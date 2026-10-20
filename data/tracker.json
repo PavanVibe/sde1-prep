@@ -353,7 +353,7 @@
     "target": "About 8 to 10 independent solves a week, around 40 unseen solves by 1 Dec, with checkpoints on 25 Oct, 8 Nov and 22 Nov."
   },
   "weeks": [
-    { "week": 0, "start": "2026-10-20", "end": "2026-10-25", "core": "Request lifecycle, status codes, REST methods and JWT (Lesson 1, closed-book)", "applied": "Trace one authenticated API route", "dsa": "Cold retests of LC 643 and LC 209, then an unseen sliding-window set with the pattern unnamed; arrays, hashing, prefix sum", "lp": "List the real incidents you could build stories on, one line each, no polish", "checkpoint": "Checkpoint 0, 25 Oct: every Week 0 retest passed, or a written remediation plan" },
+    { "week": 0, "start": "2026-10-20", "end": "2026-10-25", "core": "Request lifecycle, status codes, REST methods and JWT (Lesson 1, closed-book)", "applied": "Trace one authenticated API route", "dsa": "Cold retests of LC 643 and LC 209, then an unseen sliding-window set with the pattern unnamed; arrays, hashing, prefix sum", "lp": "List the real incidents you could build stories on, one line each, no polish. Resume truth audit: for every bullet, what you wrote (git history), what was measured, what you can defend for five minutes", "checkpoint": "Checkpoint 0, 25 Oct: every Week 0 retest passed, or a written remediation plan" },
     { "week": 1, "start": "2026-10-26", "end": "2026-11-01", "core": "SQL, joins, indexes (B-tree, write cost); transactions, ACID, isolation, the last-seat race", "applied": "Mongo data model; a conditional update as compare-and-set", "dsa": "Two pointers, stack and queue, monotonic stack, binary search variants (LC 34, 153, 33, 162)", "lp": "First full STAR draft of S-001 (internship), from verified facts only" },
     { "week": 2, "start": "2026-11-02", "end": "2026-11-08", "core": "OS retest: threads, races, locks, deadlock, GIL, stack vs heap, virtual memory. Networking: DNS, TCP and UDP, TLS, HTTP, WebSockets", "applied": "Concurrency in the job worker: heartbeat and shutdown", "dsa": "Linked-list retest, intervals and sorting, recursion, tree traversals", "lp": "Take S-001 through 10 follow-ups; draft S-002 (forest-fire project)", "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral" },
     { "week": 3, "start": "2026-11-09", "end": "2026-11-15", "core": "Distributed systems: queues, at-least-once, idempotency, retry with backoff and jitter, caching, backpressure, observability", "applied": "Job worker lifecycle: explain trigger, claim, process, finish or fail, retry", "dsa": "BST, tree problems, heap, graph BFS and DFS on grids", "lp": "Stories for a failure and for a disagreement (S-004, S-005): real incidents only" },
@@ -368,11 +368,12 @@
   ],
   "stories": [
     { "id": "S-001", "source": "Internship (Alchemic)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific incident, your personal action and the result" },
-    { "id": "S-002", "source": "Forest fire detection (deep learning project)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific challenge, your decisions and the result" },
-    { "id": "S-003", "source": "Other project or internship experience", "status": "NOT STARTED", "lps": "—", "needed": "An experience you provide" },
+    { "id": "S-002", "source": "Forest fire detection (deep learning project)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific challenge, your decisions and the result. Not on the resume reviewed on 20 Oct: confirm it stays a candidate" },
+    { "id": "S-003", "source": "Earlier internship (real-time systems software)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific incident, which parts you personally wrote or changed, and a result you measured" },
     { "id": "S-004", "source": "Failure or mistake", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
     { "id": "S-005", "source": "Team conflict or disagreement", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
-    { "id": "S-006", "source": "Customer or user impact", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" }
+    { "id": "S-006", "source": "Customer or user impact", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
+    { "id": "S-007", "source": "Personal full-stack project", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A design decision you made, the alternative you rejected, and a figure you measured yourself" }
   ],
   "storyStages": [
     { "name": "Story candidate", "means": "A real incident is identified" },

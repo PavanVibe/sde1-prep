@@ -11,6 +11,17 @@
     {
       "date": "2026-10-20",
       "kind": "plan",
+      "summary": "Resume reviewed: story bank re-aligned and a resume truth audit moved into Week 0",
+      "details": [
+        "The resume lists an earlier internship and a personal full-stack project that the story bank did not have. S-003 is now a candidate for the internship and S-007 is a new candidate for the project. S-002 (forest fire detection) is not on the resume, so it is flagged for confirmation rather than removed.",
+        "The first resume pass moves from Week 4 to Week 0. It is an audit, not a rewrite: for each bullet, what you wrote (checked against git history), what was measured, and what you can defend for five minutes. Week 4 keeps the rewrite and the behavioral mock.",
+        "Several resume figures need a measured source or a correction. The specifics are kept in the private project notes, not on this public site.",
+        "No status changed and no new evidence was added. A resume is a claim, not evidence."
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "plan",
       "summary": "Sprint reset: today is Day 0 and the gate review moves from 13 Jan 2027 to 1 Dec 2026",
       "details": [
         "The sprint is now 42 days, not 90. Checkpoints fall on Day 5 (25 Oct), Day 19 (8 Nov) and Day 33 (22 Nov), with the gate on Day 42.",
