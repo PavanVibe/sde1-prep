@@ -11,6 +11,16 @@
     {
       "date": "2026-10-20",
       "kind": "plan",
+      "summary": "Week 2 story task pointed at S-003 after S-002 was removed",
+      "details": [
+        "The Week 2 behavioral task still said to draft S-002. It now says to draft S-003 (earlier internship).",
+        "The resume audit scope shrinks by one personal project, which you are dropping from the resume. Nothing else in the plan changed.",
+        "No status changed and no new evidence was added."
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "plan",
       "summary": "Story S-002 removed from the story bank at your request",
       "details": [
         "S-002 (forest fire detection) was a candidate with no verified incident, and it is not on the resume. The ID is retired, not reused, so older log entries still make sense.",
