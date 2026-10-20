@@ -114,7 +114,7 @@ td .sub { color: var(--muted); font-size: 0.86rem; display: block; }
 .dayof strong { color: var(--ink); font-weight: 800; }
 .hero-meta { grid-column: 1 / -1; margin-top: 1rem; }
 .strip-wrap { margin: 2.2rem 0 0.4rem; position: relative; padding-top: 2.6rem; }
-.strip { display: grid; grid-template-columns: repeat(90, 1fr); gap: 2px; height: 34px; }
+.strip { display: grid; grid-template-columns: repeat(var(--cols, 43), 1fr); gap: 2px; height: 34px; }
 .strip i { border: 1.5px solid var(--rule); border-radius: 1px; background: transparent; }
 .strip i.gone { border-color: var(--muted); }
 .strip i.ev { background: var(--s3); border-color: var(--s3); }

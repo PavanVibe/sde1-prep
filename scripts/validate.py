@@ -79,6 +79,25 @@ if tracker:
         if not DATE.match(r["due"]):
             err(f"{r['id']}: due must be YYYY-MM-DD")
 
+    start, gate = tracker["meta"]["sprintStart"], tracker["meta"]["gateDate"]
+    if start >= gate:
+        err("sprintStart must be before gateDate")
+    for m in tracker["milestones"]:
+        if not (start <= m["date"] <= gate):
+            err(f"milestone {m['label']}: {m['date']} is outside the sprint")
+    for w in tracker["weaknesses"]:
+        if w.get("retestDue") and w["retestDue"] > gate:
+            err(f"{w['id']}: retest due after the gate date")
+    for r in tracker["retests"]:
+        if r["due"] > gate:
+            err(f"{r['id']}: due after the gate date")
+    weeks = tracker["weeks"]
+    for a, b in zip(weeks, weeks[1:]):
+        if a["end"] >= b["start"]:
+            err(f"weeks {a['week']} and {b['week']} overlap or are out of order")
+    if weeks and (weeks[0]["start"] != start or weeks[-1]["end"] != gate):
+        err("weeks must run from sprintStart to gateDate")
+
     lcs = [row["lc"] for row in tracker["dsaLog"]]
     if len(lcs) != len(set(lcs)):
         err("dsaLog has a duplicate problem number; update the existing row instead")

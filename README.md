@@ -2,9 +2,9 @@
 
 A static site that tracks an Amazon SDE-1 interview-prep sprint from evidence rather than feelings. It replaces the Drive documents as the place progress is logged.
 
-- **Today** shows the sprint day, a day-by-day strip that marks which days have logged evidence, this week's plan, and anything overdue or neglected.
+- **Today** shows the sprint day (Day 0 is 20 Oct 2026), a day-by-day strip that marks which days have logged evidence, this week's plan, and anything overdue or neglected.
 - **Readiness** shows every track and topic on a six-state ladder (not started, learning, practicing, understood, strong, interview ready). There is deliberately no percentage score.
-- **DSA**, **Weaknesses**, **Roadmap**, **Stories**, **Gate** and **Change log** cover the problem log, open weaknesses and retests, the 13-week plan, the story bank, the 13 Jan 2027 gate and the history.
+- **DSA**, **Weaknesses**, **Roadmap**, **Stories**, **Gate** and **Change log** cover the problem log, open weaknesses and retests, the week-by-week plan, the standards each status needs, the story bank, the 1 Dec 2026 gate and the history.
 
 ## The rule
 

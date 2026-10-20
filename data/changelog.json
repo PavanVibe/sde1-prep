@@ -10,6 +10,20 @@
   "entries": [
     {
       "date": "2026-10-20",
+      "kind": "plan",
+      "summary": "Sprint reset: today is Day 0 and the gate review moves from 13 Jan 2027 to 1 Dec 2026",
+      "details": [
+        "The sprint is now 42 days, not 90. Checkpoints fall on Day 5 (25 Oct), Day 19 (8 Nov) and Day 33 (22 Nov), with the gate on Day 42.",
+        "Standards tightened: hard timers of 20, 35 and 50 minutes; any hinted or failed problem is re-solved cold within 48 hours and again after 7 days; an overdue retest blocks new material; a failed checkpoint freezes new topics in that area.",
+        "Each status now has a written evidence threshold (see Roadmap). Previous statuses are unchanged because none had been re-tested.",
+        "Retest deadlines were reset: the four Week 0 retests are due 20 to 22 Oct, the unseen sliding-window set 25 Oct. The earlier 18 Oct deadline passed with no submission logged.",
+        "Behavioral stories now start in Week 1 because leadership principles come up in every Amazon round, and low-level design is brought forward ahead of deep system design.",
+        "Cut from the old plan: 2D DP and knapsack, tries, shortest paths and MST, the voice agent trace, replication and CAP depth, the publishable queue project and a second resume pass.",
+        "No status changed and no new evidence was added."
+      ]
+    },
+    {
+      "date": "2026-10-20",
       "kind": "setup",
       "summary": "Tracker site created and seeded from the project documents",
       "details": [

@@ -133,12 +133,12 @@
       if (ev[d]) cls.push('ev');
       if (i === todayIdx) cls.push('now');
       if (i === total - 1) cls.push('last');
-      var tip = 'Day ' + (i + 1) + ', ' + fmtLong(d) + (ev[d] ? ': evidence logged' : (i <= todayIdx ? ': no evidence logged' : ''));
+      var tip = 'Day ' + i + ', ' + fmtLong(d) + (ev[d] ? ': evidence logged' : (i <= todayIdx ? ': no evidence logged' : ''));
       cells += '<i class="' + cls.join(' ') + '" style="--n:' + i + '" title="' + esc(tip) + '"></i>';
     }
     var weeks = '';
     T.weeks.forEach(function (w) {
-      if (w.week < 1 || w.week > 12) return;
+      if (w.week < 1 || w.gate) return;
       var idx = diffDays(start, w.start);
       weeks += '<span class="' + (w.week % 2 ? 'odd' : '') + '" style="left:' + (idx / total * 100).toFixed(2) + '%">W' + w.week + '</span>';
     });
@@ -149,7 +149,7 @@
       marks += '<span class="' + (right ? 'right' : '') + '" style="left:' + ((idx + (right ? 1 : 0)) / total * 100).toFixed(2) + '%">' + esc(m.label) + '</span>';
     });
     return '<div class="strip-wrap"><div class="strip-marks" aria-hidden="true">' + marks + '</div>' +
-      '<div class="strip" role="img" aria-label="Sprint calendar of ' + total + ' days. Day ' + (todayIdx + 1) + ' is today.">' + cells + '</div>' +
+      '<div class="strip" style="--cols:' + total + '" role="img" aria-label="Sprint calendar of ' + total + ' cells. Day ' + todayIdx + ' is today.">' + cells + '</div>' +
       '<div class="strip-weeks" aria-hidden="true">' + weeks + '</div>' +
       '<div class="strip-key"><span><i class="ev"></i>Evidence logged</span><span><i class="gone"></i>Past day, nothing logged</span><span><i class="now"></i>Today</span><span><i></i>Still ahead</span></div></div>';
   }
@@ -158,11 +158,11 @@
   var VIEW = {};
 
   VIEW.today = function () {
-    var start = T.meta.sprintStart, total = diffDays(start, T.meta.gateDate) + 1;
-    var day = diffDays(start, TODAY) + 1, left = diffDays(TODAY, T.meta.gateDate);
+    var start = T.meta.sprintStart, total = diffDays(start, T.meta.gateDate);
+    var day = diffDays(start, TODAY), left = diffDays(TODAY, T.meta.gateDate);
     var wk = currentWeek();
     var big, line;
-    if (day < 1) { big = '–'; line = 'The sprint starts in <strong>' + plural(1 - day, 'day', 'days') + '</strong>'; }
+    if (day < 0) { big = '–'; line = 'The sprint starts in <strong>' + plural(-day, 'day', 'days') + '</strong>'; }
     else if (day > total) { big = String(day); line = 'Past the gate review by <strong>' + plural(day - total, 'day', 'days') + '</strong>'; }
     else { big = String(day); line = 'of <strong>' + total + '</strong> sprint days'; }
     var gateLine = left > 0 ? plural(left, 'day', 'days') + ' to the gate review on ' + fmtLong(T.meta.gateDate) : (left === 0 ? 'Gate review is today' : '');
@@ -178,12 +178,13 @@
       : 'No evidence has been logged yet.') + '</p>';
 
     html += '<div class="split"><div>';
-    html += '<h2>' + (wk ? 'This week' + (wk.week === 13 ? '' : ', week ' + wk.week) : 'This week') + '</h2>';
+    html += '<h2>' + (wk ? 'This week' + (wk.gate ? '' : ', week ' + wk.week) : 'This week') + '</h2>';
     if (wk) {
       html += '<p class="muted small">' + fmtShort(wk.start) + ' to ' + fmtShort(wk.end) + (wk.checkpoint ? '. ' + esc(wk.checkpoint) : '') + '</p><dl style="margin:0">' +
         '<div class="lane"><dt>Core topic</dt><dd>' + esc(wk.core) + '</dd></div>' +
         (wk.applied ? '<div class="lane"><dt>Applied to the internship</dt><dd>' + esc(wk.applied) + '</dd></div>' : '') +
-        '<div class="lane"><dt>DSA</dt><dd>' + esc(wk.dsa) + '</dd></div></dl>';
+        '<div class="lane"><dt>DSA</dt><dd>' + esc(wk.dsa) + '</dd></div>' +
+        (wk.lp ? '<div class="lane"><dt>Behavioral</dt><dd>' + esc(wk.lp) + '</dd></div>' : '') + '</dl>';
     } else {
       html += '<p class="empty">No roadmap week covers today.</p>';
     }
@@ -298,17 +299,31 @@
 
   VIEW.roadmap = function () {
     var wk = currentWeek();
-    var html = '<h1>Roadmap</h1><p class="lede">A 90-day sprint from ' + fmt(T.meta.sprintStart) + ' to the gate review on ' + fmt(T.meta.gateDate) + '. Rigorous, not magic: the aim is core-pattern mediums solved unseen in about 25 to 35 minutes, a tested baseline in every CS area, truthful stories and a full mock loop.</p>';
+    var days = diffDays(T.meta.sprintStart, T.meta.gateDate);
+    var html = '<h1>Roadmap</h1><p class="lede">A ' + days + '-day sprint from ' + fmt(T.meta.sprintStart) + ' (Day 0) to the gate review on ' + fmt(T.meta.gateDate) + '. ' + esc(T.scopeNote) + '</p>';
+
+    html += '<h2>Standards that do not bend</h2><ol class="steps">' + T.standards.map(function (r) { return '<li><strong>' + esc(r.title) + '.</strong> ' + esc(r.text) + '</li>'; }).join('') + '</ol>';
+
+    html += '<h2>What each status requires</h2><p class="muted">A status moves up only when its row is met and logged with a date.</p>' +
+      table(['Applies to', 'Status', 'Evidence needed'], T.thresholds.map(function (r) {
+        return '<tr><td>' + esc(r.area) + '</td><td>' + status(r.status) + '</td><td>' + esc(r.needs) + '</td></tr>';
+      }));
+
     html += '<h2>Weekly rhythm</h2><p class="muted">' + esc(T.weeklyTime.note) + '</p><dl class="timeblocks">' +
       T.weeklyTime.blocks.map(function (b) { return '<div><dt>' + esc(b.when) + '</dt><dd>' + esc(b.what) + '</dd></div>'; }).join('') + '</dl>';
     html += '<h2>Daily DSA loop</h2><ol class="steps">' + T.weeklyTime.dailyDsa.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol><p class="muted">' + esc(T.weeklyTime.target) + '</p>';
+
     html += '<h2>Week by week</h2><ol class="weeks">' + T.weeks.map(function (w) {
       var cls = 'week' + (w.end < TODAY ? ' past' : '') + (wk && wk.week === w.week ? ' now' : '');
-      return '<li class="' + cls + '"' + (wk && wk.week === w.week ? ' aria-current="step"' : '') + '><div class="when"><b>' + (w.week === 13 ? 'Gate' : 'Week ' + w.week) + '</b><span>' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></div>' +
+      return '<li class="' + cls + '"' + (wk && wk.week === w.week ? ' aria-current="step"' : '') + '><div class="when"><b>' + (w.gate ? 'Gate' : 'Week ' + w.week) + '</b><span>' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></div>' +
         '<dl class="lanes"><dt>Core topic</dt><dd>' + esc(w.core) + '</dd>' + (w.applied ? '<dt>Internship</dt><dd>' + esc(w.applied) + '</dd>' : '') + '<dt>DSA</dt><dd>' + esc(w.dsa) + '</dd>' +
+        (w.lp ? '<dt>Behavioral</dt><dd>' + esc(w.lp) + '</dd>' : '') +
         (w.checkpoint ? '<dd class="cp" style="grid-column:1/-1">' + esc(w.checkpoint) + '</dd>' : '') + '</dl></li>';
     }).join('') + '</ol>';
-    html += '<h2>' + esc(T.portfolio.title) + '</h2><p>' + esc(T.portfolio.body) + '</p>';
+
+    html += '<h2>When you fall behind</h2><p class="muted">Cut in this order, and never by adding hours.</p><ol class="steps">' +
+      T.cutLadder.order.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ol><p>' + esc(T.cutLadder.never) + '</p><p class="muted">' + esc(T.cutLadder.alreadyCut) + '</p>';
+    if (T.portfolio) html += '<h2>' + esc(T.portfolio.title) + '</h2><p>' + esc(T.portfolio.body) + '</p>';
     html += '<h2>Resume rules</h2><ul class="steps">' + T.resumeRules.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ul>';
     return { title: 'Roadmap', html: html };
   };
