@@ -10,6 +10,16 @@
   "entries": [
     {
       "date": "2026-10-20",
+      "kind": "setup",
+      "summary": "Your study notes now have their own section on the DSA page",
+      "details": [
+        "The DSA page has a new Your study notes section. It holds the sliding-window template and your notes on LC 142, LC 19 and the next-greater-element rule, which were previously scattered across the page.",
+        "Each note carries a self-test question. The question is not an answer: the note records what you wrote down, and only passing the self-test unaided is evidence.",
+        "No status changed and no new evidence was added."
+      ]
+    },
+    {
+      "date": "2026-10-20",
       "kind": "plan",
       "summary": "Your original progress notes re-read; the LC 142 technique note is now kept in full",
       "details": [

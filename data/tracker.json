@@ -247,6 +247,14 @@
     "caution": "A mental model, not proof of mastery. Future problems test whether you can decide, unaided, what belongs in the expand step, the shrink condition and the answer update.",
     "code": "for (right = ...) {\n    // do what you need when increasing window size\n\n    while (...) {\n        // do what you need while reducing window size\n    }\n\n    // get/update the required answer\n    // e.g. max_length = max(max_length, right - left + 1);\n}"
   },
+  "studyNotes": {
+    "source": "Recovered from your original progress document (2026-08-18 sync). Each note records what you wrote down, not what you can do. The self-test under each one is the evidence, not the note.",
+    "items": [
+      { "area": "Linked lists", "title": "LC 142: Linked List Cycle II", "text": "Your note: once slow meets fast, set a pointer to the head and move it and slow one step at a time. Where they meet is the cycle start.", "status": "This problem needed a hint, so the note is a recipe you were given, not a solve.", "check": "Explain why the two pointers meet at the cycle start, using the distances, with nothing in front of you." },
+      { "area": "Linked lists", "title": "LC 19: Remove Nth Node From End of List", "text": "Your note: solved without a hint. Marked for later review because there are two methods.", "status": "Independent solve on record. The two methods are not written down.", "check": "Name both methods with time and space for each, from memory, then solve it cold in C++." },
+      { "area": "Stack and queue", "title": "Next greater or next smaller element", "text": "Your note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.", "status": "Not started as a track. Scheduled for Week 1.", "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end." }
+    ]
+  },
   "dsaLog": [
     { "lc": 643, "title": "Maximum Average Subarray I", "difficulty": "Easy", "pattern": "Sliding window (fixed size)", "date": "2026-08-12", "independence": "hinted", "hint": "Needed a hint for the optimal O(n) approach", "note": "The O(n²) version was solved independently. Retest pending (W-001)." },
     { "lc": 3, "title": "Longest Substring Without Repeating Characters", "difficulty": "Medium", "pattern": "Sliding window + hashing", "date": "2026-08-12", "independence": "independent", "hint": "None", "note": "Optimal O(n), no hint." },

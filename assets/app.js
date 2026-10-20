@@ -262,7 +262,11 @@
       return '<tr><td><strong>' + esc(tp.name) + '</strong>' + (tp.note ? '<span class="sub">' + esc(tp.note) + '</span>' : '') + '</td><td>' + status(tp.status) + '</td><td>' + esc(tp.evidence) + '</td><td>' + esc(fmt(tp.lastTested)) + '</td><td>' + esc(tp.next) + '</td></tr>';
     }));
 
-    html += '<h2>' + esc(T.dsaTemplate.title) + '</h2><p class="muted">' + esc(T.dsaTemplate.caution) + '</p><pre><code>' + esc(T.dsaTemplate.code) + '</code></pre>';
+    html += '<h2>Your study notes</h2><p class="muted">' + esc(T.studyNotes.source) + '</p>';
+    html += '<div class="note-card"><h3>' + esc(T.dsaTemplate.title) + '</h3><p class="from">Sliding window</p><p>' + esc(T.dsaTemplate.caution) + '</p><pre><code>' + esc(T.dsaTemplate.code) + '</code></pre></div>';
+    T.studyNotes.items.forEach(function (n) {
+      html += '<div class="note-card"><h3>' + esc(n.title) + '</h3><p class="from">' + esc(n.area) + '</p><p>' + esc(n.text) + '</p><p class="small muted">' + esc(n.status) + '</p><p class="check"><b>Self-test.</b> ' + esc(n.check) + '</p></div>';
+    });
 
     var patterns = []; T.dsaLog.forEach(function (r) { var f = family(r.pattern); if (patterns.indexOf(f) < 0) patterns.push(f); });
     html += '<h2>Problem log</h2><div class="filters">' +
