@@ -1,0 +1,408 @@
+(function () {
+  'use strict';
+
+  var VIEWS = [
+    { id: 'today', label: 'Today' },
+    { id: 'readiness', label: 'Readiness' },
+    { id: 'dsa', label: 'DSA' },
+    { id: 'weaknesses', label: 'Weaknesses' },
+    { id: 'roadmap', label: 'Roadmap' },
+    { id: 'stories', label: 'Stories' },
+    { id: 'gate', label: 'Gate' },
+    { id: 'log', label: 'Change log' }
+  ];
+
+  var MEANING = {
+    'NOT STARTED': 'No meaningful study or evidence yet.',
+    'LEARNING': 'Actively learning; understanding is incomplete.',
+    'PRACTICING': 'Can apply it with practice, but not yet reliably.',
+    'UNDERSTOOD': 'Explains and applies it independently in normal conditions.',
+    'STRONG': 'Reliable on unfamiliar problems and follow-ups; only minor weaknesses.',
+    'INTERVIEW READY': 'Shown repeatedly under interview-like conditions.'
+  };
+
+  var RESULT = {
+    independent: 'Independent',
+    hinted: 'Hint needed',
+    solution: 'Solution used',
+    unsolved: 'Not solved',
+    unspecified: 'Not recorded'
+  };
+
+  var T = null, L = null, TODAY = '', SCALE = [];
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  /* ---------- helpers ---------- */
+  function $(s, el) { return (el || document).querySelector(s); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function ms(s) { var p = s.split('-'); return Date.UTC(+p[0], +p[1] - 1, +p[2]); }
+  function diffDays(a, b) { return Math.round((ms(b) - ms(a)) / 86400000); }
+  function addDays(s, n) { return new Date(ms(s) + n * 86400000).toISOString().slice(0, 10); }
+  function fmt(s) { if (!s) return '—'; var p = s.split('-'); return +p[2] + ' ' + MON[+p[1] - 1] + ' ' + p[0]; }
+  function fmtShort(s) { var p = s.split('-'); return +p[2] + ' ' + MON[+p[1] - 1]; }
+  function fmtLong(s) {
+    return new Date(ms(s)).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  function ago(s) {
+    var d = diffDays(s, TODAY);
+    if (d === 0) return 'today';
+    if (d === 1) return '1 day ago';
+    if (d < 0) return 'in ' + plural(-d, 'day', 'days');
+    return d + ' days ago';
+  }
+  function sentence(st) { return st.charAt(0) + st.slice(1).toLowerCase(); }
+  function level(st) { return Math.max(0, SCALE.indexOf(st)); }
+
+  function todayIST() {
+    var q = new URLSearchParams(location.search).get('today');
+    if (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) return q;
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date());
+  }
+
+  /* ---------- small components ---------- */
+  function status(st) {
+    var lv = level(st);
+    return '<span class="status lv' + lv + '"><span class="ladder lv' + lv + '" role="img" aria-label="' +
+      esc(sentence(st)) + ', level ' + lv + ' of 5"><i></i><i></i><i></i><i></i><i></i></span>' +
+      '<span class="label">' + esc(sentence(st)) + '</span></span>';
+  }
+  function result(r) {
+    return '<span class="res ' + r + '"><span>' + esc(RESULT[r] || r) + '</span></span>';
+  }
+  function table(head, rows, cls, bodyId) {
+    return '<div class="tablewrap"><table' + (cls ? ' class="' + cls + '"' : '') + '><thead><tr>' +
+      head.map(function (h) { return '<th scope="col"' + (h.num ? ' class="num"' : '') + '>' + esc(h.t || h) + '</th>'; }).join('') +
+      '</tr></thead><tbody' + (bodyId ? ' id="' + bodyId + '"' : '') + '>' + rows.join('') + '</tbody></table></div>';
+  }
+
+  /* ---------- derived data ---------- */
+  function dsaCounts() {
+    var c = { independent: 0, hinted: 0, solution: 0, unsolved: 0, unspecified: 0 };
+    T.dsaLog.forEach(function (r) { c[r.independence] = (c[r.independence] || 0) + 1; });
+    c.total = T.dsaLog.length;
+    return c;
+  }
+  function currentWeek() {
+    for (var i = 0; i < T.weeks.length; i++) {
+      var w = T.weeks[i];
+      if (TODAY >= w.start && TODAY <= w.end) return w;
+    }
+    return null;
+  }
+  function weekStart(n) {
+    for (var i = 0; i < T.weeks.length; i++) if (T.weeks[i].week === n) return T.weeks[i].start;
+    return null;
+  }
+  function lastEvidenceDate() {
+    var d = null;
+    L.entries.forEach(function (e) { if (e.kind === 'evidence' && (!d || e.date > d)) d = e.date; });
+    return d;
+  }
+  function neglected() {
+    var out = [];
+    T.tracks.forEach(function (t) {
+      var starts = weekStart(t.startsWeek);
+      if (starts && starts > TODAY) return;
+      if (!t.lastEvidence) { out.push({ track: t, why: 'No evidence logged yet' }); return; }
+      var d = diffDays(t.lastEvidence, TODAY);
+      if (d > 7) out.push({ track: t, why: 'Last evidence ' + d + ' days ago (' + fmt(t.lastEvidence) + ')' });
+    });
+    return out;
+  }
+  function openRetests() {
+    return T.retests.filter(function (r) { return r.state === 'pending'; })
+      .sort(function (a, b) { return a.due < b.due ? -1 : 1; });
+  }
+
+  /* ---------- sprint strip ---------- */
+  function strip() {
+    var start = T.meta.sprintStart, total = diffDays(start, T.meta.gateDate) + 1;
+    var todayIdx = diffDays(start, TODAY);
+    var ev = {};
+    L.entries.forEach(function (e) { if (e.kind === 'evidence') ev[e.date] = true; });
+    var cells = '', i, d, cls;
+    for (i = 0; i < total; i++) {
+      d = addDays(start, i);
+      cls = [];
+      if (i < todayIdx) cls.push('gone');
+      if (ev[d]) cls.push('ev');
+      if (i === todayIdx) cls.push('now');
+      if (i === total - 1) cls.push('last');
+      var tip = 'Day ' + (i + 1) + ', ' + fmtLong(d) + (ev[d] ? ': evidence logged' : (i <= todayIdx ? ': no evidence logged' : ''));
+      cells += '<i class="' + cls.join(' ') + '" style="--n:' + i + '" title="' + esc(tip) + '"></i>';
+    }
+    var weeks = '';
+    T.weeks.forEach(function (w) {
+      if (w.week < 1 || w.week > 12) return;
+      var idx = diffDays(start, w.start);
+      weeks += '<span class="' + (w.week % 2 ? 'odd' : '') + '" style="left:' + (idx / total * 100).toFixed(2) + '%">W' + w.week + '</span>';
+    });
+    var marks = '';
+    T.milestones.forEach(function (m) {
+      var idx = diffDays(start, m.date);
+      var right = idx >= total - 2;
+      marks += '<span class="' + (right ? 'right' : '') + '" style="left:' + ((idx + (right ? 1 : 0)) / total * 100).toFixed(2) + '%">' + esc(m.label) + '</span>';
+    });
+    return '<div class="strip-wrap"><div class="strip-marks" aria-hidden="true">' + marks + '</div>' +
+      '<div class="strip" role="img" aria-label="Sprint calendar of ' + total + ' days. Day ' + (todayIdx + 1) + ' is today.">' + cells + '</div>' +
+      '<div class="strip-weeks" aria-hidden="true">' + weeks + '</div>' +
+      '<div class="strip-key"><span><i class="ev"></i>Evidence logged</span><span><i class="gone"></i>Past day, nothing logged</span><span><i class="now"></i>Today</span><span><i></i>Still ahead</span></div></div>';
+  }
+
+  /* ---------- views ---------- */
+  var VIEW = {};
+
+  VIEW.today = function () {
+    var start = T.meta.sprintStart, total = diffDays(start, T.meta.gateDate) + 1;
+    var day = diffDays(start, TODAY) + 1, left = diffDays(TODAY, T.meta.gateDate);
+    var wk = currentWeek();
+    var big, line;
+    if (day < 1) { big = '–'; line = 'The sprint starts in <strong>' + plural(1 - day, 'day', 'days') + '</strong>'; }
+    else if (day > total) { big = String(day); line = 'Past the gate review by <strong>' + plural(day - total, 'day', 'days') + '</strong>'; }
+    else { big = String(day); line = 'of <strong>' + total + '</strong> sprint days'; }
+    var gateLine = left > 0 ? plural(left, 'day', 'days') + ' to the gate review on ' + fmtLong(T.meta.gateDate) : (left === 0 ? 'Gate review is today' : '');
+
+    var html = '<h1 class="hero" aria-label="Day ' + esc(big) + ' of ' + total + '"><span class="daynum" aria-hidden="true">' + esc(big) + '</span>' +
+      '<span class="dayof" aria-hidden="true">' + line + '<br>' + esc(gateLine) + '</span></h1>';
+    html += strip();
+
+    var le = lastEvidenceDate();
+    var inSprint = L.entries.filter(function (e) { return e.kind === 'evidence' && e.date >= start; }).length;
+    html += '<p class="lede">' + (le
+      ? 'Last evidence logged: <strong>' + fmt(le) + '</strong> (' + ago(le) + '). ' + (inSprint === 0 ? 'No evidence has been logged since the sprint began on ' + fmt(start) + '. If you have done work since then, bring the answers or solutions and they get logged.' : plural(inSprint, 'evidence entry', 'evidence entries') + ' since the sprint began.')
+      : 'No evidence has been logged yet.') + '</p>';
+
+    html += '<div class="split"><div>';
+    html += '<h2>' + (wk ? 'This week' + (wk.week === 13 ? '' : ', week ' + wk.week) : 'This week') + '</h2>';
+    if (wk) {
+      html += '<p class="muted small">' + fmtShort(wk.start) + ' to ' + fmtShort(wk.end) + (wk.checkpoint ? '. ' + esc(wk.checkpoint) : '') + '</p><dl style="margin:0">' +
+        '<div class="lane"><dt>Core topic</dt><dd>' + esc(wk.core) + '</dd></div>' +
+        (wk.applied ? '<div class="lane"><dt>Applied to the internship</dt><dd>' + esc(wk.applied) + '</dd></div>' : '') +
+        '<div class="lane"><dt>DSA</dt><dd>' + esc(wk.dsa) + '</dd></div></dl>';
+    } else {
+      html += '<p class="empty">No roadmap week covers today.</p>';
+    }
+    html += '</div><div><h2>Needs attention</h2>';
+    var rt = openRetests().filter(function (r) { return r.due <= addDays(TODAY, 7); });
+    var ng = neglected();
+    if (!rt.length && !ng.length) html += '<p class="empty">Nothing overdue or neglected.</p>';
+    else {
+      html += '<ul class="attn">';
+      rt.forEach(function (r) {
+        var d = diffDays(r.due, TODAY);
+        var tag = d > 0 ? '<span class="late-tag">' + plural(d, 'day', 'days') + ' overdue</span>, due ' + fmtShort(r.due) : (d === 0 ? '<span class="late-tag">Due today</span>' : 'Due ' + fmtShort(r.due));
+        html += '<li class="' + (d > 0 ? 'late' : '') + '"><b>' + esc(r.task) + '</b>' + tag + (r.weakness ? ', ' + esc(r.weakness) : '') + '<span class="sub muted small" style="display:block">' + esc(r.note) + '</span></li>';
+      });
+      ng.forEach(function (n) {
+        html += '<li class="late"><b>' + esc(n.track.name) + ' is neglected</b>' + esc(n.why) + '</li>';
+      });
+      html += '</ul>';
+    }
+    html += '</div></div>';
+
+    html += '<h2>Next actions</h2><ol class="steps">' + T.nextActions.map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ol>';
+    html += '<p class="muted small">Per the plan: if the planned topic has no passed evidence, do not advance. Clear the blocker first.</p>';
+    return { title: 'Today', html: html };
+  };
+
+  VIEW.readiness = function () {
+    var html = '<h1>Readiness</h1><p class="lede">There is no readiness percentage. The only question is what you can demonstrate right now, under interview conditions, without AI. ' + esc(T.meta.evidenceRule) + '</p>';
+    html += '<h2>The six states</h2><div class="tablewrap"><table><tbody>' +
+      T.statusScale.map(function (s) { return '<tr><td style="width:14rem">' + status(s) + '</td><td>' + esc(MEANING[s]) + '</td></tr>'; }).join('') + '</tbody></table></div>';
+    html += '<h2>Tracks</h2>';
+    var neg = {};
+    neglected().forEach(function (n) { neg[n.track.id] = n.why; });
+    T.tracks.forEach(function (t) {
+      var counts = SCALE.map(function () { return 0; });
+      t.topics.forEach(function (tp) { counts[level(tp.status)]++; });
+      var bar = counts.map(function (c, i) { return c ? '<i class="c' + i + '" style="flex:' + c + '" title="' + esc(sentence(SCALE[i]) + ': ' + c) + '"></i>' : ''; }).join('');
+      var parts = [];
+      for (var i = SCALE.length - 1; i >= 0; i--) if (counts[i]) parts.push(counts[i] + ' ' + SCALE[i].toLowerCase());
+      var rows = t.topics.map(function (tp) {
+        return '<tr><td><strong>' + esc(tp.name) + '</strong>' + (tp.note ? '<span class="sub">' + esc(tp.note) + '</span>' : '') + '</td><td>' + status(tp.status) + '</td><td>' + esc(tp.evidence) + '</td><td>' + esc(fmt(tp.lastTested)) + '</td><td>' + esc(tp.next) + '</td></tr>';
+      });
+      html += '<details><summary><span class="name">' + esc(t.name) + '</span><span class="dist" aria-hidden="true">' + bar + '</span>' +
+        '<span class="small">' + esc(parts.join(', ')) + '</span>' +
+        '<span class="small">' + (t.lastEvidence ? 'Evidence ' + esc(ago(t.lastEvidence)) : 'No evidence yet') + (neg[t.id] ? '<br><span class="flag">Neglected</span>' : '') + '</span></summary>' +
+        '<div class="body"><p class="note">' + esc(t.note) + '</p>' +
+        table(['Topic', 'Status', 'Evidence', 'Last tested', 'Next evidence needed'], rows) + '</div></details>';
+    });
+    return { title: 'Readiness', html: html };
+  };
+
+  function family(p) { return p.split(/ \(| \+ /)[0]; }
+  function dsaRows(pattern, res) {
+    return T.dsaLog.filter(function (r) {
+      return (!pattern || family(r.pattern) === pattern) && (!res || r.independence === res);
+    }).map(function (r) {
+      return '<tr><td class="num">' + r.lc + '</td><td><strong>' + esc(r.title) + '</strong><span class="sub">' + esc(r.difficulty) + '</span></td><td>' + esc(r.pattern) + '</td><td>' + result(r.independence) + '</td><td>' + esc(r.hint) + '</td><td>' + (r.date ? esc(fmt(r.date)) : '—') + (r.dateNote ? '<span class="sub">' + esc(r.dateNote) + '</span>' : '') + '</td><td>' + esc(r.note) + '</td></tr>';
+    }).join('') || '<tr><td colspan="7" class="empty">No problems match these filters.</td></tr>';
+  }
+
+  VIEW.dsa = function () {
+    var c = dsaCounts();
+    var dsa = T.tracks.filter(function (t) { return t.id === 'dsa'; })[0];
+    var html = '<h1>DSA in C++</h1><p class="lede">Unseen, independent solves count. Solve counts do not. A pattern advances only when an unnamed-pattern problem is recognized and solved without help.</p>';
+    html += '<h2>How the logged problems were solved</h2><div class="tally">' +
+      ['independent', 'hinted', 'solution', 'unsolved', 'unspecified'].map(function (k) {
+        return '<div><b>' + c[k] + '</b><span>' + esc(RESULT[k]) + '</span></div>';
+      }).join('') + '<div><b>' + c.total + '</b><span>Total logged</span></div></div>';
+    html += '<div class="stack" role="img" aria-label="Distribution of how problems were solved">' +
+      ['independent', 'hinted', 'solution', 'unsolved', 'unspecified'].map(function (k) { return c[k] ? '<i class="res-' + k + '" style="flex:' + c[k] + '"></i>' : ''; }).join('') + '</div>';
+    html += '<p class="muted small">Counts only, not a score. Time, edge-case and complexity fields were not recorded for these historical rows. New entries should include them.</p>';
+
+    html += '<h2>Patterns</h2>';
+    html += table(['Pattern', 'Status', 'Evidence', 'Last tested', 'Next evidence needed'], dsa.topics.map(function (tp) {
+      return '<tr><td><strong>' + esc(tp.name) + '</strong>' + (tp.note ? '<span class="sub">' + esc(tp.note) + '</span>' : '') + '</td><td>' + status(tp.status) + '</td><td>' + esc(tp.evidence) + '</td><td>' + esc(fmt(tp.lastTested)) + '</td><td>' + esc(tp.next) + '</td></tr>';
+    }));
+
+    html += '<h2>' + esc(T.dsaTemplate.title) + '</h2><p class="muted">' + esc(T.dsaTemplate.caution) + '</p><pre><code>' + esc(T.dsaTemplate.code) + '</code></pre>';
+
+    var patterns = []; T.dsaLog.forEach(function (r) { var f = family(r.pattern); if (patterns.indexOf(f) < 0) patterns.push(f); });
+    html += '<h2>Problem log</h2><div class="filters">' +
+      '<label>Pattern<select id="f-pattern"><option value="">All patterns</option>' + patterns.map(function (p) { return '<option>' + esc(p) + '</option>'; }).join('') + '</select></label>' +
+      '<label>How it was solved<select id="f-res"><option value="">All results</option>' + Object.keys(RESULT).map(function (k) { return '<option value="' + k + '">' + esc(RESULT[k]) + '</option>'; }).join('') + '</select></label></div>';
+    html += table([{ t: 'LC', num: true }, 'Problem', 'Pattern', 'Result', 'Hint', 'Date', 'Note'], [dsaRows('', '')], '', 'dsa-body');
+    return { title: 'DSA', html: html };
+  };
+
+  VIEW.weaknesses = function () {
+    var open = T.weaknesses.filter(function (w) { return w.state === 'open'; });
+    var html = '<h1>Weaknesses</h1><p class="lede">A weakness closes only after an independent retest. Reading the correction, or being told the answer, does not close it. Repeated mistakes outrank isolated ones.</p>';
+    html += '<h2>Open (' + open.length + ')</h2>';
+    open.forEach(function (w) {
+      var d = w.retestDue ? diffDays(w.retestDue, TODAY) : 0;
+      var due = w.retestDue ? (d > 0 ? '<span class="pill warn">' + plural(d, 'day', 'days') + ' overdue</span> was due ' + fmtShort(w.retestDue) : 'Due ' + fmtShort(w.retestDue)) : '';
+      html += '<section class="case"><div class="id">' + esc(w.id) + '</div><div><h3>' + esc(w.topic) + '</h3>' +
+        '<span class="muted small">Identified ' + esc(fmt(w.identified)) + ', from ' + esc(w.source) + '</span><dl>' +
+        '<dt>What went wrong</dt><dd>' + esc(w.mistake) + '</dd>' +
+        '<dt>Correct reasoning</dt><dd>' + esc(w.correct) + '</dd>' +
+        '<dt>Cause</dt><dd>' + esc(w.cause) + '</dd>' +
+        '<dt>Corrective exercise</dt><dd>' + esc(w.exercise) + '</dd>' +
+        '<dt>Retest</dt><dd><span class="pill plain">' + esc(w.retest) + '</span> ' + due + '</dd></dl></div></section>';
+    });
+    html += '<h2>Closed (' + T.closedWeaknesses.length + ')</h2>';
+    if (!T.closedWeaknesses.length) html += '<p class="empty">Nothing closed yet. The first closure needs a passed, unaided retest logged with its date.</p>';
+    else html += table(['ID', 'Topic', 'Retest result', 'Closed'], T.closedWeaknesses.map(function (w) { return '<tr><td>' + esc(w.id) + '</td><td>' + esc(w.topic) + '</td><td>' + esc(w.result) + '</td><td>' + esc(fmt(w.closed)) + '</td></tr>'; }));
+    html += '<h2>Scheduled retests</h2>' + table(['Due', 'Retest', 'Weakness', 'State'], openRetests().map(function (r) {
+      var d = diffDays(r.due, TODAY);
+      return '<tr><td>' + esc(fmt(r.due)) + (d > 0 ? '<span class="sub flag">' + plural(d, 'day', 'days') + ' overdue</span>' : '') + '</td><td>' + esc(r.task) + '<span class="sub">' + esc(r.note) + '</span></td><td>' + esc(r.weakness || '—') + '</td><td>Pending</td></tr>';
+    }));
+    return { title: 'Weaknesses', html: html };
+  };
+
+  VIEW.roadmap = function () {
+    var wk = currentWeek();
+    var html = '<h1>Roadmap</h1><p class="lede">A 90-day sprint from ' + fmt(T.meta.sprintStart) + ' to the gate review on ' + fmt(T.meta.gateDate) + '. Rigorous, not magic: the aim is core-pattern mediums solved unseen in about 25 to 35 minutes, a tested baseline in every CS area, truthful stories and a full mock loop.</p>';
+    html += '<h2>Weekly rhythm</h2><p class="muted">' + esc(T.weeklyTime.note) + '</p><dl class="timeblocks">' +
+      T.weeklyTime.blocks.map(function (b) { return '<div><dt>' + esc(b.when) + '</dt><dd>' + esc(b.what) + '</dd></div>'; }).join('') + '</dl>';
+    html += '<h2>Daily DSA loop</h2><ol class="steps">' + T.weeklyTime.dailyDsa.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol><p class="muted">' + esc(T.weeklyTime.target) + '</p>';
+    html += '<h2>Week by week</h2><ol class="weeks">' + T.weeks.map(function (w) {
+      var cls = 'week' + (w.end < TODAY ? ' past' : '') + (wk && wk.week === w.week ? ' now' : '');
+      return '<li class="' + cls + '"' + (wk && wk.week === w.week ? ' aria-current="step"' : '') + '><div class="when"><b>' + (w.week === 13 ? 'Gate' : 'Week ' + w.week) + '</b><span>' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></div>' +
+        '<dl class="lanes"><dt>Core topic</dt><dd>' + esc(w.core) + '</dd>' + (w.applied ? '<dt>Internship</dt><dd>' + esc(w.applied) + '</dd>' : '') + '<dt>DSA</dt><dd>' + esc(w.dsa) + '</dd>' +
+        (w.checkpoint ? '<dd class="cp" style="grid-column:1/-1">' + esc(w.checkpoint) + '</dd>' : '') + '</dl></li>';
+    }).join('') + '</ol>';
+    html += '<h2>' + esc(T.portfolio.title) + '</h2><p>' + esc(T.portfolio.body) + '</p>';
+    html += '<h2>Resume rules</h2><ul class="steps">' + T.resumeRules.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ul>';
+    return { title: 'Roadmap', html: html };
+  };
+
+  VIEW.stories = function () {
+    var html = '<h1>Interview stories</h1><p class="lede">A bank of real experiences only.</p><ul class="steps">' + T.storyRules.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ul>';
+    html += '<h2>Story inventory</h2>' + table(['ID', 'Source', 'Status', 'Principles', 'Evidence needed'], T.stories.map(function (s) {
+      return '<tr><td><strong>' + esc(s.id) + '</strong></td><td>' + esc(s.source) + '</td><td><span class="pill plain">' + esc(sentence(s.status)) + '</span></td><td>' + esc(s.lps) + '</td><td>' + esc(s.needed) + '</td></tr>';
+    }));
+    html += '<h2>How a story advances</h2><ol class="steps">' + T.storyStages.map(function (s) { return '<li><strong>' + esc(s.name) + '.</strong> ' + esc(s.means) + '</li>'; }).join('') + '</ol>';
+    html += '<h2>Leadership principle coverage</h2>' + table(['Principle', 'Strong story', 'Backup story', 'Status'], T.leadershipPrinciples.map(function (p) {
+      return '<tr><td>' + esc(p) + '</td><td class="muted">—</td><td class="muted">—</td><td>' + status('NOT STARTED') + '</td></tr>';
+    }));
+    return { title: 'Stories', html: html };
+  };
+
+  VIEW.gate = function () {
+    var left = diffDays(TODAY, T.gate.date);
+    var c = dsaCounts();
+    var html = '<h1>Gate review</h1><p class="lede">' + fmtLong(T.gate.date) + (left > 0 ? ', ' + plural(left, 'day', 'days') + ' away. ' : '. ') + esc(T.gate.note) + '</p>';
+    html += '<h2>Required evidence</h2>';
+    T.gate.requirements.forEach(function (r) {
+      html += '<section class="req"><h3>' + esc(r.area) + '</h3><div><p><strong>Required:</strong> ' + esc(r.required) + '</p><p class="muted"><strong>So far:</strong> ' + esc(r.current.replace('{{dsa.independent}}', c.independent)) + '</p></div><div><span class="pill warn">Not met</span></div></section>';
+    });
+    return { title: 'Gate', html: html };
+  };
+
+  function logEntries(kind) {
+    var out = L.entries.filter(function (e) { return !kind || e.kind === kind; }).map(function (e) {
+      var changes = (e.changes || []).map(function (c) {
+        return '<div><span class="muted">' + esc(c.track) + ', ' + esc(c.topic) + ':</span> ' + status(c.from) + '<span class="muted">to</span>' + status(c.to) + '</div>';
+      }).join('');
+      return '<article class="entry"><div><span class="date">' + esc(fmt(e.date)) + '</span><span class="kind"><span class="pill plain">' + esc(L.kinds[e.kind] || e.kind) + '</span></span></div><div><h3>' + esc(e.summary) + '</h3>' +
+        (changes ? '<div class="changes">' + changes + '</div>' : '') +
+        ((e.details && e.details.length) ? '<ul>' + e.details.map(function (d) { return '<li>' + esc(d) + '</li>'; }).join('') + '</ul>' : '') + '</div></article>';
+    });
+    return out.join('') || '<p class="empty">No entries of this kind.</p>';
+  }
+
+  VIEW.log = function () {
+    var html = '<h1>Change log</h1><p class="lede">Every change to a status, weakness, plan or this site is an entry here, newest first, and a commit in the repository history. ' + esc(T.meta.sources) + '</p>';
+    html += '<div class="filters"><label>Show<select id="f-kind"><option value="">All entries</option>' + Object.keys(L.kinds).map(function (k) { return '<option value="' + k + '">' + esc(L.kinds[k]) + '</option>'; }).join('') + '</select></label></div>';
+    html += '<div id="log-list">' + logEntries('') + '</div>';
+    return { title: 'Change log', html: html };
+  };
+
+  var BIND = {
+    dsa: function () {
+      function upd() { $('#dsa-body').innerHTML = dsaRows($('#f-pattern').value, $('#f-res').value); }
+      $('#f-pattern').addEventListener('change', upd);
+      $('#f-res').addEventListener('change', upd);
+    },
+    log: function () {
+      $('#f-kind').addEventListener('change', function (e) { $('#log-list').innerHTML = logEntries(e.target.value); });
+    }
+  };
+
+  /* ---------- shell ---------- */
+  function buildNav(active) {
+    var open = T.weaknesses.filter(function (w) { return w.state === 'open'; }).length;
+    $('#nav').innerHTML = VIEWS.map(function (v) {
+      var badge = v.id === 'weaknesses' && open ? '<span class="count" aria-label="' + open + ' open">' + open + '</span>' : '';
+      return '<a href="#' + v.id + '"' + (v.id === active ? ' aria-current="page"' : '') + '>' + esc(v.label) + badge + '</a>';
+    }).join('');
+  }
+
+  function route(first) {
+    var id = (location.hash || '#today').slice(1);
+    if (!VIEW[id]) id = 'today';
+    var v = VIEW[id]();
+    var main = $('#main');
+    main.innerHTML = v.html;
+    document.title = v.title + ' | ' + T.meta.title;
+    buildNav(id);
+    if (BIND[id]) BIND[id]();
+    if (!first) { main.focus({ preventScroll: true }); window.scrollTo(0, 0); }
+  }
+
+  function boot(t, l) {
+    T = t; L = l; SCALE = T.statusScale; TODAY = todayIST();
+    $('#brand-sub').textContent = T.meta.target + ', ' + T.meta.candidate;
+    var q = new URLSearchParams(location.search).get('today');
+    $('#rail-foot').textContent = (q ? 'Viewing as of ' : 'Ledger updated ') + fmt(q ? TODAY : T.meta.lastUpdated);
+    route(true);
+    window.addEventListener('hashchange', function () { route(false); });
+  }
+
+  function fail(msg) {
+    var m = $('#main');
+    m.innerHTML = '<p class="problem">' + esc(msg) + '</p><p>The ledger reads data/tracker.json and data/changelog.json. Open the site through GitHub Pages or a local server (for example <code>python3 -m http.server</code>); browsers block these reads on file:// addresses.</p>';
+  }
+
+  Promise.all([
+    fetch('data/tracker.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error('tracker.json returned ' + r.status); return r.json(); }),
+    fetch('data/changelog.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error('changelog.json returned ' + r.status); return r.json(); })
+  ]).then(function (d) { boot(d[0], d[1]); }).catch(function (e) { fail('Could not load the ledger data: ' + e.message); });
+})();

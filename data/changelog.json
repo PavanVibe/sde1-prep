@@ -1,0 +1,125 @@
+{
+  "kinds": {
+    "evidence": "Evidence",
+    "status": "Status change",
+    "weakness": "Weakness",
+    "plan": "Plan",
+    "setup": "Site",
+    "import": "Imported history"
+  },
+  "entries": [
+    {
+      "date": "2026-10-20",
+      "kind": "setup",
+      "summary": "Tracker site created and seeded from the project documents",
+      "details": [
+        "Replaces the Drive copies as the place progress is logged. Every future change adds an entry here and a git commit.",
+        "Seeded from PROGRESS & READINESS, MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, the STUDY LOG and MASTER ROADMAP v2.2.",
+        "No status was changed and no new evidence was added. Where the old documents disagreed, the STUDY LOG won (operating systems stays LEARNING).",
+        "Internship module names are generic because the site is public."
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "kind": "plan",
+      "summary": "Day 1 of the 90-day sprint; roadmap compressed to v2.2",
+      "details": [
+        "Sprint runs 2026-10-16 to the 2027-01-13 gate review.",
+        "Week 0 tasks (Lesson 1 A to C, the route trace, the LC 643 and LC 209 retests) were not submitted as of 18:28."
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "evidence",
+      "summary": "Closed-book CS baseline diagnostic, 12 questions",
+      "details": [
+        "Request lifecycle: browser events only, with no DNS, TCP, TLS, HTTP or server path (W-004).",
+        "Methods and status codes: weak. 401 vs 403 confused; PUT and PATCH blank.",
+        "Indexes: knew B-tree and separate storage; write cost and the case where an index does not help were blank.",
+        "Last-seat booking race answered as a deadlock; it is a lost-update race (W-005).",
+        "SQL vs Mongo: data shape only, no trade-offs.",
+        "Worker crash: knew job state must be durable; missed acknowledgement, redelivery and idempotency (W-006).",
+        "Blank: retries, caching, thread race, GIL, API design, explaining the job worker (W-007).",
+        "Result: baseline set. Databases, networking, distributed systems and system design stay NOT STARTED; operating systems stays LEARNING."
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "weakness",
+      "summary": "Opened W-004, W-005, W-006 and W-007 from the baseline diagnostic",
+      "details": [
+        "W-004 request lifecycle, W-005 race-condition recognition, W-006 delivery semantics, W-007 cannot trace the job worker."
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "plan",
+      "summary": "MASTER ROADMAP v2 written; calendar blocks created",
+      "details": [
+        "A 15-week plan was drafted, then compressed on 2026-10-16 into the 90-day v2.2."
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "import",
+      "summary": "Internship source observations recorded as study targets, not mastery",
+      "details": [
+        "Source study targets were set for the job worker: states, heartbeat, stale-job handling, recovery and retries. Specifics are kept out of this public site.",
+        "You have not yet explained any of this yourself, so no status moved."
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "kind": "status",
+      "summary": "Linked lists, binary search and operating systems moved off NOT STARTED; internship study logged",
+      "changes": [
+        { "track": "DSA", "topic": "Linked lists", "from": "NOT STARTED", "to": "PRACTICING" },
+        { "track": "DSA", "topic": "Binary search", "from": "NOT STARTED", "to": "PRACTICING" },
+        { "track": "Operating systems", "topic": "Overall", "from": "NOT STARTED", "to": "LEARNING" },
+        { "track": "Internship engineering", "topic": "Overall", "from": "NOT STARTED", "to": "LEARNING" }
+      ],
+      "details": [
+        "Linked lists: LC 19, 21 and 141 independent; LC 142, 2 and 25 needed help; LC 160, 206, 876 and 24 completed with assistance not recorded.",
+        "Binary search: LC 278 independent; LC 704 and 35 completed with assistance not recorded; LC 34 not solved; LC 153, 33 and 162 used solutions.",
+        "LC 904 independent. LC 560 recorded as a historical independent solve; prefix sums stays NOT STARTED as a structured track.",
+        "Operating systems: processes and threads, IPC, races, mutexes and semaphores, deadlocks, kernel mode, context switching, scheduling. Study paused before virtual memory and paging.",
+        "Internship study notes synced. No interview-mastery claim."
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "kind": "evidence",
+      "summary": "LC 1004 solved independently",
+      "details": [
+        "Sliding window stays PRACTICING."
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "kind": "evidence",
+      "summary": "Sliding window: LC 438 independent, LC 567 hint, LC 424 solution help",
+      "details": [
+        "Sliding window stays PRACTICING. LC 438 is positive transfer but does not close W-003."
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "kind": "status",
+      "summary": "Sliding window moved to PRACTICING",
+      "changes": [
+        { "track": "DSA", "topic": "Sliding window", "from": "NOT STARTED", "to": "PRACTICING" }
+      ],
+      "details": [
+        "LC 643: independent O(n²), hint needed for the optimal O(n) (W-001).",
+        "LC 3: independent, optimal O(n), no hint.",
+        "LC 209: could not solve (W-002). W-003 opened to cover generalization."
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "kind": "setup",
+      "summary": "Tracking system created; no mastery claims made",
+      "details": []
+    }
+  ]
+}
