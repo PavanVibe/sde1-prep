@@ -368,7 +368,6 @@
   ],
   "stories": [
     { "id": "S-001", "source": "Internship (Alchemic)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific incident, your personal action and the result" },
-    { "id": "S-002", "source": "Forest fire detection (deep learning project)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific challenge, your decisions and the result. Not on the resume reviewed on 20 Oct: confirm it stays a candidate" },
     { "id": "S-003", "source": "Earlier internship (real-time systems software)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific incident, which parts you personally wrote or changed, and a result you measured" },
     { "id": "S-004", "source": "Failure or mistake", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
     { "id": "S-005", "source": "Team conflict or disagreement", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },

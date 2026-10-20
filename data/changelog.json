@@ -11,6 +11,16 @@
     {
       "date": "2026-10-20",
       "kind": "plan",
+      "summary": "Story S-002 removed from the story bank at your request",
+      "details": [
+        "S-002 (forest fire detection) was a candidate with no verified incident, and it is not on the resume. The ID is retired, not reused, so older log entries still make sense.",
+        "The bank now has six candidates or open slots: S-001 (internship), S-003 (earlier internship), S-004 to S-006 (failure, conflict, customer impact, not started) and S-007 (personal project).",
+        "No status changed and no new evidence was added."
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "plan",
       "summary": "Resume reviewed: story bank re-aligned and a resume truth audit moved into Week 0",
       "details": [
         "The resume lists an earlier internship and a personal full-stack project that the story bank did not have. S-003 is now a candidate for the internship and S-007 is a new candidate for the project. S-002 (forest fire detection) is not on the resume, so it is flagged for confirmation rather than removed.",
