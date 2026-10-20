@@ -11,6 +11,17 @@
     {
       "date": "2026-10-20",
       "kind": "plan",
+      "summary": "Your original progress notes re-read; the LC 142 technique note is now kept in full",
+      "details": [
+        "The attached progress document is the one the ledger was seeded from. Its personal notes were the sliding-window template, the next-greater-element note, and short notes on LC 142 and LC 19. The first three were already in the ledger.",
+        "The LC 142 row carried only a pointer to the technique, so the technique text is now kept in it, with a flag that why it works is untested.",
+        "The six rows whose independence is unspecified (LC 160, 206, 876, 24, 704, 35) stay unspecified. The document does not say, and a note is not evidence.",
+        "No status changed and no new evidence was added."
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "plan",
       "summary": "Week 2 story task pointed at S-003 after S-002 was removed",
       "details": [
         "The Week 2 behavioral task still said to draft S-002. It now says to draft S-003 (earlier internship).",
