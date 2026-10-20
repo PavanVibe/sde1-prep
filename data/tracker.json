@@ -22,7 +22,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-08-18",
+      "lastEvidence": "2026-10-20",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, Day 19 and Day 33. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         { "name": "Arrays", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent problems and follow-ups (Week 0)" },
@@ -256,7 +256,7 @@
     ]
   },
   "dsaLog": [
-    { "lc": 643, "title": "Maximum Average Subarray I", "difficulty": "Easy", "pattern": "Sliding window (fixed size)", "date": "2026-08-12", "independence": "hinted", "hint": "Needed a hint for the optimal O(n) approach", "note": "The O(n²) version was solved independently. Retest pending (W-001)." },
+    { "lc": 643, "title": "Maximum Average Subarray I", "difficulty": "Easy", "pattern": "Sliding window (fixed size)", "date": "2026-10-20", "independence": "hinted", "hint": "Hint used on the 20 Oct cold retest (R-01); hint content not yet recorded", "note": "12 Aug: O(n²) independent, O(n) needed a hint. 20 Oct: cold retest, hint used again. W-001 stays open. Retests R-11 (22 Oct) and R-12 (27 Oct)." },
     { "lc": 3, "title": "Longest Substring Without Repeating Characters", "difficulty": "Medium", "pattern": "Sliding window + hashing", "date": "2026-08-12", "independence": "independent", "hint": "None", "note": "Optimal O(n), no hint." },
     { "lc": 209, "title": "Minimum Size Subarray Sum", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-12", "independence": "unsolved", "hint": "None recorded", "note": "Could not solve. Retest pending (W-002)." },
     { "lc": 567, "title": "Permutation in String", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-13", "independence": "hinted", "hint": "Hint needed", "note": "Invariant derivation not yet consistent." },
@@ -284,7 +284,7 @@
     { "lc": 162, "title": "Find Peak Element", "difficulty": "Medium", "pattern": "Binary search (peak)", "date": "2026-08-18", "dateNote": "from sync", "independence": "solution", "hint": "Solution used", "note": "Variant reasoning needs a retest." }
   ],
   "weaknesses": [
-    { "id": "W-001", "topic": "Sliding window: fixed-size optimization", "source": "DSA", "identified": "2026-08-12", "state": "open", "mistake": "LC 643: the basic solution was independent, but the optimal O(n) approach needed a hint.", "correct": "Update the fixed-size window incrementally instead of recomputing its sum.", "cause": "Not established.", "exercise": "Re-solve LC 643 without a hint and explain the incremental O(n) update.", "retest": "Pending", "retestDue": "2026-10-20", "result": null },
+    { "id": "W-001", "topic": "Sliding window: fixed-size optimization", "source": "DSA", "identified": "2026-08-12", "state": "open", "mistake": "LC 643: the basic solution was independent, but the optimal O(n) approach needed a hint.", "correct": "Update the fixed-size window incrementally instead of recomputing its sum.", "cause": "Not established.", "exercise": "Re-solve LC 643 without a hint and explain the incremental O(n) update.", "retest": "Hinted on 2026-10-20", "retestDue": "2026-10-22", "result": null },
     { "id": "W-002", "topic": "Sliding window: variable-size recognition and application", "source": "DSA", "identified": "2026-08-12", "state": "open", "mistake": "LC 209 could not be solved; LC 567 needed a hint. LC 438 and LC 1004 were solved independently.", "correct": "State the window invariant and the exact shrinking condition before coding.", "cause": "Not established. Variable and frequency windows are developing but inconsistent.", "exercise": "Unseen variable-size and frequency-window problems without hints, starting with LC 209.", "retest": "Pending", "retestDue": "2026-10-21", "result": null },
     { "id": "W-003", "topic": "Sliding window: generalization and invariant derivation", "source": "DSA", "identified": "2026-08-13", "state": "open", "mistake": "LC 643 optimal, LC 209, LC 567 and LC 424 all needed help or failed, while LC 3, 438 and 1004 were independent.", "correct": "Recognize the pattern, then derive the invariant, window movement and complexity for the specific problem.", "cause": "Not established. The evidence does not support blaming memorization, rushing or any single cause.", "exercise": "An unseen mixed sliding-window problem with the pattern unnamed. Require recognition, invariant, movement, complexity, independent C++ and edge cases.", "retest": "Pending", "retestDue": "2026-10-25", "result": null },
     { "id": "W-004", "topic": "Backend: request lifecycle", "source": "CS", "identified": "2026-10-15", "state": "open", "mistake": "Described browser event handlers only; left out DNS, TCP, TLS, the HTTP request and response, and the server path.", "correct": "Loading a URL is an HTTP request preceded by DNS, TCP and TLS. Button clicks trigger further HTTP requests handled by routes.", "cause": "Knowledge gap.", "exercise": "Lesson 1 questions A to C, then trace one authenticated route in the internship API.", "retest": "Pending", "retestDue": "2026-10-21", "result": null },
@@ -294,7 +294,9 @@
   ],
   "closedWeaknesses": [],
   "retests": [
-    { "id": "R-01", "weakness": "W-001", "task": "Re-solve LC 643 cold: 20-minute cap, and explain the incremental O(n) update", "due": "2026-10-20", "state": "pending", "note": "Reset on Day 0. The Week 0 deadline of 18 Oct passed with no submission logged." },
+    { "id": "R-01", "weakness": "W-001", "task": "Re-solve LC 643 cold: 20-minute cap, and explain the incremental O(n) update", "due": "2026-10-20", "state": "failed", "note": "20 Oct: attempted, hint used, not independent. Replaced by R-11 and R-12." },
+    { "id": "R-11", "weakness": "W-001", "task": "Re-solve LC 643 cold, no hints: 20-minute cap, explain the incremental O(n) update", "due": "2026-10-22", "state": "pending", "note": "48-hour retest after the hinted attempt on 20 Oct." },
+    { "id": "R-12", "weakness": "W-001", "task": "Re-solve LC 643 cold, no hints (7-day spaced retest)", "due": "2026-10-27", "state": "pending", "note": "7-day retest after the hinted attempt on 20 Oct." },
     { "id": "R-02", "weakness": "W-002", "task": "Re-solve LC 209 cold: 35-minute cap; state the invariant and shrink condition first", "due": "2026-10-21", "state": "pending", "note": "Reset on Day 0." },
     { "id": "R-03", "weakness": "W-004", "task": "Answer Lesson 1 A to C closed-book, in writing", "due": "2026-10-21", "state": "pending", "note": "Reset on Day 0." },
     { "id": "R-04", "weakness": "W-007", "task": "Trace one authenticated API route; mark uncertain lines as unsure", "due": "2026-10-22", "state": "pending", "note": "Reset on Day 0." },
@@ -306,7 +308,7 @@
     { "id": "R-10", "weakness": "W-007", "task": "Explain the job worker lifecycle from trigger to retry, unaided", "due": "2026-11-15", "state": "pending", "note": "Week 3." }
   ],
   "nextActions": [
-    "Today, Day 0: redo LC 643 cold with a 20-minute cap. State the pattern, invariant, complexity and two edge cases before you run it.",
+    "By 22 Oct (R-11): re-solve LC 643 cold, no hints, 20-minute cap. The 20 Oct attempt used a hint.",
     "Today, Day 0: answer Lesson 1 A to C, written and closed-book, no AI.",
     "By Day 1 (21 Oct): redo LC 209 cold with a 35-minute cap.",
     "By Day 2 (22 Oct): trace one authenticated API route; mark uncertain lines as unsure.",

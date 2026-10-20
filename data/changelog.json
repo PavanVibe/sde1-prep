@@ -10,6 +10,16 @@
   "entries": [
     {
       "date": "2026-10-20",
+      "kind": "evidence",
+      "summary": "LC 643 cold retest done with a hint, so W-001 stays open",
+      "details": [
+        "R-01: LC 643 was attempted cold on Day 0 with a hint, so it does not count as independent.",
+        "New retests: R-11 on 22 Oct (48 hours) and R-12 on 27 Oct (7 days).",
+        "No status changed. Sliding Window stays PRACTICING."
+      ]
+    },
+    {
+      "date": "2026-10-20",
       "kind": "setup",
       "summary": "Your study notes now have their own section on the DSA page",
       "details": [
