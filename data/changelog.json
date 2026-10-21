@@ -9,6 +9,17 @@
   },
   "entries": [
     {
+      "date": "2026-10-21",
+      "kind": "evidence",
+      "summary": "Subarray diagnostic: LC 1343 on your own; LC 53 and LC 713 with the solution",
+      "details": [
+        "LC 1343 (fixed window): self-reported independent; code not yet reviewed.",
+        "LC 53 (Kadane) and LC 713 (variable window, product): solution used, so not independent. LC 713 adds evidence to W-002.",
+        "Retests: LC 53 and LC 713 cold on 23 Oct (R-13, R-15) and 28 Oct (R-14, R-16).",
+        "No status changed."
+      ]
+    },
+    {
       "date": "2026-10-20",
       "kind": "evidence",
       "summary": "LC 643 cold retest done with a hint, so W-001 stays open",
