@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-24",
+      "kind": "evidence",
+      "summary": "LC 643 and LC 209 self-reported independent; LC 974 brute force only; LC 53 code recorded",
+      "details": [
+        "LC 643 and LC 209 cold retests: self-reported independent. Code and times not submitted, so W-001 and W-002 stay open and get 7-day retests (R-12 on 27 Oct, R-18 on 31 Oct).",
+        "LC 974: O(n^2) on your own; the O(n) prefix-sum solution was seen and not understood. Not counted as solved. Retests R-19 (26 Oct) and R-20 (31 Oct).",
+        "LC 53: your Kadane code is recorded. It was written after seeing the solution, so it is not independent.",
+        "No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-24",
       "kind": "weakness",
       "summary": "Server-step MCQ placement 3/5: race condition missed again, stateless servers new gap",
       "details": [
