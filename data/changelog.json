@@ -11,6 +11,15 @@
     {
       "date": "2026-10-24",
       "kind": "evidence",
+      "summary": "LC 53 cold retest self-reported independent",
+      "details": [
+        "R-13: LC 53 cold, no hint, self-reported. Time not submitted, and the code matches the solution recorded on 21 Oct.",
+        "Full solution saved in your study notes. Cold again on 28 Oct (R-14). No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "kind": "evidence",
       "summary": "LC 713 cold retest done with a hint; counting rule recorded",
       "details": [
         "R-15: LC 713 was attempted cold with a hint. You used count++ where count += right - left + 1 is needed, so it is not independent.",
