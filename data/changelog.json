@@ -11,6 +11,16 @@
     {
       "date": "2026-10-25",
       "kind": "evidence",
+      "summary": "Extra DSA set: LC 11, 238, 739 with the solution; LC 875 and 525 unsolved",
+      "details": [
+        "LC 11 (two pointers), LC 238 (prefix and suffix products), LC 739 (monotonic stack): solution seen, so none is independent.",
+        "LC 875 (binary search on the answer) and LC 525 (prefix sum with hashing): not solved.",
+        "Cold retests for all five on 27 Oct and 1 Nov. No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "kind": "evidence",
       "summary": "LC 11 (two pointers) write-up added to your study notes",
       "details": [
         "Your own write-up of the approach and why the shorter pointer moves.",
