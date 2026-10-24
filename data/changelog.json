@@ -11,6 +11,16 @@
     {
       "date": "2026-10-24",
       "kind": "evidence",
+      "summary": "LC 713 cold retest done with a hint; counting rule recorded",
+      "details": [
+        "R-15: LC 713 was attempted cold with a hint. You used count++ where count += right - left + 1 is needed, so it is not independent.",
+        "The counting rule is now in your study notes, with the condition under which it applies.",
+        "New retest R-21 on 26 Oct, then R-16 on 28 Oct. W-002 stays open. No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "kind": "evidence",
       "summary": "LC 643 and LC 209 self-reported independent; LC 974 brute force only; LC 53 code recorded",
       "details": [
         "LC 643 and LC 209 cold retests: self-reported independent. Code and times not submitted, so W-001 and W-002 stay open and get 7-day retests (R-12 on 27 Oct, R-18 on 31 Oct).",
