@@ -251,6 +251,13 @@
     "source": "Recovered from your original progress document (2026-08-18 sync). Each note records what you wrote down, not what you can do. The self-test under each one is the evidence, not the note.",
     "items": [
       {
+        "area": "Two pointers",
+        "title": "LC 11: Container With Most Water",
+        "text": "Goal: find two lines that hold the most water. area = (right - left) * min(height[left], height[right]). How to derive it: (1) Brute force checks every pair, O(n^2). (2) The shorter line limits the water, however tall the other one is. (3) Start with pointers at both ends for the maximum width. (4) Compute the area and update maxArea. (5) Move the pointer at the shorter line inward: if height[left] < height[right], left++, otherwise right--. (6) Repeat until left >= right. Why move the shorter line: moving the taller one only shrinks the width while the shorter line still limits the height, so it cannot improve the area. Moving the shorter one gives a chance to find a taller boundary. Complexity: O(n) time, O(1) space. Remember: identify what limits the answer, then eliminate the possibilities that cannot improve it.",
+        "status": "Your own write-up from 25 Oct. How the solve went (independent, hinted or solution seen) has not been reported, so no solve is logged.",
+        "check": "Explain why moving the shorter pointer can never miss the best pair. Then solve it cold in C++ in 20 minutes."
+      },
+      {
         "area": "Sliding window: counting subarrays",
         "title": "LC 713: Subarray Product Less Than K",
         "text": "Your mistake: count++ when the product is below k. Correct: count += right - left + 1. After shrinking, the window [left, right] is valid, so every subarray that ends at right and starts anywhere from left to right is valid too. That is right - left + 1 new subarrays. Use this when counting subarrays and the condition stays true when the window gets smaller (all positive numbers here). It does not apply to exactly-K counts (use atMost(K) - atMost(K-1)) or arrays with negatives.",

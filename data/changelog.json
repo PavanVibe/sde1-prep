@@ -9,6 +9,15 @@
   },
   "entries": [
     {
+      "date": "2026-10-25",
+      "kind": "evidence",
+      "summary": "LC 11 (two pointers) write-up added to your study notes",
+      "details": [
+        "Your own write-up of the approach and why the shorter pointer moves.",
+        "No solve was logged because the result (independent, hinted or solution seen) was not reported. No status changed."
+      ]
+    },
+    {
       "date": "2026-10-24",
       "kind": "evidence",
       "summary": "LC 53 cold retest self-reported independent",
