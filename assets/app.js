@@ -265,7 +265,7 @@
     html += '<h2>Your study notes</h2><p class="muted">' + esc(T.studyNotes.source) + '</p>';
     html += '<div class="note-card"><h3>' + esc(T.dsaTemplate.title) + '</h3><p class="from">Sliding window</p><p>' + esc(T.dsaTemplate.caution) + '</p><pre><code>' + esc(T.dsaTemplate.code) + '</code></pre></div>';
     T.studyNotes.items.forEach(function (n) {
-      html += '<div class="note-card"><h3>' + esc(n.title) + '</h3><p class="from">' + esc(n.area) + '</p><p>' + esc(n.text) + '</p><p class="small muted">' + esc(n.status) + '</p><p class="check"><b>Self-test.</b> ' + esc(n.check) + '</p></div>';
+      html += '<div class="note-card"><h3>' + esc(n.title) + '</h3><p class="from">' + esc(n.area) + '</p><p>' + esc(n.text) + '</p>' + (n.code ? '<pre><code>' + esc(n.code) + '</code></pre>' : '') + '<p class="small muted">' + esc(n.status) + '</p><p class="check"><b>Self-test.</b> ' + esc(n.check) + '</p></div>';
     });
 
     var patterns = []; T.dsaLog.forEach(function (r) { var f = family(r.pattern); if (patterns.indexOf(f) < 0) patterns.push(f); });

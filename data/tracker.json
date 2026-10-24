@@ -253,7 +253,8 @@
       {
         "area": "Arrays: Kadane",
         "title": "LC 53: Maximum Subarray",
-        "text": "Your code (C++): int current_sum = 0; int max_sum = INT_MIN; for (int i = 0; i < nums.size(); i++) { current_sum = max(current_sum + nums[i], nums[i]); max_sum = max(current_sum, max_sum); } return max_sum;",
+        "text": "Your Kadane solution (C++). At each element, either extend the running subarray or restart at the current element, and keep the best seen.",
+        "code": "int maxSubArray(vector<int>& nums) {\n    int current_sum = 0;\n    int max_sum = INT_MIN;\n    for (int i = 0; i < nums.size(); i++) {\n        current_sum = max(current_sum + nums[i], nums[i]);\n        max_sum = max(current_sum, max_sum);\n    }\n    return max_sum;\n}",
         "status": "Written after seeing the solution on 21 Oct, so it is a recipe, not a solve. The code is correct, including the all-negative case.",
         "check": "Explain why current_sum restarts at nums[i] when the running sum is worse, and why max_sum starts at INT_MIN. Then solve it cold in C++ in 15 minutes."
       },
