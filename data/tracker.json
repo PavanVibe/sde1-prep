@@ -250,6 +250,13 @@
   "studyNotes": {
     "source": "Recovered from your original progress document (2026-08-18 sync). Each note records what you wrote down, not what you can do. The self-test under each one is the evidence, not the note.",
     "items": [
+      {
+        "area": "Arrays: Kadane",
+        "title": "LC 53: Maximum Subarray",
+        "text": "Your code (C++): int current_sum = 0; int max_sum = INT_MIN; for (int i = 0; i < nums.size(); i++) { current_sum = max(current_sum + nums[i], nums[i]); max_sum = max(current_sum, max_sum); } return max_sum;",
+        "status": "Written after seeing the solution on 21 Oct, so it is a recipe, not a solve. The code is correct, including the all-negative case.",
+        "check": "Explain why current_sum restarts at nums[i] when the running sum is worse, and why max_sum starts at INT_MIN. Then solve it cold in C++ in 15 minutes."
+      },
       { "area": "Linked lists", "title": "LC 142: Linked List Cycle II", "text": "Your note: once slow meets fast, set a pointer to the head and move it and slow one step at a time. Where they meet is the cycle start.", "status": "This problem needed a hint, so the note is a recipe you were given, not a solve.", "check": "Explain why the two pointers meet at the cycle start, using the distances, with nothing in front of you." },
       { "area": "Linked lists", "title": "LC 19: Remove Nth Node From End of List", "text": "Your note: solved without a hint. Marked for later review because there are two methods.", "status": "Independent solve on record. The two methods are not written down.", "check": "Name both methods with time and space for each, from memory, then solve it cold in C++." },
       { "area": "Stack and queue", "title": "Next greater or next smaller element", "text": "Your note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.", "status": "Not started as a track. Scheduled for Week 1.", "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end." }
