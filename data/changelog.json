@@ -9,6 +9,16 @@
   },
   "entries": [
     {
+      "date": "2026-10-24",
+      "kind": "weakness",
+      "summary": "Lesson 1 retest failed, so W-004 stays open",
+      "details": [
+        "A: frontend events and JSON only; DNS, TCP, TLS, the HTTP request and the server path were still missing. B: only GET and POST. C: blank.",
+        "Taught the request lifecycle, HTTP methods, status codes and JWT flow afterwards. Teaching is not evidence.",
+        "Closed-book retest R-17 on 25 Oct. No status changed."
+      ]
+    },
+    {
       "date": "2026-10-21",
       "kind": "evidence",
       "summary": "Subarray diagnostic: LC 1343 on your own; LC 53 and LC 713 with the solution",
