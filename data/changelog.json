@@ -11,6 +11,16 @@
     {
       "date": "2026-10-24",
       "kind": "weakness",
+      "summary": "Server-step MCQ placement 3/5: race condition missed again, stateless servers new gap",
+      "details": [
+        "Right: expired JWT rejected in middleware with 401, 403 for a non-admin on an admin route, idempotency key for POST retries.",
+        "Wrong: last-seat race answered as deadlock for the second time (W-005). Don't know: why servers are stateless.",
+        "Taught both afterwards; closed-book recall check pending. W-005 retest stays 1 Nov. No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "kind": "weakness",
       "summary": "Lesson 1 retest failed, so W-004 stays open",
       "details": [
         "A: frontend events and JSON only; DNS, TCP, TLS, the HTTP request and the server path were still missing. B: only GET and POST. C: blank.",
