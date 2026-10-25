@@ -8,6 +8,17 @@
     "import": "Imported history"
   },
   "entries": [
+  {
+   "date": "2026-10-25",
+   "kind": "weakness",
+   "summary": "Lesson 1 A to C retest (R-17) failed: A improved, B and C incomplete",
+   "details": [
+    "A: DNS, TCP handshake, TLS, HTTP request, response and re-render named in order. Missing: the button-click request and the server path.",
+    "B: GET, POST and DELETE only. PUT, PATCH, idempotency and status codes missing.",
+    "C: you described a signature check but said you do not know JWT; 401 vs 403 and statelessness missing.",
+    "W-004 stays open. Retest R-32 on 26 Oct, closed-book. No status changed."
+   ]
+  },
     {
       "date": "2026-10-25",
       "kind": "evidence",
