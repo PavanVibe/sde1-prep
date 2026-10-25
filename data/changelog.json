@@ -11,6 +11,16 @@
   {
    "date": "2026-10-25",
    "kind": "weakness",
+   "summary": "JWT placement quiz 2/5: encoding vs encryption vs signing gap, stateless idea missing",
+   "details": [
+    "Right: the three parts of a JWT, and 403 for a valid user calling an admin route.",
+    "Wrong: who can read an intercepted payload, what a server does with an edited payload, and why JWTs allow stateless servers.",
+    "New weakness W-008. Prerequisite (encoding, encryption, hashing, signing) taught first, then JWT. Placement quiz only, so no status changed."
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "kind": "weakness",
    "summary": "Lesson 1 A to C retest (R-17) failed: A improved, B and C incomplete",
    "details": [
     "A: DNS, TCP handshake, TLS, HTTP request, response and re-render named in order. Missing: the button-click request and the server path.",
