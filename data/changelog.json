@@ -9,6 +9,26 @@
   },
   "entries": [
   {
+   "date": "2026-10-26",
+   "kind": "evidence",
+   "summary": "R-08 sliding-window set failed: 1 of 3 independent (LC 1695 yes; LC 1052 and LC 1658 needed hints)",
+   "details": [
+    "LC 1695: Accepted 9/9 on the first Submit, no hints, no outside help logged. Pattern recognition self-reported; invariant and complexity still to be written by you.",
+    "LC 1052: first Submit failed 5/8 because the two cases were swapped; both samples passed by coincidence. Accepted 8/8 after the fix, with 1 hint logged (25:03 on the clock).",
+    "LC 1658: the complement idea (total minus x, keep the longest middle subarray) was not seen until the hint. Accepted 10/10 after it, 21:54 on the clock, 2 hints logged.",
+    "W-003 stays open. R-08 marked failed; R-33 (cold LC 1052 and LC 1658 plus one new unseen problem) due 28 Oct. No status changed."
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "kind": "setup",
+   "summary": "DSA Workbench in use: C++17 problems judged against hidden tests, with a per-problem timer",
+   "details": [
+    "Problems are graded by a real compiler with sample, edge, random and large tests. A judged pass is not evidence by itself; hints, outside help and time are recorded with each submission.",
+    "The timer was added after LC 1695 was submitted, so that problem has no recorded time."
+   ]
+  },
+  {
    "date": "2026-10-25",
    "kind": "weakness",
    "summary": "JWT placement quiz 2/5: encoding vs encryption vs signing gap, stateless idea missing",
