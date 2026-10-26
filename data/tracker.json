@@ -355,7 +355,7 @@
     { "id": "R-03", "weakness": "W-004", "task": "Answer Lesson 1 A to C closed-book, in writing", "due": "2026-10-21", "state": "failed", "note": "24 Oct: A described frontend events, JSON and re-render only; still no DNS, TCP, TLS, HTTP request structure or server path (200 is an HTTP status, not a handshake). B: GET and POST only; PUT, PATCH, DELETE, idempotency and status codes missing. C: blank. Taught afterwards; replaced by R-17." },
     { "id": "R-17", "weakness": "W-004", "task": "Lesson 1 A to C again, closed-book, written, no notes", "due": "2026-10-25", "state": "failed", "note": "25 Oct: A improved (DNS, TCP handshake, TLS, HTTP request, response, re-render in order) but the button-click request and the server path were missing. B listed GET, POST and DELETE only; PUT, PATCH, idempotency and status codes missing. C: JWT signature-check idea only; 401 vs 403 and statelessness missing, and you said you do not know JWT. Taught after the retest; replaced by R-32." },
     { "id": "R-32", "weakness": "W-004", "task": "Lesson 1 A to C closed-book, written, no notes (retest after teaching on 25 Oct)", "due": "2026-10-26", "state": "pending", "note": "Next-day retest after the 25 Oct teaching; a 7-day retest follows if passed." },
-    { "id": "R-04", "weakness": "W-007", "task": "Trace one authenticated API route; mark uncertain lines as unsure", "due": "2026-10-22", "state": "pending", "note": "Reset on Day 0." },
+    { "id": "R-04", "weakness": "W-007", "task": "Trace one authenticated API route; mark uncertain lines as unsure", "due": "2026-10-28", "state": "pending", "note": "26 Oct: could not trace unaided, so it became a lesson (login, the per-request token check, logout, the Redis revoke list and single-session key). Not a pass. Retest 28 Oct: closed-book trace of one authenticated request on a blank page." },
     { "id": "R-08", "weakness": "W-003", "task": "Unseen sliding-window set: three problems, pattern unnamed", "due": "2026-10-25", "state": "failed", "note": "25-26 Oct: LC 1695 independent (Accepted 9/9, no hints); LC 1052 failed first, then Accepted with 1 hint; LC 1658 needed 2 hints for the complement idea, then Accepted 10/10. 1 of 3 independent. Hints were taken before the 35-minute cap. Replaced by R-33." },
     { "id": "R-33", "weakness": "W-003", "task": "Cold re-solve of LC 1052 and LC 1658 (no hints), plus one new unseen sliding-window problem, pattern unnamed; 35-minute cap each, Workbench timer on", "due": "2026-10-28", "state": "pending", "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap." },
     { "id": "R-05", "weakness": "W-005", "task": "Closed-book race scenarios: booking, shared counter, compare-and-set", "due": "2026-11-01", "state": "pending", "note": "Week 1, after transactions and isolation." },
@@ -365,11 +365,13 @@
     { "id": "R-10", "weakness": "W-007", "task": "Explain the job worker lifecycle from trigger to retry, unaided", "due": "2026-11-15", "state": "pending", "note": "Week 3." }
   ],
   "nextActions": [
-    "By 22 Oct (R-11): re-solve LC 643 cold, no hints, 20-minute cap. The 20 Oct attempt used a hint.",
-    "Today, Day 0: answer Lesson 1 A to C, written and closed-book, no AI.",
-    "By Day 1 (21 Oct): redo LC 209 cold with a 35-minute cap.",
-    "By Day 2 (22 Oct): trace one authenticated API route; mark uncertain lines as unsure.",
-    "By 28 Oct (R-33): cold re-solve LC 1052 and LC 1658 without hints, plus one new unseen sliding-window problem, 35-minute cap each."
+    "26 Oct: R-32 Lesson 1 A to C closed-book; R-19 LC 974 cold (35-minute cap); answer the auth and Redis check questions.",
+    "26-27 Oct: type the mini auth system (issue, revoke, check, login, logout) by hand and map each part to the internship code; mark unsure lines.",
+    "27 Oct (R-12): LC 643 cold, 20-minute cap.",
+    "28 Oct (R-33): cold re-solve LC 1052 and LC 1658 without hints, plus one new unseen sliding-window problem, 35-minute cap each.",
+    "28 Oct (R-04): closed-book trace of one authenticated request.",
+    "From the week of 2 Nov: two 30-minute code-reading and debugging drills a week (planted bugs in known code, symptom given, find, explain and fix the root cause), inside the internship block.",
+    "After 28 Oct: DSA pace rises to 2 new unseen problems plus 1 retest a day, on a fixed pattern calendar."
   ],
   "scopeNote": "Six weeks is about half the old plan. Core patterns, the CS fundamentals, five or more stories, one OOD mock and one design mock are in reach if the daily floor holds. Hard DP, harder graphs, tries, shortest paths and MST will not be interview-ready on 1 Dec. If the DSA gate fails, DSA alone extends and applications move later.",
   "standards": [

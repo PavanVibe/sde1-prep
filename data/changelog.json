@@ -10,6 +10,17 @@
   "entries": [
   {
    "date": "2026-10-26",
+   "kind": "plan",
+   "summary": "R-04 route trace became a lesson; debugging drills added; DSA pace to rise after 28 Oct",
+   "details": [
+    "R-04: could not trace the logout route unaided. Taught login, the per-request token check, logout and Redis (keys, TTL, revoke list). Not a pass; closed-book retest moved to 28 Oct.",
+    "New practice: two 30-minute planted-bug drills a week from the week of 2 Nov, inside the internship block. Symptom given; find, explain and fix the root cause.",
+    "Rule noted: Stack Overflow is fine for work and learning, but counts as outside help in any evidence attempt.",
+    "DSA: after 28 Oct, 2 new unseen problems plus 1 retest a day on a fixed pattern calendar. No status changed."
+   ]
+  },
+  {
+   "date": "2026-10-26",
    "kind": "evidence",
    "summary": "R-08 sliding-window set failed: 1 of 3 independent (LC 1695 yes; LC 1052 and LC 1658 needed hints)",
    "details": [
