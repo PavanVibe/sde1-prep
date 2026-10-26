@@ -1747,7 +1747,7 @@
       "task": "Re-solve LC 713 cold (7-day spaced retest)",
       "due": "2026-10-28",
       "state": "pending",
-      "note": "7 days after 21 Oct."
+      "note": "7 days after 21 Oct. Kept live on 27 Oct: LC 713 counts as done on 27 Oct, and R-16 still runs cold on 28 Oct."
     },
     {
       "id": "R-02",
@@ -1844,6 +1844,22 @@
       "due": "2026-11-15",
       "state": "pending",
       "note": "Week 3."
+    },
+    {
+      "id": "R-34",
+      "weakness": "W-002",
+      "task": "New unseen variable-size sliding-window problem, pattern unnamed, 35-minute cap, Workbench timer on; read the constraints and write two edge cases before coding",
+      "due": "2026-10-28",
+      "state": "pending",
+      "note": "Added 27 Oct so the pattern moves forward alongside the R-16 retest. Problem is loaded into the Workbench on 28 Oct, not named in advance."
+    },
+    {
+      "id": "R-35",
+      "weakness": "W-002",
+      "task": "Re-solve LC 713 cold (7-day spaced retest from 27 Oct)",
+      "due": "2026-11-03",
+      "state": "pending",
+      "note": "7 days after the 27 Oct solve."
     }
   ],
   "nextActions": [
@@ -1851,6 +1867,7 @@
     "26-27 Oct: type the mini auth system (issue, revoke, check, login, logout) by hand and map each part to the internship code; mark unsure lines.",
     "27 Oct (R-12): LC 643 cold, 20-minute cap.",
     "28 Oct (R-33): cold re-solve LC 1052 and LC 1658 without hints, plus one new unseen sliding-window problem, 35-minute cap each.",
+    "28 Oct (R-16, R-34): LC 713 cold, plus one new unseen variable-size sliding-window problem (35-minute cap, read constraints first).",
     "28 Oct (R-04): closed-book trace of one authenticated request.",
     "From the week of 2 Nov: two 30-minute code-reading and debugging drills a week (planted bugs in known code, symptom given, find, explain and fix the root cause), inside the internship block.",
     "After 28 Oct: DSA pace rises to 2 new unseen problems plus 1 retest a day, on a fixed pattern calendar."
