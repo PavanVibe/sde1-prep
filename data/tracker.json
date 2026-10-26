@@ -1256,7 +1256,7 @@
       "date": "2026-10-24",
       "independence": "unsolved",
       "hint": "Hint used on the 24 Oct cold retest",
-      "note": "Cold retest R-15. You wrote if (product < k) count++; the correct update is count += right - left + 1, because every subarray ending at right and starting anywhere from left to right is valid. 21 Oct: solution used. Adds evidence to W-002. Cold again on 26 Oct (R-21) and 28 Oct (R-16). 27 Oct (R-21): Submit smvpo4mnse5ht judged by the real g++ judge: Runtime Error on sample 2 (k = 0), SIGFPE. The shrink loop divides by nums[left] even when the window is empty, so with k <= 1 it reads past the array. Sample 1 passed. 5:38 on the clock. Not a pass; cold retest R-16 on 28 Oct."
+      "note": "Cold retest R-15. You wrote if (product < k) count++; the correct update is count += right - left + 1, because every subarray ending at right and starting anywhere from left to right is valid. 21 Oct: solution used. Adds evidence to W-002. Cold again on 26 Oct (R-21) and 28 Oct (R-16). 27 Oct (R-21): Submit smvpo4mnse5ht judged by the real g++ judge: Runtime Error on sample 2 (k = 0), SIGFPE. The shrink loop divides by nums[left] even when the window is empty, so with k <= 1 it reads past the array. Sample 1 passed. 5:38 on the clock. Not a pass; cold retest R-16 on 28 Oct. Attempt 2 (smvpog5tqdvjd), after the verdict was explained: added if (k <= 1) return 0; Accepted 2018/2018. A corrected resubmit, not a cold pass."
     },
     {
       "lc": 19,
