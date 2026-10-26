@@ -10,12 +10,35 @@
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
   },
-  "statusScale": ["NOT STARTED", "LEARNING", "PRACTICING", "UNDERSTOOD", "STRONG", "INTERVIEW READY"],
+  "statusScale": [
+    "NOT STARTED",
+    "LEARNING",
+    "PRACTICING",
+    "UNDERSTOOD",
+    "STRONG",
+    "INTERVIEW READY"
+  ],
   "milestones": [
-    { "date": "2026-10-25", "label": "Checkpoint 0", "detail": "Day 5. Every Week 0 retest passed, or turned into a written remediation plan" },
-    { "date": "2026-11-08", "label": "Checkpoint 1", "detail": "Day 19. Three unseen mediums in 90 minutes with the pattern unnamed, plus a 10-question closed-book CS oral" },
-    { "date": "2026-11-22", "label": "Checkpoint 2", "detail": "Day 33. An unseen timed set with trees and graphs, plus an OOD mock" },
-    { "date": "2026-12-01", "label": "Gate review", "detail": "Day 42. If the DSA gate fails, extend DSA only and move applications later" }
+    {
+      "date": "2026-10-25",
+      "label": "Checkpoint 0",
+      "detail": "Day 5. Every Week 0 retest passed, or turned into a written remediation plan"
+    },
+    {
+      "date": "2026-11-08",
+      "label": "Checkpoint 1",
+      "detail": "Day 19. Three unseen mediums in 90 minutes with the pattern unnamed, plus a 10-question closed-book CS oral"
+    },
+    {
+      "date": "2026-11-22",
+      "label": "Checkpoint 2",
+      "detail": "Day 33. An unseen timed set with trees and graphs, plus an OOD mock"
+    },
+    {
+      "date": "2026-12-01",
+      "label": "Gate review",
+      "detail": "Day 42. If the DSA gate fails, extend DSA only and move applications later"
+    }
   ],
   "tracks": [
     {
@@ -25,33 +48,196 @@
       "lastEvidence": "2026-10-26",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, Day 19 and Day 33. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
-        { "name": "Arrays", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent problems and follow-ups (Week 0)" },
-        { "name": "Strings", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent problems and follow-ups (Week 0)" },
-        { "name": "Hashing", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent problems and follow-ups (Week 0)" },
-        { "name": "Two pointers", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent problems and follow-ups (Week 1)" },
-        { "name": "Sliding window", "status": "PRACTICING", "evidence": "Independent: LC 3, 438, 904, 1004, 1695. Hint needed: LC 643 (optimal), 567, 1052, 1658. Solution help: LC 424. Not solved: LC 209. R-08 on 25-26 Oct: 1 of 3 independent.", "lastTested": "2026-10-26", "next": "Derive fixed- and variable-size window invariants on unseen problems; retest LC 643, LC 209 and a mixed set" },
-        { "name": "Prefix sums", "status": "NOT STARTED", "evidence": "Historical independent LC 560 only; not yet a structured track", "lastTested": "2026-08-18", "next": "Independent problems and follow-ups (Week 0)" },
-        { "name": "Sorting", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent implementation and reasoning (Week 2)" },
-        { "name": "Binary search", "status": "PRACTICING", "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162.", "lastTested": "2026-08-18", "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)" },
-        { "name": "Linked lists", "status": "PRACTICING", "evidence": "Independent: LC 19, 21, 141. Assistance not recorded: LC 160, 206, 876, 24. Hint or solution used: LC 142, 2, 25.", "lastTested": "2026-08-18", "next": "Independent implementation across more variants, edge cases and follow-ups (Week 2 retest)" },
-        { "name": "Intervals", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent problems (Week 2)" },
-        { "name": "Stack and queue", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Application problems (Week 1)", "note": "Study note: if a problem asks for the next greater or next smaller element, consider a (monotonic) stack." },
-        { "name": "Recursion", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Recursion reasoning (Week 2)" },
-        { "name": "Trees", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Traversal and problem solving (Weeks 2 and 3)" },
-        { "name": "BST", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Invariants and operations (Week 3)" },
-        { "name": "Heap and priority queue", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Selection and scheduling problems (Week 3)" },
-        { "name": "Greedy", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Proof of the greedy choice (Week 4)" },
-        { "name": "Backtracking", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Not scheduled; first to add if the sprint is ahead" },
-        { "name": "Graph BFS and DFS", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Unseen graph problems (Week 3)" },
-        { "name": "Topological sort", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Dependency problems (Week 4)" },
-        { "name": "Union find (DSU)", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Connectivity problems, basics only (Week 4)" },
-        { "name": "Shortest paths", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Out of this sprint" },
-        { "name": "MST", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Out of this sprint" },
-        { "name": "Dynamic programming", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "1D only, Week 5, and only if Checkpoint 2 passes" },
-        { "name": "Tries", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Out of this sprint" },
-        { "name": "Monotonic structures", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Pattern recognition (Week 1)" },
-        { "name": "Bit manipulation", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Not scheduled" },
-        { "name": "Advanced mixed problems", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Timed unseen sets at the checkpoints and in Week 5" }
+        {
+          "name": "Arrays",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent problems and follow-ups (Week 0)"
+        },
+        {
+          "name": "Strings",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent problems and follow-ups (Week 0)"
+        },
+        {
+          "name": "Hashing",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent problems and follow-ups (Week 0)"
+        },
+        {
+          "name": "Two pointers",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent problems and follow-ups (Week 1)"
+        },
+        {
+          "name": "Sliding window",
+          "status": "PRACTICING",
+          "evidence": "Independent: LC 3, 438, 904, 1004, 1695. Hint needed: LC 643 (optimal), 567, 1052, 1658. Solution help: LC 424. Not solved: LC 209. R-08 on 25-26 Oct: 1 of 3 independent.",
+          "lastTested": "2026-10-26",
+          "next": "Derive fixed- and variable-size window invariants on unseen problems; retest LC 643, LC 209 and a mixed set"
+        },
+        {
+          "name": "Prefix sums",
+          "status": "NOT STARTED",
+          "evidence": "Historical independent LC 560 only; not yet a structured track",
+          "lastTested": "2026-08-18",
+          "next": "Independent problems and follow-ups (Week 0)"
+        },
+        {
+          "name": "Sorting",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent implementation and reasoning (Week 2)"
+        },
+        {
+          "name": "Binary search",
+          "status": "PRACTICING",
+          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162.",
+          "lastTested": "2026-08-18",
+          "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)"
+        },
+        {
+          "name": "Linked lists",
+          "status": "PRACTICING",
+          "evidence": "Independent: LC 19, 21, 141. Assistance not recorded: LC 160, 206, 876, 24. Hint or solution used: LC 142, 2, 25.",
+          "lastTested": "2026-08-18",
+          "next": "Independent implementation across more variants, edge cases and follow-ups (Week 2 retest)"
+        },
+        {
+          "name": "Intervals",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent problems (Week 2)"
+        },
+        {
+          "name": "Stack and queue",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Application problems (Week 1)",
+          "note": "Study note: if a problem asks for the next greater or next smaller element, consider a (monotonic) stack."
+        },
+        {
+          "name": "Recursion",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Recursion reasoning (Week 2)"
+        },
+        {
+          "name": "Trees",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Traversal and problem solving (Weeks 2 and 3)"
+        },
+        {
+          "name": "BST",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Invariants and operations (Week 3)"
+        },
+        {
+          "name": "Heap and priority queue",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Selection and scheduling problems (Week 3)"
+        },
+        {
+          "name": "Greedy",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Proof of the greedy choice (Week 4)"
+        },
+        {
+          "name": "Backtracking",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Not scheduled; first to add if the sprint is ahead"
+        },
+        {
+          "name": "Graph BFS and DFS",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Unseen graph problems (Week 3)"
+        },
+        {
+          "name": "Topological sort",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Dependency problems (Week 4)"
+        },
+        {
+          "name": "Union find (DSU)",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Connectivity problems, basics only (Week 4)"
+        },
+        {
+          "name": "Shortest paths",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Out of this sprint"
+        },
+        {
+          "name": "MST",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Out of this sprint"
+        },
+        {
+          "name": "Dynamic programming",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "1D only, Week 5, and only if Checkpoint 2 passes"
+        },
+        {
+          "name": "Tries",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Out of this sprint"
+        },
+        {
+          "name": "Monotonic structures",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Pattern recognition (Week 1)"
+        },
+        {
+          "name": "Bit manipulation",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Not scheduled"
+        },
+        {
+          "name": "Advanced mixed problems",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Timed unseen sets at the checkpoints and in Week 5"
+        }
       ]
     },
     {
@@ -61,7 +247,13 @@
       "lastEvidence": null,
       "note": "The gate asks for STL fluency without AI. No evidence is logged yet; it will come from timed DSA solves.",
       "topics": [
-        { "name": "STL fluency without AI", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Closed-book use of containers, iterators and algorithms inside timed DSA sets" }
+        {
+          "name": "STL fluency without AI",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Closed-book use of containers, iterators and algorithms inside timed DSA sets"
+        }
       ]
     },
     {
@@ -71,16 +263,76 @@
       "lastEvidence": "2026-10-15",
       "note": "Overall LEARNING. Studied on 2026-08-18 and covered well then, but the 2026-10-15 diagnostic showed a retention gap: a last-seat booking race was answered as a deadlock (W-005). Study paused before virtual memory and paging. The Week 2 retest is the next real test.",
       "topics": [
-        { "name": "Processes vs threads", "status": "LEARNING", "evidence": "Learned and evaluated on 2026-08-18", "lastTested": "2026-08-18", "next": "Repeated explanation and follow-up testing" },
-        { "name": "Basic IPC", "status": "LEARNING", "evidence": "Shared memory and basic IPC learned and evaluated", "lastTested": "2026-08-18", "next": "Apply and explain IPC trade-offs" },
-        { "name": "Context switching", "status": "LEARNING", "evidence": "Mechanism and overhead learned and evaluated", "lastTested": "2026-08-18", "next": "Explain the mechanism and handle follow-ups" },
-        { "name": "Stack vs heap", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Apply to C++ examples (Week 2)" },
-        { "name": "Virtual memory", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain paging and address space (Week 2)" },
-        { "name": "Synchronization", "status": "LEARNING", "evidence": "Race conditions and critical sections learned on 2026-08-18. Diagnostic 2026-10-15: could not recognize a race in a booking scenario (W-005).", "lastTested": "2026-10-15", "next": "Concurrency scenarios and follow-ups" },
-        { "name": "Mutexes and locks", "status": "LEARNING", "evidence": "Mutexes and semaphores learned and evaluated", "lastTested": "2026-08-18", "next": "Reason about races and choose a synchronization method" },
-        { "name": "Deadlocks", "status": "LEARNING", "evidence": "Deadlocks and consistent lock ordering learned and evaluated", "lastTested": "2026-08-18", "next": "Detection and prevention reasoning with follow-ups" },
-        { "name": "Scheduling", "status": "LEARNING", "evidence": "FCFS, SJF, Round Robin, waiting and response time, starvation", "lastTested": "2026-08-18", "next": "Compare scheduling strategies in scenarios" },
-        { "name": "System calls", "status": "LEARNING", "evidence": "User vs kernel mode and conceptual system calls", "lastTested": "2026-08-18", "next": "Explain the user and kernel boundary with follow-ups" }
+        {
+          "name": "Processes vs threads",
+          "status": "LEARNING",
+          "evidence": "Learned and evaluated on 2026-08-18",
+          "lastTested": "2026-08-18",
+          "next": "Repeated explanation and follow-up testing"
+        },
+        {
+          "name": "Basic IPC",
+          "status": "LEARNING",
+          "evidence": "Shared memory and basic IPC learned and evaluated",
+          "lastTested": "2026-08-18",
+          "next": "Apply and explain IPC trade-offs"
+        },
+        {
+          "name": "Context switching",
+          "status": "LEARNING",
+          "evidence": "Mechanism and overhead learned and evaluated",
+          "lastTested": "2026-08-18",
+          "next": "Explain the mechanism and handle follow-ups"
+        },
+        {
+          "name": "Stack vs heap",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Apply to C++ examples (Week 2)"
+        },
+        {
+          "name": "Virtual memory",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain paging and address space (Week 2)"
+        },
+        {
+          "name": "Synchronization",
+          "status": "LEARNING",
+          "evidence": "Race conditions and critical sections learned on 2026-08-18. Diagnostic 2026-10-15: could not recognize a race in a booking scenario (W-005).",
+          "lastTested": "2026-10-15",
+          "next": "Concurrency scenarios and follow-ups"
+        },
+        {
+          "name": "Mutexes and locks",
+          "status": "LEARNING",
+          "evidence": "Mutexes and semaphores learned and evaluated",
+          "lastTested": "2026-08-18",
+          "next": "Reason about races and choose a synchronization method"
+        },
+        {
+          "name": "Deadlocks",
+          "status": "LEARNING",
+          "evidence": "Deadlocks and consistent lock ordering learned and evaluated",
+          "lastTested": "2026-08-18",
+          "next": "Detection and prevention reasoning with follow-ups"
+        },
+        {
+          "name": "Scheduling",
+          "status": "LEARNING",
+          "evidence": "FCFS, SJF, Round Robin, waiting and response time, starvation",
+          "lastTested": "2026-08-18",
+          "next": "Compare scheduling strategies in scenarios"
+        },
+        {
+          "name": "System calls",
+          "status": "LEARNING",
+          "evidence": "User vs kernel mode and conceptual system calls",
+          "lastTested": "2026-08-18",
+          "next": "Explain the user and kernel boundary with follow-ups"
+        }
       ]
     },
     {
@@ -90,16 +342,76 @@
       "lastEvidence": "2026-10-15",
       "note": "No study logged. The 2026-10-15 baseline showed gaps, so every topic stays NOT STARTED. Week 1 covers SQL, joins, indexes, transactions and isolation.",
       "topics": [
-        { "name": "SQL fundamentals", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Query exercises (Week 1)" },
-        { "name": "Joins", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain and write queries (Week 1)" },
-        { "name": "Indexes", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: knew B-tree and separate storage; write cost and when an index does not help were blank", "lastTested": "2026-10-15", "next": "Explain trade-offs (Week 1)" },
-        { "name": "Transactions", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: last-seat race answered as a deadlock (W-005)", "lastTested": "2026-10-15", "next": "Failure scenarios (Week 1)" },
-        { "name": "ACID", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain with examples (Week 1)" },
-        { "name": "Isolation", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Anomaly reasoning (Week 1)" },
-        { "name": "Normalization", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Schema exercise (Week 1)" },
-        { "name": "NoSQL", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: SQL vs Mongo answered on data shape only, no trade-offs", "lastTested": "2026-10-15", "next": "Model comparison (Week 1)" },
-        { "name": "MongoDB", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Apply to the internship data model (Week 1)" },
-        { "name": "Sharding", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Design exercise, light (Week 3)" }
+        {
+          "name": "SQL fundamentals",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Query exercises (Week 1)"
+        },
+        {
+          "name": "Joins",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain and write queries (Week 1)"
+        },
+        {
+          "name": "Indexes",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: knew B-tree and separate storage; write cost and when an index does not help were blank",
+          "lastTested": "2026-10-15",
+          "next": "Explain trade-offs (Week 1)"
+        },
+        {
+          "name": "Transactions",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: last-seat race answered as a deadlock (W-005)",
+          "lastTested": "2026-10-15",
+          "next": "Failure scenarios (Week 1)"
+        },
+        {
+          "name": "ACID",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain with examples (Week 1)"
+        },
+        {
+          "name": "Isolation",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Anomaly reasoning (Week 1)"
+        },
+        {
+          "name": "Normalization",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Schema exercise (Week 1)"
+        },
+        {
+          "name": "NoSQL",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: SQL vs Mongo answered on data shape only, no trade-offs",
+          "lastTested": "2026-10-15",
+          "next": "Model comparison (Week 1)"
+        },
+        {
+          "name": "MongoDB",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Apply to the internship data model (Week 1)"
+        },
+        {
+          "name": "Sharding",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Design exercise, light (Week 3)"
+        }
       ]
     },
     {
@@ -109,14 +421,62 @@
       "lastEvidence": "2026-10-15",
       "note": "No study logged. The request-lifecycle question in the 2026-10-15 baseline described browser events only (W-004). HTTP, REST and JWT come first in Week 0; the rest of networking is Week 2.",
       "topics": [
-        { "name": "HTTP", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: status codes and methods weak (401 vs 403, PUT and PATCH blank)", "lastTested": "2026-10-15", "next": "Request lifecycle (Lesson 1, Week 0)" },
-        { "name": "HTTPS and TLS", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Handshake reasoning (Week 2)" },
-        { "name": "TCP", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Reliability and congestion concepts (Week 2)" },
-        { "name": "UDP", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trade-offs against TCP (Week 2)" },
-        { "name": "DNS", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: omitted from the request lifecycle answer (W-004)", "lastTested": "2026-10-15", "next": "Resolution flow (Week 2)" },
-        { "name": "REST", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: API design question blank", "lastTested": "2026-10-15", "next": "API design (Week 0)" },
-        { "name": "WebSockets", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Connection model (Week 2)" },
-        { "name": "Latency and throughput", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Performance reasoning (Week 2)" }
+        {
+          "name": "HTTP",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: status codes and methods weak (401 vs 403, PUT and PATCH blank)",
+          "lastTested": "2026-10-15",
+          "next": "Request lifecycle (Lesson 1, Week 0)"
+        },
+        {
+          "name": "HTTPS and TLS",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Handshake reasoning (Week 2)"
+        },
+        {
+          "name": "TCP",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Reliability and congestion concepts (Week 2)"
+        },
+        {
+          "name": "UDP",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trade-offs against TCP (Week 2)"
+        },
+        {
+          "name": "DNS",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: omitted from the request lifecycle answer (W-004)",
+          "lastTested": "2026-10-15",
+          "next": "Resolution flow (Week 2)"
+        },
+        {
+          "name": "REST",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: API design question blank",
+          "lastTested": "2026-10-15",
+          "next": "API design (Week 0)"
+        },
+        {
+          "name": "WebSockets",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Connection model (Week 2)"
+        },
+        {
+          "name": "Latency and throughput",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Performance reasoning (Week 2)"
+        }
       ]
     },
     {
@@ -126,16 +486,76 @@
       "lastEvidence": "2026-10-15",
       "note": "No study logged. The crash question in the 2026-10-15 baseline covered durable job state but missed acknowledgement, redelivery and idempotency (W-006). Week 3 is the scheduled block; sharding and consistency stay light.",
       "topics": [
-        { "name": "Queues", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: knew job state must be durable (partial)", "lastTested": "2026-10-15", "next": "Design and failure cases (Week 3)" },
-        { "name": "Retries", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: blank", "lastTested": "2026-10-15", "next": "Backoff and idempotency reasoning (Week 3)" },
-        { "name": "Idempotency", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: missed in the crash scenario (W-006)", "lastTested": "2026-10-15", "next": "Duplicate request scenario (Week 3)" },
-        { "name": "Fault tolerance", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Failure analysis (Week 3)" },
-        { "name": "Rate limiting", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Design exercise (Week 4)" },
-        { "name": "Caching", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: blank", "lastTested": "2026-10-15", "next": "Invalidation and trade-offs (Week 3)" },
-        { "name": "Backpressure", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Queue overload reasoning (Week 3)" },
-        { "name": "Consistency", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trade-off reasoning, light (Week 3)" },
-        { "name": "Load balancing", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Architecture exercise (Week 4)" },
-        { "name": "Observability", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Metrics, logging and tracing (Week 3)" }
+        {
+          "name": "Queues",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: knew job state must be durable (partial)",
+          "lastTested": "2026-10-15",
+          "next": "Design and failure cases (Week 3)"
+        },
+        {
+          "name": "Retries",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: blank",
+          "lastTested": "2026-10-15",
+          "next": "Backoff and idempotency reasoning (Week 3)"
+        },
+        {
+          "name": "Idempotency",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: missed in the crash scenario (W-006)",
+          "lastTested": "2026-10-15",
+          "next": "Duplicate request scenario (Week 3)"
+        },
+        {
+          "name": "Fault tolerance",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Failure analysis (Week 3)"
+        },
+        {
+          "name": "Rate limiting",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Design exercise (Week 4)"
+        },
+        {
+          "name": "Caching",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: blank",
+          "lastTested": "2026-10-15",
+          "next": "Invalidation and trade-offs (Week 3)"
+        },
+        {
+          "name": "Backpressure",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Queue overload reasoning (Week 3)"
+        },
+        {
+          "name": "Consistency",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trade-off reasoning, light (Week 3)"
+        },
+        {
+          "name": "Load balancing",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Architecture exercise (Week 4)"
+        },
+        {
+          "name": "Observability",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Metrics, logging and tracing (Week 3)"
+        }
       ]
     },
     {
@@ -145,24 +565,132 @@
       "lastEvidence": "2026-10-15",
       "note": "Overall LEARNING from source-backed study notes, which is not interview mastery. On 2026-10-15 you could not yet describe what the background job worker does or how it handles failure (W-007). Module names are generic on purpose: this site is public, so no proprietary file names or internals appear here.",
       "topics": [
-        { "name": "Web API server lifecycle", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace one request end to end (Week 0)" },
-        { "name": "JWT authentication", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace a protected request (Week 0)" },
-        { "name": "MongoDB data-access layer", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace read, write and indexes (Week 1)" },
-        { "name": "Redis layer", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Identify the actual use cases (Week 3)" },
-        { "name": "Job creation handler", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace job creation (Week 3)" },
-        { "name": "Background job worker", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: could not explain what it does or how it handles failure (W-007)", "lastTested": "2026-10-15", "next": "Explain lifecycle and concurrency (Weeks 2 and 3)" },
-        { "name": "Job retries and recovery", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Failure scenario analysis (Week 3)" },
-        { "name": "Job idempotency", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A source-backed example (Week 3)" },
-        { "name": "Real-time voice agent", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Out of this sprint; revisit after the gate review" },
-        { "name": "Speech-to-text proxies", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Out of this sprint; revisit after the gate review" },
-        { "name": "Text-to-speech integration", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Out of this sprint; revisit after the gate review" },
-        { "name": "Conversation state handler", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain the state machine" },
-        { "name": "Analysis handler", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace the synthesis flow" },
-        { "name": "Dashboard front-end boundary", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace front-end and back-end interaction" },
-        { "name": "Landing-site boundary", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trace the API interaction" },
-        { "name": "Deployment and process supervision", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain the process lifecycle" },
-        { "name": "Reverse proxy and ingress", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain request routing" },
-        { "name": "Logging and health checks", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Failure investigation flow (Week 3)" }
+        {
+          "name": "Web API server lifecycle",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace one request end to end (Week 0)"
+        },
+        {
+          "name": "JWT authentication",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace a protected request (Week 0)"
+        },
+        {
+          "name": "MongoDB data-access layer",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace read, write and indexes (Week 1)"
+        },
+        {
+          "name": "Redis layer",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Identify the actual use cases (Week 3)"
+        },
+        {
+          "name": "Job creation handler",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace job creation (Week 3)"
+        },
+        {
+          "name": "Background job worker",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: could not explain what it does or how it handles failure (W-007)",
+          "lastTested": "2026-10-15",
+          "next": "Explain lifecycle and concurrency (Weeks 2 and 3)"
+        },
+        {
+          "name": "Job retries and recovery",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Failure scenario analysis (Week 3)"
+        },
+        {
+          "name": "Job idempotency",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A source-backed example (Week 3)"
+        },
+        {
+          "name": "Real-time voice agent",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Out of this sprint; revisit after the gate review"
+        },
+        {
+          "name": "Speech-to-text proxies",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Out of this sprint; revisit after the gate review"
+        },
+        {
+          "name": "Text-to-speech integration",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Out of this sprint; revisit after the gate review"
+        },
+        {
+          "name": "Conversation state handler",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain the state machine"
+        },
+        {
+          "name": "Analysis handler",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace the synthesis flow"
+        },
+        {
+          "name": "Dashboard front-end boundary",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace front-end and back-end interaction"
+        },
+        {
+          "name": "Landing-site boundary",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trace the API interaction"
+        },
+        {
+          "name": "Deployment and process supervision",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain the process lifecycle"
+        },
+        {
+          "name": "Reverse proxy and ingress",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain request routing"
+        },
+        {
+          "name": "Logging and health checks",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Failure investigation flow (Week 3)"
+        }
       ]
     },
     {
@@ -172,16 +700,76 @@
       "lastEvidence": null,
       "note": "Scheduled for Week 4 (SOLID, LRU cache, parking lot). Low-level design is common in junior loops, so this outranks deep system design. Nothing logged yet.",
       "topics": [
-        { "name": "Classes and objects", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Independent design" },
-        { "name": "Encapsulation", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain and design" },
-        { "name": "Abstraction", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Explain and design" },
-        { "name": "Composition", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Choose correctly" },
-        { "name": "Inheritance", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Defend its usage" },
-        { "name": "Polymorphism", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Implement and explain" },
-        { "name": "SOLID", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Scenario questions" },
-        { "name": "Interface design", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Requirement-driven design" },
-        { "name": "Requirement changes", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Refactor exercise" },
-        { "name": "OOD interview problems", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Timed mocks" }
+        {
+          "name": "Classes and objects",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Independent design"
+        },
+        {
+          "name": "Encapsulation",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain and design"
+        },
+        {
+          "name": "Abstraction",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Explain and design"
+        },
+        {
+          "name": "Composition",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Choose correctly"
+        },
+        {
+          "name": "Inheritance",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Defend its usage"
+        },
+        {
+          "name": "Polymorphism",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Implement and explain"
+        },
+        {
+          "name": "SOLID",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Scenario questions"
+        },
+        {
+          "name": "Interface design",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Requirement-driven design"
+        },
+        {
+          "name": "Requirement changes",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Refactor exercise"
+        },
+        {
+          "name": "OOD interview problems",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Timed mocks"
+        }
       ]
     },
     {
@@ -191,17 +779,83 @@
       "lastEvidence": "2026-10-15",
       "note": "Framework and two designs in Week 4 at SDE-1 depth, then one mock in Week 5. The only evidence so far is a blank API-design answer in the 2026-10-15 baseline.",
       "topics": [
-        { "name": "Requirements clarification", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Timed design" },
-        { "name": "API design", "status": "NOT STARTED", "evidence": "Diagnostic 2026-10-15: blank", "lastTested": "2026-10-15", "next": "Design exercises" },
-        { "name": "Data modelling", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Schema exercises" },
-        { "name": "Indexing", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Trade-off questions" },
-        { "name": "Caching", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Design exercise" },
-        { "name": "Queues and workers", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Async design" },
-        { "name": "Load balancing", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Scaling exercise" },
-        { "name": "Fault tolerance", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Failure injection questions" },
-        { "name": "Rate limiting", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Design exercise" },
-        { "name": "Observability", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Production scenario" },
-        { "name": "SDE-1 design interview", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A successful timed mock" }
+        {
+          "name": "Requirements clarification",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Timed design"
+        },
+        {
+          "name": "API design",
+          "status": "NOT STARTED",
+          "evidence": "Diagnostic 2026-10-15: blank",
+          "lastTested": "2026-10-15",
+          "next": "Design exercises"
+        },
+        {
+          "name": "Data modelling",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Schema exercises"
+        },
+        {
+          "name": "Indexing",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Trade-off questions"
+        },
+        {
+          "name": "Caching",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Design exercise"
+        },
+        {
+          "name": "Queues and workers",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Async design"
+        },
+        {
+          "name": "Load balancing",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Scaling exercise"
+        },
+        {
+          "name": "Fault tolerance",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Failure injection questions"
+        },
+        {
+          "name": "Rate limiting",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Design exercise"
+        },
+        {
+          "name": "Observability",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Production scenario"
+        },
+        {
+          "name": "SDE-1 design interview",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A successful timed mock"
+        }
       ]
     },
     {
@@ -211,19 +865,97 @@
       "lastEvidence": null,
       "note": "Leadership principles come up in every round, so stories start in Week 1, not at the end. Until then every principle is a gap, and the story bank holds candidates only.",
       "topics": [
-        { "name": "Customer Obsession", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Ownership", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Invent and Simplify", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Learn and Be Curious", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Dive Deep", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Bias for Action", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Insist on the Highest Standards", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Earn Trust", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Have Backbone; Disagree and Commit", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Deliver Results", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Think Big", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Frugality", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "A genuine story" },
-        { "name": "Follow-up handling", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Mock evidence" }
+        {
+          "name": "Customer Obsession",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Ownership",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Invent and Simplify",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Learn and Be Curious",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Dive Deep",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Bias for Action",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Insist on the Highest Standards",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Earn Trust",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Have Backbone; Disagree and Commit",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Deliver Results",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Think Big",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Frugality",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "A genuine story"
+        },
+        {
+          "name": "Follow-up handling",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Mock evidence"
+        }
       ]
     },
     {
@@ -233,12 +965,48 @@
       "lastEvidence": null,
       "note": "Mocks arrive at the checkpoints: CS oral and timed DSA on Day 19, OOD on Day 33, then a full loop in Week 5.",
       "topics": [
-        { "name": "DSA mock", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Timed mock" },
-        { "name": "CS fundamentals mock", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Oral mock" },
-        { "name": "OOD mock", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Timed design" },
-        { "name": "System design mock", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Timed design" },
-        { "name": "Behavioral mock", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "Leadership-principle follow-up drill" },
-        { "name": "Full Amazon-style mock", "status": "NOT STARTED", "evidence": "—", "lastTested": null, "next": "End-to-end mock" }
+        {
+          "name": "DSA mock",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Timed mock"
+        },
+        {
+          "name": "CS fundamentals mock",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Oral mock"
+        },
+        {
+          "name": "OOD mock",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Timed design"
+        },
+        {
+          "name": "System design mock",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Timed design"
+        },
+        {
+          "name": "Behavioral mock",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "Leadership-principle follow-up drill"
+        },
+        {
+          "name": "Full Amazon-style mock",
+          "status": "NOT STARTED",
+          "evidence": "—",
+          "lastTested": null,
+          "next": "End-to-end mock"
+        }
       ]
     }
   ],
@@ -273,96 +1041,810 @@
         "status": "Cold retest on 24 Oct self-reported as independent; the 28 Oct retest confirms it. The code is correct, including the all-negative case.",
         "check": "Explain why current_sum restarts at nums[i] when the running sum is worse, and why max_sum starts at INT_MIN. Then solve it cold in C++ in 15 minutes."
       },
-      { "area": "Linked lists", "title": "LC 142: Linked List Cycle II", "text": "Your note: once slow meets fast, set a pointer to the head and move it and slow one step at a time. Where they meet is the cycle start.", "status": "This problem needed a hint, so the note is a recipe you were given, not a solve.", "check": "Explain why the two pointers meet at the cycle start, using the distances, with nothing in front of you." },
-      { "area": "Linked lists", "title": "LC 19: Remove Nth Node From End of List", "text": "Your note: solved without a hint. Marked for later review because there are two methods.", "status": "Independent solve on record. The two methods are not written down.", "check": "Name both methods with time and space for each, from memory, then solve it cold in C++." },
-      { "area": "Stack and queue", "title": "Next greater or next smaller element", "text": "Your note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.", "status": "Not started as a track. Scheduled for Week 1.", "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end." }
+      {
+        "area": "Linked lists",
+        "title": "LC 142: Linked List Cycle II",
+        "text": "Your note: once slow meets fast, set a pointer to the head and move it and slow one step at a time. Where they meet is the cycle start.",
+        "status": "This problem needed a hint, so the note is a recipe you were given, not a solve.",
+        "check": "Explain why the two pointers meet at the cycle start, using the distances, with nothing in front of you."
+      },
+      {
+        "area": "Linked lists",
+        "title": "LC 19: Remove Nth Node From End of List",
+        "text": "Your note: solved without a hint. Marked for later review because there are two methods.",
+        "status": "Independent solve on record. The two methods are not written down.",
+        "check": "Name both methods with time and space for each, from memory, then solve it cold in C++."
+      },
+      {
+        "area": "Stack and queue",
+        "title": "Next greater or next smaller element",
+        "text": "Your note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.",
+        "status": "Not started as a track. Scheduled for Week 1.",
+        "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end."
+      }
     ]
   },
   "dsaLog": [
-    { "lc": 643, "title": "Maximum Average Subarray I", "difficulty": "Easy", "pattern": "Sliding window (fixed size)", "date": "2026-10-24", "independence": "independent", "hint": "None (self-reported)", "note": "Cold retest R-11, self-reported independent on 24 Oct; code and time not submitted. 20 Oct attempt used a hint. W-001 stays open until the 27 Oct retest (R-12)." },
-    { "lc": 3, "title": "Longest Substring Without Repeating Characters", "difficulty": "Medium", "pattern": "Sliding window + hashing", "date": "2026-08-12", "independence": "independent", "hint": "None", "note": "Optimal O(n), no hint." },
-    { "lc": 209, "title": "Minimum Size Subarray Sum", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-10-24", "independence": "independent", "hint": "None (self-reported)", "note": "Cold retest R-02, self-reported independent on 24 Oct; code, time and shrink-condition explanation not submitted. 12 Aug: unsolved. W-002 stays open until a 7-day retest (R-18)." },
-    { "lc": 567, "title": "Permutation in String", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-13", "independence": "hinted", "hint": "Hint needed", "note": "Invariant derivation not yet consistent." },
-    { "lc": 438, "title": "Find All Anagrams in a String", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-13", "independence": "independent", "hint": "None", "note": "Positive transfer; does not close W-003 on its own." },
-    { "lc": 424, "title": "Longest Repeating Character Replacement", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-13", "independence": "solution", "hint": "Solution help", "note": "Unseen variant not independent." },
-    { "lc": 1004, "title": "Max Consecutive Ones III", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-15", "independence": "independent", "hint": "None", "note": "Mixed evidence still does not establish consistent mastery." },
-    { "lc": 904, "title": "Fruit Into Baskets", "difficulty": "Medium", "pattern": "Sliding window", "date": "2026-08-18", "dateNote": "from sync", "independence": "independent", "hint": "None", "note": "" },
-    { "lc": 560, "title": "Subarray Sum Equals K", "difficulty": "Medium", "pattern": "Prefix sum + hashing", "date": null, "dateNote": "historical", "independence": "independent", "hint": "None", "note": "Prefix sums stays NOT STARTED as a structured track." },
-    { "lc": 142, "title": "Linked List Cycle II", "difficulty": "Medium", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "hinted", "hint": "Hint needed", "note": "Your study note: once slow meets fast, set a pointer to the head and move it and slow one step at a time; where they meet is the cycle start. This is a recipe, not an explanation: why it works is untested. Not an independent-solve claim." },
-    { "lc": 53, "title": "Maximum Subarray", "difficulty": "Medium", "pattern": "Kadane / max subarray DP", "date": "2026-10-24", "independence": "independent", "hint": "None (self-reported)", "note": "Cold retest R-13, self-reported independent on 24 Oct; time not given. The code matches the solution recorded on 21 Oct, which you saw first. 21 Oct: solution seen. Cold again on 28 Oct (R-14)." },
-    { "lc": 974, "title": "Subarray Sums Divisible by K", "difficulty": "Medium", "pattern": "Prefix sum + remainder hashing", "date": "2026-10-24", "independence": "solution", "hint": "Solution seen", "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20)." },
-    { "lc": 11, "title": "Container With Most Water", "difficulty": "Medium", "pattern": "Two pointers", "date": "2026-10-25", "independence": "solution", "hint": "Solution seen", "note": "Not independent. Your write-up is in the study notes. Cold again on 27 Oct (R-22) and 1 Nov (R-23)." },
-    { "lc": 238, "title": "Product of Array Except Self", "difficulty": "Medium", "pattern": "Prefix and suffix products", "date": "2026-10-25", "independence": "solution", "hint": "Solution seen", "note": "Not independent. Cold again on 27 Oct (R-24) and 1 Nov (R-25)." },
-    { "lc": 739, "title": "Daily Temperatures", "difficulty": "Medium", "pattern": "Monotonic stack", "date": "2026-10-25", "independence": "solution", "hint": "Solution seen", "note": "Not independent. Cold again on 27 Oct (R-26) and 1 Nov (R-27)." },
-    { "lc": 875, "title": "Koko Eating Bananas", "difficulty": "Medium", "pattern": "Binary search on the answer", "date": "2026-10-25", "independence": "unsolved", "hint": "None recorded", "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-28) and 1 Nov (R-29)." },
-    { "lc": 525, "title": "Contiguous Array", "difficulty": "Medium", "pattern": "Prefix sum + hashing", "date": "2026-10-25", "independence": "unsolved", "hint": "None recorded", "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31)." },
-    { "lc": 1343, "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold", "difficulty": "Medium", "pattern": "Sliding window (fixed size)", "date": "2026-10-21", "independence": "independent", "hint": "None (self-reported)", "note": "Subarray diagnostic #2. Self-reported independent; code and timing not yet submitted for review. Positive transfer for W-001; does not close it (LC 643 cold retest R-11 still due 22 Oct)." },
-    { "lc": 713, "title": "Subarray Product Less Than K", "difficulty": "Medium", "pattern": "Sliding window (variable, product)", "date": "2026-10-24", "independence": "hinted", "hint": "Hint used on the 24 Oct cold retest", "note": "Cold retest R-15. You wrote if (product < k) count++; the correct update is count += right - left + 1, because every subarray ending at right and starting anywhere from left to right is valid. 21 Oct: solution used. Adds evidence to W-002. Cold again on 26 Oct (R-21) and 28 Oct (R-16)." },
-    { "lc": 19, "title": "Remove Nth Node From End of List", "difficulty": "Medium", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "independent", "hint": "None", "note": "Two methods exist; marked for later review." },
-    { "lc": 21, "title": "Merge Two Sorted Lists", "difficulty": "Easy", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "independent", "hint": "None", "note": "" },
-    { "lc": 160, "title": "Intersection of Two Linked Lists", "difficulty": "Easy", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "unspecified", "hint": "Not recorded", "note": "Completed; marked for later review." },
-    { "lc": 141, "title": "Linked List Cycle", "difficulty": "Easy", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "independent", "hint": "None", "note": "" },
-    { "lc": 206, "title": "Reverse Linked List", "difficulty": "Easy", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "unspecified", "hint": "Not recorded", "note": "Completed." },
-    { "lc": 876, "title": "Middle of the Linked List", "difficulty": "Easy", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "unspecified", "hint": "Not recorded", "note": "Completed." },
-    { "lc": 2, "title": "Add Two Numbers", "difficulty": "Medium", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "solution", "hint": "Solution used", "note": "Pointer and carry handling needs a retest." },
-    { "lc": 24, "title": "Swap Nodes in Pairs", "difficulty": "Medium", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "unspecified", "hint": "Not recorded", "note": "Completed." },
-    { "lc": 25, "title": "Reverse Nodes in k-Group", "difficulty": "Hard", "pattern": "Linked lists", "date": "2026-08-18", "dateNote": "from sync", "independence": "solution", "hint": "Solution used", "note": "Complex pointer manipulation needs a retest." },
-    { "lc": 704, "title": "Binary Search", "difficulty": "Easy", "pattern": "Binary search", "date": "2026-08-18", "dateNote": "from sync", "independence": "unspecified", "hint": "Not recorded", "note": "Completed." },
-    { "lc": 35, "title": "Search Insert Position", "difficulty": "Easy", "pattern": "Binary search", "date": "2026-08-18", "dateNote": "from sync", "independence": "unspecified", "hint": "Not recorded", "note": "Completed." },
-    { "lc": 34, "title": "Find First and Last Position of Element in Sorted Array", "difficulty": "Medium", "pattern": "Binary search", "date": "2026-08-18", "dateNote": "from sync", "independence": "unsolved", "hint": "Not recorded", "note": "Unseen-variant gap remains." },
-    { "lc": 278, "title": "First Bad Version", "difficulty": "Easy", "pattern": "Binary search", "date": "2026-08-18", "dateNote": "from sync", "independence": "independent", "hint": "None", "note": "" },
-    { "lc": 153, "title": "Find Minimum in Rotated Sorted Array", "difficulty": "Medium", "pattern": "Binary search (rotated)", "date": "2026-08-18", "dateNote": "from sync", "independence": "solution", "hint": "Solution used", "note": "Rotated-array reasoning needs a retest." },
-    { "lc": 33, "title": "Search in Rotated Sorted Array", "difficulty": "Medium", "pattern": "Binary search (rotated)", "date": "2026-08-18", "dateNote": "from sync", "independence": "solution", "hint": "Solution used", "note": "Rotated-array reasoning needs a retest." },
-    { "lc": 162, "title": "Find Peak Element", "difficulty": "Medium", "pattern": "Binary search (peak)", "date": "2026-08-18", "dateNote": "from sync", "independence": "solution", "hint": "Solution used", "note": "Variant reasoning needs a retest." },
-    { "lc": 1695, "title": "Maximum Erasure Value", "difficulty": "Medium", "pattern": "Sliding window + hashing", "date": "2026-10-25", "independence": "independent", "hint": "None (logged)", "note": "R-08 problem 1, pattern unnamed. Accepted 9/9 on the first Submit in the Workbench, no hints and no outside help logged. Time not recorded (timer added later). Pattern recognition self-reported. Redundant 'count == 1' guard before the answer update; invariant and complexity not yet written by you." },
-    { "lc": 1052, "title": "Grumpy Bookstore Owner", "difficulty": "Medium", "pattern": "Sliding window (fixed size)", "date": "2026-10-25", "independence": "hinted", "hint": "1 hint logged", "note": "R-08 problem 2. First Submit failed 5/8: the two cases were swapped (base counted where grumpy was 1, window where it was 0), and both samples passed by coincidence. Accepted 8/8 after the swap was fixed, with 1 hint logged; 25:03 on the clock at the first Accepted. Not independent." },
-    { "lc": 1658, "title": "Minimum Operations to Reduce X to Zero", "difficulty": "Medium", "pattern": "Sliding window (complement: longest subarray with sum total minus x)", "date": "2026-10-26", "independence": "hinted", "hint": "2 hints logged", "note": "R-08 problem 3. Did not see the complement idea (remove both ends = keep the longest middle subarray) until the hint to look at total minus x. After the hint: Accepted 10/10 on the first Submit, 21:54 on the clock, edge cases target below 0 and equal to 0 handled. Not independent." }
+    {
+      "lc": 643,
+      "title": "Maximum Average Subarray I",
+      "difficulty": "Easy",
+      "pattern": "Sliding window (fixed size)",
+      "date": "2026-10-24",
+      "independence": "independent",
+      "hint": "None (self-reported)",
+      "note": "Cold retest R-11, self-reported independent on 24 Oct; code and time not submitted. 20 Oct attempt used a hint. W-001 stays open until the 27 Oct retest (R-12)."
+    },
+    {
+      "lc": 3,
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "pattern": "Sliding window + hashing",
+      "date": "2026-08-12",
+      "independence": "independent",
+      "hint": "None",
+      "note": "Optimal O(n), no hint."
+    },
+    {
+      "lc": 209,
+      "title": "Minimum Size Subarray Sum",
+      "difficulty": "Medium",
+      "pattern": "Sliding window",
+      "date": "2026-10-24",
+      "independence": "independent",
+      "hint": "None (self-reported)",
+      "note": "Cold retest R-02, self-reported independent on 24 Oct; code, time and shrink-condition explanation not submitted. 12 Aug: unsolved. W-002 stays open until a 7-day retest (R-18)."
+    },
+    {
+      "lc": 567,
+      "title": "Permutation in String",
+      "difficulty": "Medium",
+      "pattern": "Sliding window",
+      "date": "2026-08-13",
+      "independence": "hinted",
+      "hint": "Hint needed",
+      "note": "Invariant derivation not yet consistent."
+    },
+    {
+      "lc": 438,
+      "title": "Find All Anagrams in a String",
+      "difficulty": "Medium",
+      "pattern": "Sliding window",
+      "date": "2026-08-13",
+      "independence": "independent",
+      "hint": "None",
+      "note": "Positive transfer; does not close W-003 on its own."
+    },
+    {
+      "lc": 424,
+      "title": "Longest Repeating Character Replacement",
+      "difficulty": "Medium",
+      "pattern": "Sliding window",
+      "date": "2026-08-13",
+      "independence": "solution",
+      "hint": "Solution help",
+      "note": "Unseen variant not independent."
+    },
+    {
+      "lc": 1004,
+      "title": "Max Consecutive Ones III",
+      "difficulty": "Medium",
+      "pattern": "Sliding window",
+      "date": "2026-08-15",
+      "independence": "independent",
+      "hint": "None",
+      "note": "Mixed evidence still does not establish consistent mastery."
+    },
+    {
+      "lc": 904,
+      "title": "Fruit Into Baskets",
+      "difficulty": "Medium",
+      "pattern": "Sliding window",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "independent",
+      "hint": "None",
+      "note": ""
+    },
+    {
+      "lc": 560,
+      "title": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "pattern": "Prefix sum + hashing",
+      "date": null,
+      "dateNote": "historical",
+      "independence": "independent",
+      "hint": "None",
+      "note": "Prefix sums stays NOT STARTED as a structured track."
+    },
+    {
+      "lc": 142,
+      "title": "Linked List Cycle II",
+      "difficulty": "Medium",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "hinted",
+      "hint": "Hint needed",
+      "note": "Your study note: once slow meets fast, set a pointer to the head and move it and slow one step at a time; where they meet is the cycle start. This is a recipe, not an explanation: why it works is untested. Not an independent-solve claim."
+    },
+    {
+      "lc": 53,
+      "title": "Maximum Subarray",
+      "difficulty": "Medium",
+      "pattern": "Kadane / max subarray DP",
+      "date": "2026-10-24",
+      "independence": "independent",
+      "hint": "None (self-reported)",
+      "note": "Cold retest R-13, self-reported independent on 24 Oct; time not given. The code matches the solution recorded on 21 Oct, which you saw first. 21 Oct: solution seen. Cold again on 28 Oct (R-14)."
+    },
+    {
+      "lc": 974,
+      "title": "Subarray Sums Divisible by K",
+      "difficulty": "Medium",
+      "pattern": "Prefix sum + remainder hashing",
+      "date": "2026-10-24",
+      "independence": "solution",
+      "hint": "Solution seen",
+      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20)."
+    },
+    {
+      "lc": 11,
+      "title": "Container With Most Water",
+      "difficulty": "Medium",
+      "pattern": "Two pointers",
+      "date": "2026-10-25",
+      "independence": "solution",
+      "hint": "Solution seen",
+      "note": "Not independent. Your write-up is in the study notes. Cold again on 27 Oct (R-22) and 1 Nov (R-23)."
+    },
+    {
+      "lc": 238,
+      "title": "Product of Array Except Self",
+      "difficulty": "Medium",
+      "pattern": "Prefix and suffix products",
+      "date": "2026-10-25",
+      "independence": "solution",
+      "hint": "Solution seen",
+      "note": "Not independent. Cold again on 27 Oct (R-24) and 1 Nov (R-25)."
+    },
+    {
+      "lc": 739,
+      "title": "Daily Temperatures",
+      "difficulty": "Medium",
+      "pattern": "Monotonic stack",
+      "date": "2026-10-25",
+      "independence": "solution",
+      "hint": "Solution seen",
+      "note": "Not independent. Cold again on 27 Oct (R-26) and 1 Nov (R-27)."
+    },
+    {
+      "lc": 875,
+      "title": "Koko Eating Bananas",
+      "difficulty": "Medium",
+      "pattern": "Binary search on the answer",
+      "date": "2026-10-25",
+      "independence": "unsolved",
+      "hint": "None recorded",
+      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-28) and 1 Nov (R-29)."
+    },
+    {
+      "lc": 525,
+      "title": "Contiguous Array",
+      "difficulty": "Medium",
+      "pattern": "Prefix sum + hashing",
+      "date": "2026-10-25",
+      "independence": "unsolved",
+      "hint": "None recorded",
+      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31)."
+    },
+    {
+      "lc": 1343,
+      "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+      "difficulty": "Medium",
+      "pattern": "Sliding window (fixed size)",
+      "date": "2026-10-21",
+      "independence": "independent",
+      "hint": "None (self-reported)",
+      "note": "Subarray diagnostic #2. Self-reported independent; code and timing not yet submitted for review. Positive transfer for W-001; does not close it (LC 643 cold retest R-11 still due 22 Oct)."
+    },
+    {
+      "lc": 713,
+      "title": "Subarray Product Less Than K",
+      "difficulty": "Medium",
+      "pattern": "Sliding window (variable, product)",
+      "date": "2026-10-24",
+      "independence": "unsolved",
+      "hint": "Hint used on the 24 Oct cold retest",
+      "note": "Cold retest R-15. You wrote if (product < k) count++; the correct update is count += right - left + 1, because every subarray ending at right and starting anywhere from left to right is valid. 21 Oct: solution used. Adds evidence to W-002. Cold again on 26 Oct (R-21) and 28 Oct (R-16). 27 Oct (R-21): Submit smvpo4mnse5ht judged by the real g++ judge: Runtime Error on sample 2 (k = 0), SIGFPE. The shrink loop divides by nums[left] even when the window is empty, so with k <= 1 it reads past the array. Sample 1 passed. 5:38 on the clock. Not a pass; cold retest R-16 on 28 Oct."
+    },
+    {
+      "lc": 19,
+      "title": "Remove Nth Node From End of List",
+      "difficulty": "Medium",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "independent",
+      "hint": "None",
+      "note": "Two methods exist; marked for later review."
+    },
+    {
+      "lc": 21,
+      "title": "Merge Two Sorted Lists",
+      "difficulty": "Easy",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "independent",
+      "hint": "None",
+      "note": ""
+    },
+    {
+      "lc": 160,
+      "title": "Intersection of Two Linked Lists",
+      "difficulty": "Easy",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unspecified",
+      "hint": "Not recorded",
+      "note": "Completed; marked for later review."
+    },
+    {
+      "lc": 141,
+      "title": "Linked List Cycle",
+      "difficulty": "Easy",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "independent",
+      "hint": "None",
+      "note": ""
+    },
+    {
+      "lc": 206,
+      "title": "Reverse Linked List",
+      "difficulty": "Easy",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unspecified",
+      "hint": "Not recorded",
+      "note": "Completed."
+    },
+    {
+      "lc": 876,
+      "title": "Middle of the Linked List",
+      "difficulty": "Easy",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unspecified",
+      "hint": "Not recorded",
+      "note": "Completed."
+    },
+    {
+      "lc": 2,
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "solution",
+      "hint": "Solution used",
+      "note": "Pointer and carry handling needs a retest."
+    },
+    {
+      "lc": 24,
+      "title": "Swap Nodes in Pairs",
+      "difficulty": "Medium",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unspecified",
+      "hint": "Not recorded",
+      "note": "Completed."
+    },
+    {
+      "lc": 25,
+      "title": "Reverse Nodes in k-Group",
+      "difficulty": "Hard",
+      "pattern": "Linked lists",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "solution",
+      "hint": "Solution used",
+      "note": "Complex pointer manipulation needs a retest."
+    },
+    {
+      "lc": 704,
+      "title": "Binary Search",
+      "difficulty": "Easy",
+      "pattern": "Binary search",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unspecified",
+      "hint": "Not recorded",
+      "note": "Completed."
+    },
+    {
+      "lc": 35,
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "pattern": "Binary search",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unspecified",
+      "hint": "Not recorded",
+      "note": "Completed."
+    },
+    {
+      "lc": 34,
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "difficulty": "Medium",
+      "pattern": "Binary search",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "unsolved",
+      "hint": "Not recorded",
+      "note": "Unseen-variant gap remains."
+    },
+    {
+      "lc": 278,
+      "title": "First Bad Version",
+      "difficulty": "Easy",
+      "pattern": "Binary search",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "independent",
+      "hint": "None",
+      "note": ""
+    },
+    {
+      "lc": 153,
+      "title": "Find Minimum in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "pattern": "Binary search (rotated)",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "solution",
+      "hint": "Solution used",
+      "note": "Rotated-array reasoning needs a retest."
+    },
+    {
+      "lc": 33,
+      "title": "Search in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "pattern": "Binary search (rotated)",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "solution",
+      "hint": "Solution used",
+      "note": "Rotated-array reasoning needs a retest."
+    },
+    {
+      "lc": 162,
+      "title": "Find Peak Element",
+      "difficulty": "Medium",
+      "pattern": "Binary search (peak)",
+      "date": "2026-08-18",
+      "dateNote": "from sync",
+      "independence": "solution",
+      "hint": "Solution used",
+      "note": "Variant reasoning needs a retest."
+    },
+    {
+      "lc": 1695,
+      "title": "Maximum Erasure Value",
+      "difficulty": "Medium",
+      "pattern": "Sliding window + hashing",
+      "date": "2026-10-25",
+      "independence": "independent",
+      "hint": "None (logged)",
+      "note": "R-08 problem 1, pattern unnamed. Accepted 9/9 on the first Submit in the Workbench, no hints and no outside help logged. Time not recorded (timer added later). Pattern recognition self-reported. Redundant 'count == 1' guard before the answer update; invariant and complexity not yet written by you."
+    },
+    {
+      "lc": 1052,
+      "title": "Grumpy Bookstore Owner",
+      "difficulty": "Medium",
+      "pattern": "Sliding window (fixed size)",
+      "date": "2026-10-25",
+      "independence": "hinted",
+      "hint": "1 hint logged",
+      "note": "R-08 problem 2. First Submit failed 5/8: the two cases were swapped (base counted where grumpy was 1, window where it was 0), and both samples passed by coincidence. Accepted 8/8 after the swap was fixed, with 1 hint logged; 25:03 on the clock at the first Accepted. Not independent."
+    },
+    {
+      "lc": 1658,
+      "title": "Minimum Operations to Reduce X to Zero",
+      "difficulty": "Medium",
+      "pattern": "Sliding window (complement: longest subarray with sum total minus x)",
+      "date": "2026-10-26",
+      "independence": "hinted",
+      "hint": "2 hints logged",
+      "note": "R-08 problem 3. Did not see the complement idea (remove both ends = keep the longest middle subarray) until the hint to look at total minus x. After the hint: Accepted 10/10 on the first Submit, 21:54 on the clock, edge cases target below 0 and equal to 0 handled. Not independent."
+    }
   ],
   "weaknesses": [
-    { "id": "W-001", "topic": "Sliding window: fixed-size optimization", "source": "DSA", "identified": "2026-08-12", "state": "open", "mistake": "LC 643: the basic solution was independent, but the optimal O(n) approach needed a hint.", "correct": "Update the fixed-size window incrementally instead of recomputing its sum.", "cause": "Not established.", "exercise": "Re-solve LC 643 without a hint and explain the incremental O(n) update.", "retest": "Hinted on 2026-10-20", "retestDue": "2026-10-22", "result": null },
-    { "id": "W-002", "topic": "Sliding window: variable-size recognition and application", "source": "DSA", "identified": "2026-08-12", "state": "open", "mistake": "LC 209 could not be solved; LC 567 needed a hint. LC 438 and LC 1004 were solved independently.", "correct": "State the window invariant and the exact shrinking condition before coding.", "cause": "Not established. Variable and frequency windows are developing but inconsistent.", "exercise": "Unseen variable-size and frequency-window problems without hints, starting with LC 209.", "retest": "Failed on 2026-10-24; retest 2026-10-25", "retestDue": "2026-10-25", "result": "Failed 2026-10-24" },
-    { "id": "W-003", "topic": "Sliding window: generalization and invariant derivation", "source": "DSA", "identified": "2026-08-13", "state": "open", "mistake": "LC 643 optimal, LC 209, LC 567 and LC 424 all needed help or failed, while LC 3, 438 and 1004 were independent. 25-26 Oct set: LC 1695 independent; LC 1052 first submit failed (two cases swapped) and needed a hint; LC 1658 needed a hint to see the complement (total minus x).", "correct": "Recognize the pattern, then derive the invariant, window movement and complexity for the specific problem.", "cause": "Not established. The evidence does not support blaming memorization, rushing or any single cause.", "exercise": "An unseen mixed sliding-window problem with the pattern unnamed. Require recognition, invariant, movement, complexity, independent C++ and edge cases.", "retest": "Failed 2026-10-26 (1 of 3 independent); retest 2026-10-28", "retestDue": "2026-10-28", "result": "Failed 2026-10-26" },
-    { "id": "W-004", "topic": "Backend: request lifecycle", "source": "CS", "identified": "2026-10-15", "state": "open", "mistake": "Described browser event handlers only; left out DNS, TCP, TLS, the HTTP request and response, and the server path.", "correct": "Loading a URL is an HTTP request preceded by DNS, TCP and TLS. Button clicks trigger further HTTP requests handled by routes.", "cause": "Knowledge gap.", "exercise": "Lesson 1 questions A to C, then trace one authenticated route in the internship API.", "retest": "Failed 2026-10-25 (partial); retest 2026-10-26", "retestDue": "2026-10-26", "result": "Failed 2026-10-25" },
-    { "id": "W-005", "topic": "Concurrency: race-condition recognition", "source": "CS", "identified": "2026-10-15", "state": "open", "mistake": "Repeated on 2026-10-24 in an MCQ: picked deadlock again for the last-seat race. Answered a last-seat booking scenario as a deadlock and left the shared-counter question blank, although races were studied on 2026-08-18.", "correct": "Concurrent read-modify-write without atomicity causes a lost update or double booking. Fix it with atomic operations, locks or transactions.", "cause": "Retention and transfer gap. Nothing further is established.", "exercise": "Closed-book scenarios in Week 1: booking, shared counter, compare-and-set.", "retest": "Pending", "retestDue": "2026-11-01", "result": null },
-    { "id": "W-006", "topic": "Distributed systems: delivery semantics", "source": "CS", "identified": "2026-10-15", "state": "open", "mistake": "The crash answer covered durable state but not acknowledgement, redelivery, duplicates or idempotency.", "correct": "At-least-once delivery produces duplicates, so handlers must be idempotent.", "cause": "Knowledge gap.", "exercise": "Week 3: walk a worker crash after processing but before acknowledgement, and design the retry and idempotency path.", "retest": "Pending", "retestDue": "2026-11-15", "result": null },
-    { "id": "W-007", "topic": "Internship ownership: cannot trace the job worker", "source": "Alchemic", "identified": "2026-10-15", "state": "open", "mistake": "Could not describe what the background job worker does or how it handles failure.", "correct": "Be able to trace trigger, claim, process, finish or fail, and retry from the source, unaided.", "cause": "Not yet studied from source by you.", "exercise": "Route trace in Week 0 and the job worker lifecycle in Week 3; mark uncertain lines as unsure.", "retest": "Pending", "retestDue": "2026-11-15", "result": null },
-    { "id": "W-008", "topic": "Auth: JWT mechanism, and encoding vs encryption vs signing", "source": "CS", "identified": "2026-10-25", "state": "open", "mistake": "Placement quiz 2/5 on 25 Oct. Chose that a JWT payload needs the server key to be read (it is only encoded), chose that a server accepts an edited payload, and chose that stateless means the browser holds the session. Correct: the three-part structure and 403 for a valid user on an admin route.", "correct": "The payload is base64url-encoded, so anyone can read it. The signature, recomputed with the server key, detects tampering. Stateless means any server instance can verify the token with no stored session.", "cause": "Knowledge gap: no clear model of encoding vs encryption vs signing.", "exercise": "Teach the prerequisite (encoding, encryption, hashing, signing), then JWT; closed-book retest as part of Lesson 1 C.", "retest": "Pending", "retestDue": "2026-10-26", "result": "Placement 2/5 on 2026-10-25" }
+    {
+      "id": "W-001",
+      "topic": "Sliding window: fixed-size optimization",
+      "source": "DSA",
+      "identified": "2026-08-12",
+      "state": "open",
+      "mistake": "LC 643: the basic solution was independent, but the optimal O(n) approach needed a hint.",
+      "correct": "Update the fixed-size window incrementally instead of recomputing its sum.",
+      "cause": "Not established.",
+      "exercise": "Re-solve LC 643 without a hint and explain the incremental O(n) update.",
+      "retest": "Hinted on 2026-10-20",
+      "retestDue": "2026-10-22",
+      "result": null
+    },
+    {
+      "id": "W-002",
+      "topic": "Sliding window: variable-size recognition and application",
+      "source": "DSA",
+      "identified": "2026-08-12",
+      "state": "open",
+      "mistake": "LC 209 could not be solved; LC 567 needed a hint. LC 438 and LC 1004 were solved independently.",
+      "correct": "State the window invariant and the exact shrinking condition before coding.",
+      "cause": "Not established. Variable and frequency windows are developing but inconsistent.",
+      "exercise": "Unseen variable-size and frequency-window problems without hints, starting with LC 209.",
+      "retest": "Failed on 2026-10-24; retest 2026-10-25",
+      "retestDue": "2026-10-25",
+      "result": "Failed 2026-10-24"
+    },
+    {
+      "id": "W-003",
+      "topic": "Sliding window: generalization and invariant derivation",
+      "source": "DSA",
+      "identified": "2026-08-13",
+      "state": "open",
+      "mistake": "LC 643 optimal, LC 209, LC 567 and LC 424 all needed help or failed, while LC 3, 438 and 1004 were independent. 25-26 Oct set: LC 1695 independent; LC 1052 first submit failed (two cases swapped) and needed a hint; LC 1658 needed a hint to see the complement (total minus x).",
+      "correct": "Recognize the pattern, then derive the invariant, window movement and complexity for the specific problem.",
+      "cause": "Not established. The evidence does not support blaming memorization, rushing or any single cause.",
+      "exercise": "An unseen mixed sliding-window problem with the pattern unnamed. Require recognition, invariant, movement, complexity, independent C++ and edge cases.",
+      "retest": "Failed 2026-10-26 (1 of 3 independent); retest 2026-10-28",
+      "retestDue": "2026-10-28",
+      "result": "Failed 2026-10-26"
+    },
+    {
+      "id": "W-004",
+      "topic": "Backend: request lifecycle",
+      "source": "CS",
+      "identified": "2026-10-15",
+      "state": "open",
+      "mistake": "Described browser event handlers only; left out DNS, TCP, TLS, the HTTP request and response, and the server path.",
+      "correct": "Loading a URL is an HTTP request preceded by DNS, TCP and TLS. Button clicks trigger further HTTP requests handled by routes.",
+      "cause": "Knowledge gap.",
+      "exercise": "Lesson 1 questions A to C, then trace one authenticated route in the internship API.",
+      "retest": "Failed 2026-10-25 (partial); retest 2026-10-26",
+      "retestDue": "2026-10-26",
+      "result": "Failed 2026-10-25"
+    },
+    {
+      "id": "W-005",
+      "topic": "Concurrency: race-condition recognition",
+      "source": "CS",
+      "identified": "2026-10-15",
+      "state": "open",
+      "mistake": "Repeated on 2026-10-24 in an MCQ: picked deadlock again for the last-seat race. Answered a last-seat booking scenario as a deadlock and left the shared-counter question blank, although races were studied on 2026-08-18.",
+      "correct": "Concurrent read-modify-write without atomicity causes a lost update or double booking. Fix it with atomic operations, locks or transactions.",
+      "cause": "Retention and transfer gap. Nothing further is established.",
+      "exercise": "Closed-book scenarios in Week 1: booking, shared counter, compare-and-set.",
+      "retest": "Pending",
+      "retestDue": "2026-11-01",
+      "result": null
+    },
+    {
+      "id": "W-006",
+      "topic": "Distributed systems: delivery semantics",
+      "source": "CS",
+      "identified": "2026-10-15",
+      "state": "open",
+      "mistake": "The crash answer covered durable state but not acknowledgement, redelivery, duplicates or idempotency.",
+      "correct": "At-least-once delivery produces duplicates, so handlers must be idempotent.",
+      "cause": "Knowledge gap.",
+      "exercise": "Week 3: walk a worker crash after processing but before acknowledgement, and design the retry and idempotency path.",
+      "retest": "Pending",
+      "retestDue": "2026-11-15",
+      "result": null
+    },
+    {
+      "id": "W-007",
+      "topic": "Internship ownership: cannot trace the job worker",
+      "source": "Alchemic",
+      "identified": "2026-10-15",
+      "state": "open",
+      "mistake": "Could not describe what the background job worker does or how it handles failure.",
+      "correct": "Be able to trace trigger, claim, process, finish or fail, and retry from the source, unaided.",
+      "cause": "Not yet studied from source by you.",
+      "exercise": "Route trace in Week 0 and the job worker lifecycle in Week 3; mark uncertain lines as unsure.",
+      "retest": "Pending",
+      "retestDue": "2026-11-15",
+      "result": null
+    },
+    {
+      "id": "W-008",
+      "topic": "Auth: JWT mechanism, and encoding vs encryption vs signing",
+      "source": "CS",
+      "identified": "2026-10-25",
+      "state": "open",
+      "mistake": "Placement quiz 2/5 on 25 Oct. Chose that a JWT payload needs the server key to be read (it is only encoded), chose that a server accepts an edited payload, and chose that stateless means the browser holds the session. Correct: the three-part structure and 403 for a valid user on an admin route.",
+      "correct": "The payload is base64url-encoded, so anyone can read it. The signature, recomputed with the server key, detects tampering. Stateless means any server instance can verify the token with no stored session.",
+      "cause": "Knowledge gap: no clear model of encoding vs encryption vs signing.",
+      "exercise": "Teach the prerequisite (encoding, encryption, hashing, signing), then JWT; closed-book retest as part of Lesson 1 C.",
+      "retest": "Pending",
+      "retestDue": "2026-10-26",
+      "result": "Placement 2/5 on 2026-10-25"
+    }
   ],
   "closedWeaknesses": [],
   "retests": [
-    { "id": "R-01", "weakness": "W-001", "task": "Re-solve LC 643 cold: 20-minute cap, and explain the incremental O(n) update", "due": "2026-10-20", "state": "failed", "note": "20 Oct: attempted, hint used, not independent. Replaced by R-11 and R-12." },
-    { "id": "R-11", "weakness": "W-001", "task": "Re-solve LC 643 cold, no hints: 20-minute cap, explain the incremental O(n) update", "due": "2026-10-22", "state": "self-reported pass", "note": "24 Oct: self-reported independent, code and time not submitted. 48-hour retest after the hinted attempt on 20 Oct." },
-    { "id": "R-12", "weakness": "W-001", "task": "Re-solve LC 643 cold, no hints (7-day spaced retest)", "due": "2026-10-27", "state": "pending", "note": "7-day retest after the hinted attempt on 20 Oct." },
-    { "id": "R-18", "weakness": "W-002", "task": "Re-solve LC 209 cold, no hints, 35-minute cap; write the shrink condition first", "due": "2026-10-31", "state": "pending", "note": "7-day retest after the 24 Oct self-reported solve." },
-    { "id": "R-19", "weakness": null, "task": "LC 974: explain and code the O(n) prefix-sum remainder solution cold", "due": "2026-10-26", "state": "pending", "note": "After teaching on 24 Oct." },
-    { "id": "R-20", "weakness": null, "task": "LC 974 cold again (7-day spaced retest)", "due": "2026-10-31", "state": "pending", "note": "7 days after 24 Oct." },
-    { "id": "R-13", "weakness": null, "task": "Re-solve LC 53 cold, no hints, 15-minute cap; explain why the running sum resets", "due": "2026-10-23", "state": "self-reported pass", "note": "24 Oct: self-reported independent, time not submitted. 48h after solution seen on 21 Oct." },
-    { "id": "R-14", "weakness": null, "task": "Re-solve LC 53 cold (7-day spaced retest)", "due": "2026-10-28", "state": "pending", "note": "7 days after 21 Oct." },
-    { "id": "R-15", "weakness": "W-002", "task": "Re-solve LC 713 cold, no hints, 25-minute cap; state the shrink condition and why count += right-left+1", "due": "2026-10-23", "state": "failed", "note": "24 Oct: attempted, hint used (count++ instead of count += right - left + 1). Replaced by R-21. 48h after solution used on 21 Oct." },
-    { "id": "R-21", "weakness": "W-002", "task": "Re-solve LC 713 cold, no hints, 25-minute cap; explain count += right - left + 1", "due": "2026-10-26", "state": "pending", "note": "48h retest after the hinted attempt on 24 Oct." },
-    { "id": "R-22", "weakness": null, "task": "Re-solve LC 11 cold, no hints, 20-minute cap", "due": "2026-10-27", "state": "pending", "note": "48h after the 25 Oct attempt." },
-    { "id": "R-23", "weakness": null, "task": "Re-solve LC 11 cold again (7-day spaced retest)", "due": "2026-11-01", "state": "pending", "note": "7 days after the 25 Oct attempt." },
-    { "id": "R-24", "weakness": null, "task": "Re-solve LC 238 cold, no hints, 25-minute cap", "due": "2026-10-27", "state": "pending", "note": "48h after the 25 Oct attempt." },
-    { "id": "R-25", "weakness": null, "task": "Re-solve LC 238 cold again (7-day spaced retest)", "due": "2026-11-01", "state": "pending", "note": "7 days after the 25 Oct attempt." },
-    { "id": "R-26", "weakness": null, "task": "Re-solve LC 739 cold, no hints, 30-minute cap", "due": "2026-10-27", "state": "pending", "note": "48h after the 25 Oct attempt." },
-    { "id": "R-27", "weakness": null, "task": "Re-solve LC 739 cold again (7-day spaced retest)", "due": "2026-11-01", "state": "pending", "note": "7 days after the 25 Oct attempt." },
-    { "id": "R-28", "weakness": null, "task": "Re-solve LC 875 cold, no hints, 35-minute cap", "due": "2026-10-27", "state": "pending", "note": "48h after the 25 Oct attempt." },
-    { "id": "R-29", "weakness": null, "task": "Re-solve LC 875 cold again (7-day spaced retest)", "due": "2026-11-01", "state": "pending", "note": "7 days after the 25 Oct attempt." },
-    { "id": "R-30", "weakness": null, "task": "Re-solve LC 525 cold, no hints, 35-minute cap", "due": "2026-10-27", "state": "pending", "note": "48h after the 25 Oct attempt." },
-    { "id": "R-31", "weakness": null, "task": "Re-solve LC 525 cold again (7-day spaced retest)", "due": "2026-11-01", "state": "pending", "note": "7 days after the 25 Oct attempt." },
-    { "id": "R-16", "weakness": "W-002", "task": "Re-solve LC 713 cold (7-day spaced retest)", "due": "2026-10-28", "state": "pending", "note": "7 days after 21 Oct." },
-    { "id": "R-02", "weakness": "W-002", "task": "Re-solve LC 209 cold: 35-minute cap; state the invariant and shrink condition first", "due": "2026-10-21", "state": "self-reported pass", "note": "24 Oct: self-reported independent, code and time not submitted. Reset on Day 0." },
-    { "id": "R-03", "weakness": "W-004", "task": "Answer Lesson 1 A to C closed-book, in writing", "due": "2026-10-21", "state": "failed", "note": "24 Oct: A described frontend events, JSON and re-render only; still no DNS, TCP, TLS, HTTP request structure or server path (200 is an HTTP status, not a handshake). B: GET and POST only; PUT, PATCH, DELETE, idempotency and status codes missing. C: blank. Taught afterwards; replaced by R-17." },
-    { "id": "R-17", "weakness": "W-004", "task": "Lesson 1 A to C again, closed-book, written, no notes", "due": "2026-10-25", "state": "failed", "note": "25 Oct: A improved (DNS, TCP handshake, TLS, HTTP request, response, re-render in order) but the button-click request and the server path were missing. B listed GET, POST and DELETE only; PUT, PATCH, idempotency and status codes missing. C: JWT signature-check idea only; 401 vs 403 and statelessness missing, and you said you do not know JWT. Taught after the retest; replaced by R-32." },
-    { "id": "R-32", "weakness": "W-004", "task": "Lesson 1 A to C closed-book, written, no notes (retest after teaching on 25 Oct)", "due": "2026-10-26", "state": "pending", "note": "Next-day retest after the 25 Oct teaching; a 7-day retest follows if passed." },
-    { "id": "R-04", "weakness": "W-007", "task": "Trace one authenticated API route; mark uncertain lines as unsure", "due": "2026-10-28", "state": "pending", "note": "26 Oct: could not trace unaided, so it became a lesson (login, the per-request token check, logout, the Redis revoke list and single-session key). Not a pass. Retest 28 Oct: closed-book trace of one authenticated request on a blank page." },
-    { "id": "R-08", "weakness": "W-003", "task": "Unseen sliding-window set: three problems, pattern unnamed", "due": "2026-10-25", "state": "failed", "note": "25-26 Oct: LC 1695 independent (Accepted 9/9, no hints); LC 1052 failed first, then Accepted with 1 hint; LC 1658 needed 2 hints for the complement idea, then Accepted 10/10. 1 of 3 independent. Hints were taken before the 35-minute cap. Replaced by R-33." },
-    { "id": "R-33", "weakness": "W-003", "task": "Cold re-solve of LC 1052 and LC 1658 (no hints), plus one new unseen sliding-window problem, pattern unnamed; 35-minute cap each, Workbench timer on", "due": "2026-10-28", "state": "pending", "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap." },
-    { "id": "R-05", "weakness": "W-005", "task": "Closed-book race scenarios: booking, shared counter, compare-and-set", "due": "2026-11-01", "state": "pending", "note": "Week 1, after transactions and isolation." },
-    { "id": "R-06", "weakness": null, "task": "Binary search variants: LC 34, 153, 33, 162 without help", "due": "2026-11-01", "state": "pending", "note": "Week 1. Rotated-array and peak reasoning." },
-    { "id": "R-07", "weakness": null, "task": "Linked-list retest: LC 2, 25 and a new unseen problem", "due": "2026-11-08", "state": "pending", "note": "Week 2." },
-    { "id": "R-09", "weakness": "W-006", "task": "Worker-crash scenario: acknowledgement, redelivery, idempotency", "due": "2026-11-15", "state": "pending", "note": "Week 3." },
-    { "id": "R-10", "weakness": "W-007", "task": "Explain the job worker lifecycle from trigger to retry, unaided", "due": "2026-11-15", "state": "pending", "note": "Week 3." }
+    {
+      "id": "R-01",
+      "weakness": "W-001",
+      "task": "Re-solve LC 643 cold: 20-minute cap, and explain the incremental O(n) update",
+      "due": "2026-10-20",
+      "state": "failed",
+      "note": "20 Oct: attempted, hint used, not independent. Replaced by R-11 and R-12."
+    },
+    {
+      "id": "R-11",
+      "weakness": "W-001",
+      "task": "Re-solve LC 643 cold, no hints: 20-minute cap, explain the incremental O(n) update",
+      "due": "2026-10-22",
+      "state": "self-reported pass",
+      "note": "24 Oct: self-reported independent, code and time not submitted. 48-hour retest after the hinted attempt on 20 Oct."
+    },
+    {
+      "id": "R-12",
+      "weakness": "W-001",
+      "task": "Re-solve LC 643 cold, no hints (7-day spaced retest)",
+      "due": "2026-10-27",
+      "state": "pending",
+      "note": "7-day retest after the hinted attempt on 20 Oct."
+    },
+    {
+      "id": "R-18",
+      "weakness": "W-002",
+      "task": "Re-solve LC 209 cold, no hints, 35-minute cap; write the shrink condition first",
+      "due": "2026-10-31",
+      "state": "pending",
+      "note": "7-day retest after the 24 Oct self-reported solve."
+    },
+    {
+      "id": "R-19",
+      "weakness": null,
+      "task": "LC 974: explain and code the O(n) prefix-sum remainder solution cold",
+      "due": "2026-10-26",
+      "state": "pending",
+      "note": "After teaching on 24 Oct."
+    },
+    {
+      "id": "R-20",
+      "weakness": null,
+      "task": "LC 974 cold again (7-day spaced retest)",
+      "due": "2026-10-31",
+      "state": "pending",
+      "note": "7 days after 24 Oct."
+    },
+    {
+      "id": "R-13",
+      "weakness": null,
+      "task": "Re-solve LC 53 cold, no hints, 15-minute cap; explain why the running sum resets",
+      "due": "2026-10-23",
+      "state": "self-reported pass",
+      "note": "24 Oct: self-reported independent, time not submitted. 48h after solution seen on 21 Oct."
+    },
+    {
+      "id": "R-14",
+      "weakness": null,
+      "task": "Re-solve LC 53 cold (7-day spaced retest)",
+      "due": "2026-10-28",
+      "state": "pending",
+      "note": "7 days after 21 Oct."
+    },
+    {
+      "id": "R-15",
+      "weakness": "W-002",
+      "task": "Re-solve LC 713 cold, no hints, 25-minute cap; state the shrink condition and why count += right-left+1",
+      "due": "2026-10-23",
+      "state": "failed",
+      "note": "24 Oct: attempted, hint used (count++ instead of count += right - left + 1). Replaced by R-21. 48h after solution used on 21 Oct."
+    },
+    {
+      "id": "R-21",
+      "weakness": "W-002",
+      "task": "Re-solve LC 713 cold, no hints, 25-minute cap; explain count += right - left + 1",
+      "due": "2026-10-26",
+      "state": "pending",
+      "note": "48h retest after the hinted attempt on 24 Oct."
+    },
+    {
+      "id": "R-22",
+      "weakness": null,
+      "task": "Re-solve LC 11 cold, no hints, 20-minute cap",
+      "due": "2026-10-27",
+      "state": "pending",
+      "note": "48h after the 25 Oct attempt."
+    },
+    {
+      "id": "R-23",
+      "weakness": null,
+      "task": "Re-solve LC 11 cold again (7-day spaced retest)",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "7 days after the 25 Oct attempt."
+    },
+    {
+      "id": "R-24",
+      "weakness": null,
+      "task": "Re-solve LC 238 cold, no hints, 25-minute cap",
+      "due": "2026-10-27",
+      "state": "pending",
+      "note": "48h after the 25 Oct attempt."
+    },
+    {
+      "id": "R-25",
+      "weakness": null,
+      "task": "Re-solve LC 238 cold again (7-day spaced retest)",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "7 days after the 25 Oct attempt."
+    },
+    {
+      "id": "R-26",
+      "weakness": null,
+      "task": "Re-solve LC 739 cold, no hints, 30-minute cap",
+      "due": "2026-10-27",
+      "state": "pending",
+      "note": "48h after the 25 Oct attempt."
+    },
+    {
+      "id": "R-27",
+      "weakness": null,
+      "task": "Re-solve LC 739 cold again (7-day spaced retest)",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "7 days after the 25 Oct attempt."
+    },
+    {
+      "id": "R-28",
+      "weakness": null,
+      "task": "Re-solve LC 875 cold, no hints, 35-minute cap",
+      "due": "2026-10-27",
+      "state": "pending",
+      "note": "48h after the 25 Oct attempt."
+    },
+    {
+      "id": "R-29",
+      "weakness": null,
+      "task": "Re-solve LC 875 cold again (7-day spaced retest)",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "7 days after the 25 Oct attempt."
+    },
+    {
+      "id": "R-30",
+      "weakness": null,
+      "task": "Re-solve LC 525 cold, no hints, 35-minute cap",
+      "due": "2026-10-27",
+      "state": "pending",
+      "note": "48h after the 25 Oct attempt."
+    },
+    {
+      "id": "R-31",
+      "weakness": null,
+      "task": "Re-solve LC 525 cold again (7-day spaced retest)",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "7 days after the 25 Oct attempt."
+    },
+    {
+      "id": "R-16",
+      "weakness": "W-002",
+      "task": "Re-solve LC 713 cold (7-day spaced retest)",
+      "due": "2026-10-28",
+      "state": "pending",
+      "note": "7 days after 21 Oct."
+    },
+    {
+      "id": "R-02",
+      "weakness": "W-002",
+      "task": "Re-solve LC 209 cold: 35-minute cap; state the invariant and shrink condition first",
+      "due": "2026-10-21",
+      "state": "self-reported pass",
+      "note": "24 Oct: self-reported independent, code and time not submitted. Reset on Day 0."
+    },
+    {
+      "id": "R-03",
+      "weakness": "W-004",
+      "task": "Answer Lesson 1 A to C closed-book, in writing",
+      "due": "2026-10-21",
+      "state": "failed",
+      "note": "24 Oct: A described frontend events, JSON and re-render only; still no DNS, TCP, TLS, HTTP request structure or server path (200 is an HTTP status, not a handshake). B: GET and POST only; PUT, PATCH, DELETE, idempotency and status codes missing. C: blank. Taught afterwards; replaced by R-17."
+    },
+    {
+      "id": "R-17",
+      "weakness": "W-004",
+      "task": "Lesson 1 A to C again, closed-book, written, no notes",
+      "due": "2026-10-25",
+      "state": "failed",
+      "note": "25 Oct: A improved (DNS, TCP handshake, TLS, HTTP request, response, re-render in order) but the button-click request and the server path were missing. B listed GET, POST and DELETE only; PUT, PATCH, idempotency and status codes missing. C: JWT signature-check idea only; 401 vs 403 and statelessness missing, and you said you do not know JWT. Taught after the retest; replaced by R-32."
+    },
+    {
+      "id": "R-32",
+      "weakness": "W-004",
+      "task": "Lesson 1 A to C closed-book, written, no notes (retest after teaching on 25 Oct)",
+      "due": "2026-10-26",
+      "state": "pending",
+      "note": "Next-day retest after the 25 Oct teaching; a 7-day retest follows if passed."
+    },
+    {
+      "id": "R-04",
+      "weakness": "W-007",
+      "task": "Trace one authenticated API route; mark uncertain lines as unsure",
+      "due": "2026-10-28",
+      "state": "pending",
+      "note": "26 Oct: could not trace unaided, so it became a lesson (login, the per-request token check, logout, the Redis revoke list and single-session key). Not a pass. Retest 28 Oct: closed-book trace of one authenticated request on a blank page."
+    },
+    {
+      "id": "R-08",
+      "weakness": "W-003",
+      "task": "Unseen sliding-window set: three problems, pattern unnamed",
+      "due": "2026-10-25",
+      "state": "failed",
+      "note": "25-26 Oct: LC 1695 independent (Accepted 9/9, no hints); LC 1052 failed first, then Accepted with 1 hint; LC 1658 needed 2 hints for the complement idea, then Accepted 10/10. 1 of 3 independent. Hints were taken before the 35-minute cap. Replaced by R-33."
+    },
+    {
+      "id": "R-33",
+      "weakness": "W-003",
+      "task": "Cold re-solve of LC 1052 and LC 1658 (no hints), plus one new unseen sliding-window problem, pattern unnamed; 35-minute cap each, Workbench timer on",
+      "due": "2026-10-28",
+      "state": "pending",
+      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap."
+    },
+    {
+      "id": "R-05",
+      "weakness": "W-005",
+      "task": "Closed-book race scenarios: booking, shared counter, compare-and-set",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "Week 1, after transactions and isolation."
+    },
+    {
+      "id": "R-06",
+      "weakness": null,
+      "task": "Binary search variants: LC 34, 153, 33, 162 without help",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "Week 1. Rotated-array and peak reasoning."
+    },
+    {
+      "id": "R-07",
+      "weakness": null,
+      "task": "Linked-list retest: LC 2, 25 and a new unseen problem",
+      "due": "2026-11-08",
+      "state": "pending",
+      "note": "Week 2."
+    },
+    {
+      "id": "R-09",
+      "weakness": "W-006",
+      "task": "Worker-crash scenario: acknowledgement, redelivery, idempotency",
+      "due": "2026-11-15",
+      "state": "pending",
+      "note": "Week 3."
+    },
+    {
+      "id": "R-10",
+      "weakness": "W-007",
+      "task": "Explain the job worker lifecycle from trigger to retry, unaided",
+      "due": "2026-11-15",
+      "state": "pending",
+      "note": "Week 3."
+    }
   ],
   "nextActions": [
     "26 Oct: R-32 Lesson 1 A to C closed-book; R-19 LC 974 cold (35-minute cap); answer the auth and Redis check questions.",
@@ -375,26 +1857,89 @@
   ],
   "scopeNote": "Six weeks is about half the old plan. Core patterns, the CS fundamentals, five or more stories, one OOD mock and one design mock are in reach if the daily floor holds. Hard DP, harder graphs, tries, shortest paths and MST will not be interview-ready on 1 Dec. If the DSA gate fails, DSA alone extends and applications move later.",
   "standards": [
-    { "title": "Daily floor", "text": "Every planned day ends with a logged artifact: solution code or closed-book answers. No artifact leaves the day empty on the strip, and tomorrow does not advance." },
-    { "title": "Hard timers", "text": "Easy 20 minutes, medium 35, hard 50. At the cap the hint ladder opens: pattern name, then invariant, then approach. Any hint makes the solve not independent." },
-    { "title": "Re-solve rule", "text": "A failed or hinted problem is re-solved cold within 48 hours and again after 7 days. Two independent passes close it." },
-    { "title": "What independent means", "text": "The code passes. You stated the pattern, invariant, complexity and two edge cases before running it. No hint and no AI." },
-    { "title": "No AI in tests", "text": "Timed solves, retests and closed-book answers are unaided. A solve done with AI is void and logged as void." },
-    { "title": "Overdue retests block", "text": "An overdue retest stops new material until it is passed or turned into a written remediation plan." },
-    { "title": "Checkpoints cannot be skipped", "text": "A failed checkpoint freezes new topics in the failed area for the following week. Remediation replaces them." },
-    { "title": "Missed days", "text": "No extra hours to catch up. The cut ladder applies, in its fixed order." },
-    { "title": "Stories", "text": "Real incidents you can verify. No metric unless you measured it." }
+    {
+      "title": "Daily floor",
+      "text": "Every planned day ends with a logged artifact: solution code or closed-book answers. No artifact leaves the day empty on the strip, and tomorrow does not advance."
+    },
+    {
+      "title": "Hard timers",
+      "text": "Easy 20 minutes, medium 35, hard 50. At the cap the hint ladder opens: pattern name, then invariant, then approach. Any hint makes the solve not independent."
+    },
+    {
+      "title": "Re-solve rule",
+      "text": "A failed or hinted problem is re-solved cold within 48 hours and again after 7 days. Two independent passes close it."
+    },
+    {
+      "title": "What independent means",
+      "text": "The code passes. You stated the pattern, invariant, complexity and two edge cases before running it. No hint and no AI."
+    },
+    {
+      "title": "No AI in tests",
+      "text": "Timed solves, retests and closed-book answers are unaided. A solve done with AI is void and logged as void."
+    },
+    {
+      "title": "Overdue retests block",
+      "text": "An overdue retest stops new material until it is passed or turned into a written remediation plan."
+    },
+    {
+      "title": "Checkpoints cannot be skipped",
+      "text": "A failed checkpoint freezes new topics in the failed area for the following week. Remediation replaces them."
+    },
+    {
+      "title": "Missed days",
+      "text": "No extra hours to catch up. The cut ladder applies, in its fixed order."
+    },
+    {
+      "title": "Stories",
+      "text": "Real incidents you can verify. No metric unless you measured it."
+    }
   ],
   "thresholds": [
-    { "area": "DSA pattern", "status": "PRACTICING", "needs": "Two independent solves, plus one cold re-solve after at least 2 days" },
-    { "area": "DSA pattern", "status": "UNDERSTOOD", "needs": "Three unseen mediums solved independently within 35 minutes, each with correct complexity and two edge cases, one with the pattern unnamed" },
-    { "area": "DSA pattern", "status": "STRONG", "needs": "An unnamed-pattern timed set passed, and a retest after at least 7 days" },
-    { "area": "DSA pattern", "status": "INTERVIEW READY", "needs": "A mock passed under interview conditions" },
-    { "area": "CS topic", "status": "UNDERSTOOD", "needs": "A closed-book answer that explains the mechanism and survives one follow-up" },
-    { "area": "CS topic", "status": "STRONG", "needs": "An unseen scenario answered correctly, and a retest after at least 7 days" },
-    { "area": "CS topic", "status": "INTERVIEW READY", "needs": "An oral mock passed" },
-    { "area": "Story", "status": "STRONG", "needs": "Situation, task, your action, measured result and trade-offs verified, and 10 follow-ups survived" },
-    { "area": "Story", "status": "INTERVIEW READY", "needs": "Delivered naturally in a mock, with follow-ups survived twice" }
+    {
+      "area": "DSA pattern",
+      "status": "PRACTICING",
+      "needs": "Two independent solves, plus one cold re-solve after at least 2 days"
+    },
+    {
+      "area": "DSA pattern",
+      "status": "UNDERSTOOD",
+      "needs": "Three unseen mediums solved independently within 35 minutes, each with correct complexity and two edge cases, one with the pattern unnamed"
+    },
+    {
+      "area": "DSA pattern",
+      "status": "STRONG",
+      "needs": "An unnamed-pattern timed set passed, and a retest after at least 7 days"
+    },
+    {
+      "area": "DSA pattern",
+      "status": "INTERVIEW READY",
+      "needs": "A mock passed under interview conditions"
+    },
+    {
+      "area": "CS topic",
+      "status": "UNDERSTOOD",
+      "needs": "A closed-book answer that explains the mechanism and survives one follow-up"
+    },
+    {
+      "area": "CS topic",
+      "status": "STRONG",
+      "needs": "An unseen scenario answered correctly, and a retest after at least 7 days"
+    },
+    {
+      "area": "CS topic",
+      "status": "INTERVIEW READY",
+      "needs": "An oral mock passed"
+    },
+    {
+      "area": "Story",
+      "status": "STRONG",
+      "needs": "Situation, task, your action, measured result and trade-offs verified, and 10 follow-ups survived"
+    },
+    {
+      "area": "Story",
+      "status": "INTERVIEW READY",
+      "needs": "Delivered naturally in a mock, with follow-ups survived twice"
+    }
   ],
   "cutLadder": {
     "order": [
@@ -409,9 +1954,18 @@
   "weeklyTime": {
     "note": "About 27 hours a week, with Sunday afternoon as the only rest. That is the same time as the old 90-day plan, with a stricter standard, because the sprint is half as long. Tell me your real weekly hours and the plan is resized to them.",
     "blocks": [
-      { "when": "Weekdays 19:00 to 22:30 IST", "what": "DSA 90 min, core topic 90 min, recall and log 30 min" },
-      { "when": "Saturday 09:00 to 15:00", "what": "Internship tracing or design 3 h, timed DSA set 2 h, log 30 min (30-minute break)" },
-      { "when": "Sunday 09:00 to 13:00", "what": "Closed-book retests, mocks from Week 8, weekly review at 19:00. Afternoon off." }
+      {
+        "when": "Weekdays 19:00 to 22:30 IST",
+        "what": "DSA 90 min, core topic 90 min, recall and log 30 min"
+      },
+      {
+        "when": "Saturday 09:00 to 15:00",
+        "what": "Internship tracing or design 3 h, timed DSA set 2 h, log 30 min (30-minute break)"
+      },
+      {
+        "when": "Sunday 09:00 to 13:00",
+        "what": "Closed-book retests, mocks from Week 8, weekly review at 19:00. Afternoon off."
+      }
     ],
     "dailyDsa": [
       "One unseen problem under the hard timer, in C++, with no hints. State the pattern, the invariant, time and space complexity and two edge cases before you run it.",
@@ -422,13 +1976,75 @@
     "target": "About 8 to 10 independent solves a week, around 40 unseen solves by 1 Dec, with checkpoints on 25 Oct, 8 Nov and 22 Nov."
   },
   "weeks": [
-    { "week": 0, "start": "2026-10-20", "end": "2026-10-25", "core": "Request lifecycle, status codes, REST methods and JWT (Lesson 1, closed-book)", "applied": "Trace one authenticated API route", "dsa": "Cold retests of LC 643 and LC 209, then an unseen sliding-window set with the pattern unnamed; arrays, hashing, prefix sum", "lp": "List the real incidents you could build stories on, one line each, no polish. Resume truth audit: for every bullet, what you wrote (git history), what was measured, what you can defend for five minutes", "checkpoint": "Checkpoint 0, 25 Oct: every Week 0 retest passed, or a written remediation plan" },
-    { "week": 1, "start": "2026-10-26", "end": "2026-11-01", "core": "SQL, joins, indexes (B-tree, write cost); transactions, ACID, isolation, the last-seat race", "applied": "Mongo data model; a conditional update as compare-and-set", "dsa": "Two pointers, stack and queue, monotonic stack, binary search variants (LC 34, 153, 33, 162)", "lp": "First full STAR draft of S-001 (internship), from verified facts only" },
-    { "week": 2, "start": "2026-11-02", "end": "2026-11-08", "core": "OS retest: threads, races, locks, deadlock, GIL, stack vs heap, virtual memory. Networking: DNS, TCP and UDP, TLS, HTTP, WebSockets", "applied": "Concurrency in the job worker: heartbeat and shutdown", "dsa": "Linked-list retest, intervals and sorting, recursion, tree traversals", "lp": "Take S-001 through 10 follow-ups; draft S-003 (earlier internship)", "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral" },
-    { "week": 3, "start": "2026-11-09", "end": "2026-11-15", "core": "Distributed systems: queues, at-least-once, idempotency, retry with backoff and jitter, caching, backpressure, observability", "applied": "Job worker lifecycle: explain trigger, claim, process, finish or fail, retry", "dsa": "BST, tree problems, heap, graph BFS and DFS on grids", "lp": "Stories for a failure and for a disagreement (S-004, S-005): real incidents only" },
-    { "week": 4, "start": "2026-11-16", "end": "2026-11-22", "core": "OOD: SOLID, LRU cache, parking lot. System design at SDE-1 depth: URL shortener, rate limiter", "applied": "Redesign the job system as a scheduler, on paper", "dsa": "Topological sort, union find basics, greedy; mixed timed sets", "lp": "One resume pass with truthful bullets; behavioral mock 1", "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees and graphs, plus an OOD mock" },
-    { "week": 5, "start": "2026-11-23", "end": "2026-11-29", "core": "Mocks: CS oral, system design (45 minutes), behavioral with follow-ups", "applied": "", "dsa": "1D DP only if Checkpoint 2 passed; otherwise remediate the weakest patterns. Two problems in 70 minutes, twice", "lp": "Rehearse every story against follow-ups; behavioral mock 2", "checkpoint": "Full Amazon-style loop simulation on 28 or 29 Nov" },
-    { "week": 6, "start": "2026-11-30", "end": "2026-12-01", "gate": true, "core": "Gate review and remediation plan", "applied": "", "dsa": "Retest the weakest patterns", "lp": "", "checkpoint": "Gate review, Day 42" }
+    {
+      "week": 0,
+      "start": "2026-10-20",
+      "end": "2026-10-25",
+      "core": "Request lifecycle, status codes, REST methods and JWT (Lesson 1, closed-book)",
+      "applied": "Trace one authenticated API route",
+      "dsa": "Cold retests of LC 643 and LC 209, then an unseen sliding-window set with the pattern unnamed; arrays, hashing, prefix sum",
+      "lp": "List the real incidents you could build stories on, one line each, no polish. Resume truth audit: for every bullet, what you wrote (git history), what was measured, what you can defend for five minutes",
+      "checkpoint": "Checkpoint 0, 25 Oct: every Week 0 retest passed, or a written remediation plan"
+    },
+    {
+      "week": 1,
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "core": "SQL, joins, indexes (B-tree, write cost); transactions, ACID, isolation, the last-seat race",
+      "applied": "Mongo data model; a conditional update as compare-and-set",
+      "dsa": "Two pointers, stack and queue, monotonic stack, binary search variants (LC 34, 153, 33, 162)",
+      "lp": "First full STAR draft of S-001 (internship), from verified facts only"
+    },
+    {
+      "week": 2,
+      "start": "2026-11-02",
+      "end": "2026-11-08",
+      "core": "OS retest: threads, races, locks, deadlock, GIL, stack vs heap, virtual memory. Networking: DNS, TCP and UDP, TLS, HTTP, WebSockets",
+      "applied": "Concurrency in the job worker: heartbeat and shutdown",
+      "dsa": "Linked-list retest, intervals and sorting, recursion, tree traversals",
+      "lp": "Take S-001 through 10 follow-ups; draft S-003 (earlier internship)",
+      "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral"
+    },
+    {
+      "week": 3,
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "core": "Distributed systems: queues, at-least-once, idempotency, retry with backoff and jitter, caching, backpressure, observability",
+      "applied": "Job worker lifecycle: explain trigger, claim, process, finish or fail, retry",
+      "dsa": "BST, tree problems, heap, graph BFS and DFS on grids",
+      "lp": "Stories for a failure and for a disagreement (S-004, S-005): real incidents only"
+    },
+    {
+      "week": 4,
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "core": "OOD: SOLID, LRU cache, parking lot. System design at SDE-1 depth: URL shortener, rate limiter",
+      "applied": "Redesign the job system as a scheduler, on paper",
+      "dsa": "Topological sort, union find basics, greedy; mixed timed sets",
+      "lp": "One resume pass with truthful bullets; behavioral mock 1",
+      "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees and graphs, plus an OOD mock"
+    },
+    {
+      "week": 5,
+      "start": "2026-11-23",
+      "end": "2026-11-29",
+      "core": "Mocks: CS oral, system design (45 minutes), behavioral with follow-ups",
+      "applied": "",
+      "dsa": "1D DP only if Checkpoint 2 passed; otherwise remediate the weakest patterns. Two problems in 70 minutes, twice",
+      "lp": "Rehearse every story against follow-ups; behavioral mock 2",
+      "checkpoint": "Full Amazon-style loop simulation on 28 or 29 Nov"
+    },
+    {
+      "week": 6,
+      "start": "2026-11-30",
+      "end": "2026-12-01",
+      "gate": true,
+      "core": "Gate review and remediation plan",
+      "applied": "",
+      "dsa": "Retest the weakest patterns",
+      "lp": "",
+      "checkpoint": "Gate review, Day 42"
+    }
   ],
   "resumeRules": [
     "No internship bullet goes on a resume until you say which parts you wrote or changed (checked against git history).",
@@ -436,18 +2052,66 @@
     "Do not publish internship code. Check your internship and NDA terms first."
   ],
   "stories": [
-    { "id": "S-001", "source": "Internship (Alchemic)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific incident, your personal action and the result" },
-    { "id": "S-003", "source": "Earlier internship (real-time systems software)", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A specific incident, which parts you personally wrote or changed, and a result you measured" },
-    { "id": "S-004", "source": "Failure or mistake", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
-    { "id": "S-005", "source": "Team conflict or disagreement", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
-    { "id": "S-006", "source": "Customer or user impact", "status": "NOT STARTED", "lps": "—", "needed": "A real incident you provide" },
-    { "id": "S-007", "source": "Personal full-stack project", "status": "STORY CANDIDATE", "lps": "To be determined from real experience", "needed": "A design decision you made, the alternative you rejected, and a figure you measured yourself" }
+    {
+      "id": "S-001",
+      "source": "Internship (Alchemic)",
+      "status": "STORY CANDIDATE",
+      "lps": "To be determined from real experience",
+      "needed": "A specific incident, your personal action and the result"
+    },
+    {
+      "id": "S-003",
+      "source": "Earlier internship (real-time systems software)",
+      "status": "STORY CANDIDATE",
+      "lps": "To be determined from real experience",
+      "needed": "A specific incident, which parts you personally wrote or changed, and a result you measured"
+    },
+    {
+      "id": "S-004",
+      "source": "Failure or mistake",
+      "status": "NOT STARTED",
+      "lps": "—",
+      "needed": "A real incident you provide"
+    },
+    {
+      "id": "S-005",
+      "source": "Team conflict or disagreement",
+      "status": "NOT STARTED",
+      "lps": "—",
+      "needed": "A real incident you provide"
+    },
+    {
+      "id": "S-006",
+      "source": "Customer or user impact",
+      "status": "NOT STARTED",
+      "lps": "—",
+      "needed": "A real incident you provide"
+    },
+    {
+      "id": "S-007",
+      "source": "Personal full-stack project",
+      "status": "STORY CANDIDATE",
+      "lps": "To be determined from real experience",
+      "needed": "A design decision you made, the alternative you rejected, and a figure you measured yourself"
+    }
   ],
   "storyStages": [
-    { "name": "Story candidate", "means": "A real incident is identified" },
-    { "name": "Developing", "means": "Situation, task and your personal action are verified" },
-    { "name": "Strong", "means": "Result, decisions, trade-offs, failures and learning are defensible" },
-    { "name": "Interview ready", "means": "You answer the story and deep follow-ups naturally, accurately and without memorizing" }
+    {
+      "name": "Story candidate",
+      "means": "A real incident is identified"
+    },
+    {
+      "name": "Developing",
+      "means": "Situation, task and your personal action are verified"
+    },
+    {
+      "name": "Strong",
+      "means": "Result, decisions, trade-offs, failures and learning are defensible"
+    },
+    {
+      "name": "Interview ready",
+      "means": "You answer the story and deep follow-ups naturally, accurately and without memorizing"
+    }
   ],
   "storyRules": [
     "Real experiences only. No fabricated achievements and no invented metrics.",
@@ -472,13 +2136,41 @@
     "date": "2026-12-01",
     "note": "The gate is a review, not a promise. It reports what you can demonstrate under interview conditions without AI. Six weeks cannot cover everything: if DSA fails, DSA alone extends and applications move later. Hard DP and harder graphs are outside this gate.",
     "requirements": [
-      { "area": "DSA", "required": "Timed, unseen solves with the pattern unnamed: two problems in 70 minutes, passed twice in Week 5, and Checkpoints 0 to 2 passed", "current": "{{dsa.independent}} independent solves logged, none timed and none from an unnamed-pattern set. Sliding window still has open weaknesses (W-001 to W-003)." },
-      { "area": "C++ and STL", "required": "STL used without AI inside the timed sets", "current": "No evidence logged." },
-      { "area": "CS fundamentals", "required": "A closed-book oral of 10 questions across OS, databases, networking and distributed systems, with 8 or more answered correctly and the mechanism explained", "current": "No oral answer has passed. The 2026-10-15 baseline exposed gaps (W-004, W-005, W-006)." },
-      { "area": "Internship engineering", "required": "You explain and defend two areas, the API request path and the job worker lifecycle, with trade-offs and without AI", "current": "Neither traced and explained yet (W-007)." },
-      { "area": "OOD and system design", "required": "One OOD mock and one SDE-1 design mock passed", "current": "No mock done." },
-      { "area": "Behavioral", "required": "5 or more truthful STAR stories that each survive 10 follow-ups", "current": "0 stories developed. 2 candidates identified." },
-      { "area": "Mocks", "required": "A full Amazon-style loop simulated once", "current": "No mock done." }
+      {
+        "area": "DSA",
+        "required": "Timed, unseen solves with the pattern unnamed: two problems in 70 minutes, passed twice in Week 5, and Checkpoints 0 to 2 passed",
+        "current": "{{dsa.independent}} independent solves logged, none timed and none from an unnamed-pattern set. Sliding window still has open weaknesses (W-001 to W-003)."
+      },
+      {
+        "area": "C++ and STL",
+        "required": "STL used without AI inside the timed sets",
+        "current": "No evidence logged."
+      },
+      {
+        "area": "CS fundamentals",
+        "required": "A closed-book oral of 10 questions across OS, databases, networking and distributed systems, with 8 or more answered correctly and the mechanism explained",
+        "current": "No oral answer has passed. The 2026-10-15 baseline exposed gaps (W-004, W-005, W-006)."
+      },
+      {
+        "area": "Internship engineering",
+        "required": "You explain and defend two areas, the API request path and the job worker lifecycle, with trade-offs and without AI",
+        "current": "Neither traced and explained yet (W-007)."
+      },
+      {
+        "area": "OOD and system design",
+        "required": "One OOD mock and one SDE-1 design mock passed",
+        "current": "No mock done."
+      },
+      {
+        "area": "Behavioral",
+        "required": "5 or more truthful STAR stories that each survive 10 follow-ups",
+        "current": "0 stories developed. 2 candidates identified."
+      },
+      {
+        "area": "Mocks",
+        "required": "A full Amazon-style loop simulated once",
+        "current": "No mock done."
+      }
     ]
   }
 }

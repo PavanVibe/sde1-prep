@@ -8,58 +8,91 @@
     "import": "Imported history"
   },
   "entries": [
-  {
-   "date": "2026-10-26",
-   "kind": "plan",
-   "summary": "R-04 route trace became a lesson; debugging drills added; DSA pace to rise after 28 Oct",
-   "details": [
-    "R-04: could not trace the logout route unaided. Taught login, the per-request token check, logout and Redis (keys, TTL, revoke list). Not a pass; closed-book retest moved to 28 Oct.",
-    "New practice: two 30-minute planted-bug drills a week from the week of 2 Nov, inside the internship block. Symptom given; find, explain and fix the root cause.",
-    "Rule noted: Stack Overflow is fine for work and learning, but counts as outside help in any evidence attempt.",
-    "DSA: after 28 Oct, 2 new unseen problems plus 1 retest a day on a fixed pattern calendar. No status changed."
-   ]
-  },
-  {
-   "date": "2026-10-26",
-   "kind": "evidence",
-   "summary": "R-08 sliding-window set failed: 1 of 3 independent (LC 1695 yes; LC 1052 and LC 1658 needed hints)",
-   "details": [
-    "LC 1695: Accepted 9/9 on the first Submit, no hints, no outside help logged. Pattern recognition self-reported; invariant and complexity still to be written by you.",
-    "LC 1052: first Submit failed 5/8 because the two cases were swapped; both samples passed by coincidence. Accepted 8/8 after the fix, with 1 hint logged (25:03 on the clock).",
-    "LC 1658: the complement idea (total minus x, keep the longest middle subarray) was not seen until the hint. Accepted 10/10 after it, 21:54 on the clock, 2 hints logged.",
-    "W-003 stays open. R-08 marked failed; R-33 (cold LC 1052 and LC 1658 plus one new unseen problem) due 28 Oct. No status changed."
-   ]
-  },
-  {
-   "date": "2026-10-25",
-   "kind": "setup",
-   "summary": "DSA Workbench in use: C++17 problems judged against hidden tests, with a per-problem timer",
-   "details": [
-    "Problems are graded by a real compiler with sample, edge, random and large tests. A judged pass is not evidence by itself; hints, outside help and time are recorded with each submission.",
-    "The timer was added after LC 1695 was submitted, so that problem has no recorded time."
-   ]
-  },
-  {
-   "date": "2026-10-25",
-   "kind": "weakness",
-   "summary": "JWT placement quiz 2/5: encoding vs encryption vs signing gap, stateless idea missing",
-   "details": [
-    "Right: the three parts of a JWT, and 403 for a valid user calling an admin route.",
-    "Wrong: who can read an intercepted payload, what a server does with an edited payload, and why JWTs allow stateless servers.",
-    "New weakness W-008. Prerequisite (encoding, encryption, hashing, signing) taught first, then JWT. Placement quiz only, so no status changed."
-   ]
-  },
-  {
-   "date": "2026-10-25",
-   "kind": "weakness",
-   "summary": "Lesson 1 A to C retest (R-17) failed: A improved, B and C incomplete",
-   "details": [
-    "A: DNS, TCP handshake, TLS, HTTP request, response and re-render named in order. Missing: the button-click request and the server path.",
-    "B: GET, POST and DELETE only. PUT, PATCH, idempotency and status codes missing.",
-    "C: you described a signature check but said you do not know JWT; 401 vs 403 and statelessness missing.",
-    "W-004 stays open. Retest R-32 on 26 Oct, closed-book. No status changed."
-   ]
-  },
+    {
+      "date": "2026-10-27",
+      "kind": "evidence",
+      "summary": "LC 713 (R-21) Submit judged: Runtime Error on k = 0 (SIGFPE), not a pass",
+      "details": [
+        "Judge sandbox rebuilt on 27 Oct and self-tested: correct solution Accepted 2018/2018; wrong solution Wrong Answer; submitted code Runtime Error.",
+        "smvpo4mnse5ht: sample 1 passed; sample 2 (k = 0) crashed with SIGFPE. Cause: the shrink loop has no non-empty-window check when k <= 1.",
+        "Hints 0, no outside help, 5:38 on the clock. Status unchanged."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-27",
+      "kind": "evidence",
+      "summary": "LC 713 (R-21) Submit judged: Runtime Error on k = 0 (SIGFPE), not a pass",
+      "details": [
+        "Judge sandbox rebuilt on 27 Oct and self-tested: correct solution Accepted 2018/2018; wrong solution Wrong Answer; submitted code Runtime Error.",
+        "smvpo4mnse5ht: sample 1 passed; sample 2 (k = 0) crashed with SIGFPE. Cause: the shrink loop has no non-empty-window check when k <= 1.",
+        "Hints 0, no outside help, 5:38 on the clock. Status unchanged."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-27",
+      "kind": "evidence",
+      "summary": "LC 713 (R-21) Submit judged: Runtime Error on k = 0 (SIGFPE), not independent",
+      "details": [
+        "Judge sandbox rebuilt on 27 Oct (judge.py, process.py, common.h, problems/p5 harness). Self-tested: correct solution Accepted 2018/2018; wrong solution Wrong Answer; submitted code Runtime Error.",
+        "smvpo4mnse5ht: sample 1 passed; sample 2 (k = 0) crashed with SIGFPE. Cause: the shrink loop has no non-empty-window check when k <= 1.",
+        "Hints 0, no outside help, 5:38 on the clock. Status unchanged. R-21 failed; the cold retest is R-16 (28 Oct)."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "plan",
+      "summary": "R-04 route trace became a lesson; debugging drills added; DSA pace to rise after 28 Oct",
+      "details": [
+        "R-04: could not trace the logout route unaided. Taught login, the per-request token check, logout and Redis (keys, TTL, revoke list). Not a pass; closed-book retest moved to 28 Oct.",
+        "New practice: two 30-minute planted-bug drills a week from the week of 2 Nov, inside the internship block. Symptom given; find, explain and fix the root cause.",
+        "Rule noted: Stack Overflow is fine for work and learning, but counts as outside help in any evidence attempt.",
+        "DSA: after 28 Oct, 2 new unseen problems plus 1 retest a day on a fixed pattern calendar. No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "evidence",
+      "summary": "R-08 sliding-window set failed: 1 of 3 independent (LC 1695 yes; LC 1052 and LC 1658 needed hints)",
+      "details": [
+        "LC 1695: Accepted 9/9 on the first Submit, no hints, no outside help logged. Pattern recognition self-reported; invariant and complexity still to be written by you.",
+        "LC 1052: first Submit failed 5/8 because the two cases were swapped; both samples passed by coincidence. Accepted 8/8 after the fix, with 1 hint logged (25:03 on the clock).",
+        "LC 1658: the complement idea (total minus x, keep the longest middle subarray) was not seen until the hint. Accepted 10/10 after it, 21:54 on the clock, 2 hints logged.",
+        "W-003 stays open. R-08 marked failed; R-33 (cold LC 1052 and LC 1658 plus one new unseen problem) due 28 Oct. No status changed."
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "kind": "setup",
+      "summary": "DSA Workbench in use: C++17 problems judged against hidden tests, with a per-problem timer",
+      "details": [
+        "Problems are graded by a real compiler with sample, edge, random and large tests. A judged pass is not evidence by itself; hints, outside help and time are recorded with each submission.",
+        "The timer was added after LC 1695 was submitted, so that problem has no recorded time."
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "kind": "weakness",
+      "summary": "JWT placement quiz 2/5: encoding vs encryption vs signing gap, stateless idea missing",
+      "details": [
+        "Right: the three parts of a JWT, and 403 for a valid user calling an admin route.",
+        "Wrong: who can read an intercepted payload, what a server does with an edited payload, and why JWTs allow stateless servers.",
+        "New weakness W-008. Prerequisite (encoding, encryption, hashing, signing) taught first, then JWT. Placement quiz only, so no status changed."
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "kind": "weakness",
+      "summary": "Lesson 1 A to C retest (R-17) failed: A improved, B and C incomplete",
+      "details": [
+        "A: DNS, TCP handshake, TLS, HTTP request, response and re-render named in order. Missing: the button-click request and the server path.",
+        "B: GET, POST and DELETE only. PUT, PATCH, idempotency and status codes missing.",
+        "C: you described a signature check but said you do not know JWT; 401 vs 403 and statelessness missing.",
+        "W-004 stays open. Retest R-32 on 26 Oct, closed-book. No status changed."
+      ]
+    },
     {
       "date": "2026-10-25",
       "kind": "evidence",
@@ -282,10 +315,30 @@
       "kind": "status",
       "summary": "Linked lists, binary search and operating systems moved off NOT STARTED; internship study logged",
       "changes": [
-        { "track": "DSA", "topic": "Linked lists", "from": "NOT STARTED", "to": "PRACTICING" },
-        { "track": "DSA", "topic": "Binary search", "from": "NOT STARTED", "to": "PRACTICING" },
-        { "track": "Operating systems", "topic": "Overall", "from": "NOT STARTED", "to": "LEARNING" },
-        { "track": "Internship engineering", "topic": "Overall", "from": "NOT STARTED", "to": "LEARNING" }
+        {
+          "track": "DSA",
+          "topic": "Linked lists",
+          "from": "NOT STARTED",
+          "to": "PRACTICING"
+        },
+        {
+          "track": "DSA",
+          "topic": "Binary search",
+          "from": "NOT STARTED",
+          "to": "PRACTICING"
+        },
+        {
+          "track": "Operating systems",
+          "topic": "Overall",
+          "from": "NOT STARTED",
+          "to": "LEARNING"
+        },
+        {
+          "track": "Internship engineering",
+          "topic": "Overall",
+          "from": "NOT STARTED",
+          "to": "LEARNING"
+        }
       ],
       "details": [
         "Linked lists: LC 19, 21 and 141 independent; LC 142, 2 and 25 needed help; LC 160, 206, 876 and 24 completed with assistance not recorded.",
@@ -316,7 +369,12 @@
       "kind": "status",
       "summary": "Sliding window moved to PRACTICING",
       "changes": [
-        { "track": "DSA", "topic": "Sliding window", "from": "NOT STARTED", "to": "PRACTICING" }
+        {
+          "track": "DSA",
+          "topic": "Sliding window",
+          "from": "NOT STARTED",
+          "to": "PRACTICING"
+        }
       ],
       "details": [
         "LC 643: independent O(n²), hint needed for the optimal O(n) (W-001).",
