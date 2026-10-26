@@ -11,12 +11,13 @@
     {
       "date": "2026-10-27",
       "kind": "evidence",
-      "summary": "LC 713 (R-21) Submit judged: Runtime Error on k = 0 (SIGFPE), not a pass",
+      "summary": "LC 713 (R-21): attempt 1 Runtime Error on k = 0; attempt 2 Accepted; marked independent at your request",
       "details": [
         "Judge sandbox rebuilt on 27 Oct and self-tested: correct solution Accepted 2018/2018; wrong solution Wrong Answer; submitted code Runtime Error.",
         "smvpo4mnse5ht: sample 1 passed; sample 2 (k = 0) crashed with SIGFPE. Cause: the shrink loop has no non-empty-window check when k <= 1.",
         "Hints 0, no outside help, 5:38 on the clock. Status unchanged.",
-        "Attempt 2 (smvpog5tqdvjd): added a k <= 1 early return; Accepted 2018/2018. It came after the failure was explained, so it confirms the fix but is not independent evidence."
+        "Attempt 2 (smvpog5tqdvjd): added a k <= 1 early return; Accepted 2018/2018. It came after the failure was explained, so it confirms the fix but is not independent evidence.",
+        "Marked independent and R-21 passed at your request: the k = 0 constraint was missed through not reading the statement. The fix followed the explanation of the failing case. R-16 cold retest still due 28 Oct."
       ],
       "changes": []
     },
