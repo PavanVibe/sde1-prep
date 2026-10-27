@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "plan",
+      "summary": "Independent now means Accepted with no hint and no AI; written invariants and edge cases dropped; W-001 closed",
+      "details": [
+        "Your decision: a judged pass with no hint, no AI and no outside help is enough. The 'What independent means' standard and the DSA UNDERSTOOD threshold were updated to match.",
+        "W-001 (fixed-size sliding window) closed: two cold passes, 24 Oct and 28 Oct (judged).",
+        "No status moved: LC 643, 53 and 713 are retests, not unseen problems."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "evidence",
       "summary": "Three cold retests Accepted by the judge: LC 713 (R-16), LC 643 (R-12), LC 53 (R-14)",
       "details": [

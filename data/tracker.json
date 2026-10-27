@@ -1467,20 +1467,6 @@
   ],
   "weaknesses": [
     {
-      "id": "W-001",
-      "topic": "Sliding window: fixed-size optimization",
-      "source": "DSA",
-      "identified": "2026-08-12",
-      "state": "open",
-      "mistake": "LC 643: the basic solution was independent, but the optimal O(n) approach needed a hint.",
-      "correct": "Update the fixed-size window incrementally instead of recomputing its sum.",
-      "cause": "Not established.",
-      "exercise": "Re-solve LC 643 without a hint and explain the incremental O(n) update.",
-      "retest": "Hinted on 2026-10-20",
-      "retestDue": "2026-10-22",
-      "result": null
-    },
-    {
       "id": "W-002",
       "topic": "Sliding window: variable-size recognition and application",
       "source": "DSA",
@@ -1579,7 +1565,23 @@
       "result": "Placement 2/5 on 2026-10-25"
     }
   ],
-  "closedWeaknesses": [],
+  "closedWeaknesses": [
+    {
+      "id": "W-001",
+      "topic": "Sliding window: fixed-size optimization",
+      "source": "DSA",
+      "identified": "2026-08-12",
+      "state": "closed",
+      "mistake": "LC 643: the basic solution was independent, but the optimal O(n) approach needed a hint.",
+      "correct": "Update the fixed-size window incrementally instead of recomputing its sum.",
+      "cause": "Not established.",
+      "exercise": "Re-solve LC 643 without a hint and explain the incremental O(n) update.",
+      "retest": "Hinted on 2026-10-20",
+      "retestDue": "2026-10-22",
+      "result": "Closed 2026-10-28: cold passes on 24 Oct (self-reported) and 28 Oct (judged Accepted 11/11, 3:51).",
+      "closed": "2026-10-28"
+    }
+  ],
   "retests": [
     {
       "id": "R-01",
@@ -1864,7 +1866,7 @@
   ],
   "nextActions": [
     "28 Oct core: R-32 Lesson 1 A to C closed-book, written (W-004, overdue since 26 Oct); R-04 closed-book trace of one authenticated request.",
-    "28 Oct DSA: R-16 LC 713, R-12 LC 643 and R-14 LC 53 passed (judged). Still due: R-19 LC 974 (p4, 35 min); one-line explanation of the LC 643 O(n) update to close W-001.",
+    "28 Oct DSA: R-16 LC 713, R-12 LC 643 and R-14 LC 53 passed (judged). Still due: R-19 LC 974 (p4, 35 min).",
     "29 Oct: R-33 cold LC 1052 and LC 1658 plus Minimum Window Substring (p6); R-34 new unseen variable-size window problem. 35-minute cap each.",
     "30 Oct: R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875, R-30 LC 525, all cold.",
     "26-27 Oct carry-over: type the mini auth system by hand and map it to the internship code; mark unsure lines.",
@@ -1887,7 +1889,7 @@
     },
     {
       "title": "What independent means",
-      "text": "The code passes. You stated the pattern, invariant, complexity and two edge cases before running it. No hint and no AI."
+      "text": "The code is Accepted by the judge with no hint, no AI and no outside help. Written invariants and edge cases are not required (your decision, 28 Oct)."
     },
     {
       "title": "No AI in tests",
@@ -1919,7 +1921,7 @@
     {
       "area": "DSA pattern",
       "status": "UNDERSTOOD",
-      "needs": "Three unseen mediums solved independently within 35 minutes, each with correct complexity and two edge cases, one with the pattern unnamed"
+      "needs": "Three unseen mediums Accepted independently within 35 minutes, one with the pattern unnamed"
     },
     {
       "area": "DSA pattern",
