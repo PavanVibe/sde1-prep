@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "plan",
+      "summary": "Prefix-sum practice set assigned: LC 560, 523, 525, 930, 1248, 325, 327 (Workbench p9 to p15)",
+      "details": [
+        "Seven problems from the 'Subarray problems' notes, each with a judge harness (samples, edge cases, 2000 random cases against brute force, large inputs with a time limit).",
+        "LC 560, 1248 and 327 have full templates in the notes, so a solve with the notes open counts as outside help.",
+        "A cold LC 525 counts as R-30 (due 30 Oct)."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "setup",
       "summary": "Study notes: 'Subarray problems' cheat sheet added, opens full screen from the DSA page",
       "details": [
