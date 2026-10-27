@@ -10,6 +10,16 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "setup",
+      "summary": "Subarray notes: added 'same remainder means divisible by k' and remainder normalization",
+      "details": [
+        "New section after pattern 3 in the 'Subarray problems' sheet: why equal prefix remainders give a subarray sum divisible by k, why a hash map stores remainders, and ((prefix % k) + k) % k for negative prefixes.",
+        "Reference material, not evidence. R-19 (LC 974) is still pending."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "plan",
       "summary": "Prefix-sum practice set assigned: LC 560, 523, 525, 930, 1248, 325, 327 (Workbench p9 to p15)",
       "details": [

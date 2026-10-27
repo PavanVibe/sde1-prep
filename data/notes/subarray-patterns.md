@@ -412,6 +412,80 @@ If you store the current prefix before counting, you can accidentally count an e
 
 Related problem: LC 560, Subarray Sum Equals K.
 
+## Pattern 3 extension: same remainder means divisible by k
+
+### Why does the same remainder mean the difference is divisible by k?
+
+**Mathematical rule:** if two numbers have the same remainder when divided by k, their difference is divisible by k.
+
+Example with k = 5:
+
+- 12 % 5 = 2
+- 7 % 5 = 2
+
+Both have the same remainder, 2. Subtract them: 12 - 7 = 5. Since 5 is divisible by 5, the difference is divisible by k.
+
+### How does this apply to subarrays?
+
+Let prefix1 be the prefix sum before the subarray and prefix2 the prefix sum at the end of the subarray.
+
+**subarraySum = prefix2 - prefix1**
+
+If both prefix sums have the same remainder when divided by k, their difference is divisible by k.
+
+Example:
+
+- prefix1 = 7, remainder 7 % 5 = 2
+- prefix2 = 12, remainder 12 % 5 = 2
+- Subarray sum = 12 - 7 = 5
+- 5 % 5 = 0, so it is divisible by 5.
+
+### Why use a hash map?
+
+We store the remainders of previous prefix sums. When the current prefix sum has a remainder we have seen before, the difference between those prefix sums gives a subarray whose sum is divisible by k.
+
+**Remember:** same remainder, so the difference is divisible by k, so the subarray sum is divisible by k.
+
+### Why not just use prefix % k?
+
+In C++, the `%` operator can return a negative remainder when the prefix sum is negative.
+
+Example: prefix = -6, k = 4.
+
+```cpp
+prefix % k  // -6 % 4 = -2
+```
+
+Mathematically, we want the remainder normalized to the range 0 to k-1. Since -6 = (-2 * 4) + 2, the normalized remainder is 2.
+
+Use:
+
+```cpp
+int rem = ((prefix % k) + k) % k;
+```
+
+Step by step:
+
+```cpp
+((-6 % 4) + 4) % 4
+= (-2 + 4) % 4
+= 2
+```
+
+### When should I use each formula?
+
+- All array elements are non-negative: `prefix % k` is enough, because the prefix sum never goes negative.
+- Array elements can be negative: use `((prefix % k) + k) % k` to normalize the remainder.
+- k == 0: never calculate `% k`, because division by zero is invalid. Handle this case separately.
+
+### Remember
+
+```cpp
+int rem = ((prefix % k) + k) % k;
+```
+
+This formula keeps the remainder non-negative when k > 0. Using it consistently is a safe habit for divisibility problems such as LC 974, Subarray Sums Divisible by K.
+
 ## Pattern 4: Exactly K = At most K - At most K-1
 
 ### Step 1: The problem
