@@ -1070,10 +1070,10 @@
       "title": "Maximum Average Subarray I",
       "difficulty": "Easy",
       "pattern": "Sliding window (fixed size)",
-      "date": "2026-10-24",
+      "date": "2026-10-28",
       "independence": "independent",
-      "hint": "None (self-reported)",
-      "note": "Cold retest R-11, self-reported independent on 24 Oct; code and time not submitted. 20 Oct attempt used a hint. W-001 stays open until the 27 Oct retest (R-12)."
+      "hint": "0 hints; no outside help (judged)",
+      "note": "Cold retest R-11, self-reported independent on 24 Oct; code and time not submitted. 20 Oct attempt used a hint. W-001 stays open until the 27 Oct retest (R-12). 28 Oct (R-12, 7-day retest): Submit smvr33b57ycsg judged Accepted 11/11 (all hidden groups, including the large-input time check), 0 hints, no outside help, 3:51 on the clock. Code: fixed window of k, sum += nums[i] - nums[i-k], max tracked, divided by k at the end. The written explanation of the O(n) update was not given yet, so W-001 stays open until it is. Small cleanup: the nums.empty() check is dead code under the constraints."
     },
     {
       "lc": 3,
@@ -1173,10 +1173,10 @@
       "title": "Maximum Subarray",
       "difficulty": "Medium",
       "pattern": "Kadane / max subarray DP",
-      "date": "2026-10-24",
+      "date": "2026-10-28",
       "independence": "independent",
-      "hint": "None (self-reported)",
-      "note": "Cold retest R-13, self-reported independent on 24 Oct; time not given. The code matches the solution recorded on 21 Oct, which you saw first. 21 Oct: solution seen. Cold again on 28 Oct (R-14)."
+      "hint": "0 hints; no outside help (judged)",
+      "note": "Cold retest R-13, self-reported independent on 24 Oct; time not given. The code matches the solution recorded on 21 Oct, which you saw first. 21 Oct: solution seen. Cold again on 28 Oct (R-14). 28 Oct (R-14, 7-day retest): Submit smvr38gbhmuqu judged Accepted 11/11 on attempt 1, 0 hints, no outside help, 3:48 on the clock (the timer was left running). Kadane: sum = max(nums[i], sum + nums[i]), best starts at INT_MIN so all-negative arrays work. Invariant and edge cases not yet written down."
     },
     {
       "lc": 974,
@@ -1253,10 +1253,10 @@
       "title": "Subarray Product Less Than K",
       "difficulty": "Medium",
       "pattern": "Sliding window (variable, product)",
-      "date": "2026-10-27",
+      "date": "2026-10-28",
       "independence": "independent",
-      "hint": "0 hints logged; no outside help",
-      "note": "Cold retest R-15. You wrote if (product < k) count++; the correct update is count += right - left + 1, because every subarray ending at right and starting anywhere from left to right is valid. 21 Oct: solution used. Adds evidence to W-002. Cold again on 26 Oct (R-21) and 28 Oct (R-16). 27 Oct (R-21): Submit smvpo4mnse5ht judged by the real g++ judge: Runtime Error on sample 2 (k = 0), SIGFPE. The shrink loop divides by nums[left] even when the window is empty, so with k <= 1 it reads past the array. Sample 1 passed. 5:38 on the clock. Not a pass; cold retest R-16 on 28 Oct. Attempt 2 (smvpog5tqdvjd), after the verdict was explained: added if (k <= 1) return 0; Accepted 2018/2018. A corrected resubmit, not a cold pass. Marked independent at your request on 27 Oct: you said the k = 0 constraint was missed through not reading the statement, not a gap in the method. The fix was made after the failing case was explained."
+      "hint": "0 hints; no outside help (judged)",
+      "note": "Cold retest R-15. You wrote if (product < k) count++; the correct update is count += right - left + 1, because every subarray ending at right and starting anywhere from left to right is valid. 21 Oct: solution used. Adds evidence to W-002. Cold again on 26 Oct (R-21) and 28 Oct (R-16). 27 Oct (R-21): Submit smvpo4mnse5ht judged by the real g++ judge: Runtime Error on sample 2 (k = 0), SIGFPE. The shrink loop divides by nums[left] even when the window is empty, so with k <= 1 it reads past the array. Sample 1 passed. 5:38 on the clock. Not a pass; cold retest R-16 on 28 Oct. Attempt 2 (smvpog5tqdvjd), after the verdict was explained: added if (k <= 1) return 0; Accepted 2018/2018. A corrected resubmit, not a cold pass. Marked independent at your request on 27 Oct: you said the k = 0 constraint was missed through not reading the statement, not a gap in the method. The fix was made after the failing case was explained. 28 Oct (R-16, cold): Submit smvr2wifwrx5i judged Accepted 19/19, 0 hints, no outside help. The k <= 1 guard was written up front this time. The timer was not started, so there is no time. The if (product < k) before count += right - left + 1 is always true after the shrink loop and can go."
     },
     {
       "lc": 19,
@@ -1602,8 +1602,8 @@
       "weakness": "W-001",
       "task": "Re-solve LC 643 cold, no hints (7-day spaced retest)",
       "due": "2026-10-27",
-      "state": "pending",
-      "note": "7-day retest after the hinted attempt on 20 Oct."
+      "state": "passed",
+      "note": "7-day retest after the hinted attempt on 20 Oct. 28 Oct: Accepted 11/11 (smvr33b57ycsg), 0 hints, 3:51. Explanation of the O(n) update still owed."
     },
     {
       "id": "R-18",
@@ -1642,8 +1642,8 @@
       "weakness": null,
       "task": "Re-solve LC 53 cold (7-day spaced retest)",
       "due": "2026-10-28",
-      "state": "pending",
-      "note": "7 days after 21 Oct."
+      "state": "passed",
+      "note": "7 days after 21 Oct. 28 Oct: Accepted 11/11 (smvr38gbhmuqu), 0 hints, 3:48."
     },
     {
       "id": "R-15",
@@ -1746,8 +1746,8 @@
       "weakness": "W-002",
       "task": "Re-solve LC 713 cold (7-day spaced retest)",
       "due": "2026-10-28",
-      "state": "pending",
-      "note": "7 days after 21 Oct. Kept live on 27 Oct: LC 713 counts as done on 27 Oct, and R-16 still runs cold on 28 Oct."
+      "state": "passed",
+      "note": "7 days after 21 Oct. Kept live on 27 Oct: LC 713 counts as done on 27 Oct, and R-16 still runs cold on 28 Oct. 28 Oct: Accepted 19/19 (smvr2wifwrx5i), 0 hints, timer not started."
     },
     {
       "id": "R-02",
@@ -1864,7 +1864,7 @@
   ],
   "nextActions": [
     "28 Oct core: R-32 Lesson 1 A to C closed-book, written (W-004, overdue since 26 Oct); R-04 closed-book trace of one authenticated request.",
-    "28 Oct DSA: R-16 LC 713 cold (25 min), R-12 LC 643 cold (20 min), R-19 LC 974 (p4, 35 min), R-14 LC 53 cold (15 min).",
+    "28 Oct DSA: R-16 LC 713, R-12 LC 643 and R-14 LC 53 passed (judged). Still due: R-19 LC 974 (p4, 35 min); one-line explanation of the LC 643 O(n) update to close W-001.",
     "29 Oct: R-33 cold LC 1052 and LC 1658 plus Minimum Window Substring (p6); R-34 new unseen variable-size window problem. 35-minute cap each.",
     "30 Oct: R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875, R-30 LC 525, all cold.",
     "26-27 Oct carry-over: type the mini auth system by hand and map it to the internship code; mark unsure lines.",

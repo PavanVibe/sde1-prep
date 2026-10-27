@@ -10,6 +10,18 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "evidence",
+      "summary": "Three cold retests Accepted by the judge: LC 713 (R-16), LC 643 (R-12), LC 53 (R-14)",
+      "details": [
+        "LC 713: Accepted 19/19, 0 hints, k <= 1 guard written up front; timer not started.",
+        "LC 643: Accepted 11/11, 0 hints, 3:51. W-001 stays open until the O(n) update is explained in writing.",
+        "LC 53: Accepted 11/11, 0 hints, 3:48.",
+        "Invariants and edge cases were not written down before coding, so no status moved. Judge results are now grouped (random cases in one line) to keep the Workbench under its size limit."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "plan",
       "summary": "Day 8: 13 retests due or overdue; the backlog is spread over 28-30 Oct",
       "details": [
