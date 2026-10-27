@@ -1161,11 +1161,11 @@
       "title": "Subarray Sum Equals K",
       "difficulty": "Medium",
       "pattern": "Prefix sum + hashing",
-      "date": null,
+      "date": "2026-10-28",
       "dateNote": "historical",
       "independence": "independent",
-      "hint": "None",
-      "note": "Prefix sums stays NOT STARTED as a structured track."
+      "hint": "0 hints; no outside help logged (judged)",
+      "note": "Prefix sums stays NOT STARTED as a structured track. 28 Oct: Submit smvr5npbex84g Accepted 10/10 on attempt 1, 0:30 on the clock. The code matches the pattern 3 template in your notes, read earlier the same night."
     },
     {
       "lc": 142,
@@ -1193,10 +1193,10 @@
       "title": "Subarray Sums Divisible by K",
       "difficulty": "Medium",
       "pattern": "Prefix sum + remainder hashing",
-      "date": "2026-10-24",
-      "independence": "solution",
-      "hint": "Solution seen",
-      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20)."
+      "date": "2026-10-28",
+      "independence": "independent",
+      "hint": "0 hints; no outside help logged (judged)",
+      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section."
     },
     {
       "lc": 11,
@@ -1630,8 +1630,8 @@
       "weakness": null,
       "task": "LC 974: explain and code the O(n) prefix-sum remainder solution cold",
       "due": "2026-10-26",
-      "state": "pending",
-      "note": "After teaching on 24 Oct."
+      "state": "passed",
+      "note": "After teaching on 24 Oct. 28 Oct: Accepted 12/12 (smvr6g5q8qsqw), 0 hints, 1:43."
     },
     {
       "id": "R-20",

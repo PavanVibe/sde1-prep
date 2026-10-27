@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "evidence",
+      "summary": "LC 974 (R-19) and LC 560 Accepted by the judge, 0 hints",
+      "details": [
+        "LC 974: Accepted 12/12, attempt 1, 1:43. R-19 passed.",
+        "LC 560: Accepted 10/10, attempt 1, 0:30.",
+        "Both were written right after reading the subarray notes, which contain these exact approaches. Logged as independent under your rule (no hint, no outside help box ticked). No status moved."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "setup",
       "summary": "Subarray notes: added 'same remainder means divisible by k' and remainder normalization",
       "details": [
