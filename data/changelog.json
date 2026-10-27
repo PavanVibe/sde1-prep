@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "setup",
+      "summary": "Study notes: 'Subarray problems' cheat sheet added, opens full screen from the DSA page",
+      "details": [
+        "Your notes on 8 subarray patterns (fixed and variable windows, prefix sum + map, exactly K, Kadane, monotonic deque, range-sum counting, binary search on the answer and subarray DP) are saved as data/notes/subarray-patterns.md.",
+        "On the DSA page, under 'Your study notes', the heading 'Subarray problems' has an Open button that shows the notes full screen. Close or Esc returns to the page.",
+        "Reference material only: reading it is not evidence, so no status moved."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "plan",
       "summary": "Independent now means Accepted with no hint and no AI; written invariants and edge cases dropped; W-001 closed",
       "details": [

@@ -260,3 +260,28 @@ pre { background: var(--paper-2); padding: 0.9rem 1rem; overflow-x: auto; font: 
 .note-card .from { color: var(--muted); font-size: 0.86rem; margin-top: 0.1rem; }
 .note-card .check { border-left: 4px solid var(--ink); padding-left: 0.8rem; margin-top: 0.6rem; }
 .note-card pre { margin-top: 0.5rem; }
+
+/* note sheets: a heading row with an Open button, read full screen */
+.sheet-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 2px solid var(--rule-strong); border-bottom: 1px solid var(--rule); padding: 0.8rem 0; max-width: 72ch; margin-bottom: 0.8rem; }
+.sheet-row h3 { margin: 0; font-size: 1.1rem; }
+.sheet-row .from { color: var(--muted); font-size: 0.86rem; margin: 0.15rem 0 0; }
+.open-btn, .close-btn { font: 700 0.95rem/1 var(--text); color: var(--paper); background: var(--ink); border: 1.5px solid var(--ink); border-radius: 3px; padding: 0.55rem 1.1rem; cursor: pointer; flex: none; }
+.open-btn:hover, .close-btn:hover { background: var(--s4); border-color: var(--s4); }
+.sheet-open, .sheet-open body { overflow: hidden; }
+.sheet-dialog { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--paper); color: var(--ink); display: none; flex-direction: column; }
+.sheet-dialog[open] { display: flex; }
+.sheet-dialog::backdrop { background: var(--paper); }
+.sheet-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem max(16px, 4vw); border-bottom: 2px solid var(--rule-strong); background: var(--paper); }
+.sheet-bar h2 { margin: 0; font-size: 1.25rem; }
+.sheet-body { flex: 1; overflow-y: auto; padding: 1.2rem max(16px, 4vw) 4rem; outline: none; }
+.sheet-body > * { max-width: 48rem; margin-left: auto; margin-right: auto; }
+.sheet-body h2 { margin-top: 2.6rem; font-size: 1.55rem; border-top: 2px solid var(--rule-strong); padding-top: 0.8rem; }
+.sheet-body h3 { margin-top: 2rem; font-size: 1.2rem; }
+.sheet-body h4 { font: 700 1rem/1.3 var(--display); margin: 1.4rem auto 0.4rem; }
+.sheet-body ul, .sheet-body ol { padding-left: 1.4rem; }
+.sheet-body li { margin: 0.2rem 0; }
+.sheet-body pre { max-width: 48rem; }
+.sheet-body .tablewrap { margin-bottom: 1rem; }
+.sheet-body code { font: 0.9em/1.5 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+.sheet-body p code, .sheet-body li code, .sheet-body td code { background: var(--paper-2); padding: 0.05rem 0.3rem; border-radius: 2px; }
+@media (max-width: 520px) { .sheet-row { flex-wrap: wrap; } }

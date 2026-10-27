@@ -1062,6 +1062,16 @@
         "status": "Not started as a track. Scheduled for Week 1.",
         "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end."
       }
+    ],
+    "sheets": [
+      {
+        "id": "subarray-patterns",
+        "title": "Subarray problems",
+        "area": "DSA patterns",
+        "file": "data/notes/subarray-patterns.md",
+        "summary": "8 subarray patterns with C++ templates, then patterns 3, 4, 6 and 7 step by step. Added 28 Oct; reference material, not evidence.",
+        "added": "2026-10-28"
+      }
     ]
   },
   "dsaLog": [

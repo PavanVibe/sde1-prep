@@ -118,6 +118,22 @@ if changelog and tracker:
                 if c[k] not in tracker["statusScale"]:
                     err(f"changelog {e['date']}: {c[k]!r} is not a valid status")
 
+if tracker:
+    for sh in tracker.get("studyNotes", {}).get("sheets", []):
+        for k in ("id", "title", "file"):
+            if not sh.get(k):
+                err(f"study note sheet is missing {k!r}")
+        f = ROOT / sh.get("file", "")
+        if sh.get("file") and not f.is_file():
+            err(f"study note sheet {sh.get('id')!r}: {sh['file']} does not exist")
+
+note_files = sorted((ROOT / "data" / "notes").glob("*.md")) if (ROOT / "data" / "notes").is_dir() else []
+for f in note_files:
+    text = f.read_text(encoding="utf-8")
+    for bad in FORBIDDEN:
+        if bad.lower() in text.lower():
+            err(f"notes/{f.name}: contains {bad!r}, which should not appear on a public site")
+
 for name in ("tracker.json", "changelog.json"):
     text = (ROOT / "data" / name).read_text(encoding="utf-8")
     for bad in FORBIDDEN:

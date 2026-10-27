@@ -32,6 +32,82 @@
   var T = null, L = null, TODAY = '', SCALE = [];
   var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+
+  /* ---------- note sheets (full-screen reader) ---------- */
+  function inlineMd(t) {
+    var parts = String(t).split('`'), out = '';
+    for (var i = 0; i < parts.length; i++) {
+      if (i % 2) { out += '<code>' + esc(parts[i]) + '</code>'; continue; }
+      out += esc(parts[i]).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }
+    return out;
+  }
+  function renderMd(md) {
+    var lines = md.replace(/\r/g, '').split('\n'), html = '', i = 0, para = [];
+    function flush() { if (para.length) { html += '<p>' + inlineMd(para.join(' ')) + '</p>'; para = []; } }
+    while (i < lines.length) {
+      var ln = lines[i];
+      if (/^```/.test(ln)) {
+        flush(); var code = []; i++;
+        while (i < lines.length && !/^```/.test(lines[i])) { code.push(lines[i]); i++; }
+        i++; html += '<pre><code>' + esc(code.join('\n')) + '</code></pre>'; continue;
+      }
+      var h = /^(#{1,3})\s+(.*)$/.exec(ln);
+      if (h) { flush(); var lv = h[1].length + 1; html += '<h' + lv + '>' + inlineMd(h[2]) + '</h' + lv + '>'; i++; continue; }
+      if (/^\|/.test(ln)) {
+        flush(); var rows = [];
+        while (i < lines.length && /^\|/.test(lines[i])) { rows.push(lines[i]); i++; }
+        var cells = function (r) { return r.replace(/^\||\|$/g, '').split('|').map(function (c) { return c.trim(); }); };
+        var head = cells(rows[0]), body = rows.slice(2);
+        html += '<div class="tablewrap"><table><thead><tr>' + head.map(function (c) { return '<th scope="col">' + inlineMd(c) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+          body.map(function (r) { return '<tr>' + cells(r).map(function (c) { return '<td>' + inlineMd(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>';
+        continue;
+      }
+      if (/^\s*[-*]\s+/.test(ln) || /^\s*\d+\.\s+/.test(ln)) {
+        flush(); var ordered = /^\s*\d+\./.test(ln), items = [];
+        while (i < lines.length && (ordered ? /^\s*\d+\.\s+/ : /^\s*[-*]\s+/).test(lines[i])) { items.push(lines[i].replace(/^\s*(?:[-*]|\d+\.)\s+/, '')); i++; }
+        var tag = ordered ? 'ol' : 'ul';
+        html += '<' + tag + '>' + items.map(function (x) { return '<li>' + inlineMd(x) + '</li>'; }).join('') + '</' + tag + '>';
+        continue;
+      }
+      if (!ln.trim()) { flush(); i++; continue; }
+      para.push(ln.trim()); i++;
+    }
+    flush();
+    return html;
+  }
+  var lastOpener = null;
+  function openSheet(id, opener) {
+    var sh = (T.studyNotes.sheets || []).filter(function (x) { return x.id === id; })[0];
+    if (!sh) return;
+    lastOpener = opener || null;
+    var dlg = $('#sheet-dialog');
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.id = 'sheet-dialog'; dlg.className = 'sheet-dialog';
+      dlg.setAttribute('aria-labelledby', 'sheet-title');
+      dlg.innerHTML = '<div class="sheet-bar"><h2 id="sheet-title"></h2><button type="button" class="close-btn" id="sheet-close">Close</button></div><article class="sheet-body" id="sheet-body" tabindex="-1"></article>';
+      document.body.appendChild(dlg);
+      $('#sheet-close').addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('close', function () { document.documentElement.classList.remove('sheet-open'); if (lastOpener) lastOpener.focus(); });
+    }
+    $('#sheet-title').textContent = sh.title;
+    $('#sheet-body').innerHTML = '<p class="muted">Loading the notes.</p>';
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+    document.documentElement.classList.add('sheet-open');
+    fetch(sh.file, { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error(sh.file + ' returned ' + r.status); return r.text(); })
+      .then(function (md) {
+        md = md.replace(/^#\s+.*\n/, '');
+        $('#sheet-body').innerHTML = renderMd(md);
+        $('#sheet-body').scrollTop = 0; $('#sheet-body').focus();
+      })
+      .catch(function (e) { $('#sheet-body').innerHTML = '<p class="problem">Could not load the notes: ' + esc(e.message) + '</p>'; });
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-sheet]');
+    if (b) openSheet(b.getAttribute('data-sheet'), b);
+  });
+
   /* ---------- helpers ---------- */
   function $(s, el) { return (el || document).querySelector(s); }
   function esc(s) {
@@ -262,7 +338,12 @@
       return '<tr><td><strong>' + esc(tp.name) + '</strong>' + (tp.note ? '<span class="sub">' + esc(tp.note) + '</span>' : '') + '</td><td>' + status(tp.status) + '</td><td>' + esc(tp.evidence) + '</td><td>' + esc(fmt(tp.lastTested)) + '</td><td>' + esc(tp.next) + '</td></tr>';
     }));
 
-    html += '<h2>Your study notes</h2><p class="muted">' + esc(T.studyNotes.source) + '</p>';
+    html += '<h2>Your study notes</h2>';
+    (T.studyNotes.sheets || []).forEach(function (sh) {
+      html += '<div class="sheet-row"><div><h3>' + esc(sh.title) + '</h3><p class="from">' + esc(sh.summary || '') + '</p></div>' +
+        '<button type="button" class="open-btn" data-sheet="' + esc(sh.id) + '" aria-haspopup="dialog">Open</button></div>';
+    });
+    html += '<p class="muted">' + esc(T.studyNotes.source) + '</p>';
     html += '<div class="note-card"><h3>' + esc(T.dsaTemplate.title) + '</h3><p class="from">Sliding window</p><p>' + esc(T.dsaTemplate.caution) + '</p><pre><code>' + esc(T.dsaTemplate.code) + '</code></pre></div>';
     T.studyNotes.items.forEach(function (n) {
       html += '<div class="note-card"><h3>' + esc(n.title) + '</h3><p class="from">' + esc(n.area) + '</p><p>' + esc(n.text) + '</p>' + (n.code ? '<pre><code>' + esc(n.code) + '</code></pre>' : '') + '<p class="small muted">' + esc(n.status) + '</p><p class="check"><b>Self-test.</b> ' + esc(n.check) + '</p></div>';
