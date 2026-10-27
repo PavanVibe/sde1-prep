@@ -9,6 +9,18 @@
   },
   "entries": [
     {
+      "date": "2026-10-28",
+      "kind": "plan",
+      "summary": "Day 8: 13 retests due or overdue; the backlog is spread over 28-30 Oct",
+      "details": [
+        "28 Oct: R-32 Lesson 1 A to C (overdue since 26 Oct, W-004), R-04 route trace, R-16 LC 713, R-12 LC 643, R-19 LC 974, R-14 LC 53.",
+        "29 Oct: R-33 (LC 1052, LC 1658, Minimum Window Substring) and R-34 (new unseen variable-size window problem).",
+        "30 Oct: the 48-hour retests from the 25 Oct set (R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875, R-30 LC 525).",
+        "Overdue retests block new material, so the faster DSA pace starts only after the backlog clears. Also removed two duplicate 27 Oct entries created by failed validation runs."
+      ],
+      "changes": []
+    },
+    {
       "date": "2026-10-27",
       "kind": "evidence",
       "summary": "LC 713 (R-21): attempt 1 Runtime Error on k = 0; attempt 2 Accepted; marked independent at your request",
@@ -19,28 +31,6 @@
         "Attempt 2 (smvpog5tqdvjd): added a k <= 1 early return; Accepted 2018/2018. It came after the failure was explained, so it confirms the fix but is not independent evidence.",
         "Marked independent and R-21 passed at your request: the k = 0 constraint was missed through not reading the statement. The fix followed the explanation of the failing case. R-16 cold retest still due 28 Oct.",
         "Plan: R-16 (LC 713 cold) stays on 28 Oct; R-34 adds a new unseen variable-size sliding-window problem the same day; R-35 is the 7-day LC 713 retest on 3 Nov."
-      ],
-      "changes": []
-    },
-    {
-      "date": "2026-10-27",
-      "kind": "evidence",
-      "summary": "LC 713 (R-21) Submit judged: Runtime Error on k = 0 (SIGFPE), not a pass",
-      "details": [
-        "Judge sandbox rebuilt on 27 Oct and self-tested: correct solution Accepted 2018/2018; wrong solution Wrong Answer; submitted code Runtime Error.",
-        "smvpo4mnse5ht: sample 1 passed; sample 2 (k = 0) crashed with SIGFPE. Cause: the shrink loop has no non-empty-window check when k <= 1.",
-        "Hints 0, no outside help, 5:38 on the clock. Status unchanged."
-      ],
-      "changes": []
-    },
-    {
-      "date": "2026-10-27",
-      "kind": "evidence",
-      "summary": "LC 713 (R-21) Submit judged: Runtime Error on k = 0 (SIGFPE), not independent",
-      "details": [
-        "Judge sandbox rebuilt on 27 Oct (judge.py, process.py, common.h, problems/p5 harness). Self-tested: correct solution Accepted 2018/2018; wrong solution Wrong Answer; submitted code Runtime Error.",
-        "smvpo4mnse5ht: sample 1 passed; sample 2 (k = 0) crashed with SIGFPE. Cause: the shrink loop has no non-empty-window check when k <= 1.",
-        "Hints 0, no outside help, 5:38 on the clock. Status unchanged. R-21 failed; the cold retest is R-16 (28 Oct)."
       ],
       "changes": []
     },

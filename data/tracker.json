@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2026-12-01",
-    "lastUpdated": "2026-10-26",
+    "lastUpdated": "2026-10-28",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -1665,9 +1665,9 @@
       "id": "R-22",
       "weakness": null,
       "task": "Re-solve LC 11 cold, no hints, 20-minute cap",
-      "due": "2026-10-27",
+      "due": "2026-10-30",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt."
+      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-23",
@@ -1681,9 +1681,9 @@
       "id": "R-24",
       "weakness": null,
       "task": "Re-solve LC 238 cold, no hints, 25-minute cap",
-      "due": "2026-10-27",
+      "due": "2026-10-30",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt."
+      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-25",
@@ -1697,9 +1697,9 @@
       "id": "R-26",
       "weakness": null,
       "task": "Re-solve LC 739 cold, no hints, 30-minute cap",
-      "due": "2026-10-27",
+      "due": "2026-10-30",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt."
+      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-27",
@@ -1713,9 +1713,9 @@
       "id": "R-28",
       "weakness": null,
       "task": "Re-solve LC 875 cold, no hints, 35-minute cap",
-      "due": "2026-10-27",
+      "due": "2026-10-30",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt."
+      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-29",
@@ -1729,9 +1729,9 @@
       "id": "R-30",
       "weakness": null,
       "task": "Re-solve LC 525 cold, no hints, 35-minute cap",
-      "due": "2026-10-27",
+      "due": "2026-10-30",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt."
+      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-31",
@@ -1801,9 +1801,9 @@
       "id": "R-33",
       "weakness": "W-003",
       "task": "Cold re-solve of LC 1052 and LC 1658 (no hints), plus one new unseen sliding-window problem, pattern unnamed; 35-minute cap each, Workbench timer on",
-      "due": "2026-10-28",
+      "due": "2026-10-29",
       "state": "pending",
-      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap."
+      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-05",
@@ -1849,9 +1849,9 @@
       "id": "R-34",
       "weakness": "W-002",
       "task": "New unseen variable-size sliding-window problem, pattern unnamed, 35-minute cap, Workbench timer on; read the constraints and write two edge cases before coding",
-      "due": "2026-10-28",
+      "due": "2026-10-29",
       "state": "pending",
-      "note": "Added 27 Oct so the pattern moves forward alongside the R-16 retest. Problem is loaded into the Workbench on 28 Oct, not named in advance."
+      "note": "Added 27 Oct so the pattern moves forward alongside the R-16 retest. Problem is loaded into the Workbench on 28 Oct, not named in advance. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog."
     },
     {
       "id": "R-35",
@@ -1863,14 +1863,13 @@
     }
   ],
   "nextActions": [
-    "26 Oct: R-32 Lesson 1 A to C closed-book; R-19 LC 974 cold (35-minute cap); answer the auth and Redis check questions.",
-    "26-27 Oct: type the mini auth system (issue, revoke, check, login, logout) by hand and map each part to the internship code; mark unsure lines.",
-    "27 Oct (R-12): LC 643 cold, 20-minute cap.",
-    "28 Oct (R-33): cold re-solve LC 1052 and LC 1658 without hints, plus one new unseen sliding-window problem, 35-minute cap each.",
-    "28 Oct (R-16, R-34): LC 713 cold, plus one new unseen variable-size sliding-window problem (35-minute cap, read constraints first).",
-    "28 Oct (R-04): closed-book trace of one authenticated request.",
-    "From the week of 2 Nov: two 30-minute code-reading and debugging drills a week (planted bugs in known code, symptom given, find, explain and fix the root cause), inside the internship block.",
-    "After 28 Oct: DSA pace rises to 2 new unseen problems plus 1 retest a day, on a fixed pattern calendar."
+    "28 Oct core: R-32 Lesson 1 A to C closed-book, written (W-004, overdue since 26 Oct); R-04 closed-book trace of one authenticated request.",
+    "28 Oct DSA: R-16 LC 713 cold (25 min), R-12 LC 643 cold (20 min), R-19 LC 974 (p4, 35 min), R-14 LC 53 cold (15 min).",
+    "29 Oct: R-33 cold LC 1052 and LC 1658 plus Minimum Window Substring (p6); R-34 new unseen variable-size window problem. 35-minute cap each.",
+    "30 Oct: R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875, R-30 LC 525, all cold.",
+    "26-27 Oct carry-over: type the mini auth system by hand and map it to the internship code; mark unsure lines.",
+    "From the week of 2 Nov: two 30-minute planted-bug debugging drills a week, inside the internship block.",
+    "After the backlog clears: DSA pace rises to 2 new unseen problems plus 1 retest a day."
   ],
   "scopeNote": "Six weeks is about half the old plan. Core patterns, the CS fundamentals, five or more stories, one OOD mock and one design mock are in reach if the daily floor holds. Hard DP, harder graphs, tries, shortest paths and MST will not be interview-ready on 1 Dec. If the DSA gate fails, DSA alone extends and applications move later.",
   "standards": [
