@@ -10,6 +10,18 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "weakness",
+      "summary": "Lesson 1 retest (R-32) failed: A mostly complete, B and C not answered",
+      "details": [
+        "A: DNS, handshake, TLS, HTTP GET, server response and render in order; the click flow and UI update covered. Errors: delete sent as POST (REST uses DELETE); the three-way handshake not named as TCP; JWT verification described as a Redis lookup and cookie match rather than a signature check.",
+        "Status codes 200/204/401/403/404/500 correct. 201 and 400 not given.",
+        "B (methods, idempotency) and C (JWT parts, tampering, statelessness) not answered.",
+        "Independence of the answer not yet confirmed. W-004 stays open; retest R-36 on 30 Oct. R-04 route trace not attempted. No status changed."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "evidence",
       "summary": "LC 974 (R-19) and LC 560 Accepted by the judge, 0 hints",
       "details": [
