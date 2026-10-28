@@ -4,7 +4,7 @@
     "candidate": "Pavan",
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
-    "gateDate": "2026-12-01",
+    "gateDate": "2027-01-18",
     "lastUpdated": "2026-10-29",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
@@ -32,12 +32,22 @@
     {
       "date": "2026-11-22",
       "label": "Checkpoint 2",
-      "detail": "Day 33. An unseen timed set with trees and graphs, plus an OOD mock"
+      "detail": "Day 33. Unseen timed set with trees, heaps and graphs, pattern unnamed, plus a CS oral on databases, OS and distributed systems"
     },
     {
-      "date": "2026-12-01",
+      "date": "2026-12-13",
+      "label": "Checkpoint 3",
+      "detail": "Day 54. Unseen mixed set (DP, backtracking, graphs) plus an OOD mock"
+    },
+    {
+      "date": "2027-01-03",
+      "label": "Checkpoint 4",
+      "detail": "Day 75. First full Amazon-style loop simulation"
+    },
+    {
+      "date": "2027-01-18",
       "label": "Gate review",
-      "detail": "Day 42. If the DSA gate fails, extend DSA only and move applications later"
+      "detail": "Day 90. Every Tier 1 goal at its gate target, or the gap and a dated plan for it"
     }
   ],
   "tracks": [
@@ -61,7 +71,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Independent problems and follow-ups (Week 0)"
+          "next": "Independent problems and follow-ups (Week 0)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Hashing",
@@ -197,21 +208,24 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Dependency problems (Week 4)"
+          "next": "Dependency problems (Week 4)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Union find (DSU)",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Connectivity problems, basics only (Week 4)"
+          "next": "Connectivity problems, basics only (Week 4)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Shortest paths",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Out of this sprint"
+          "next": "Out of this sprint",
+          "gateTarget": "STRONG"
         },
         {
           "name": "MST",
@@ -233,7 +247,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Out of this sprint"
+          "next": "Out of this sprint",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Monotonic structures",
@@ -248,14 +263,16 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Not scheduled"
+          "next": "Not scheduled",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Advanced mixed problems",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Timed unseen sets at the checkpoints and in Week 5"
+          "next": "Timed unseen sets at the checkpoints and in Week 5",
+          "gateTarget": "UNDERSTOOD"
         }
       ]
     },
@@ -295,14 +312,16 @@
           "status": "LEARNING",
           "evidence": "Shared memory and basic IPC learned and evaluated",
           "lastTested": "2026-08-18",
-          "next": "Apply and explain IPC trade-offs"
+          "next": "Apply and explain IPC trade-offs",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Context switching",
           "status": "LEARNING",
           "evidence": "Mechanism and overhead learned and evaluated",
           "lastTested": "2026-08-18",
-          "next": "Explain the mechanism and handle follow-ups"
+          "next": "Explain the mechanism and handle follow-ups",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Stack vs heap",
@@ -349,14 +368,16 @@
           "status": "LEARNING",
           "evidence": "FCFS, SJF, Round Robin, waiting and response time, starvation",
           "lastTested": "2026-08-18",
-          "next": "Compare scheduling strategies in scenarios"
+          "next": "Compare scheduling strategies in scenarios",
+          "gateTarget": "STRONG"
         },
         {
           "name": "System calls",
           "status": "LEARNING",
           "evidence": "User vs kernel mode and conceptual system calls",
           "lastTested": "2026-08-18",
-          "next": "Explain the user and kernel boundary with follow-ups"
+          "next": "Explain the user and kernel boundary with follow-ups",
+          "gateTarget": "STRONG"
         }
       ]
     },
@@ -420,14 +441,16 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Schema exercise (Week 1)"
+          "next": "Schema exercise (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "NoSQL",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: SQL vs Mongo answered on data shape only, no trade-offs",
           "lastTested": "2026-10-15",
-          "next": "Model comparison (Week 1)"
+          "next": "Model comparison (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "MongoDB",
@@ -435,14 +458,15 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Apply to the internship data model (Week 1)",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         },
         {
           "name": "Sharding",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Design exercise, light (Week 3)"
+          "next": "Design exercise, light (Week 3)",
+          "gateTarget": "STRONG"
         }
       ]
     },
@@ -483,7 +507,7 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Trade-offs against TCP (Week 2)",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         },
         {
           "name": "DNS",
@@ -506,14 +530,16 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Connection model (Week 2)"
+          "next": "Connection model (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Latency and throughput",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Performance reasoning (Week 2)"
+          "next": "Performance reasoning (Week 2)",
+          "gateTarget": "STRONG"
         }
       ]
     },
@@ -553,14 +579,16 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Failure analysis (Week 3)"
+          "next": "Failure analysis (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Rate limiting",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Design exercise (Week 4)"
+          "next": "Design exercise (Week 4)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Caching",
@@ -576,21 +604,23 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Queue overload reasoning (Week 3)",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         },
         {
           "name": "Consistency",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Trade-off reasoning, light (Week 3)"
+          "next": "Trade-off reasoning, light (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Load balancing",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Architecture exercise (Week 4)"
+          "next": "Architecture exercise (Week 4)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Observability",
@@ -598,7 +628,7 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Metrics, logging and tracing (Week 3)",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         }
       ]
     },
@@ -676,7 +706,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Out of this sprint; revisit after the gate review"
+          "next": "Out of this sprint; revisit after the gate review",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Speech-to-text proxies",
@@ -771,7 +802,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Explain and design"
+          "next": "Explain and design",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Composition",
@@ -786,14 +818,16 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Defend its usage"
+          "next": "Defend its usage",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Polymorphism",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Implement and explain"
+          "next": "Implement and explain",
+          "gateTarget": "STRONG"
         },
         {
           "name": "SOLID",
@@ -841,35 +875,40 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Timed design"
+          "next": "Timed design",
+          "gateTarget": "STRONG"
         },
         {
           "name": "API design",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: blank",
           "lastTested": "2026-10-15",
-          "next": "Design exercises"
+          "next": "Design exercises",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Data modelling",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Schema exercises"
+          "next": "Schema exercises",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Indexing",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Trade-off questions"
+          "next": "Trade-off questions",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Caching",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Design exercise"
+          "next": "Design exercise",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Queues and workers",
@@ -877,21 +916,23 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Async design",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         },
         {
           "name": "Load balancing",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Scaling exercise"
+          "next": "Scaling exercise",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Fault tolerance",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Failure injection questions"
+          "next": "Failure injection questions",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Rate limiting",
@@ -899,14 +940,15 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Design exercise",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         },
         {
           "name": "Observability",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Production scenario"
+          "next": "Production scenario",
+          "gateTarget": "STRONG"
         },
         {
           "name": "SDE-1 design interview",
@@ -914,7 +956,7 @@
           "evidence": "—",
           "lastTested": null,
           "next": "A successful timed mock",
-          "gateTarget": "UNDERSTOOD"
+          "gateTarget": "STRONG"
         }
       ]
     },
@@ -1043,42 +1085,48 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Timed mock"
+          "next": "Timed mock",
+          "gateTarget": "STRONG"
         },
         {
           "name": "CS fundamentals mock",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Oral mock"
+          "next": "Oral mock",
+          "gateTarget": "STRONG"
         },
         {
           "name": "OOD mock",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Timed design"
+          "next": "Timed design",
+          "gateTarget": "STRONG"
         },
         {
           "name": "System design mock",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Timed design"
+          "next": "Timed design",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Behavioral mock",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Leadership-principle follow-up drill"
+          "next": "Leadership-principle follow-up drill",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Full Amazon-style mock",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "End-to-end mock"
+          "next": "End-to-end mock",
+          "gateTarget": "INTERVIEW READY"
         }
       ]
     }
@@ -1998,7 +2046,7 @@
     "Sat 31 Oct: R-18, R-20, R-37, R-39, LC 162 + 2 unseen two-pointer + 1 unseen binary search on the answer; transactions, ACID and the last-seat race; Mongo compare-and-set in the internship code; S-001 full draft.",
     "Sun 1 Nov: R-06 (LC 34, 153, 33, 162 cold), 7-day retests R-23, R-25, R-27, R-29, R-31; R-05 race scenarios; weekly review at 19:00."
   ],
-  "scopeNote": "Tiered plan from 29 Oct. Tier 1, never cut: 17 DSA patterns to Interview ready (1D DP included), the 8 most-asked LPs to Interview ready, OOD to Strong. Tier 2: OS concurrency, databases, the request path, distributed systems basics, URL shortener and rate limiter, the job worker, to Strong. Cut: tries, shortest paths, MST, bit manipulation, 2D DP, topological sort and union find, the voice agent.",
+  "scopeNote": "90-day sprint from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
     {
       "title": "Daily floor",
@@ -2095,13 +2143,13 @@
   ],
   "cutLadder": {
     "order": [
+      "MST (left out; low frequency for SDE-1)",
       "WebSockets and HTTP/2 depth",
-      "Sharding and consistency depth, and the second system design mock",
-      "Internship modules beyond the job worker and the API request path",
+      "Internship modules beyond the job worker, the API path and the voice agent overview",
       "Tier 2 depth beyond Understood (never Tier 1)"
     ],
-    "never": "Tier 1 quotas, retests, checkpoints, stories and mocks are never cut. If Tier 1 is not met by 1 Dec, the gate moves.",
-    "alreadyCut": "Cut on 29 Oct as low-frequency or hard for SDE-1: tries, shortest paths, MST, bit manipulation, 2D DP, topological sort and union find (only if time remains), the real-time voice agent, replication and CAP depth."
+    "never": "Tier 1 quotas, retests, checkpoints, stories and mocks are never cut. If Tier 1 is not met by 18 Jan, the gate moves again.",
+    "alreadyCut": "Left out: MST, advanced graph algorithms beyond Dijkstra, replication and CAP depth, the publishable queue project."
   },
   "weeklyTime": {
     "note": "About 43 hours a week, set 29 Oct from your real availability: weekdays 19:30 to 00:30, weekends free. Hard stop at 00:30: no tests after it, because tired solves are unreliable evidence. Sunday evening after the review is rest.",
@@ -2459,8 +2507,8 @@
       "start": "2026-11-02",
       "end": "2026-11-08",
       "core": "OS concurrency: threads, races, locks, deadlock, stack vs heap, virtual memory. Networking request path: DNS, TCP, UDP, TLS, HTTP",
-      "applied": "Concurrency in the job worker: heartbeat and shutdown",
-      "dsa": "Arrays and hashing, linked lists, intervals and greedy, recursion and tree traversals",
+      "applied": "Job worker concurrency: heartbeat and shutdown",
+      "dsa": "Arrays and hashing, linked lists, intervals, sorting and greedy",
       "lp": "S-001 through 10 follow-ups; S-003 full STAR",
       "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral",
       "goals": [
@@ -2555,11 +2603,11 @@
           "id": "W2-4",
           "lane": "dsa",
           "kind": "new",
-          "item": "Arrays and hashing: 5 unseen mediums",
+          "item": "Arrays and hashing: 6 unseen",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "5 unseen independent",
+          "quota": "6 unseen mediums independent within 35 min",
           "refs": [
             {
               "track": "dsa",
@@ -2616,27 +2664,6 @@
         },
         {
           "id": "W2-7",
-          "lane": "dsa",
-          "kind": "new",
-          "item": "Recursion and tree traversals: 4 unseen",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": "4 unseen independent (trees continue in Week 3)",
-          "refs": [
-            {
-              "track": "dsa",
-              "topic": "Recursion"
-            },
-            {
-              "track": "dsa",
-              "topic": "Trees"
-            }
-          ],
-          "target": "PRACTICING"
-        },
-        {
-          "id": "W2-8",
           "lane": "lp",
           "kind": "new",
           "item": "S-001 through 10 follow-ups; S-003 full STAR",
@@ -2646,7 +2673,7 @@
           "quota": "Both stories survive follow-ups without notes"
         },
         {
-          "id": "W2-9",
+          "id": "W2-8",
           "lane": "checkpoint",
           "kind": "checkpoint",
           "item": "Checkpoint 1: three unseen mediums in 90 minutes + 10-question CS oral",
@@ -2661,10 +2688,10 @@
       "week": 3,
       "start": "2026-11-09",
       "end": "2026-11-15",
-      "core": "Distributed systems: queues, at-least-once, idempotency, retries with backoff and jitter, caching, backpressure, observability. OOD foundations",
+      "core": "Distributed systems I: queues, at-least-once delivery, idempotency, retries with backoff and jitter",
       "applied": "Job worker lifecycle: trigger, claim, process, finish or fail, retry",
-      "dsa": "Trees and BST, heap, graph BFS and DFS",
-      "lp": "Failure and disagreement stories (S-004, S-005)",
+      "dsa": "Recursion, tree traversals, BST",
+      "lp": "S-004 (failure), real incident only",
       "goals": [
         {
           "id": "W3-1",
@@ -2674,7 +2701,7 @@
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Worker-crash scenario (R-09)",
+          "quota": "Worker-crash scenario (R-09) + 2 more scenarios",
           "refs": [
             {
               "track": "dist",
@@ -2693,31 +2720,6 @@
         },
         {
           "id": "W3-2",
-          "lane": "core",
-          "kind": "new",
-          "item": "Caching, backpressure, observability",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": "Closed-book oral",
-          "refs": [
-            {
-              "track": "dist",
-              "topic": "Caching"
-            },
-            {
-              "track": "dist",
-              "topic": "Backpressure"
-            },
-            {
-              "track": "dist",
-              "topic": "Observability"
-            }
-          ],
-          "target": "UNDERSTOOD"
-        },
-        {
-          "id": "W3-3",
           "lane": "applied",
           "kind": "new",
           "item": "Job worker lifecycle, retries and idempotency",
@@ -2742,19 +2744,36 @@
           "target": "UNDERSTOOD"
         },
         {
-          "id": "W3-4",
+          "id": "W3-3",
           "lane": "dsa",
           "kind": "new",
-          "item": "Trees and BST: 8 unseen",
+          "item": "Recursion and tree traversals: 6 unseen",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "8 unseen independent",
+          "quota": "6 unseen independent",
           "refs": [
             {
               "track": "dsa",
-              "topic": "Trees"
+              "topic": "Recursion"
             },
+            {
+              "track": "dsa",
+              "topic": "Trees"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W3-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "BST: 5 unseen",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "5 unseen independent",
+          "refs": [
             {
               "track": "dsa",
               "topic": "BST"
@@ -2764,6 +2783,103 @@
         },
         {
           "id": "W3-5",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Maintenance: sliding window, prefix sum, two pointers in one unnamed set",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Unnamed set of 3, 105 minutes",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Sliding window"
+            },
+            {
+              "track": "dsa",
+              "topic": "Prefix sums"
+            },
+            {
+              "track": "dsa",
+              "topic": "Two pointers"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W3-6",
+          "lane": "lp",
+          "kind": "new",
+          "item": "S-004 (failure) full STAR + 5 follow-ups",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Real incident; survives follow-ups"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "core": "Distributed systems II: caching, backpressure, observability, fault tolerance, load balancing",
+      "applied": "Job worker failure modes on paper",
+      "dsa": "Heap, graph BFS and DFS on grids and graphs",
+      "lp": "S-005 (disagreement)",
+      "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees, heaps and graphs (pattern unnamed), plus a CS oral on databases, OS and distributed systems",
+      "goals": [
+        {
+          "id": "W4-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "Caching, backpressure, observability, fault tolerance, load balancing",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Closed-book oral + 2 scenarios",
+          "refs": [
+            {
+              "track": "dist",
+              "topic": "Caching"
+            },
+            {
+              "track": "dist",
+              "topic": "Backpressure"
+            },
+            {
+              "track": "dist",
+              "topic": "Observability"
+            },
+            {
+              "track": "dist",
+              "topic": "Fault tolerance"
+            },
+            {
+              "track": "dist",
+              "topic": "Load balancing"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W4-2",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Job worker failure modes: crash, duplicate, poison message",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Defend each failure path unaided",
+          "refs": [
+            {
+              "track": "alch",
+              "topic": "Job retries and recovery"
+            }
+          ],
+          "target": "STRONG"
+        },
+        {
+          "id": "W4-3",
           "lane": "dsa",
           "kind": "new",
           "item": "Heap and priority queue: 6 unseen",
@@ -2780,14 +2896,14 @@
           "target": "UNDERSTOOD"
         },
         {
-          "id": "W3-6",
+          "id": "W4-4",
           "lane": "dsa",
           "kind": "new",
-          "item": "Graph BFS and DFS (grids and graphs): 6 unseen",
+          "item": "Graph BFS and DFS: 7 unseen",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "6 unseen independent",
+          "quota": "7 unseen independent",
           "refs": [
             {
               "track": "dsa",
@@ -2797,10 +2913,41 @@
           "target": "UNDERSTOOD"
         },
         {
-          "id": "W3-7",
+          "id": "W4-5",
+          "lane": "lp",
+          "kind": "new",
+          "item": "S-005 (disagreement) full STAR + 5 follow-ups",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Real incident; survives follow-ups"
+        },
+        {
+          "id": "W4-6",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Checkpoint 2: trees, heaps, graphs set + CS oral",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": ""
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "start": "2026-11-23",
+      "end": "2026-11-29",
+      "core": "OOD foundations: classes, encapsulation, composition, SOLID, interfaces; LRU cache",
+      "applied": "Model the job system's classes",
+      "dsa": "Backtracking; graphs round 2 (multi-source BFS, cycle detection)",
+      "lp": "S-006 (customer impact)",
+      "goals": [
+        {
+          "id": "W5-1",
           "lane": "core",
           "kind": "new",
-          "item": "OOD foundations; LRU cache coded cold",
+          "item": "OOD foundations + LRU cache coded cold",
           "state": "pending",
           "doneDate": null,
           "note": "",
@@ -2821,97 +2968,16 @@
             {
               "track": "ood",
               "topic": "SOLID"
-            }
-          ],
-          "target": "UNDERSTOOD"
-        },
-        {
-          "id": "W3-8",
-          "lane": "lp",
-          "kind": "new",
-          "item": "S-004 (failure) and S-005 (disagreement), real incidents only",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": "Full STAR + 5 follow-ups each"
-        }
-      ]
-    },
-    {
-      "week": 4,
-      "start": "2026-11-16",
-      "end": "2026-11-22",
-      "core": "OOD interview problems: LRU, parking lot, one more. System design at SDE-1 depth: URL shortener, rate limiter",
-      "applied": "Redesign the job system as a scheduler, on paper",
-      "dsa": "Backtracking, graphs round 2, 1D DP begins",
-      "lp": "S-006, S-007; resume pass; behavioral mock 1",
-      "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees and graphs, plus an OOD mock",
-      "goals": [
-        {
-          "id": "W4-1",
-          "lane": "core",
-          "kind": "new",
-          "item": "OOD: parking lot + one more design, defended against requirement changes",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": "Each designed and coded cold, then changed live",
-          "refs": [
-            {
-              "track": "ood",
-              "topic": "OOD interview problems"
             },
             {
               "track": "ood",
               "topic": "Interface design"
-            },
-            {
-              "track": "ood",
-              "topic": "Requirement changes"
-            }
-          ],
-          "target": "STRONG"
-        },
-        {
-          "id": "W4-2",
-          "lane": "core",
-          "kind": "new",
-          "item": "System design: URL shortener, rate limiter",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": "Two 45-minute designs on paper",
-          "refs": [
-            {
-              "track": "sd",
-              "topic": "SDE-1 design interview"
-            },
-            {
-              "track": "sd",
-              "topic": "Rate limiting"
             }
           ],
           "target": "UNDERSTOOD"
         },
         {
-          "id": "W4-3",
-          "lane": "applied",
-          "kind": "new",
-          "item": "Job system redesigned as a scheduler",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": "Paper design with failure handling",
-          "refs": [
-            {
-              "track": "sd",
-              "topic": "Queues and workers"
-            }
-          ],
-          "target": "UNDERSTOOD"
-        },
-        {
-          "id": "W4-4",
+          "id": "W5-2",
           "lane": "dsa",
           "kind": "new",
           "item": "Backtracking: 8 unseen",
@@ -2928,7 +2994,7 @@
           "target": "UNDERSTOOD"
         },
         {
-          "id": "W4-5",
+          "id": "W5-3",
           "lane": "dsa",
           "kind": "new",
           "item": "Graphs round 2: 4 unseen + unnamed set",
@@ -2945,63 +3011,222 @@
           "target": "STRONG"
         },
         {
-          "id": "W4-6",
+          "id": "W5-4",
           "lane": "dsa",
           "kind": "new",
-          "item": "1D DP: 5 unseen",
+          "item": "Maintenance: binary search, stack, linked lists unnamed set",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "5 unseen (DP continues in Week 5)",
+          "quota": "Unnamed set + 7-day retest",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Binary search"
+            },
+            {
+              "track": "dsa",
+              "topic": "Stack and queue"
+            },
+            {
+              "track": "dsa",
+              "topic": "Monotonic structures"
+            },
+            {
+              "track": "dsa",
+              "topic": "Linked lists"
+            }
+          ],
+          "target": "STRONG"
+        },
+        {
+          "id": "W5-5",
+          "lane": "lp",
+          "kind": "new",
+          "item": "S-006 (customer impact) full STAR",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Real incident; survives follow-ups"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "start": "2026-11-30",
+      "end": "2026-12-06",
+      "core": "OOD interview problems: parking lot plus one more, under requirement changes",
+      "applied": "",
+      "dsa": "1D dynamic programming; topological sort; union find",
+      "lp": "S-007; behavioral mock 1",
+      "goals": [
+        {
+          "id": "W6-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "OOD: parking lot + one more design, defended against requirement changes",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Each designed and coded cold, then changed live",
+          "refs": [
+            {
+              "track": "ood",
+              "topic": "OOD interview problems"
+            },
+            {
+              "track": "ood",
+              "topic": "Requirement changes"
+            },
+            {
+              "track": "ood",
+              "topic": "Inheritance"
+            },
+            {
+              "track": "ood",
+              "topic": "Polymorphism"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W6-2",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "1D DP: 8 unseen",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "8 unseen independent",
           "refs": [
             {
               "track": "dsa",
               "topic": "Dynamic programming"
             }
           ],
-          "target": "PRACTICING"
+          "target": "UNDERSTOOD"
         },
         {
-          "id": "W4-7",
+          "id": "W6-3",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Topological sort and union find: 4 unseen each",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "8 unseen independent",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Topological sort"
+            },
+            {
+              "track": "dsa",
+              "topic": "Union find (DSU)"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W6-4",
           "lane": "lp",
           "kind": "new",
-          "item": "S-006, S-007, resume pass, behavioral mock 1",
+          "item": "S-007 full STAR + behavioral mock 1",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Mock passed with follow-ups"
-        },
-        {
-          "id": "W4-8",
-          "lane": "checkpoint",
-          "kind": "checkpoint",
-          "item": "Checkpoint 2: unseen trees and graphs set + OOD mock",
-          "state": "pending",
-          "doneDate": null,
-          "note": "",
-          "quota": ""
+          "quota": "Mock passed with follow-ups",
+          "refs": [
+            {
+              "track": "beh",
+              "topic": "Ownership"
+            },
+            {
+              "track": "beh",
+              "topic": "Dive Deep"
+            },
+            {
+              "track": "beh",
+              "topic": "Deliver Results"
+            }
+          ],
+          "target": "UNDERSTOOD"
         }
       ]
     },
     {
-      "week": 5,
-      "start": "2026-11-23",
-      "end": "2026-11-29",
-      "core": "Mocks: CS oral, system design (45 min), OOD, behavioral with follow-ups",
+      "week": 7,
+      "start": "2026-12-07",
+      "end": "2026-12-13",
+      "core": "System design I: requirements, API, data model, URL shortener. Databases II: normalization, NoSQL, sharding basics",
       "applied": "",
-      "dsa": "1D DP to target; daily unnamed mixed timed sets across all Tier 1 patterns",
-      "lp": "Rehearse every story; behavioral mock 2",
-      "checkpoint": "Full Amazon-style loop simulation on 28 or 29 Nov",
+      "dsa": "2D DP; tries",
+      "lp": "Stories for the remaining most-asked LPs",
+      "checkpoint": "Checkpoint 3, 13 Dec: unseen mixed set (DP, backtracking, graphs) + OOD mock",
       "goals": [
         {
-          "id": "W5-1",
-          "lane": "dsa",
+          "id": "W7-1",
+          "lane": "core",
           "kind": "new",
-          "item": "1D DP: 6 more unseen + unnamed set",
+          "item": "System design: requirements, API, data model, URL shortener",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "6 unseen independent + timed set",
+          "quota": "One 45-minute design on paper, defended",
+          "refs": [
+            {
+              "track": "sd",
+              "topic": "Requirements clarification"
+            },
+            {
+              "track": "sd",
+              "topic": "API design"
+            },
+            {
+              "track": "sd",
+              "topic": "Data modelling"
+            },
+            {
+              "track": "sd",
+              "topic": "Indexing"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W7-2",
+          "lane": "core",
+          "kind": "new",
+          "item": "Normalization, NoSQL, sharding basics",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Closed-book oral",
+          "refs": [
+            {
+              "track": "db",
+              "topic": "Normalization"
+            },
+            {
+              "track": "db",
+              "topic": "NoSQL"
+            },
+            {
+              "track": "db",
+              "topic": "Sharding"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W7-3",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "2D DP: 6 unseen",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "6 unseen independent + unnamed set",
           "refs": [
             {
               "track": "dsa",
@@ -3011,14 +3236,251 @@
           "target": "STRONG"
         },
         {
-          "id": "W5-2",
+          "id": "W7-4",
           "lane": "dsa",
           "kind": "new",
-          "item": "All Tier 1 patterns at interview level (mixed timed sets + DSA mock)",
+          "item": "Tries: 4 unseen",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Two problems in 70 minutes daily; DSA mock",
+          "quota": "4 unseen independent",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Tries"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W7-5",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Remaining most-asked LP stories drafted",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Each LP has a verified story",
+          "refs": [
+            {
+              "track": "beh",
+              "topic": "Customer Obsession"
+            },
+            {
+              "track": "beh",
+              "topic": "Bias for Action"
+            },
+            {
+              "track": "beh",
+              "topic": "Earn Trust"
+            },
+            {
+              "track": "beh",
+              "topic": "Have Backbone; Disagree and Commit"
+            },
+            {
+              "track": "beh",
+              "topic": "Learn and Be Curious"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W7-6",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Checkpoint 3: unseen DP/backtracking/graphs set + OOD mock",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": ""
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "start": "2026-12-14",
+      "end": "2026-12-20",
+      "core": "System design II: rate limiter, caching, load balancing, queues; a notification or job-scheduler design",
+      "applied": "Real-time voice agent: architecture and streaming latency",
+      "dsa": "Shortest paths (Dijkstra), bit manipulation, strings",
+      "lp": "Behavioral mock 2",
+      "goals": [
+        {
+          "id": "W8-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "System design: rate limiter + job scheduler or notification system",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Two 45-minute designs",
+          "refs": [
+            {
+              "track": "sd",
+              "topic": "Rate limiting"
+            },
+            {
+              "track": "sd",
+              "topic": "Caching"
+            },
+            {
+              "track": "sd",
+              "topic": "Load balancing"
+            },
+            {
+              "track": "sd",
+              "topic": "Queues and workers"
+            },
+            {
+              "track": "sd",
+              "topic": "Fault tolerance"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W8-2",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Real-time voice agent architecture and latency",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Explain the pipeline unaided; no invented metrics",
+          "refs": [
+            {
+              "track": "alch",
+              "topic": "Real-time voice agent"
+            }
+          ],
+          "target": "PRACTICING"
+        },
+        {
+          "id": "W8-3",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Shortest paths: 4 unseen",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "4 unseen independent",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Shortest paths"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W8-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Bit manipulation and strings: 3 unseen each",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "6 unseen independent",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Bit manipulation"
+            },
+            {
+              "track": "dsa",
+              "topic": "Strings"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W8-5",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Behavioral mock 2",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Mock passed with follow-ups",
+          "refs": [
+            {
+              "track": "beh",
+              "topic": "Follow-up handling"
+            }
+          ],
+          "target": "STRONG"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "start": "2026-12-21",
+      "end": "2026-12-27",
+      "core": "CS completion: OS scheduling, IPC, system calls, context switching; networking latency and WebSockets",
+      "applied": "",
+      "dsa": "Daily unnamed mixed timed sets across all patterns; DSA mock 1",
+      "lp": "Rehearse all stories",
+      "goals": [
+        {
+          "id": "W9-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "OS scheduling, IPC, system calls, context switching",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Closed-book oral",
+          "refs": [
+            {
+              "track": "os",
+              "topic": "Scheduling"
+            },
+            {
+              "track": "os",
+              "topic": "Basic IPC"
+            },
+            {
+              "track": "os",
+              "topic": "System calls"
+            },
+            {
+              "track": "os",
+              "topic": "Context switching"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W9-2",
+          "lane": "core",
+          "kind": "new",
+          "item": "Latency, throughput, WebSockets",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Closed-book oral",
+          "refs": [
+            {
+              "track": "net",
+              "topic": "Latency and throughput"
+            },
+            {
+              "track": "net",
+              "topic": "WebSockets"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W9-3",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "All core patterns Strong: daily mixed timed sets",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Two problems in 70 minutes daily",
           "refs": [
             {
               "track": "dsa",
@@ -3083,29 +3545,213 @@
             {
               "track": "dsa",
               "topic": "Greedy"
+            },
+            {
+              "track": "dsa",
+              "topic": "Dynamic programming"
             }
           ],
-          "target": "INTERVIEW READY"
+          "target": "STRONG"
         },
         {
-          "id": "W5-3",
+          "id": "W9-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "DSA mock 1",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Mock passed",
+          "refs": [
+            {
+              "track": "mock",
+              "topic": "DSA mock"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "start": "2026-12-28",
+      "end": "2027-01-03",
+      "core": "Mocks: CS oral, OOD, system design",
+      "applied": "Internship deep-dive mock",
+      "dsa": "Mixed sets; DSA mock 2; remediation",
+      "lp": "Behavioral mock 3",
+      "checkpoint": "Checkpoint 4, 3 Jan: first full Amazon-style loop simulation",
+      "goals": [
+        {
+          "id": "W10-1",
           "lane": "core",
           "kind": "new",
           "item": "CS, OOD and system design mocks",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Each mock passed"
+          "quota": "Each mock passed",
+          "refs": [
+            {
+              "track": "mock",
+              "topic": "CS fundamentals mock"
+            },
+            {
+              "track": "mock",
+              "topic": "OOD mock"
+            },
+            {
+              "track": "mock",
+              "topic": "System design mock"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
-          "id": "W5-4",
+          "id": "W10-2",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "DSA mock 2 + remediation of the weakest pattern",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Mock passed",
+          "refs": [
+            {
+              "track": "mock",
+              "topic": "DSA mock"
+            }
+          ],
+          "target": "STRONG"
+        },
+        {
+          "id": "W10-3",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Behavioral mock 3",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Mock passed",
+          "refs": [
+            {
+              "track": "mock",
+              "topic": "Behavioral mock"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W10-4",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Checkpoint 4: full loop simulation 1",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": ""
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "start": "2027-01-04",
+      "end": "2027-01-10",
+      "core": "Remediation of every goal below target",
+      "applied": "Resume final truth pass",
+      "dsa": "Mixed sets; remaining quota gaps",
+      "lp": "Stories at interview level",
+      "goals": [
+        {
+          "id": "W11-1",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "All Tier 1 patterns at interview level",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": "Timed sets + mocks",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Arrays"
+            },
+            {
+              "track": "dsa",
+              "topic": "Hashing"
+            },
+            {
+              "track": "dsa",
+              "topic": "Two pointers"
+            },
+            {
+              "track": "dsa",
+              "topic": "Sliding window"
+            },
+            {
+              "track": "dsa",
+              "topic": "Prefix sums"
+            },
+            {
+              "track": "dsa",
+              "topic": "Binary search"
+            },
+            {
+              "track": "dsa",
+              "topic": "Stack and queue"
+            },
+            {
+              "track": "dsa",
+              "topic": "Monotonic structures"
+            },
+            {
+              "track": "dsa",
+              "topic": "Linked lists"
+            },
+            {
+              "track": "dsa",
+              "topic": "Trees"
+            },
+            {
+              "track": "dsa",
+              "topic": "BST"
+            },
+            {
+              "track": "dsa",
+              "topic": "Heap and priority queue"
+            },
+            {
+              "track": "dsa",
+              "topic": "Graph BFS and DFS"
+            },
+            {
+              "track": "dsa",
+              "topic": "Backtracking"
+            },
+            {
+              "track": "dsa",
+              "topic": "Intervals"
+            },
+            {
+              "track": "dsa",
+              "topic": "Greedy"
+            },
+            {
+              "track": "dsa",
+              "topic": "Dynamic programming"
+            }
+          ],
+          "target": "INTERVIEW READY"
+        },
+        {
+          "id": "W11-2",
           "lane": "lp",
           "kind": "new",
           "item": "Most-asked LPs at interview level",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Behavioral mock 2 with follow-ups",
+          "quota": "Mocks with follow-ups",
           "refs": [
             {
               "track": "beh",
@@ -3143,45 +3789,75 @@
           "target": "INTERVIEW READY"
         },
         {
-          "id": "W5-5",
+          "id": "W11-3",
           "lane": "checkpoint",
           "kind": "checkpoint",
-          "item": "Full Amazon-style loop simulation",
+          "item": "Full loop simulation 2",
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "28 or 29 Nov"
+          "quota": ""
         }
       ]
     },
     {
-      "week": 6,
-      "start": "2026-11-30",
-      "end": "2026-12-01",
-      "gate": true,
-      "core": "Gate review and remediation plan",
+      "week": 12,
+      "start": "2027-01-11",
+      "end": "2027-01-17",
+      "core": "Maintenance and final mocks",
       "applied": "",
-      "dsa": "Retest the weakest patterns",
-      "lp": "",
-      "checkpoint": "Gate review, Day 42",
+      "dsa": "Light mixed sets; rest before the gate",
+      "lp": "Final rehearsal",
       "goals": [
         {
-          "id": "W6-1",
-          "lane": "dsa",
-          "kind": "retest",
-          "item": "Retest the weakest patterns",
+          "id": "W12-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "Full Amazon-style mock",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "quota": "Passed",
+          "refs": [
+            {
+              "track": "mock",
+              "topic": "Full Amazon-style mock"
+            }
+          ],
+          "target": "INTERVIEW READY"
         },
         {
-          "id": "W6-2",
+          "id": "W12-2",
           "lane": "checkpoint",
           "kind": "checkpoint",
-          "item": "Gate review (Day 42)",
+          "item": "Full loop simulation 3",
           "state": "pending",
           "doneDate": null,
-          "note": "1 Dec."
+          "note": "",
+          "quota": ""
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "start": "2027-01-18",
+      "end": "2027-01-18",
+      "gate": true,
+      "core": "Gate review",
+      "applied": "",
+      "dsa": "",
+      "lp": "",
+      "checkpoint": "Gate review, Day 90",
+      "goals": [
+        {
+          "id": "W13-1",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Gate review (Day 90)",
+          "state": "pending",
+          "doneDate": null,
+          "note": "",
+          "quota": ""
         }
       ]
     }
@@ -3273,12 +3949,12 @@
     "Frugality"
   ],
   "gate": {
-    "date": "2026-12-01",
-    "note": "The gate is a review, not a promise. It reports what you can demonstrate under interview conditions without AI. Six weeks cannot cover everything: if DSA fails, DSA alone extends and applications move later. Hard DP and harder graphs are outside this gate.",
+    "date": "2027-01-18",
+    "note": "The gate is a review, not a promise. It reports what you can demonstrate under interview conditions without AI. Extended on 29 Oct from 42 to 90 days at your request, so the cut topics are back and spaced retests fit.",
     "requirements": [
       {
         "area": "DSA",
-        "required": "Timed, unseen solves with the pattern unnamed: two problems in 70 minutes, passed twice in Week 5, and Checkpoints 0 to 2 passed",
+        "required": "Timed, unseen solves with the pattern unnamed: two problems in 70 minutes, passed twice in Weeks 9 to 12, and Checkpoints 1 to 4 passed",
         "current": "{{dsa.independent}} independent solves logged, none timed and none from an unnamed-pattern set. Sliding window still has open weaknesses (W-001 to W-003)."
       },
       {
@@ -3327,67 +4003,95 @@
       {
         "area": "DSA",
         "weight": 45,
-        "coverage": 74,
-        "missing": "Tries, shortest paths, MST, bit manipulation, 2D DP, topological sort, union find (cut as lower frequency for SDE-1)"
+        "coverage": 93,
+        "missing": "MST and advanced graph algorithms"
       },
       {
         "area": "Behavioral and LPs",
         "weight": 25,
-        "coverage": 60,
-        "missing": "LPs outside the 8 most asked get stories only if time remains"
+        "coverage": 85,
+        "missing": "Lower-frequency LPs get stories only if time remains"
       },
       {
         "area": "CS fundamentals (OS, DB, networking, distributed)",
         "weight": 10,
-        "coverage": 70,
-        "missing": "OS scheduling, IPC and system calls; normalization; consistency"
+        "coverage": 90,
+        "missing": "Replication and CAP depth"
       },
       {
         "area": "OOD",
         "weight": 10,
-        "coverage": 70,
-        "missing": "None planned; OOD now starts in Week 3"
+        "coverage": 90,
+        "missing": "None planned"
       },
       {
         "area": "System design",
         "weight": 5,
-        "coverage": 80,
-        "missing": "Sharding depth"
+        "coverage": 90,
+        "missing": "Advanced scale topics"
       },
       {
         "area": "Internship deep-dive",
         "weight": 5,
-        "coverage": 35,
-        "missing": "Real-time voice agent (cut)"
+        "coverage": 70,
+        "missing": "Internship modules beyond the job worker, API path and voice agent overview"
       }
     ],
     "byWeek": [
       {
         "week": 0,
-        "share": 10
+        "share": 6
       },
       {
         "week": 1,
-        "share": 13
+        "share": 8
       },
       {
         "week": 2,
-        "share": 16
+        "share": 11
       },
       {
         "week": 3,
-        "share": 13
+        "share": 8
       },
       {
         "week": 4,
-        "share": 14
+        "share": 9
       },
       {
         "week": 5,
+        "share": 8
+      },
+      {
+        "week": 6,
+        "share": 9
+      },
+      {
+        "week": 7,
+        "share": 8
+      },
+      {
+        "week": 8,
+        "share": 8
+      },
+      {
+        "week": 9,
+        "share": 6
+      },
+      {
+        "week": 10,
         "share": 4
+      },
+      {
+        "week": 11,
+        "share": 2
+      },
+      {
+        "week": 12,
+        "share": 1
       }
     ],
-    "total": 70,
-    "decision": "29 Oct: Option B. Gate stays 1 Dec at about 43 hours a week. Tier 1 (core coding patterns, the most-asked LPs, OOD) must reach its gate target with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Low-frequency topics are cut. If Tier 1 is not met by 1 Dec, the gate moves to mid-January; quotas never shrink."
+    "total": 88,
+    "decision": "29 Oct: extended to a 90-day sprint (gate 18 Jan 2027) at about 43 hours a week. Tier 1 quotas never shrink; if Tier 1 is not met by 18 Jan, the gate moves again."
   }
 }

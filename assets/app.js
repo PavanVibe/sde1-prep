@@ -282,6 +282,24 @@
     return '<div class="gbar" role="img" aria-label="' + esc(label) + '">' + seg(pd, 'gd') + seg(pl, 'gl') + seg(pp, 'gp') + mark + '</div>';
   }
   function overdueNow() { return T.retests.filter(function (r) { return r.state === 'pending' && r.due < TODAY; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; }); }
+
+  function carryFor(w) {
+    var goals = [];
+    T.weeks.forEach(function (v) {
+      if (v.week >= w.week) return;
+      weekStats(v);
+      (v.goals || []).forEach(function (x) { if (x.kind !== 'checkpoint' && x._p < 1) goals.push({ week: v.week, g: x }); });
+    });
+    var rts = T.retests.filter(function (r) { return r.state === 'pending' && r.due < w.start; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; });
+    return { goals: goals, rts: rts, n: goals.length + rts.length };
+  }
+  function carryHtml(w, c) {
+    if (!c.n) return '<p class="okc small">Nothing carried over from earlier weeks.</p>';
+    var html = '<div class="carry"><h3>Carried over from earlier weeks: ' + c.n + '</h3><p class="small muted">These are unfinished. Overdue retests block this week\'s new topics; earlier goals below target must be brought up alongside this week\'s work.</p><ul>';
+    c.rts.forEach(function (r) { html += '<li><span class="late-tag">Retest ' + esc(r.id) + '</span> ' + esc(r.task) + ' <span class="muted small">(due ' + esc(fmtShort(r.due)) + ')</span></li>'; });
+    c.goals.forEach(function (o) { html += '<li><span class="cw">Week ' + o.week + '</span> ' + esc(o.g.item) + ' <span class="muted small">(' + Math.round(o.g._p * 100) + '% of target' + (o.g.target ? ' ' + esc(sentence(o.g.target)) : '') + ')</span></li>'; });
+    return html + '</ul></div>';
+  }
   function weekSummary(w, st) {
     var pct = Math.round(st.pct * 100);
     var label = pct + '% of week ' + w.week + ' goals done';
@@ -313,9 +331,10 @@
         return '<tr class="gs-' + x.state + '"><td>' + esc(x.lane === 'lp' ? 'Behavioral' : x.lane === 'applied' ? 'Internship' : x.lane === 'checkpoint' ? 'Checkpoint' : x.lane === 'core' ? 'Core' : 'DSA') + (x.kind === 'retest' ? '<span class="sub">retest</span>' : '') + '</td><td><strong>' + esc(x.item) + '</strong>' + (x.quota ? '<span class="sub"><b>Quota:</b> ' + esc(x.quota) + '</span>' : '') + (x.note ? '<span class="sub">' + esc(x.note) + '</span>' : '') + '</td><td>' + (x.refs ? '<span class="sub">Target: <strong>' + esc(sentence(x.target)) + '</strong></span>' + x.refs.map(function (r) { var tp = topicOf(r); return '<span class="sub">' + esc(r.topic) + ': ' + esc(sentence(tp ? tp.status : 'NOT STARTED')) + (tp && tp.gateTarget ? ' (gate: ' + esc(sentence(tp.gateTarget)) + ')' : '') + '</span>'; }).join('') : '') + '</td><td><span class="gchip ' + x._k + '">' + esc(GSTATE[x._k]) + '</span><span class="sub">' + Math.round(x._p * 100) + '% of target</span>' + (x.doneDate ? '<span class="sub">' + esc(fmt(x.doneDate)) + '</span>' : '') + '</td></tr>';
       }).join('');
       var rtRows = st.rts.map(function (r) { return '<li>' + esc(r.id) + ' ' + esc(r.task) + ' <span class="' + (r.state === 'passed' ? 'okc' : (r.due < TODAY ? 'late-tag' : 'muted')) + '">' + esc(r.state === 'passed' ? 'passed' : r.state === 'failed' ? 'failed' : (r.due < TODAY ? 'overdue' : 'due ' + fmtShort(r.due))) + '</span></li>'; }).join('');
+      var cy = carryFor(w); st = weekStats(w);
       html += '<details class="wk"' + (st.phase === 'now' ? ' open' : '') + '><summary><span class="name">' + (w.gate ? 'Gate' : 'Week ' + w.week) + (st.phase === 'now' ? ' (this week)' : '') + '<span class="sub">' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></span>' +
-        goalBar(st, Math.round(st.pct * 100) + '% done') + '<span class="small"><strong>' + Math.round(st.pct * 100) + '%</strong> of ' + st.g.length + ' goals</span><span><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span></span></summary>' +
-        '<div class="body">' + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Target level and where you are', 'Progress'], [rows]) +
+        goalBar(st, Math.round(st.pct * 100) + '% done') + '<span class="small"><strong>' + Math.round(st.pct * 100) + '%</strong> of ' + st.g.length + ' goals</span><span><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span>' + (cy.n && st.phase !== 'past' ? '<span class="sub late-tag">' + cy.n + ' carried over</span>' : '') + '</span></summary>' +
+        '<div class="body">' + (st.phase !== 'past' ? carryHtml(w, cy) : '') + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Target level and where you are', 'Progress'], [rows]) +
         (rtRows ? '<h3 class="small">Retests due this week</h3><ul class="rtl small">' + rtRows + '</ul>' : '') + '</div></details>';
     });
     return { title: 'Weekly goals', html: html };
@@ -349,7 +368,7 @@
         (wk.applied ? '<div class="lane"><dt>Applied to the internship</dt><dd>' + esc(wk.applied) + '</dd></div>' : '') +
         '<div class="lane"><dt>DSA</dt><dd>' + esc(wk.dsa) + '</dd></div>' +
         (wk.lp ? '<div class="lane"><dt>Behavioral</dt><dd>' + esc(wk.lp) + '</dd></div>' : '') + '</dl>';
-      if (wk.goals) html += weekSummary(wk, weekStats(wk)) + '<p class="small"><a href="#weekly">See every week\'s goals</a></p>';
+      if (wk.goals) { var cyt = carryFor(wk); html += weekSummary(wk, weekStats(wk)) + carryHtml(wk, cyt) + '<p class="small"><a href="#weekly">See every week\'s goals</a></p>'; }
     } else {
       html += '<p class="empty">No roadmap week covers today.</p>';
     }

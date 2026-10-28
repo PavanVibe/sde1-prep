@@ -11,6 +11,18 @@
     {
       "date": "2026-10-29",
       "kind": "plan",
+      "summary": "Sprint extended to 90 days (gate 18 Jan 2027); every week shows what carries over",
+      "details": [
+        "At your request the sprint runs 90 days from 20 Oct; the gate review is Mon 18 Jan 2027. Hours stay at about 43 a week.",
+        "Weeks 1 to 4 keep their dates and checkpoints (8 Nov, 22 Nov), with fewer patterns per week so each reaches its quota. New checkpoints: 13 Dec (DP, backtracking, graphs + OOD mock) and 3 Jan (first full loop simulation).",
+        "Back in the plan: tries, shortest paths, topological sort, union find, 2D DP, bit manipulation and strings, the voice agent overview, OS scheduling and IPC, normalization and sharding. Planned coverage rises from about 70% to about 88% of the weighted syllabus; MST stays out.",
+        "Each week on the Weekly goals page now lists what is carried over: earlier goals below target and retests that were already overdue when the week began. No existing due dates were moved."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-29",
+      "kind": "plan",
       "summary": "Rigorous tiered plan: about 43 hours a week, fixed quotas per topic, Tier 1 never cut",
       "details": [
         "Your availability: weekdays 19:30 to 00:30, weekends free. Weekly time set to about 43 hours with a hard stop at 00:30 and Sunday evening rest.",
