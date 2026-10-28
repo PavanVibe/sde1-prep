@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "weakness",
+      "summary": "R-32 marked passed at your request; W-004 closed",
+      "details": [
+        "Passed on content (A mostly complete, B correct, C mostly correct). Independence was not confirmed; recorded as marked at your request.",
+        "Header-holds-bcrypt error carried to W-008 as oral check R-36 on 4 Nov.",
+        "No topic status changed."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "evidence",
       "summary": "Lesson 1 retest (R-32) submitted in full; grading on hold until independence is confirmed",
       "details": [
