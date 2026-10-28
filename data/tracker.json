@@ -1480,9 +1480,9 @@
       "difficulty": "Medium",
       "pattern": "Sliding window (at most one zero)",
       "date": "2026-10-29",
-      "independence": "hinted",
-      "hint": "0 hints; outside help flagged",
-      "note": "R-34 unseen problem, pattern unnamed. Accepted 311/311 on the first submit, 31:49. Window with at most one zero, answer right - left. Not independent because outside help was used."
+      "independence": "solution",
+      "hint": "Solution seen",
+      "note": "R-34 unseen problem, pattern unnamed. Accepted 311/311 on the first submit, 31:49. Window with at most one zero, answer right - left. You confirmed you saw the solution, so it is not independent."
     }
   ],
   "weaknesses": [

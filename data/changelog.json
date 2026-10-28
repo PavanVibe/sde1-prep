@@ -14,6 +14,7 @@
       "summary": "R-34 unseen LC 1493: Accepted but outside help flagged, so not independent",
       "details": [
         "Accepted 311/311 on the first submit in 31:49 with 0 hints, but the Workbench outside-help flag was set.",
+        "You confirmed the outside help was seeing the solution; logged as solution seen.",
         "W-003 stays open. New retests: R-37 (cold LC 1493) and R-39 (a different unseen window problem) on 31 Oct; R-38 on 5 Nov. No status changed."
       ],
       "changes": []
