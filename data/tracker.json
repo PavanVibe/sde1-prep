@@ -1473,6 +1473,16 @@
       "independence": "hinted",
       "hint": "2 hints logged",
       "note": "R-08 problem 3. Did not see the complement idea (remove both ends = keep the longest middle subarray) until the hint to look at total minus x. After the hint: Accepted 10/10 on the first Submit, 21:54 on the clock, edge cases target below 0 and equal to 0 handled. Not independent. 29 Oct cold retest R-33: Accepted 310/310, 0 hints (confirmed), 3:28; longest window with sum total minus x, handles target < 0 and target == 0."
+    },
+    {
+      "lc": 1493,
+      "title": "Longest Subarray of 1's After Deleting One Element",
+      "difficulty": "Medium",
+      "pattern": "Sliding window (at most one zero)",
+      "date": "2026-10-29",
+      "independence": "hinted",
+      "hint": "0 hints; outside help flagged",
+      "note": "R-34 unseen problem, pattern unnamed. Accepted 311/311 on the first submit, 31:49. Window with at most one zero, answer right - left. Not independent because outside help was used."
     }
   ],
   "weaknesses": [
@@ -1500,9 +1510,9 @@
       "correct": "Recognize the pattern, then derive the invariant, window movement and complexity for the specific problem.",
       "cause": "Not established. The evidence does not support blaming memorization, rushing or any single cause.",
       "exercise": "An unseen mixed sliding-window problem with the pattern unnamed. Require recognition, invariant, movement, complexity, independent C++ and edge cases.",
-      "retest": "29 Oct: cold LC 1052 and LC 1658 passed; unseen problem R-34 still due",
-      "retestDue": "2026-10-28",
-      "result": "Failed 2026-10-26"
+      "retest": "29 Oct: unseen LC 1493 needed outside help; R-37 and R-39 due 31 Oct",
+      "retestDue": "2026-10-31",
+      "result": "Failed 2026-10-29"
     },
     {
       "id": "W-005",
@@ -1863,8 +1873,8 @@
       "weakness": "W-002",
       "task": "New unseen variable-size sliding-window problem, pattern unnamed, 35-minute cap, Workbench timer on; read the constraints and write two edge cases before coding",
       "due": "2026-10-29",
-      "state": "pending",
-      "note": "Added 27 Oct so the pattern moves forward alongside the R-16 retest. Problem is loaded into the Workbench on 28 Oct, not named in advance. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog."
+      "state": "failed",
+      "note": "Added 27 Oct so the pattern moves forward alongside the R-16 retest. Problem is loaded into the Workbench on 28 Oct, not named in advance. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog. 29 Oct: LC 1493 Accepted 311/311 (smvskh5tuwbo1), 31:49, 0 hints, but the outside-help flag was set, so not independent. Replaced by R-37."
     },
     {
       "id": "R-35",
@@ -1881,6 +1891,30 @@
       "due": "2026-11-04",
       "state": "pending",
       "note": "Spaced check after R-32 on 28 Oct."
+    },
+    {
+      "id": "R-37",
+      "weakness": "W-003",
+      "task": "Cold re-solve of LC 1493, no help, 35-minute cap",
+      "due": "2026-10-31",
+      "state": "pending",
+      "note": "48h after outside help on 29 Oct."
+    },
+    {
+      "id": "R-38",
+      "weakness": "W-003",
+      "task": "LC 1493 cold again (7-day spaced retest)",
+      "due": "2026-11-05",
+      "state": "pending",
+      "note": "7 days after 29 Oct."
+    },
+    {
+      "id": "R-39",
+      "weakness": "W-003",
+      "task": "A different unseen variable-size window problem, pattern unnamed, 35-minute cap, no help",
+      "due": "2026-10-31",
+      "state": "pending",
+      "note": "The pattern-recognition check R-34 did not provide."
     }
   ],
   "nextActions": [
