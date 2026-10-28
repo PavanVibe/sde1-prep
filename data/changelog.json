@@ -11,6 +11,17 @@
     {
       "date": "2026-10-29",
       "kind": "plan",
+      "summary": "Week 0 carry-over assigned; completion goals scored as done",
+      "details": [
+        "Corrected: 'Lesson 1', 'LC 643 cold retest' and 'LC 209 cold retest' are completion goals, so they are scored by whether the test passed, not by topic level. Lesson 1 and LC 643 now count as done late.",
+        "Assigned in the Workbench: LC 209 (p21, R-18); an unnamed three-problem set p22 to p24 for W-003 (includes R-39); arrays and hashing p25 to p28 (LC 49, 128, 54, 73); prefix sum p12 and p13 (LC 930, 1248).",
+        "Topic statuses for HTTP, REST and JWT did not move: R-32 was marked passed at your request with independence unconfirmed, which completes the goal but is not threshold evidence."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-29",
+      "kind": "plan",
       "summary": "Sprint extended to 90 days (gate 18 Jan 2027); every week shows what carries over",
       "details": [
         "At your request the sprint runs 90 days from 20 Oct; the gate review is Mon 18 Jan 2027. Hours stay at about 43 a week.",

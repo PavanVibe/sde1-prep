@@ -1755,7 +1755,7 @@
       "task": "Re-solve LC 209 cold, no hints, 35-minute cap; write the shrink condition first",
       "due": "2026-10-31",
       "state": "pending",
-      "note": "7-day retest after the 24 Oct self-reported solve."
+      "note": "7-day retest after the 24 Oct self-reported solve. 29 Oct: loaded in the Workbench as p21."
     },
     {
       "id": "R-19",
@@ -2035,11 +2035,12 @@
       "task": "A different unseen variable-size window problem, pattern unnamed, 35-minute cap, no help",
       "due": "2026-10-31",
       "state": "pending",
-      "note": "The pattern-recognition check R-34 did not provide."
+      "note": "The pattern-recognition check R-34 did not provide. 29 Oct: part of an unnamed set of three in the Workbench (p22, p23, p24); any one solved independently counts."
     }
   ],
   "nextActions": [
     "Thu 29 Oct 19:30-21:30 DSA: R-28 LC 875 (p19), R-30 LC 525, then LC 34 cold (binary search quota).",
+    "Week 0 carry-over now in the Workbench: LC 209 (p21, R-18); unnamed set p22 to p24 (W-003, R-39); arrays and hashing p25 to p28; prefix sum p12 and p13. Work them in the DSA blocks after the overdue retests, 35-minute cap each, timer on.",
     "Thu 29 Oct 21:30-23:00 core: R-04 route trace (overdue), then SQL quiz (5 MCQs first) and teach the gaps.",
     "Thu 29 Oct 23:00-23:45 behavioral: one-line list of real internship incidents for S-001 (still owed from Week 0).",
     "Fri 30 Oct: LC 153 and LC 33 cold + 1 unseen stack problem; joins and indexes closed-book; S-001 STAR draft (situation, task, actions).",
@@ -2221,22 +2222,7 @@
           "item": "Lesson 1: request lifecycle, methods, status codes, JWT (closed-book)",
           "state": "late",
           "doneDate": "2026-10-28",
-          "note": "Passed 28 Oct (R-32), 3 days after the week ended; marked at your request.",
-          "refs": [
-            {
-              "track": "net",
-              "topic": "HTTP"
-            },
-            {
-              "track": "net",
-              "topic": "REST"
-            },
-            {
-              "track": "alch",
-              "topic": "JWT authentication"
-            }
-          ],
-          "target": "PRACTICING"
+          "note": "Passed 28 Oct (R-32), 3 days after the week ended; marked at your request."
         },
         {
           "id": "W0-2",
@@ -2261,30 +2247,16 @@
           "item": "LC 643 cold retest",
           "state": "late",
           "doneDate": "2026-10-28",
-          "note": "Judged pass 28 Oct (R-12).",
-          "refs": [
-            {
-              "track": "dsa",
-              "topic": "Sliding window"
-            }
-          ],
-          "target": "UNDERSTOOD"
+          "note": "Judged pass 28 Oct (R-12)."
         },
         {
           "id": "W0-4",
           "lane": "dsa",
           "kind": "retest",
           "item": "LC 209 cold retest",
-          "state": "missed",
+          "state": "pending",
           "doneDate": null,
-          "note": "Only a self-reported pass on 24 Oct; judged retest R-18 due 31 Oct.",
-          "refs": [
-            {
-              "track": "dsa",
-              "topic": "Sliding window"
-            }
-          ],
-          "target": "UNDERSTOOD"
+          "note": "Judged cold retest R-18 (LC 209); assigned in the Workbench (p21) on 29 Oct."
         },
         {
           "id": "W0-5",
@@ -2293,7 +2265,7 @@
           "item": "Unseen sliding-window set, pattern unnamed",
           "state": "missed",
           "doneDate": null,
-          "note": "25-26 Oct: 1 of 3 independent (R-08 failed).",
+          "note": "25-26 Oct: 1 of 3 independent (R-08 failed). New unnamed set assigned 29 Oct (Workbench p22 to p24).",
           "refs": [
             {
               "track": "dsa",
@@ -2309,7 +2281,7 @@
           "item": "Arrays, hashing, prefix sum",
           "state": "partial",
           "doneDate": null,
-          "note": "Prefix sum: LC 974 and LC 560 judged on 28 Oct. Arrays and hashing: nothing logged.",
+          "note": "Prefix sum: LC 974 and LC 560 judged on 28 Oct. Arrays and hashing: nothing logged. Assigned 29 Oct: arrays and hashing p25 to p28, prefix sum p12 and p13.",
           "refs": [
             {
               "track": "dsa",
