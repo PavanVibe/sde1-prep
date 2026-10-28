@@ -9,6 +9,17 @@
   },
   "entries": [
     {
+      "date": "2026-10-29",
+      "kind": "evidence",
+      "summary": "Overdue cold retests passed: LC 11 (R-22), LC 238 (R-24), LC 739 (R-26)",
+      "details": [
+        "All judged Accepted on the first submit with 0 hints: LC 11 in 8:13, LC 238 in 5:39, LC 739 in 10:58. Earlier solution-seen rows updated to independent on the cold retest.",
+        "LC 1052 and LC 1658 (R-33) also Accepted; independence pending because the page's hint counter carries over from 25 Oct.",
+        "No status changed."
+      ],
+      "changes": []
+    },
+    {
       "date": "2026-10-28",
       "kind": "plan",
       "summary": "R-22, R-24, R-26, R-28 restored to 27 Oct (overdue)",

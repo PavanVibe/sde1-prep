@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2026-12-01",
-    "lastUpdated": "2026-10-28",
+    "lastUpdated": "2026-10-29",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -45,7 +45,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-10-26",
+      "lastEvidence": "2026-10-29",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, Day 19 and Day 33. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
@@ -1203,30 +1203,30 @@
       "title": "Container With Most Water",
       "difficulty": "Medium",
       "pattern": "Two pointers",
-      "date": "2026-10-25",
-      "independence": "solution",
-      "hint": "Solution seen",
-      "note": "Not independent. Your write-up is in the study notes. Cold again on 27 Oct (R-22) and 1 Nov (R-23)."
+      "date": "2026-10-29",
+      "independence": "independent",
+      "hint": "None (29 Oct retest)",
+      "note": "Not independent. Your write-up is in the study notes. Cold again on 27 Oct (R-22) and 1 Nov (R-23). 29 Oct cold retest R-22: Accepted 319/319, 0 hints, 8:13; O(n), O(1) space."
     },
     {
       "lc": 238,
       "title": "Product of Array Except Self",
       "difficulty": "Medium",
       "pattern": "Prefix and suffix products",
-      "date": "2026-10-25",
-      "independence": "solution",
-      "hint": "Solution seen",
-      "note": "Not independent. Cold again on 27 Oct (R-24) and 1 Nov (R-25)."
+      "date": "2026-10-29",
+      "independence": "independent",
+      "hint": "None (29 Oct retest)",
+      "note": "Not independent. Cold again on 27 Oct (R-24) and 1 Nov (R-25). 29 Oct cold retest R-24: Accepted 309/309, 0 hints, 5:39; O(n) time, O(n) extra (left and right arrays), O(1)-extra follow-up not shown."
     },
     {
       "lc": 739,
       "title": "Daily Temperatures",
       "difficulty": "Medium",
       "pattern": "Monotonic stack",
-      "date": "2026-10-25",
-      "independence": "solution",
-      "hint": "Solution seen",
-      "note": "Not independent. Cold again on 27 Oct (R-26) and 1 Nov (R-27)."
+      "date": "2026-10-29",
+      "independence": "independent",
+      "hint": "None (29 Oct retest)",
+      "note": "Not independent. Cold again on 27 Oct (R-26) and 1 Nov (R-27). 29 Oct cold retest R-26: Accepted 320/320, 0 hints, 10:58; monotonic stack, O(n)."
     },
     {
       "lc": 875,
@@ -1679,8 +1679,8 @@
       "weakness": null,
       "task": "Re-solve LC 11 cold, no hints, 20-minute cap",
       "due": "2026-10-27",
-      "state": "pending",
-      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
+      "state": "passed",
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue. 29 Oct: Accepted 319/319 (smvsf7s60slcu), 0 hints, 8:13, attempt 1."
     },
     {
       "id": "R-23",
@@ -1695,8 +1695,8 @@
       "weakness": null,
       "task": "Re-solve LC 238 cold, no hints, 25-minute cap",
       "due": "2026-10-27",
-      "state": "pending",
-      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
+      "state": "passed",
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue. 29 Oct: Accepted 309/309 (smvsfwf111ch7), 0 hints, 5:39, attempt 1. O(n) extra space; O(1) follow-up not attempted."
     },
     {
       "id": "R-25",
@@ -1711,8 +1711,8 @@
       "weakness": null,
       "task": "Re-solve LC 739 cold, no hints, 30-minute cap",
       "due": "2026-10-27",
-      "state": "pending",
-      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
+      "state": "passed",
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue. 29 Oct: Accepted 320/320 (smvsh5klur0ci), 0 hints, 10:58, attempt 1."
     },
     {
       "id": "R-27",
