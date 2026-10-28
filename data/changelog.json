@@ -11,6 +11,20 @@
     {
       "date": "2026-10-29",
       "kind": "plan",
+      "summary": "Rigorous tiered plan: about 43 hours a week, fixed quotas per topic, Tier 1 never cut",
+      "details": [
+        "Your availability: weekdays 19:30 to 00:30, weekends free. Weekly time set to about 43 hours with a hard stop at 00:30 and Sunday evening rest.",
+        "Tier 1 (never cut): 17 DSA patterns including backtracking and 1D DP to Interview ready, each with a quota of 5 to 8 unseen mediums solved independently within 35 minutes plus mixed sets and a mock; the 8 most-asked LPs to Interview ready; OOD to Strong, now starting in Week 3.",
+        "Tier 2: OS concurrency, databases, the request path, distributed systems basics, URL shortener and rate limiter, the job worker, to Strong.",
+        "Cut as lower frequency for SDE-1: tries, shortest paths, MST, bit manipulation, 2D DP, topological sort and union find, the voice agent.",
+        "Re-solve rule tightened: non-independent problems return at 48 hours, 7 days and 21 days; independent unseen solves return once in a mixed set about 14 days later.",
+        "If Tier 1 is not met by 1 Dec the gate moves (fallback mid-January); quotas never shrink. No existing due dates were moved."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-29",
+      "kind": "plan",
       "summary": "Progress now measured against target levels; backtracking added; syllabus coverage shown",
       "details": [
         "Every topic goal has a target level for the end of its week (lower when the topic returns later, final level when it is one-shot) and topics have gate targets for 1 Dec. Progress is the evidence-backed level against the target, capped at 100%.",
