@@ -10,13 +10,13 @@
   "entries": [
     {
       "date": "2026-10-28",
-      "kind": "weakness",
-      "summary": "Lesson 1 retest (R-32) failed: A mostly complete, B and C not answered",
+      "kind": "evidence",
+      "summary": "Lesson 1 retest (R-32) submitted in full; grading on hold until independence is confirmed",
       "details": [
-        "A: DNS, handshake, TLS, HTTP GET, server response and render in order; the click flow and UI update covered. Errors: delete sent as POST (REST uses DELETE); the three-way handshake not named as TCP; JWT verification described as a Redis lookup and cookie match rather than a signature check.",
-        "Status codes 200/204/401/403/404/500 correct. 201 and 400 not given.",
-        "B (methods, idempotency) and C (JWT parts, tampering, statelessness) not answered.",
-        "Independence of the answer not yet confirmed. W-004 stays open; retest R-36 on 30 Oct. R-04 route trace not attempted. No status changed."
+        "A: DNS, handshake, TLS, HTTP GET, response and render in order, plus the click flow. Errors: delete sent as POST (REST uses DELETE); handshake not named as TCP; JWT verification described as a Redis lookup rather than a signature check.",
+        "B: methods, idempotency and all six status codes correct.",
+        "C: three parts named; payload readable; tampering breaks the signature; statelessness and revocation downside correct. Error: header said to hold 'bcrypt' (it holds the signing algorithm such as HS256; bcrypt is a one-way hash for stored credentials). 401 not defined on its own.",
+        "An earlier entry today wrongly logged this as failed before B and C arrived; corrected here. Several sections read like reference text, so the result is held until you confirm they were written from memory. No status changed."
       ],
       "changes": []
     },

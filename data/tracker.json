@@ -1514,9 +1514,9 @@
       "correct": "Loading a URL is an HTTP request preceded by DNS, TCP and TLS. Button clicks trigger further HTTP requests handled by routes.",
       "cause": "Knowledge gap.",
       "exercise": "Lesson 1 questions A to C, then trace one authenticated route in the internship API.",
-      "retest": "Failed 2026-10-28 (A mostly complete, B and C missing); retest 2026-10-30",
+      "retest": "Submitted 2026-10-28; independence unconfirmed",
       "retestDue": "2026-10-30",
-      "result": "Failed 2026-10-28"
+      "result": null
     },
     {
       "id": "W-005",
@@ -1790,8 +1790,8 @@
       "weakness": "W-004",
       "task": "Lesson 1 A to C closed-book, written, no notes (retest after teaching on 25 Oct)",
       "due": "2026-10-26",
-      "state": "failed",
-      "note": "Next-day retest after the 25 Oct teaching; a 7-day retest follows if passed. 28 Oct: A mostly complete (DELETE sent as POST, TCP not named, JWT check described as a Redis lookup); B methods and idempotency not answered; C (JWT parts, tampering, statelessness) not answered. Replaced by R-36."
+      "state": "pending",
+      "note": "Next-day retest after the 25 Oct teaching; a 7-day retest follows if passed. 28 Oct: full A-C submitted. Content: A mostly complete (delete sent as POST, TCP not named, JWT check described as a Redis lookup); B correct; C mostly correct but the header was said to hold \"bcrypt\" (wrong: it holds the signing algorithm, e.g. HS256), 401 not defined separately. Several sections read as reference text; independence not yet confirmed, so not graded as a pass."
     },
     {
       "id": "R-04",
@@ -1872,18 +1872,10 @@
       "due": "2026-11-03",
       "state": "pending",
       "note": "7 days after the 27 Oct solve."
-    },
-    {
-      "id": "R-36",
-      "weakness": "W-004",
-      "task": "Lesson 1 B and C closed-book, written: HTTP methods, idempotency, JWT parts, tamper detection, 401 vs 403, statelessness; plus A's click request with the correct method",
-      "due": "2026-10-30",
-      "state": "pending",
-      "note": "After the 28 Oct partial on R-32."
     }
   ],
   "nextActions": [
-    "30 Oct core: R-36 Lesson 1 B and C closed-book (W-004, W-008); R-04 route trace still owed (due 28 Oct, not attempted).",
+    "29 Oct: confirm whether the R-32 answers were from memory; if not, R-32 is redone closed-book. R-04 route trace still owed.",
     "28 Oct DSA: R-16 LC 713, R-12 LC 643 and R-14 LC 53 passed (judged). Still due: R-19 LC 974 (p4, 35 min).",
     "Prefix-sum practice set in the Workbench (p9 to p15): LC 560, 523, 525, 930, 1248, 325, 327. A cold LC 525 here also counts as R-30. Judged submissions are logged as they come in.",
     "29 Oct: R-33 cold LC 1052 and LC 1658 plus Minimum Window Substring (p6); R-34 new unseen variable-size window problem. 35-minute cap each.",
