@@ -1678,9 +1678,9 @@
       "id": "R-22",
       "weakness": null,
       "task": "Re-solve LC 11 cold, no hints, 20-minute cap",
-      "due": "2026-10-30",
+      "due": "2026-10-27",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
     },
     {
       "id": "R-23",
@@ -1694,9 +1694,9 @@
       "id": "R-24",
       "weakness": null,
       "task": "Re-solve LC 238 cold, no hints, 25-minute cap",
-      "due": "2026-10-30",
+      "due": "2026-10-27",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
     },
     {
       "id": "R-25",
@@ -1710,9 +1710,9 @@
       "id": "R-26",
       "weakness": null,
       "task": "Re-solve LC 739 cold, no hints, 30-minute cap",
-      "due": "2026-10-30",
+      "due": "2026-10-27",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
     },
     {
       "id": "R-27",
@@ -1726,9 +1726,9 @@
       "id": "R-28",
       "weakness": null,
       "task": "Re-solve LC 875 cold, no hints, 35-minute cap",
-      "due": "2026-10-30",
+      "due": "2026-10-27",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt. Moved from 2026-10-27 to 2026-10-30 on 28 Oct to clear the overdue backlog."
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
     },
     {
       "id": "R-29",
@@ -1885,7 +1885,7 @@
   ],
   "nextActions": [
     "29 Oct core: R-04 route trace (overdue since 28 Oct), then start Week 1 databases: SQL, joins, indexes.",
-    "28 Oct DSA: R-16 LC 713, R-12 LC 643 and R-14 LC 53 passed (judged). Still due: R-19 LC 974 (p4, 35 min).",
+    "Overdue DSA retests (cold, no hints): R-33 LC 1052 + LC 1658 (due 28 Oct); R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875 (due 27 Oct). They block new material.",
     "Prefix-sum practice set in the Workbench (p9 to p15): LC 560, 523, 525, 930, 1248, 325, 327. A cold LC 525 here also counts as R-30. Judged submissions are logged as they come in.",
     "29 Oct: R-33 cold LC 1052 and LC 1658 plus Minimum Window Substring (p6); R-34 new unseen variable-size window problem. 35-minute cap each.",
     "30 Oct: R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875, R-30 LC 525, all cold.",

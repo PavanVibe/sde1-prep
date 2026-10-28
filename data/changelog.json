@@ -11,6 +11,15 @@
     {
       "date": "2026-10-28",
       "kind": "plan",
+      "summary": "R-22, R-24, R-26, R-28 restored to 27 Oct (overdue)",
+      "details": [
+        "These had been moved to 30 Oct in an earlier session without your agreement. Restored at your request; they are overdue and block new material."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
+      "kind": "plan",
       "summary": "R-33 due date restored to 28 Oct; due dates now move only with your permission",
       "details": [
         "R-33 (cold LC 1052, LC 1658) had been moved to 29 Oct in an earlier session without recorded agreement. Restored to 28 Oct; it is overdue and goes first on 29 Oct.",
