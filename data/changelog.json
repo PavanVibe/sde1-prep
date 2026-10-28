@@ -10,6 +10,16 @@
   "entries": [
     {
       "date": "2026-10-28",
+      "kind": "plan",
+      "summary": "R-33 due date restored to 28 Oct; due dates now move only with your permission",
+      "details": [
+        "R-33 (cold LC 1052, LC 1658) had been moved to 29 Oct in an earlier session without recorded agreement. Restored to 28 Oct; it is overdue and goes first on 29 Oct.",
+        "New standard: no due date, especially an overdue one, is moved without your explicit permission."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-28",
       "kind": "weakness",
       "summary": "R-32 marked passed at your request; W-004 closed",
       "details": [

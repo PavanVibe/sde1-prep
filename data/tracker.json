@@ -1814,9 +1814,9 @@
       "id": "R-33",
       "weakness": "W-003",
       "task": "Cold re-solve of LC 1052 and LC 1658 (no hints), plus one new unseen sliding-window problem, pattern unnamed; 35-minute cap each, Workbench timer on",
-      "due": "2026-10-29",
+      "due": "2026-10-28",
       "state": "pending",
-      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog."
+      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog. Due date restored to 28 Oct at your request (it had been moved to 29 Oct without your agreement); overdue, first task on 29 Oct."
     },
     {
       "id": "R-05",
@@ -1930,7 +1930,8 @@
     {
       "title": "Stories",
       "text": "Real incidents you can verify. No metric unless you measured it."
-    }
+    },
+    "Never move a due date (especially an overdue one) without your explicit permission."
   ],
   "thresholds": [
     {
