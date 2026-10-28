@@ -10,6 +10,17 @@
   "entries": [
     {
       "date": "2026-10-29",
+      "kind": "setup",
+      "summary": "Weekly goals page: planned goals per week with a progress bar and pace check",
+      "details": [
+        "Every roadmap week now lists its planned goals, each marked done, done late, partial, not done yet, blocked or missed from logged evidence.",
+        "Each week shows a progress bar (partial counts as half), a pace check against where you should be by today, retests due that week, and how many new topics are not done or blocked by overdue retests.",
+        "Week 0: 28% (goal missed). Week 1 as of 29 Oct: 14%, behind by 3 goals; 3 new topics blocked."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-29",
       "kind": "plan",
       "summary": "R-30 restored to 27 Oct (overdue); R-02, R-11, R-13 closed as superseded",
       "details": [

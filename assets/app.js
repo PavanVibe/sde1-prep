@@ -3,6 +3,7 @@
 
   var VIEWS = [
     { id: 'today', label: 'Today' },
+    { id: 'weekly', label: 'Weekly goals' },
     { id: 'readiness', label: 'Readiness' },
     { id: 'dsa', label: 'DSA' },
     { id: 'weaknesses', label: 'Weaknesses' },
@@ -233,6 +234,66 @@
   /* ---------- views ---------- */
   var VIEW = {};
 
+
+  /* ---------- weekly goals ---------- */
+  var GSTATE = { done: 'Done', late: 'Done late', partial: 'Partial', pending: 'Not done yet', blocked: 'Blocked', missed: 'Missed' };
+  function weekStats(w) {
+    var g = w.goals || [];
+    var score = 0, n = { done: 0, late: 0, partial: 0, pending: 0, blocked: 0, missed: 0 };
+    g.forEach(function (x) { n[x.state] = (n[x.state] || 0) + 1; score += (x.state === 'done' || x.state === 'late') ? 1 : (x.state === 'partial' ? 0.5 : 0); });
+    var len = diffDays(w.start, w.end) + 1;
+    var phase = TODAY > w.end ? 'past' : (TODAY < w.start ? 'future' : 'now');
+    var expected = phase === 'past' ? 1 : (phase === 'future' ? 0 : Math.min(1, (diffDays(w.start, TODAY) + 1) / len));
+    var pct = g.length ? score / g.length : 0;
+    var newLeft = g.filter(function (x) { return x.kind === 'new' && x.state !== 'done' && x.state !== 'late'; }).length;
+    var rts = T.retests.filter(function (r) { return r.due >= w.start && r.due <= w.end && r.state !== 'superseded'; });
+    var rtPassed = rts.filter(function (r) { return r.state === 'passed'; }).length;
+    var behind = Math.round((expected * g.length - score) * 2) / 2;
+    var verdict, cls;
+    if (phase === 'future') { verdict = 'Upcoming'; cls = ''; }
+    else if (phase === 'past') { verdict = pct >= 1 ? 'Weekly goal met' : 'Weekly goal missed'; cls = pct >= 1 ? 'ok' : 'warn'; }
+    else if (behind <= 0.5) { verdict = 'On track'; cls = 'ok'; }
+    else { verdict = 'Behind by ' + behind + ' ' + (behind === 1 ? 'goal' : 'goals'); cls = 'warn'; }
+    return { g: g, n: n, score: score, pct: pct, expected: expected, phase: phase, newLeft: newLeft, rts: rts, rtPassed: rtPassed, verdict: verdict, cls: cls };
+  }
+  function goalBar(st, label) {
+    var tot = st.g.length || 1;
+    var seg = function (c, k) { return c ? '<i class="' + k + '" style="width:' + (c / tot * 100).toFixed(2) + '%"></i>' : ''; };
+    var mark = st.phase === 'now' ? '<b class="expect" style="left:' + (st.expected * 100).toFixed(1) + '%" title="Where you should be today"></b>' : '';
+    return '<div class="gbar" role="img" aria-label="' + esc(label) + '">' + seg(st.n.done, 'gd') + seg(st.n.late, 'gl') + seg(st.n.partial, 'gp') + mark + '</div>';
+  }
+  function overdueNow() { return T.retests.filter(function (r) { return r.state === 'pending' && r.due < TODAY; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; }); }
+  function weekSummary(w, st) {
+    var pct = Math.round(st.pct * 100);
+    var label = pct + '% of week ' + w.week + ' goals done';
+    return '<div class="gsum">' + goalBar(st, label) +
+      '<p class="gline"><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span> <strong>' + pct + '%</strong> of goals (' + (st.n.done + st.n.late) + ' done' + (st.n.partial ? ', ' + st.n.partial + ' partial' : '') + ' of ' + st.g.length + ')' +
+      (st.phase === 'now' ? '; by today you should be at ' + Math.round(st.expected * 100) + '%' : '') + '.</p>' +
+      '<p class="gline small">' + (st.rts.length ? 'Retests due this week: <strong>' + st.rtPassed + ' of ' + st.rts.length + '</strong> passed. ' : '') +
+      (st.phase !== 'future' ? 'New topics not done: <strong>' + st.newLeft + '</strong>' + (st.n.blocked ? ' (' + st.n.blocked + ' blocked by overdue retests)' : '') + '.' : '') + '</p></div>';
+  }
+  VIEW.weekly = function () {
+    var html = '<h1>Weekly goals</h1><p class="lede">What each week planned, and how much of it is actually done. A goal counts only with logged evidence. Partial counts as half. The dark tick on the current week\'s bar is where you should be by today if the week\'s goals were spread evenly.</p>';
+    var od = overdueNow();
+    if (od.length) {
+      html += '<div class="blockers"><h2>Blocking new topics right now</h2><p class="muted small">Overdue retests stop new material until they pass. Clear these first.</p><ul class="attn">' +
+        od.map(function (r) { return '<li class="late"><b>' + esc(r.id) + ': ' + esc(r.task) + '</b><span class="late-tag">' + plural(diffDays(r.due, TODAY), 'day', 'days') + ' overdue</span></li>'; }).join('') + '</ul></div>';
+    }
+    html += '<div class="key small"><span><i class="gd"></i>Done</span><span><i class="gl"></i>Done late</span><span><i class="gp"></i>Partial</span><span><i></i>Not done</span></div>';
+    T.weeks.forEach(function (w) {
+      var st = weekStats(w);
+      var rows = st.g.map(function (x) {
+        return '<tr class="gs-' + x.state + '"><td>' + esc(x.lane === 'lp' ? 'Behavioral' : x.lane === 'applied' ? 'Internship' : x.lane === 'checkpoint' ? 'Checkpoint' : x.lane === 'core' ? 'Core' : 'DSA') + (x.kind === 'retest' ? '<span class="sub">retest</span>' : '') + '</td><td><strong>' + esc(x.item) + '</strong>' + (x.note ? '<span class="sub">' + esc(x.note) + '</span>' : '') + '</td><td><span class="gchip ' + x.state + '">' + esc(GSTATE[x.state]) + '</span>' + (x.doneDate ? '<span class="sub">' + esc(fmt(x.doneDate)) + '</span>' : '') + '</td></tr>';
+      }).join('');
+      var rtRows = st.rts.map(function (r) { return '<li>' + esc(r.id) + ' ' + esc(r.task) + ' <span class="' + (r.state === 'passed' ? 'okc' : (r.due < TODAY ? 'late-tag' : 'muted')) + '">' + esc(r.state === 'passed' ? 'passed' : r.state === 'failed' ? 'failed' : (r.due < TODAY ? 'overdue' : 'due ' + fmtShort(r.due))) + '</span></li>'; }).join('');
+      html += '<details class="wk"' + (st.phase === 'now' ? ' open' : '') + '><summary><span class="name">' + (w.gate ? 'Gate' : 'Week ' + w.week) + (st.phase === 'now' ? ' (this week)' : '') + '<span class="sub">' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></span>' +
+        goalBar(st, Math.round(st.pct * 100) + '% done') + '<span class="small"><strong>' + Math.round(st.pct * 100) + '%</strong> of ' + st.g.length + ' goals</span><span><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span></span></summary>' +
+        '<div class="body">' + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Status'], [rows]) +
+        (rtRows ? '<h3 class="small">Retests due this week</h3><ul class="rtl small">' + rtRows + '</ul>' : '') + '</div></details>';
+    });
+    return { title: 'Weekly goals', html: html };
+  };
+
   VIEW.today = function () {
     var start = T.meta.sprintStart, total = diffDays(start, T.meta.gateDate);
     var day = diffDays(start, TODAY), left = diffDays(TODAY, T.meta.gateDate);
@@ -261,6 +322,7 @@
         (wk.applied ? '<div class="lane"><dt>Applied to the internship</dt><dd>' + esc(wk.applied) + '</dd></div>' : '') +
         '<div class="lane"><dt>DSA</dt><dd>' + esc(wk.dsa) + '</dd></div>' +
         (wk.lp ? '<div class="lane"><dt>Behavioral</dt><dd>' + esc(wk.lp) + '</dd></div>' : '') + '</dl>';
+      if (wk.goals) html += weekSummary(wk, weekStats(wk)) + '<p class="small"><a href="#weekly">See every week\'s goals</a></p>';
     } else {
       html += '<p class="empty">No roadmap week covers today.</p>';
     }

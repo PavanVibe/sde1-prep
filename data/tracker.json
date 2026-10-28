@@ -2057,7 +2057,90 @@
       "applied": "Trace one authenticated API route",
       "dsa": "Cold retests of LC 643 and LC 209, then an unseen sliding-window set with the pattern unnamed; arrays, hashing, prefix sum",
       "lp": "List the real incidents you could build stories on, one line each, no polish. Resume truth audit: for every bullet, what you wrote (git history), what was measured, what you can defend for five minutes",
-      "checkpoint": "Checkpoint 0, 25 Oct: every Week 0 retest passed, or a written remediation plan"
+      "checkpoint": "Checkpoint 0, 25 Oct: every Week 0 retest passed, or a written remediation plan",
+      "goals": [
+        {
+          "id": "W0-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "Lesson 1: request lifecycle, methods, status codes, JWT (closed-book)",
+          "state": "late",
+          "doneDate": "2026-10-28",
+          "note": "Passed 28 Oct (R-32), 3 days after the week ended; marked at your request."
+        },
+        {
+          "id": "W0-2",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Trace one authenticated API route",
+          "state": "missed",
+          "doneDate": null,
+          "note": "R-04 not attempted; overdue."
+        },
+        {
+          "id": "W0-3",
+          "lane": "dsa",
+          "kind": "retest",
+          "item": "LC 643 cold retest",
+          "state": "late",
+          "doneDate": "2026-10-28",
+          "note": "Judged pass 28 Oct (R-12)."
+        },
+        {
+          "id": "W0-4",
+          "lane": "dsa",
+          "kind": "retest",
+          "item": "LC 209 cold retest",
+          "state": "missed",
+          "doneDate": null,
+          "note": "Only a self-reported pass on 24 Oct; judged retest R-18 due 31 Oct."
+        },
+        {
+          "id": "W0-5",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Unseen sliding-window set, pattern unnamed",
+          "state": "missed",
+          "doneDate": null,
+          "note": "25-26 Oct: 1 of 3 independent (R-08 failed)."
+        },
+        {
+          "id": "W0-6",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Arrays, hashing, prefix sum",
+          "state": "partial",
+          "doneDate": null,
+          "note": "Prefix sum: LC 974 and LC 560 judged on 28 Oct. Arrays and hashing: nothing logged."
+        },
+        {
+          "id": "W0-7",
+          "lane": "lp",
+          "kind": "new",
+          "item": "One-line list of real incidents for stories",
+          "state": "missed",
+          "doneDate": null,
+          "note": "Not logged."
+        },
+        {
+          "id": "W0-8",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Resume truth audit (what you wrote, what was measured)",
+          "state": "missed",
+          "doneDate": null,
+          "note": "Not logged."
+        },
+        {
+          "id": "W0-9",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Checkpoint 0: every Week 0 retest passed or a written remediation plan",
+          "state": "missed",
+          "doneDate": null,
+          "note": "Failed 25 Oct."
+        }
+      ]
     },
     {
       "week": 1,
@@ -2066,7 +2149,72 @@
       "core": "SQL, joins, indexes (B-tree, write cost); transactions, ACID, isolation, the last-seat race",
       "applied": "Mongo data model; a conditional update as compare-and-set",
       "dsa": "Two pointers, stack and queue, monotonic stack, binary search variants (LC 34, 153, 33, 162)",
-      "lp": "First full STAR draft of S-001 (internship), from verified facts only"
+      "lp": "First full STAR draft of S-001 (internship), from verified facts only",
+      "goals": [
+        {
+          "id": "W1-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "SQL, joins, indexes (B-tree, write cost)",
+          "state": "blocked",
+          "doneDate": null,
+          "note": "Not started: overdue retests block new material."
+        },
+        {
+          "id": "W1-2",
+          "lane": "core",
+          "kind": "new",
+          "item": "Transactions, ACID, isolation, the last-seat race",
+          "state": "blocked",
+          "doneDate": null,
+          "note": "Not started: overdue retests block new material."
+        },
+        {
+          "id": "W1-3",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Mongo data model; a conditional update as compare-and-set",
+          "state": "blocked",
+          "doneDate": null,
+          "note": "Not started."
+        },
+        {
+          "id": "W1-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Two pointers",
+          "state": "partial",
+          "doneDate": null,
+          "note": "LC 11 cold retest passed 29 Oct; no unseen two-pointer problem yet."
+        },
+        {
+          "id": "W1-5",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Stack, queue and monotonic stack",
+          "state": "partial",
+          "doneDate": null,
+          "note": "LC 739 cold retest passed 29 Oct; no unseen problem yet."
+        },
+        {
+          "id": "W1-6",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Binary search variants: LC 34, 153, 33, 162",
+          "state": "pending",
+          "doneDate": null,
+          "note": "R-06 due 1 Nov. Starts after R-28 clears."
+        },
+        {
+          "id": "W1-7",
+          "lane": "lp",
+          "kind": "new",
+          "item": "First full STAR draft of S-001 (internship)",
+          "state": "pending",
+          "doneDate": null,
+          "note": "Planned for Saturday morning."
+        }
+      ]
     },
     {
       "week": 2,
@@ -2076,7 +2224,81 @@
       "applied": "Concurrency in the job worker: heartbeat and shutdown",
       "dsa": "Linked-list retest, intervals and sorting, recursion, tree traversals",
       "lp": "Take S-001 through 10 follow-ups; draft S-003 (earlier internship)",
-      "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral"
+      "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral",
+      "goals": [
+        {
+          "id": "W2-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "OS retest: threads, races, locks, deadlock, GIL, stack vs heap, virtual memory",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W2-2",
+          "lane": "core",
+          "kind": "new",
+          "item": "Networking: DNS, TCP and UDP, TLS, HTTP, WebSockets",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W2-3",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Concurrency in the job worker: heartbeat and shutdown",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W2-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Linked-list retest",
+          "state": "pending",
+          "doneDate": null,
+          "note": "R-07 due 8 Nov."
+        },
+        {
+          "id": "W2-5",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Intervals and sorting",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W2-6",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Recursion and tree traversals",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W2-7",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Take S-001 through 10 follow-ups; draft S-003",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W2-8",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Checkpoint 1: three unseen mediums in 90 minutes + 10-question CS oral",
+          "state": "pending",
+          "doneDate": null,
+          "note": "8 Nov."
+        }
+      ]
     },
     {
       "week": 3,
@@ -2085,7 +2307,72 @@
       "core": "Distributed systems: queues, at-least-once, idempotency, retry with backoff and jitter, caching, backpressure, observability",
       "applied": "Job worker lifecycle: explain trigger, claim, process, finish or fail, retry",
       "dsa": "BST, tree problems, heap, graph BFS and DFS on grids",
-      "lp": "Stories for a failure and for a disagreement (S-004, S-005): real incidents only"
+      "lp": "Stories for a failure and for a disagreement (S-004, S-005): real incidents only",
+      "goals": [
+        {
+          "id": "W3-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "Distributed systems: queues, at-least-once, idempotency, retry with backoff and jitter",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W3-2",
+          "lane": "core",
+          "kind": "new",
+          "item": "Caching, backpressure, observability",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W3-3",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Job worker lifecycle: trigger, claim, process, finish or fail, retry",
+          "state": "pending",
+          "doneDate": null,
+          "note": "R-10 due 15 Nov."
+        },
+        {
+          "id": "W3-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "BST and tree problems",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W3-5",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Heap",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W3-6",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Graph BFS and DFS on grids",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W3-7",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Failure and disagreement stories (S-004, S-005)",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        }
+      ]
     },
     {
       "week": 4,
@@ -2095,7 +2382,72 @@
       "applied": "Redesign the job system as a scheduler, on paper",
       "dsa": "Topological sort, union find basics, greedy; mixed timed sets",
       "lp": "One resume pass with truthful bullets; behavioral mock 1",
-      "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees and graphs, plus an OOD mock"
+      "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees and graphs, plus an OOD mock",
+      "goals": [
+        {
+          "id": "W4-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "OOD: SOLID, LRU cache, parking lot",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W4-2",
+          "lane": "core",
+          "kind": "new",
+          "item": "System design: URL shortener, rate limiter",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W4-3",
+          "lane": "applied",
+          "kind": "new",
+          "item": "Redesign the job system as a scheduler, on paper",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W4-4",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Topological sort, union find basics",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W4-5",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Greedy; mixed timed sets",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W4-6",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Resume pass with truthful bullets; behavioral mock 1",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W4-7",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Checkpoint 2: unseen trees and graphs set + OOD mock",
+          "state": "pending",
+          "doneDate": null,
+          "note": "22 Nov."
+        }
+      ]
     },
     {
       "week": 5,
@@ -2105,7 +2457,54 @@
       "applied": "",
       "dsa": "1D DP only if Checkpoint 2 passed; otherwise remediate the weakest patterns. Two problems in 70 minutes, twice",
       "lp": "Rehearse every story against follow-ups; behavioral mock 2",
-      "checkpoint": "Full Amazon-style loop simulation on 28 or 29 Nov"
+      "checkpoint": "Full Amazon-style loop simulation on 28 or 29 Nov",
+      "goals": [
+        {
+          "id": "W5-1",
+          "lane": "core",
+          "kind": "new",
+          "item": "Mocks: CS oral, system design (45 min), behavioral with follow-ups",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W5-2",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "1D DP (only if Checkpoint 2 passed), else remediate weakest patterns",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W5-3",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Two problems in 70 minutes, twice",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W5-4",
+          "lane": "lp",
+          "kind": "new",
+          "item": "Rehearse every story; behavioral mock 2",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W5-5",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Full Amazon-style loop simulation",
+          "state": "pending",
+          "doneDate": null,
+          "note": "28 or 29 Nov."
+        }
+      ]
     },
     {
       "week": 6,
@@ -2116,7 +2515,27 @@
       "applied": "",
       "dsa": "Retest the weakest patterns",
       "lp": "",
-      "checkpoint": "Gate review, Day 42"
+      "checkpoint": "Gate review, Day 42",
+      "goals": [
+        {
+          "id": "W6-1",
+          "lane": "dsa",
+          "kind": "retest",
+          "item": "Retest the weakest patterns",
+          "state": "pending",
+          "doneDate": null,
+          "note": ""
+        },
+        {
+          "id": "W6-2",
+          "lane": "checkpoint",
+          "kind": "checkpoint",
+          "item": "Gate review (Day 42)",
+          "state": "pending",
+          "doneDate": null,
+          "note": "1 Dec."
+        }
+      ]
     }
   ],
   "resumeRules": [
@@ -2245,5 +2664,13 @@
         "current": "No mock done."
       }
     ]
+  },
+  "goalStates": {
+    "done": "Done in the week",
+    "late": "Done, but after the week ended",
+    "partial": "Partly done",
+    "pending": "Not done yet",
+    "blocked": "New topic not started: overdue retests block it",
+    "missed": "Week ended without it"
   }
 }
