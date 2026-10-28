@@ -10,6 +10,16 @@
   "entries": [
     {
       "date": "2026-10-29",
+      "kind": "plan",
+      "summary": "R-30 restored to 27 Oct (overdue); R-02, R-11, R-13 closed as superseded",
+      "details": [
+        "R-30 (LC 525) had been moved to 30 Oct without your agreement; restored at your request.",
+        "R-02, R-11 and R-13 were self-reported passes, replaced by later judged retests of LC 209, 643 and 53; closed with your OK."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-29",
       "kind": "weakness",
       "summary": "R-34 unseen LC 1493: Accepted but outside help flagged, so not independent",
       "details": [
