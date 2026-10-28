@@ -1462,7 +1462,7 @@
       "date": "2026-10-25",
       "independence": "hinted",
       "hint": "1 hint logged",
-      "note": "R-08 problem 2. First Submit failed 5/8: the two cases were swapped (base counted where grumpy was 1, window where it was 0), and both samples passed by coincidence. Accepted 8/8 after the swap was fixed, with 1 hint logged; 25:03 on the clock at the first Accepted. Not independent."
+      "note": "R-08 problem 2. First Submit failed 5/8: the two cases were swapped (base counted where grumpy was 1, window where it was 0), and both samples passed by coincidence. Accepted 8/8 after the swap was fixed, with 1 hint logged; 25:03 on the clock at the first Accepted. Not independent. 29 Oct cold retest R-33: Accepted 308/308, 0 hints (confirmed), 7:48; base sum plus best grumpy window, O(n)."
     },
     {
       "lc": 1658,
@@ -1472,7 +1472,7 @@
       "date": "2026-10-26",
       "independence": "hinted",
       "hint": "2 hints logged",
-      "note": "R-08 problem 3. Did not see the complement idea (remove both ends = keep the longest middle subarray) until the hint to look at total minus x. After the hint: Accepted 10/10 on the first Submit, 21:54 on the clock, edge cases target below 0 and equal to 0 handled. Not independent."
+      "note": "R-08 problem 3. Did not see the complement idea (remove both ends = keep the longest middle subarray) until the hint to look at total minus x. After the hint: Accepted 10/10 on the first Submit, 21:54 on the clock, edge cases target below 0 and equal to 0 handled. Not independent. 29 Oct cold retest R-33: Accepted 310/310, 0 hints (confirmed), 3:28; longest window with sum total minus x, handles target < 0 and target == 0."
     }
   ],
   "weaknesses": [
@@ -1500,7 +1500,7 @@
       "correct": "Recognize the pattern, then derive the invariant, window movement and complexity for the specific problem.",
       "cause": "Not established. The evidence does not support blaming memorization, rushing or any single cause.",
       "exercise": "An unseen mixed sliding-window problem with the pattern unnamed. Require recognition, invariant, movement, complexity, independent C++ and edge cases.",
-      "retest": "Failed 2026-10-26 (1 of 3 independent); retest 2026-10-28",
+      "retest": "29 Oct: cold LC 1052 and LC 1658 passed; unseen problem R-34 still due",
       "retestDue": "2026-10-28",
       "result": "Failed 2026-10-26"
     },
@@ -1815,8 +1815,8 @@
       "weakness": "W-003",
       "task": "Cold re-solve of LC 1052 and LC 1658 (no hints), plus one new unseen sliding-window problem, pattern unnamed; 35-minute cap each, Workbench timer on",
       "due": "2026-10-28",
-      "state": "pending",
-      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog. Due date restored to 28 Oct at your request (it had been moved to 29 Oct without your agreement); overdue, first task on 29 Oct."
+      "state": "passed",
+      "note": "48-hour retest after the failed R-08. Write the invariant, the shrink or update rule and two edge cases before coding. Hints only after the 35-minute cap. Moved from 2026-10-28 to 2026-10-29 on 28 Oct to clear the overdue backlog. Due date restored to 28 Oct at your request (it had been moved to 29 Oct without your agreement); overdue, first task on 29 Oct. 29 Oct: LC 1052 Accepted 308/308 (smvshkp1tluae), 7:48; LC 1658 Accepted 310/310 (smvsiu4rrppv4), 3:28. You confirmed 0 hints; the page hint counter carried over from 25 Oct. The new unseen problem is tracked as R-34."
     },
     {
       "id": "R-05",
