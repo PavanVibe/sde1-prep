@@ -299,7 +299,7 @@ pre { background: var(--paper-2); padding: 0.9rem 1rem; overflow-x: auto; font: 
 .key span { display: inline-flex; align-items: center; gap: 0.4rem; }
 .key i { width: 14px; height: 12px; border: 1px solid var(--rule); background: var(--paper-2); display: inline-block; }
 .gchip { display: inline-block; font-weight: 700; font-size: 0.86rem; }
-.gchip.done { color: var(--ok); } .gchip.late { color: var(--s3); } .gchip.partial { color: var(--muted); }
+.gchip.done { color: var(--ok); } .gchip.late { color: var(--s3); } .gchip.partial { color: var(--s3); }
 .gchip.blocked, .gchip.missed { color: var(--alert); } .gchip.pending { color: var(--muted); font-weight: 400; }
 .okc { color: var(--ok); font-weight: 700; }
 .blockers { border: 1.5px solid var(--alert); background: var(--alert-bg); padding: 0.4rem 1rem 0.2rem; border-radius: 3px; margin: 1.2rem 0; }

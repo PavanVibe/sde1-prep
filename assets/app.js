@@ -236,16 +236,34 @@
 
 
   /* ---------- weekly goals ---------- */
-  var GSTATE = { done: 'Done', late: 'Done late', partial: 'Partial', pending: 'Not done yet', blocked: 'Blocked', missed: 'Missed' };
+  var GSTATE = { done: 'At target', late: 'At target, late', partial: 'Part-way', pending: 'Not done yet', blocked: 'Blocked', missed: 'Missed' };
+
+  function topicOf(ref) {
+    var tr = T.tracks.filter(function (t) { return t.id === ref.track; })[0];
+    return tr ? tr.topics.filter(function (x) { return x.name === ref.topic; })[0] : null;
+  }
+  function goalProgress(x) {
+    if (x.refs && x.target) {
+      var tl = level(x.target), sum = 0;
+      x.refs.forEach(function (r) { var tp = topicOf(r); sum += Math.min(1, (tp ? level(tp.status) : 0) / tl); });
+      return sum / x.refs.length;
+    }
+    return (x.state === 'done' || x.state === 'late') ? 1 : (x.state === 'partial' ? 0.5 : 0);
+  }
   function weekStats(w) {
     var g = w.goals || [];
     var score = 0, n = { done: 0, late: 0, partial: 0, pending: 0, blocked: 0, missed: 0 };
-    g.forEach(function (x) { n[x.state] = (n[x.state] || 0) + 1; score += (x.state === 'done' || x.state === 'late') ? 1 : (x.state === 'partial' ? 0.5 : 0); });
+    g.forEach(function (x) {
+      var pr = goalProgress(x); x._p = pr;
+      var k = pr >= 1 ? (x.state === 'late' ? 'late' : 'done') : (pr > 0 ? 'partial' : (x.refs ? (x.state === 'blocked' || x.state === 'missed' ? x.state : 'pending') : (x.state === 'partial' ? 'pending' : x.state)));
+      x._k = k;
+      n[x._k] = (n[x._k] || 0) + 1; score += pr;
+    });
     var len = diffDays(w.start, w.end) + 1;
     var phase = TODAY > w.end ? 'past' : (TODAY < w.start ? 'future' : 'now');
     var expected = phase === 'past' ? 1 : (phase === 'future' ? 0 : Math.min(1, (diffDays(w.start, TODAY) + 1) / len));
     var pct = g.length ? score / g.length : 0;
-    var newLeft = g.filter(function (x) { return x.kind === 'new' && x.state !== 'done' && x.state !== 'late'; }).length;
+    var newLeft = g.filter(function (x) { return x.kind === 'new' && x._p < 1; }).length;
     var rts = T.retests.filter(function (r) { return r.due >= w.start && r.due <= w.end && r.state !== 'superseded'; });
     var rtPassed = rts.filter(function (r) { return r.state === 'passed'; }).length;
     var behind = Math.round((expected * g.length - score) * 2) / 2;
@@ -258,37 +276,46 @@
   }
   function goalBar(st, label) {
     var tot = st.g.length || 1;
-    var seg = function (c, k) { return c ? '<i class="' + k + '" style="width:' + (c / tot * 100).toFixed(2) + '%"></i>' : ''; };
+    var seg = function (c, k) { return c > 0 ? '<i class="' + k + '" style="width:' + (c / tot * 100).toFixed(2) + '%"></i>' : ''; };
+    var pd = 0, pl = 0, pp = 0; st.g.forEach(function (x) { if (x._p >= 1) { if (x._k === 'late') pl++; else pd++; } else pp += x._p; });
     var mark = st.phase === 'now' ? '<b class="expect" style="left:' + (st.expected * 100).toFixed(1) + '%" title="Where you should be today"></b>' : '';
-    return '<div class="gbar" role="img" aria-label="' + esc(label) + '">' + seg(st.n.done, 'gd') + seg(st.n.late, 'gl') + seg(st.n.partial, 'gp') + mark + '</div>';
+    return '<div class="gbar" role="img" aria-label="' + esc(label) + '">' + seg(pd, 'gd') + seg(pl, 'gl') + seg(pp, 'gp') + mark + '</div>';
   }
   function overdueNow() { return T.retests.filter(function (r) { return r.state === 'pending' && r.due < TODAY; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; }); }
   function weekSummary(w, st) {
     var pct = Math.round(st.pct * 100);
     var label = pct + '% of week ' + w.week + ' goals done';
     return '<div class="gsum">' + goalBar(st, label) +
-      '<p class="gline"><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span> <strong>' + pct + '%</strong> of goals (' + (st.n.done + st.n.late) + ' done' + (st.n.partial ? ', ' + st.n.partial + ' partial' : '') + ' of ' + st.g.length + ')' +
+      '<p class="gline"><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span> <strong>' + pct + '%</strong> of the week\'s targets (' + (st.n.done + st.n.late) + ' of ' + st.g.length + ' goals at target' + (st.n.partial ? ', ' + st.n.partial + ' part-way' : '') + ')' +
       (st.phase === 'now' ? '; by today you should be at ' + Math.round(st.expected * 100) + '%' : '') + '.</p>' +
       '<p class="gline small">' + (st.rts.length ? 'Retests due this week: <strong>' + st.rtPassed + ' of ' + st.rts.length + '</strong> passed. ' : '') +
       (st.phase !== 'future' ? 'New topics not done: <strong>' + st.newLeft + '</strong>' + (st.n.blocked ? ' (' + st.n.blocked + ' blocked by overdue retests)' : '') + '.' : '') + '</p></div>';
   }
   VIEW.weekly = function () {
-    var html = '<h1>Weekly goals</h1><p class="lede">What each week planned, and how much of it is actually done. A goal counts only with logged evidence. Partial counts as half. The dark tick on the current week\'s bar is where you should be by today if the week\'s goals were spread evenly.</p>';
+    var html = '<h1>Weekly goals</h1><p class="lede">Each topic has a target level for the end of its week, set by where it sits in the plan: a topic that comes back later only needs a lower level the first time; a one-shot topic must reach its final level in its own week. Progress is your evidence-backed level against that target, never attempts or hours. A goal without a topic (a story draft, a checkpoint) counts when it is done. The dark tick on the current week\'s bar is where you should be by today if the week\'s goals were spread evenly.</p>';
     var od = overdueNow();
     if (od.length) {
       html += '<div class="blockers"><h2>Blocking new topics right now</h2><p class="muted small">Overdue retests stop new material until they pass. Clear these first.</p><ul class="attn">' +
         od.map(function (r) { return '<li class="late"><b>' + esc(r.id) + ': ' + esc(r.task) + '</b><span class="late-tag">' + plural(diffDays(r.due, TODAY), 'day', 'days') + ' overdue</span></li>'; }).join('') + '</ul></div>';
     }
-    html += '<div class="key small"><span><i class="gd"></i>Done</span><span><i class="gl"></i>Done late</span><span><i class="gp"></i>Partial</span><span><i></i>Not done</span></div>';
+    var sy = T.syllabus;
+    if (sy) {
+      html += '<h2>How much of the interview syllabus the plan covers</h2><p class="muted small">' + esc(sy.note) + '</p>' +
+        table(['Area', 'Share of the interview', 'Scheduled in the plan', 'Not in the plan'], [sy.areas.map(function (a) {
+          return '<tr><td><strong>' + esc(a.area) + '</strong></td><td>' + a.weight + '%</td><td><div class="gbar" style="max-width:10rem"><i class="gp" style="width:' + a.coverage + '%"></i></div><span class="sub">' + a.coverage + '%</span></td><td>' + esc(a.missing) + '</td></tr>';
+        }).join('')]) +
+        '<p>All weeks together schedule about <strong>' + sy.total + '%</strong> of the weighted syllabus (' + sy.byWeek.map(function (b) { return 'W' + b.week + ' ' + b.share + '%'; }).join(', ') + '). ' + esc(sy.decision) + '</p>';
+    }
+    html += '<h2>Week by week</h2><div class="key small"><span><i class="gd"></i>At target</span><span><i class="gl"></i>At target, late</span><span><i class="gp"></i>Part-way</span><span><i></i>Not started</span></div>';
     T.weeks.forEach(function (w) {
       var st = weekStats(w);
       var rows = st.g.map(function (x) {
-        return '<tr class="gs-' + x.state + '"><td>' + esc(x.lane === 'lp' ? 'Behavioral' : x.lane === 'applied' ? 'Internship' : x.lane === 'checkpoint' ? 'Checkpoint' : x.lane === 'core' ? 'Core' : 'DSA') + (x.kind === 'retest' ? '<span class="sub">retest</span>' : '') + '</td><td><strong>' + esc(x.item) + '</strong>' + (x.note ? '<span class="sub">' + esc(x.note) + '</span>' : '') + '</td><td><span class="gchip ' + x.state + '">' + esc(GSTATE[x.state]) + '</span>' + (x.doneDate ? '<span class="sub">' + esc(fmt(x.doneDate)) + '</span>' : '') + '</td></tr>';
+        return '<tr class="gs-' + x.state + '"><td>' + esc(x.lane === 'lp' ? 'Behavioral' : x.lane === 'applied' ? 'Internship' : x.lane === 'checkpoint' ? 'Checkpoint' : x.lane === 'core' ? 'Core' : 'DSA') + (x.kind === 'retest' ? '<span class="sub">retest</span>' : '') + '</td><td><strong>' + esc(x.item) + '</strong>' + (x.note ? '<span class="sub">' + esc(x.note) + '</span>' : '') + '</td><td>' + (x.refs ? '<span class="sub">Target: <strong>' + esc(sentence(x.target)) + '</strong></span>' + x.refs.map(function (r) { var tp = topicOf(r); return '<span class="sub">' + esc(r.topic) + ': ' + esc(sentence(tp ? tp.status : 'NOT STARTED')) + (tp && tp.gateTarget ? ' (gate: ' + esc(sentence(tp.gateTarget)) + ')' : '') + '</span>'; }).join('') : '') + '</td><td><span class="gchip ' + x._k + '">' + esc(GSTATE[x._k]) + '</span><span class="sub">' + Math.round(x._p * 100) + '% of target</span>' + (x.doneDate ? '<span class="sub">' + esc(fmt(x.doneDate)) + '</span>' : '') + '</td></tr>';
       }).join('');
       var rtRows = st.rts.map(function (r) { return '<li>' + esc(r.id) + ' ' + esc(r.task) + ' <span class="' + (r.state === 'passed' ? 'okc' : (r.due < TODAY ? 'late-tag' : 'muted')) + '">' + esc(r.state === 'passed' ? 'passed' : r.state === 'failed' ? 'failed' : (r.due < TODAY ? 'overdue' : 'due ' + fmtShort(r.due))) + '</span></li>'; }).join('');
       html += '<details class="wk"' + (st.phase === 'now' ? ' open' : '') + '><summary><span class="name">' + (w.gate ? 'Gate' : 'Week ' + w.week) + (st.phase === 'now' ? ' (this week)' : '') + '<span class="sub">' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></span>' +
         goalBar(st, Math.round(st.pct * 100) + '% done') + '<span class="small"><strong>' + Math.round(st.pct * 100) + '%</strong> of ' + st.g.length + ' goals</span><span><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span></span></summary>' +
-        '<div class="body">' + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Status'], [rows]) +
+        '<div class="body">' + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Target level and where you are', 'Progress'], [rows]) +
         (rtRows ? '<h3 class="small">Retests due this week</h3><ul class="rtl small">' + rtRows + '</ul>' : '') + '</div></details>';
     });
     return { title: 'Weekly goals', html: html };

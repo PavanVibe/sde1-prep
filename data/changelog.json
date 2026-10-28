@@ -10,6 +10,18 @@
   "entries": [
     {
       "date": "2026-10-29",
+      "kind": "plan",
+      "summary": "Progress now measured against target levels; backtracking added; syllabus coverage shown",
+      "details": [
+        "Every topic goal has a target level for the end of its week (lower when the topic returns later, final level when it is one-shot) and topics have gate targets for 1 Dec. Progress is the evidence-backed level against the target, capped at 100%.",
+        "Option B chosen: gate stays 1 Dec; backtracking (missing by mistake) added to Week 4. Extending to mid-January stays the fallback.",
+        "The 28 Oct prefix-sum practice set was off-plan for Week 1; removed from next actions. The problems stay in the Workbench as optional practice.",
+        "Syllabus coverage estimate added: the plan schedules about 70% of the weighted interview syllabus. Week 1 now reads 10% of targets, behind by 3.5 goals."
+      ],
+      "changes": []
+    },
+    {
+      "date": "2026-10-29",
       "kind": "setup",
       "summary": "Weekly goals page: planned goals per week with a progress bar and pace check",
       "details": [

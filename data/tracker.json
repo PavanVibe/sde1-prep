@@ -53,7 +53,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Independent problems and follow-ups (Week 0)"
+          "next": "Independent problems and follow-ups (Week 0)",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "Strings",
@@ -67,56 +68,64 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Independent problems and follow-ups (Week 0)"
+          "next": "Independent problems and follow-ups (Week 0)",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "Two pointers",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Independent problems and follow-ups (Week 1)"
+          "next": "Independent problems and follow-ups (Week 1)",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "Sliding window",
           "status": "PRACTICING",
           "evidence": "Independent: LC 3, 438, 904, 1004, 1695. Hint needed: LC 643 (optimal), 567, 1052, 1658. Solution help: LC 424. Not solved: LC 209. R-08 on 25-26 Oct: 1 of 3 independent.",
           "lastTested": "2026-10-26",
-          "next": "Derive fixed- and variable-size window invariants on unseen problems; retest LC 643, LC 209 and a mixed set"
+          "next": "Derive fixed- and variable-size window invariants on unseen problems; retest LC 643, LC 209 and a mixed set",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "Prefix sums",
           "status": "NOT STARTED",
           "evidence": "Historical independent LC 560 only; not yet a structured track",
           "lastTested": "2026-08-18",
-          "next": "Independent problems and follow-ups (Week 0)"
+          "next": "Independent problems and follow-ups (Week 0)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Sorting",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Independent implementation and reasoning (Week 2)"
+          "next": "Independent implementation and reasoning (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Binary search",
           "status": "PRACTICING",
           "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162.",
           "lastTested": "2026-08-18",
-          "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)"
+          "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "Linked lists",
           "status": "PRACTICING",
           "evidence": "Independent: LC 19, 21, 141. Assistance not recorded: LC 160, 206, 876, 24. Hint or solution used: LC 142, 2, 25.",
           "lastTested": "2026-08-18",
-          "next": "Independent implementation across more variants, edge cases and follow-ups (Week 2 retest)"
+          "next": "Independent implementation across more variants, edge cases and follow-ups (Week 2 retest)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Intervals",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Independent problems (Week 2)"
+          "next": "Independent problems (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Stack and queue",
@@ -124,70 +133,80 @@
           "evidence": "—",
           "lastTested": null,
           "next": "Application problems (Week 1)",
-          "note": "Study note: if a problem asks for the next greater or next smaller element, consider a (monotonic) stack."
+          "note": "Study note: if a problem asks for the next greater or next smaller element, consider a (monotonic) stack.",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Recursion",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Recursion reasoning (Week 2)"
+          "next": "Recursion reasoning (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Trees",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Traversal and problem solving (Weeks 2 and 3)"
+          "next": "Traversal and problem solving (Weeks 2 and 3)",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "BST",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Invariants and operations (Week 3)"
+          "next": "Invariants and operations (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Heap and priority queue",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Selection and scheduling problems (Week 3)"
+          "next": "Selection and scheduling problems (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Greedy",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Proof of the greedy choice (Week 4)"
+          "next": "Proof of the greedy choice (Week 4)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Backtracking",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Not scheduled; first to add if the sprint is ahead"
+          "next": "Not scheduled; first to add if the sprint is ahead",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Graph BFS and DFS",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Unseen graph problems (Week 3)"
+          "next": "Unseen graph problems (Week 3)",
+          "gateTarget": "INTERVIEW READY"
         },
         {
           "name": "Topological sort",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Dependency problems (Week 4)"
+          "next": "Dependency problems (Week 4)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Union find (DSU)",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Connectivity problems, basics only (Week 4)"
+          "next": "Connectivity problems, basics only (Week 4)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Shortest paths",
@@ -208,7 +227,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "1D only, Week 5, and only if Checkpoint 2 passes"
+          "next": "1D only, Week 5, and only if Checkpoint 2 passes",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Tries",
@@ -222,7 +242,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Pattern recognition (Week 1)"
+          "next": "Pattern recognition (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Bit manipulation",
@@ -268,7 +289,8 @@
           "status": "LEARNING",
           "evidence": "Learned and evaluated on 2026-08-18",
           "lastTested": "2026-08-18",
-          "next": "Repeated explanation and follow-up testing"
+          "next": "Repeated explanation and follow-up testing",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Basic IPC",
@@ -289,35 +311,40 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Apply to C++ examples (Week 2)"
+          "next": "Apply to C++ examples (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Virtual memory",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Explain paging and address space (Week 2)"
+          "next": "Explain paging and address space (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Synchronization",
           "status": "LEARNING",
           "evidence": "Race conditions and critical sections learned on 2026-08-18. Diagnostic 2026-10-15: could not recognize a race in a booking scenario (W-005).",
           "lastTested": "2026-10-15",
-          "next": "Concurrency scenarios and follow-ups"
+          "next": "Concurrency scenarios and follow-ups",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Mutexes and locks",
           "status": "LEARNING",
           "evidence": "Mutexes and semaphores learned and evaluated",
           "lastTested": "2026-08-18",
-          "next": "Reason about races and choose a synchronization method"
+          "next": "Reason about races and choose a synchronization method",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Deadlocks",
           "status": "LEARNING",
           "evidence": "Deadlocks and consistent lock ordering learned and evaluated",
           "lastTested": "2026-08-18",
-          "next": "Detection and prevention reasoning with follow-ups"
+          "next": "Detection and prevention reasoning with follow-ups",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Scheduling",
@@ -347,42 +374,48 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Query exercises (Week 1)"
+          "next": "Query exercises (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Joins",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Explain and write queries (Week 1)"
+          "next": "Explain and write queries (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Indexes",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: knew B-tree and separate storage; write cost and when an index does not help were blank",
           "lastTested": "2026-10-15",
-          "next": "Explain trade-offs (Week 1)"
+          "next": "Explain trade-offs (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Transactions",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: last-seat race answered as a deadlock (W-005)",
           "lastTested": "2026-10-15",
-          "next": "Failure scenarios (Week 1)"
+          "next": "Failure scenarios (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "ACID",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Explain with examples (Week 1)"
+          "next": "Explain with examples (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Isolation",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Anomaly reasoning (Week 1)"
+          "next": "Anomaly reasoning (Week 1)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Normalization",
@@ -403,7 +436,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Apply to the internship data model (Week 1)"
+          "next": "Apply to the internship data model (Week 1)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Sharding",
@@ -426,49 +460,56 @@
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: status codes and methods weak (401 vs 403, PUT and PATCH blank)",
           "lastTested": "2026-10-15",
-          "next": "Request lifecycle (Lesson 1, Week 0)"
+          "next": "Request lifecycle (Lesson 1, Week 0)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "HTTPS and TLS",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Handshake reasoning (Week 2)"
+          "next": "Handshake reasoning (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "TCP",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Reliability and congestion concepts (Week 2)"
+          "next": "Reliability and congestion concepts (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "UDP",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Trade-offs against TCP (Week 2)"
+          "next": "Trade-offs against TCP (Week 2)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "DNS",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: omitted from the request lifecycle answer (W-004)",
           "lastTested": "2026-10-15",
-          "next": "Resolution flow (Week 2)"
+          "next": "Resolution flow (Week 2)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "REST",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: API design question blank",
           "lastTested": "2026-10-15",
-          "next": "API design (Week 0)"
+          "next": "API design (Week 0)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "WebSockets",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Connection model (Week 2)"
+          "next": "Connection model (Week 2)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Latency and throughput",
@@ -491,21 +532,24 @@
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: knew job state must be durable (partial)",
           "lastTested": "2026-10-15",
-          "next": "Design and failure cases (Week 3)"
+          "next": "Design and failure cases (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Retries",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: blank",
           "lastTested": "2026-10-15",
-          "next": "Backoff and idempotency reasoning (Week 3)"
+          "next": "Backoff and idempotency reasoning (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Idempotency",
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: missed in the crash scenario (W-006)",
           "lastTested": "2026-10-15",
-          "next": "Duplicate request scenario (Week 3)"
+          "next": "Duplicate request scenario (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Fault tolerance",
@@ -526,14 +570,16 @@
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: blank",
           "lastTested": "2026-10-15",
-          "next": "Invalidation and trade-offs (Week 3)"
+          "next": "Invalidation and trade-offs (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Backpressure",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Queue overload reasoning (Week 3)"
+          "next": "Queue overload reasoning (Week 3)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Consistency",
@@ -554,7 +600,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Metrics, logging and tracing (Week 3)"
+          "next": "Metrics, logging and tracing (Week 3)",
+          "gateTarget": "UNDERSTOOD"
         }
       ]
     },
@@ -570,21 +617,24 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Trace one request end to end (Week 0)"
+          "next": "Trace one request end to end (Week 0)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "JWT authentication",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Trace a protected request (Week 0)"
+          "next": "Trace a protected request (Week 0)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "MongoDB data-access layer",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Trace read, write and indexes (Week 1)"
+          "next": "Trace read, write and indexes (Week 1)",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Redis layer",
@@ -605,21 +655,24 @@
           "status": "NOT STARTED",
           "evidence": "Diagnostic 2026-10-15: could not explain what it does or how it handles failure (W-007)",
           "lastTested": "2026-10-15",
-          "next": "Explain lifecycle and concurrency (Weeks 2 and 3)"
+          "next": "Explain lifecycle and concurrency (Weeks 2 and 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Job retries and recovery",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Failure scenario analysis (Week 3)"
+          "next": "Failure scenario analysis (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Job idempotency",
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "A source-backed example (Week 3)"
+          "next": "A source-backed example (Week 3)",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Real-time voice agent",
@@ -747,7 +800,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Scenario questions"
+          "next": "Scenario questions",
+          "gateTarget": "STRONG"
         },
         {
           "name": "Interface design",
@@ -768,7 +822,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Timed mocks"
+          "next": "Timed mocks",
+          "gateTarget": "STRONG"
         }
       ]
     },
@@ -819,7 +874,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Async design"
+          "next": "Async design",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Load balancing",
@@ -840,7 +896,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "Design exercise"
+          "next": "Design exercise",
+          "gateTarget": "UNDERSTOOD"
         },
         {
           "name": "Observability",
@@ -854,7 +911,8 @@
           "status": "NOT STARTED",
           "evidence": "—",
           "lastTested": null,
-          "next": "A successful timed mock"
+          "next": "A successful timed mock",
+          "gateTarget": "UNDERSTOOD"
         }
       ]
     },
@@ -1920,7 +1978,6 @@
   "nextActions": [
     "29 Oct core: R-04 route trace (overdue since 28 Oct), then start Week 1 databases: SQL, joins, indexes.",
     "Overdue DSA retests (cold, no hints): R-33 LC 1052 + LC 1658 (due 28 Oct); R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875 (due 27 Oct). They block new material.",
-    "Prefix-sum practice set in the Workbench (p9 to p15): LC 560, 523, 525, 930, 1248, 325, 327. A cold LC 525 here also counts as R-30. Judged submissions are logged as they come in.",
     "29 Oct: R-33 cold LC 1052 and LC 1658 plus Minimum Window Substring (p6); R-34 new unseen variable-size window problem. 35-minute cap each.",
     "30 Oct: R-22 LC 11, R-24 LC 238, R-26 LC 739, R-28 LC 875, R-30 LC 525, all cold.",
     "26-27 Oct carry-over: type the mini auth system by hand and map it to the internship code; mark unsure lines.",
@@ -2066,7 +2123,22 @@
           "item": "Lesson 1: request lifecycle, methods, status codes, JWT (closed-book)",
           "state": "late",
           "doneDate": "2026-10-28",
-          "note": "Passed 28 Oct (R-32), 3 days after the week ended; marked at your request."
+          "note": "Passed 28 Oct (R-32), 3 days after the week ended; marked at your request.",
+          "refs": [
+            {
+              "track": "net",
+              "topic": "HTTP"
+            },
+            {
+              "track": "net",
+              "topic": "REST"
+            },
+            {
+              "track": "alch",
+              "topic": "JWT authentication"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W0-2",
@@ -2075,7 +2147,14 @@
           "item": "Trace one authenticated API route",
           "state": "missed",
           "doneDate": null,
-          "note": "R-04 not attempted; overdue."
+          "note": "R-04 not attempted; overdue.",
+          "refs": [
+            {
+              "track": "alch",
+              "topic": "Web API server lifecycle"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W0-3",
@@ -2084,7 +2163,14 @@
           "item": "LC 643 cold retest",
           "state": "late",
           "doneDate": "2026-10-28",
-          "note": "Judged pass 28 Oct (R-12)."
+          "note": "Judged pass 28 Oct (R-12).",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Sliding window"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W0-4",
@@ -2093,7 +2179,14 @@
           "item": "LC 209 cold retest",
           "state": "missed",
           "doneDate": null,
-          "note": "Only a self-reported pass on 24 Oct; judged retest R-18 due 31 Oct."
+          "note": "Only a self-reported pass on 24 Oct; judged retest R-18 due 31 Oct.",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Sliding window"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W0-5",
@@ -2102,7 +2195,14 @@
           "item": "Unseen sliding-window set, pattern unnamed",
           "state": "missed",
           "doneDate": null,
-          "note": "25-26 Oct: 1 of 3 independent (R-08 failed)."
+          "note": "25-26 Oct: 1 of 3 independent (R-08 failed).",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Sliding window"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W0-6",
@@ -2111,7 +2211,22 @@
           "item": "Arrays, hashing, prefix sum",
           "state": "partial",
           "doneDate": null,
-          "note": "Prefix sum: LC 974 and LC 560 judged on 28 Oct. Arrays and hashing: nothing logged."
+          "note": "Prefix sum: LC 974 and LC 560 judged on 28 Oct. Arrays and hashing: nothing logged.",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Arrays"
+            },
+            {
+              "track": "dsa",
+              "topic": "Hashing"
+            },
+            {
+              "track": "dsa",
+              "topic": "Prefix sums"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W0-7",
@@ -2158,7 +2273,22 @@
           "item": "SQL, joins, indexes (B-tree, write cost)",
           "state": "blocked",
           "doneDate": null,
-          "note": "Not started: overdue retests block new material."
+          "note": "Not started: overdue retests block new material.",
+          "refs": [
+            {
+              "track": "db",
+              "topic": "SQL fundamentals"
+            },
+            {
+              "track": "db",
+              "topic": "Joins"
+            },
+            {
+              "track": "db",
+              "topic": "Indexes"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W1-2",
@@ -2167,7 +2297,22 @@
           "item": "Transactions, ACID, isolation, the last-seat race",
           "state": "blocked",
           "doneDate": null,
-          "note": "Not started: overdue retests block new material."
+          "note": "Not started: overdue retests block new material.",
+          "refs": [
+            {
+              "track": "db",
+              "topic": "Transactions"
+            },
+            {
+              "track": "db",
+              "topic": "ACID"
+            },
+            {
+              "track": "db",
+              "topic": "Isolation"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W1-3",
@@ -2176,7 +2321,18 @@
           "item": "Mongo data model; a conditional update as compare-and-set",
           "state": "blocked",
           "doneDate": null,
-          "note": "Not started."
+          "note": "Not started.",
+          "refs": [
+            {
+              "track": "db",
+              "topic": "MongoDB"
+            },
+            {
+              "track": "alch",
+              "topic": "MongoDB data-access layer"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W1-4",
@@ -2185,7 +2341,14 @@
           "item": "Two pointers",
           "state": "partial",
           "doneDate": null,
-          "note": "LC 11 cold retest passed 29 Oct; no unseen two-pointer problem yet."
+          "note": "LC 11 cold retest passed 29 Oct; no unseen two-pointer problem yet.",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Two pointers"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W1-5",
@@ -2194,7 +2357,18 @@
           "item": "Stack, queue and monotonic stack",
           "state": "partial",
           "doneDate": null,
-          "note": "LC 739 cold retest passed 29 Oct; no unseen problem yet."
+          "note": "LC 739 cold retest passed 29 Oct; no unseen problem yet.",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Stack and queue"
+            },
+            {
+              "track": "dsa",
+              "topic": "Monotonic structures"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W1-6",
@@ -2203,7 +2377,14 @@
           "item": "Binary search variants: LC 34, 153, 33, 162",
           "state": "pending",
           "doneDate": null,
-          "note": "R-06 due 1 Nov. Starts after R-28 clears."
+          "note": "R-06 due 1 Nov. Starts after R-28 clears.",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Binary search"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W1-7",
@@ -2233,7 +2414,34 @@
           "item": "OS retest: threads, races, locks, deadlock, GIL, stack vs heap, virtual memory",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "os",
+              "topic": "Processes vs threads"
+            },
+            {
+              "track": "os",
+              "topic": "Synchronization"
+            },
+            {
+              "track": "os",
+              "topic": "Mutexes and locks"
+            },
+            {
+              "track": "os",
+              "topic": "Deadlocks"
+            },
+            {
+              "track": "os",
+              "topic": "Stack vs heap"
+            },
+            {
+              "track": "os",
+              "topic": "Virtual memory"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W2-2",
@@ -2242,7 +2450,34 @@
           "item": "Networking: DNS, TCP and UDP, TLS, HTTP, WebSockets",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "net",
+              "topic": "DNS"
+            },
+            {
+              "track": "net",
+              "topic": "TCP"
+            },
+            {
+              "track": "net",
+              "topic": "UDP"
+            },
+            {
+              "track": "net",
+              "topic": "HTTPS and TLS"
+            },
+            {
+              "track": "net",
+              "topic": "HTTP"
+            },
+            {
+              "track": "net",
+              "topic": "WebSockets"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W2-3",
@@ -2251,7 +2486,14 @@
           "item": "Concurrency in the job worker: heartbeat and shutdown",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "alch",
+              "topic": "Background job worker"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W2-4",
@@ -2260,7 +2502,14 @@
           "item": "Linked-list retest",
           "state": "pending",
           "doneDate": null,
-          "note": "R-07 due 8 Nov."
+          "note": "R-07 due 8 Nov.",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Linked lists"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W2-5",
@@ -2269,7 +2518,18 @@
           "item": "Intervals and sorting",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Intervals"
+            },
+            {
+              "track": "dsa",
+              "topic": "Sorting"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W2-6",
@@ -2278,7 +2538,18 @@
           "item": "Recursion and tree traversals",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Recursion"
+            },
+            {
+              "track": "dsa",
+              "topic": "Trees"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W2-7",
@@ -2316,7 +2587,22 @@
           "item": "Distributed systems: queues, at-least-once, idempotency, retry with backoff and jitter",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dist",
+              "topic": "Queues"
+            },
+            {
+              "track": "dist",
+              "topic": "Retries"
+            },
+            {
+              "track": "dist",
+              "topic": "Idempotency"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W3-2",
@@ -2325,7 +2611,22 @@
           "item": "Caching, backpressure, observability",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dist",
+              "topic": "Caching"
+            },
+            {
+              "track": "dist",
+              "topic": "Backpressure"
+            },
+            {
+              "track": "dist",
+              "topic": "Observability"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W3-3",
@@ -2334,7 +2635,22 @@
           "item": "Job worker lifecycle: trigger, claim, process, finish or fail, retry",
           "state": "pending",
           "doneDate": null,
-          "note": "R-10 due 15 Nov."
+          "note": "R-10 due 15 Nov.",
+          "refs": [
+            {
+              "track": "alch",
+              "topic": "Background job worker"
+            },
+            {
+              "track": "alch",
+              "topic": "Job retries and recovery"
+            },
+            {
+              "track": "alch",
+              "topic": "Job idempotency"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W3-4",
@@ -2343,7 +2659,18 @@
           "item": "BST and tree problems",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Trees"
+            },
+            {
+              "track": "dsa",
+              "topic": "BST"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W3-5",
@@ -2352,7 +2679,14 @@
           "item": "Heap",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Heap and priority queue"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W3-6",
@@ -2361,7 +2695,14 @@
           "item": "Graph BFS and DFS on grids",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Graph BFS and DFS"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W3-7",
@@ -2380,7 +2721,7 @@
       "end": "2026-11-22",
       "core": "OOD: SOLID, LRU cache, parking lot. System design at SDE-1 depth: URL shortener, rate limiter",
       "applied": "Redesign the job system as a scheduler, on paper",
-      "dsa": "Topological sort, union find basics, greedy; mixed timed sets",
+      "dsa": "Topological sort, union find basics, greedy; mixed timed sets; backtracking",
       "lp": "One resume pass with truthful bullets; behavioral mock 1",
       "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees and graphs, plus an OOD mock",
       "goals": [
@@ -2391,7 +2732,18 @@
           "item": "OOD: SOLID, LRU cache, parking lot",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "ood",
+              "topic": "SOLID"
+            },
+            {
+              "track": "ood",
+              "topic": "OOD interview problems"
+            }
+          ],
+          "target": "STRONG"
         },
         {
           "id": "W4-2",
@@ -2400,7 +2752,18 @@
           "item": "System design: URL shortener, rate limiter",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "sd",
+              "topic": "SDE-1 design interview"
+            },
+            {
+              "track": "sd",
+              "topic": "Rate limiting"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W4-3",
@@ -2409,7 +2772,14 @@
           "item": "Redesign the job system as a scheduler, on paper",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "sd",
+              "topic": "Queues and workers"
+            }
+          ],
+          "target": "UNDERSTOOD"
         },
         {
           "id": "W4-4",
@@ -2418,7 +2788,18 @@
           "item": "Topological sort, union find basics",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Topological sort"
+            },
+            {
+              "track": "dsa",
+              "topic": "Union find (DSU)"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W4-5",
@@ -2427,7 +2808,23 @@
           "item": "Greedy; mixed timed sets",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Greedy"
+            }
+          ],
+          "target": "UNDERSTOOD"
+        },
+        {
+          "id": "W4-8",
+          "lane": "dsa",
+          "kind": "new",
+          "item": "Backtracking (subsets, permutations, combination sum)",
+          "state": "pending",
+          "doneDate": null,
+          "note": "Added 29 Oct: it had been left out of the plan by mistake."
         },
         {
           "id": "W4-6",
@@ -2475,7 +2872,14 @@
           "item": "1D DP (only if Checkpoint 2 passed), else remediate weakest patterns",
           "state": "pending",
           "doneDate": null,
-          "note": ""
+          "note": "",
+          "refs": [
+            {
+              "track": "dsa",
+              "topic": "Dynamic programming"
+            }
+          ],
+          "target": "PRACTICING"
         },
         {
           "id": "W5-3",
@@ -2672,5 +3076,74 @@
     "pending": "Not done yet",
     "blocked": "New topic not started: overdue retests block it",
     "missed": "Week ended without it"
+  },
+  "syllabus": {
+    "note": "Estimate, not an official Amazon syllabus. Area shares follow how public interview guides describe an SDE-1 loop: coding is the bulk, leadership principles in every round, OOD common, system design light. Coverage means scheduled in the plan, not mastered.",
+    "areas": [
+      {
+        "area": "DSA",
+        "weight": 45,
+        "coverage": 76,
+        "missing": "Tries, shortest paths, MST, bit manipulation, 2D DP"
+      },
+      {
+        "area": "Behavioral and LPs",
+        "weight": 25,
+        "coverage": 60,
+        "missing": "Stories for about half the LPs"
+      },
+      {
+        "area": "CS fundamentals (OS, DB, networking, distributed)",
+        "weight": 10,
+        "coverage": 70,
+        "missing": "OS scheduling, IPC and system calls; normalization; consistency"
+      },
+      {
+        "area": "OOD",
+        "weight": 10,
+        "coverage": 70,
+        "missing": "Depth: one week only"
+      },
+      {
+        "area": "System design",
+        "weight": 5,
+        "coverage": 80,
+        "missing": "Sharding depth"
+      },
+      {
+        "area": "Internship deep-dive",
+        "weight": 5,
+        "coverage": 35,
+        "missing": "Real-time voice agent (cut)"
+      }
+    ],
+    "byWeek": [
+      {
+        "week": 0,
+        "share": 10
+      },
+      {
+        "week": 1,
+        "share": 13
+      },
+      {
+        "week": 2,
+        "share": 16
+      },
+      {
+        "week": 3,
+        "share": 13
+      },
+      {
+        "week": 4,
+        "share": 14
+      },
+      {
+        "week": 5,
+        "share": 4
+      }
+    ],
+    "total": 70,
+    "decision": "29 Oct: Option B. Gate stays 1 Dec; backtracking added to Week 4. Extending the gate to mid-January stays the fallback."
   }
 }
