@@ -321,3 +321,13 @@ details.wk > summary .name .sub { display: block; font: 400 0.84rem var(--text);
 .note-body p { margin: 0.35rem 0 0; }
 .note-body pre { margin: 0.5rem 0; }
 .note-body table { margin: 0.4rem 0; }
+
+details.note-card { padding: 0; }
+details.note-card > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.75rem; padding: 0.75rem 0 0.75rem 1.6rem; position: relative; }
+details.note-card > summary::-webkit-details-marker { display: none; }
+details.note-card > summary::before { content: '\25B8'; position: absolute; left: 0.2rem; top: 0.72rem; transition: transform 0.15s; }
+details.note-card[open] > summary::before { transform: rotate(90deg); }
+details.note-card > summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+details.note-card .note-title { font-weight: 700; font-size: 1.02rem; }
+details.note-card summary .from { margin: 0; }
+details.note-card .note-inner { padding: 0 0 1rem 1.6rem; }
