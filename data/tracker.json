@@ -1192,6 +1192,14 @@
         "file": "data/notes/subarray-patterns.md",
         "summary": "8 subarray patterns with C++ templates, then patterns 3, 4, 6 and 7 step by step. Added 28 Oct; reference material, not evidence.",
         "added": "2026-10-28"
+      },
+      {
+        "id": "cpp-stl-ceil-division",
+        "title": "max_element and ceiling division",
+        "area": "C++ and DSA",
+        "file": "data/notes/cpp-stl-and-ceil-division.md",
+        "summary": "What *max_element returns and why it is an iterator; why (pile + k - 1) / k rounds up, with proof and overflow note; how both fit LC 875. Added 30 Oct; reference material, not evidence.",
+        "added": "2026-10-30"
       }
     ]
   },
