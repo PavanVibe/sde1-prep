@@ -1182,6 +1182,20 @@
         "text": "Your note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.",
         "status": "Not started as a track. Scheduled for Week 1.",
         "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end."
+      },
+      {
+        "area": "C++ STL",
+        "title": "*max_element: what it returns and how to use it",
+        "text": "max_element(v.begin(), v.end()) is in <algorithm>. It returns an ITERATOR (like a pointer) to the largest element, not the value. Put * in front to get the value: int hi = *max_element(piles.begin(), piles.end()); For piles = [3, 6, 7, 11], the iterator points at 11 and * gives 11. Index of the max: it - v.begin(). Why an iterator: (1) you get the position as well as the value; (2) on an empty range it returns v.end() (not found), so never dereference that; (3) the same function works for every container. Mistake to avoid: int hi = max_element(...) without * does not compile. Siblings that also return iterators: min_element, find, lower_bound, upper_bound. For a few literal values, max({a, b, c}) returns the value directly.",
+        "status": "Your notes from 30 Oct (taught during LC 875). Reference only, not evidence.",
+        "check": "Without notes: write the line for the max value AND the index of the max of a vector, and say what happens on an empty vector."
+      },
+      {
+        "area": "Binary search on the answer",
+        "title": "Ceiling division (pile + k - 1) / k, and LC 875 Koko Eating Bananas",
+        "text": "Goal: ceil(pile / k) using integers. C++ int division rounds DOWN (7 / 3 = 2), but 7 bananas at 3 per hour takes 3 hours. Logic: write pile = q*k + r, where 0 <= r < k. We need q hours if r = 0 and q + 1 hours if r > 0. (pile + k - 1) / k = q + (r + k - 1) / k. If r = 0: (k - 1) / k = 0, so the total is q. If r >= 1: k <= r + k - 1 <= 2k - 2 < 2k, so this part is exactly 1 and the total is q + 1. Intuition: k - 1 is the largest amount you can add without pushing an exact multiple past the next multiple; any leftover gets pushed over. Examples with k = 3: pile 6 gives 2, pile 7 gives 3, pile 8 gives 3, pile 9 gives 3. It is a calculator (always equals the ceiling), not a condition to satisfy. Overflow: write (p + (long long)k - 1) / k. LC 875 use: search speed k in [1, max(piles)] (at max speed each pile takes 1 hour, and h >= n). canFinish(k) = sum of ceil(pile / k) over ALL piles <= h, with the sum in long long (it can reach about 1e13). The predicate is monotonic, F F F T T T, so find the first T: if canFinish(mid), set ans = mid and hi = mid - 1; else lo = mid + 1. O(n log M) time, O(1) space.",
+        "status": "Your notes from 30 Oct. LC 875 solution was seen (R-28 failed); cold re-solve due Sun 1 Nov.",
+        "check": "Prove why (pile + k - 1) / k rounds up, using q and r. Then solve LC 875 cold in 35 minutes."
       }
     ],
     "sheets": [
@@ -1192,14 +1206,6 @@
         "file": "data/notes/subarray-patterns.md",
         "summary": "8 subarray patterns with C++ templates, then patterns 3, 4, 6 and 7 step by step. Added 28 Oct; reference material, not evidence.",
         "added": "2026-10-28"
-      },
-      {
-        "id": "cpp-stl-ceil-division",
-        "title": "max_element and ceiling division",
-        "area": "C++ and DSA",
-        "file": "data/notes/cpp-stl-and-ceil-division.md",
-        "summary": "What *max_element returns and why it is an iterator; why (pile + k - 1) / k rounds up, with proof and overflow note; how both fit LC 875. Added 30 Oct; reference material, not evidence.",
-        "added": "2026-10-30"
       }
     ]
   },
