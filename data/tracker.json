@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2027-01-18",
-    "lastUpdated": "2026-10-29",
+    "lastUpdated": "2026-10-30",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -2039,16 +2039,17 @@
     }
   ],
   "nextActions": [
-    "Thu 29 Oct 19:30-21:30 DSA: R-28 LC 875 (p19), R-30 LC 525, then LC 34 cold (binary search quota).",
-    "Week 0 carry-over now in the Workbench: LC 209 (p21, R-18); unnamed set p22 to p24 (W-003, R-39); arrays and hashing p25 to p28; prefix sum p12 and p13. Work them in the DSA blocks after the overdue retests, 35-minute cap each, timer on.",
-    "Thu 29 Oct 21:30-23:00 core: R-04 route trace (overdue), then SQL quiz (5 MCQs first) and teach the gaps.",
-    "Thu 29 Oct 23:00-23:45 behavioral: one-line list of real internship incidents for S-001 (still owed from Week 0).",
-    "Fri 30 Oct: LC 153 and LC 33 cold + 1 unseen stack problem; joins and indexes closed-book; S-001 STAR draft (situation, task, actions).",
-    "Sat 31 Oct: R-18, R-20, R-37, R-39, LC 162 + 2 unseen two-pointer + 1 unseen binary search on the answer; transactions, ACID and the last-seat race; Mongo compare-and-set in the internship code; S-001 full draft.",
-    "Sun 1 Nov: R-06 (LC 34, 153, 33, 162 cold), 7-day retests R-23, R-25, R-27, R-29, R-31; R-05 race scenarios; weekly review at 19:00."
+    "BACKLOG FIRST (standing rule from 30 Oct): Thu 29 Oct plan was not done; clear it before any Fri 30 Oct item.",
+    "Fri 30 Oct 19:30-21:30 DSA backlog: R-28 LC 875 (p19), R-30 LC 525, then LC 34 cold (Thu item).",
+    "Fri 30 Oct 21:30-23:00 core backlog: R-04 route trace (overdue), then SQL quiz (5 MCQs first) and teach the gaps.",
+    "Fri 30 Oct 23:00-23:45 behavioral backlog: one-line list of 5 real internship incidents for S-001.",
+    "Then Fri 30 Oct items, only after the backlog is clear: LC 153 and LC 33 cold + 1 unseen stack problem; joins and indexes closed-book; S-001 STAR draft. Whatever is left carries to Sat 31 Oct ahead of Saturday's items.",
+    "Sat 31 Oct: carried Friday items first, then R-18, R-20, R-37, R-39, LC 162 + 2 unseen two-pointer + 1 unseen binary search on the answer; transactions, ACID and the last-seat race; Mongo compare-and-set in the internship code; S-001 full draft.",
+    "Sun 1 Nov: carried items first, then R-06 (LC 34, 153, 33, 162 cold), 7-day retests R-23, R-25, R-27, R-29, R-31; R-05 race scenarios; weekly review at 19:00."
   ],
   "scopeNote": "90-day sprint from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
+    "Backlog first: any planned item missed on an earlier day is done before that day's new items; the day's own plan only starts once the backlog is clear, and anything unfinished carries forward to the front of the next day (user rule, 30 Oct 2026).",
     {
       "title": "Daily floor",
       "text": "Every planned day ends with a logged artifact: solution code or closed-book answers. No artifact leaves the day empty on the strip, and tomorrow does not advance."
