@@ -11,6 +11,13 @@
     {
       "date": "2026-10-30",
       "kind": "plan",
+      "summary": "Standing rule: notes go into the tracker's study notes and are pushed",
+      "details": "Notes on max_element and ceiling division (LC 875) moved from a separate file into studyNotes.items. From now on every 'write notes' request goes there.",
+      "changes": []
+    },
+    {
+      "date": "2026-10-30",
+      "kind": "plan",
       "summary": "Standing rule: missed items are cleared before new ones",
       "details": "Thu 29 Oct plan was not done. At the user's request, missed items always come first on the next day, and the day's own plan starts only after the backlog is clear. Fri 30 Oct reordered accordingly; no dates moved.",
       "changes": []
