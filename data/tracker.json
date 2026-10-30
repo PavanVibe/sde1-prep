@@ -1142,14 +1142,14 @@
       {
         "area": "Two pointers",
         "title": "LC 11: Container With Most Water",
-        "text": "Goal: find two lines that hold the most water. area = (right - left) * min(height[left], height[right]). How to derive it: (1) Brute force checks every pair, O(n^2). (2) The shorter line limits the water, however tall the other one is. (3) Start with pointers at both ends for the maximum width. (4) Compute the area and update maxArea. (5) Move the pointer at the shorter line inward: if height[left] < height[right], left++, otherwise right--. (6) Repeat until left >= right. Why move the shorter line: moving the taller one only shrinks the width while the shorter line still limits the height, so it cannot improve the area. Moving the shorter one gives a chance to find a taller boundary. Complexity: O(n) time, O(1) space. Remember: identify what limits the answer, then eliminate the possibilities that cannot improve it.",
+        "text": "### Problem\nPick two lines that hold the most water.\n\n### Key formula\n`area = (right - left) * min(height[left], height[right])`\n\n### How to derive it\n1. Brute force checks every pair: O(n²).\n2. The **shorter** line limits the water, however tall the other one is.\n3. Start with pointers at both ends, which gives the maximum width.\n4. Compute the area and update `maxArea`.\n5. Move the pointer at the **shorter** line inward: if `height[left] < height[right]` then `left++`, else `right--`.\n6. Repeat while `left < right`.\n\n### Why move the shorter line\n- Moving the taller one only shrinks the width, and the shorter line still caps the height, so the area can't improve.\n- Moving the shorter one is the only move that might find a taller boundary.\n\n### Complexity\nO(n) time, O(1) space.\n\n### Remember\nFind what limits the answer, then eliminate the options that can't improve it.",
         "status": "Your own write-up from 25 Oct. How the solve went (independent, hinted or solution seen) has not been reported, so no solve is logged.",
         "check": "Explain why moving the shorter pointer can never miss the best pair. Then solve it cold in C++ in 20 minutes."
       },
       {
         "area": "Sliding window: counting subarrays",
         "title": "LC 713: Subarray Product Less Than K",
-        "text": "Your mistake: count++ when the product is below k. Correct: count += right - left + 1. After shrinking, the window [left, right] is valid, so every subarray that ends at right and starts anywhere from left to right is valid too. That is right - left + 1 new subarrays. Use this when counting subarrays and the condition stays true when the window gets smaller (all positive numbers here). It does not apply to exactly-K counts (use atMost(K) - atMost(K-1)) or arrays with negatives.",
+        "text": "### Your mistake\n`count++` when the product is below k.\n\n### Correct\n`count += right - left + 1`\n\n### Why\n- After shrinking, the window `[left, right]` is valid.\n- Every subarray that **ends at right** and starts anywhere from left to right is also valid.\n- That's `right - left + 1` new subarrays, each counted exactly once (by its right end).\n\n### When it applies\n- Counting subarrays where the condition **stays true when the window shrinks** (all positive numbers here).\n\n### When it doesn't\n- Exactly-K counts: use `atMost(K) - atMost(K - 1)`.\n- Arrays with negatives.",
         "code": "int numSubarrayProductLessThanK(vector<int>& nums, int k) {\n    if (k <= 1) return 0;\n    long long product = 1;\n    int left = 0, count = 0;\n    for (int right = 0; right < nums.size(); right++) {\n        product *= nums[right];\n        while (product >= k) {\n            product /= nums[left];\n            left++;\n        }\n        count += right - left + 1;\n    }\n    return count;\n}",
         "status": "Hinted on 24 Oct, so this is a recipe, not a solve.",
         "check": "Explain why count += right - left + 1 counts each subarray exactly once, and why k <= 1 returns 0. Then solve it cold in C++ in 25 minutes."
@@ -1157,7 +1157,7 @@
       {
         "area": "Arrays: Kadane",
         "title": "LC 53: Maximum Subarray",
-        "text": "Your Kadane solution (C++). At each element, either extend the running subarray or restart at the current element, and keep the best seen.",
+        "text": "### Key idea\nYour Kadane solution (C++). At each element, either extend the running subarray or restart at the current element, and keep the best seen.",
         "code": "class Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        int current_sum = 0;\n        int max_sum = INT_MIN;\n        for (int i = 0; i < nums.size(); i++) {\n            current_sum = max(current_sum + nums[i], nums[i]);\n            max_sum = max(current_sum, max_sum);\n        }\n        return max_sum;\n    }\n};",
         "status": "Cold retest on 24 Oct self-reported as independent; the 28 Oct retest confirms it. The code is correct, including the all-negative case.",
         "check": "Explain why current_sum restarts at nums[i] when the running sum is worse, and why max_sum starts at INT_MIN. Then solve it cold in C++ in 15 minutes."
@@ -1165,35 +1165,35 @@
       {
         "area": "Linked lists",
         "title": "LC 142: Linked List Cycle II",
-        "text": "Your note: once slow meets fast, set a pointer to the head and move it and slow one step at a time. Where they meet is the cycle start.",
+        "text": "### Key idea\nYour note: once slow meets fast, set a pointer to the head and move it and slow one step at a time. Where they meet is the cycle start.",
         "status": "This problem needed a hint, so the note is a recipe you were given, not a solve.",
         "check": "Explain why the two pointers meet at the cycle start, using the distances, with nothing in front of you."
       },
       {
         "area": "Linked lists",
         "title": "LC 19: Remove Nth Node From End of List",
-        "text": "Your note: solved without a hint. Marked for later review because there are two methods.",
+        "text": "### Key idea\nYour note: solved without a hint. Marked for later review because there are two methods.",
         "status": "Independent solve on record. The two methods are not written down.",
         "check": "Name both methods with time and space for each, from memory, then solve it cold in C++."
       },
       {
         "area": "Stack and queue",
         "title": "Next greater or next smaller element",
-        "text": "Your note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.",
+        "text": "### Key idea\nYour note: if a problem asks for the next greater or next smaller element, consider a stack, often a monotonic one.",
         "status": "Not started as a track. Scheduled for Week 1.",
         "check": "Explain why a monotonic stack makes next-greater linear time, and what is left on the stack at the end."
       },
       {
         "area": "C++ STL",
         "title": "*max_element: what it returns and how to use it",
-        "text": "max_element(v.begin(), v.end()) is in <algorithm>. It returns an ITERATOR (like a pointer) to the largest element, not the value. Put * in front to get the value: int hi = *max_element(piles.begin(), piles.end()); For piles = [3, 6, 7, 11], the iterator points at 11 and * gives 11. Index of the max: it - v.begin(). Why an iterator: (1) you get the position as well as the value; (2) on an empty range it returns v.end() (not found), so never dereference that; (3) the same function works for every container. Mistake to avoid: int hi = max_element(...) without * does not compile. Siblings that also return iterators: min_element, find, lower_bound, upper_bound. For a few literal values, max({a, b, c}) returns the value directly.",
+        "text": "### What it is\n- `max_element(v.begin(), v.end())`, from `<algorithm>`.\n- Returns an **iterator** (like a pointer) to the largest element, **not the value**.\n- Put `*` in front to get the value.\n\n### How to use it\n```cpp\nvector<int> piles = {3, 6, 7, 11};\n\nauto it = max_element(piles.begin(), piles.end()); // points at 11\nint mx  = *it;                                     // 11  (value)\nint idx = it - piles.begin();                      // 3   (index)\n\nint hi = *max_element(piles.begin(), piles.end()); // usual one-liner\n```\n\n### Why it returns an iterator\n1. You get the **position** as well as the value.\n2. On an **empty** range it returns `v.end()` (not found). Never dereference that.\n3. The same function works for **every container** (vector, list, set, arrays).\n\n### Mistake to avoid\n`int hi = max_element(...);` without `*` does **not compile**.\n\n### Related\n- Also return iterators: `min_element`, `find`, `lower_bound`, `upper_bound`.\n- For a few literal values, `max({a, b, c})` returns the value directly.",
         "status": "Your notes from 30 Oct (taught during LC 875). Reference only, not evidence.",
         "check": "Without notes: write the line for the max value AND the index of the max of a vector, and say what happens on an empty vector."
       },
       {
         "area": "Binary search on the answer",
         "title": "Ceiling division (pile + k - 1) / k, and LC 875 Koko Eating Bananas",
-        "text": "Goal: ceil(pile / k) using integers. C++ int division rounds DOWN (7 / 3 = 2), but 7 bananas at 3 per hour takes 3 hours. Logic: write pile = q*k + r, where 0 <= r < k. We need q hours if r = 0 and q + 1 hours if r > 0. (pile + k - 1) / k = q + (r + k - 1) / k. If r = 0: (k - 1) / k = 0, so the total is q. If r >= 1: k <= r + k - 1 <= 2k - 2 < 2k, so this part is exactly 1 and the total is q + 1. Intuition: k - 1 is the largest amount you can add without pushing an exact multiple past the next multiple; any leftover gets pushed over. Examples with k = 3: pile 6 gives 2, pile 7 gives 3, pile 8 gives 3, pile 9 gives 3. It is a calculator (always equals the ceiling), not a condition to satisfy. Overflow: write (p + (long long)k - 1) / k. LC 875 use: search speed k in [1, max(piles)] (at max speed each pile takes 1 hour, and h >= n). canFinish(k) = sum of ceil(pile / k) over ALL piles <= h, with the sum in long long (it can reach about 1e13). The predicate is monotonic, F F F T T T, so find the first T: if canFinish(mid), set ans = mid and hi = mid - 1; else lo = mid + 1. O(n log M) time, O(1) space.",
+        "text": "### Goal\nCompute ⌈pile / k⌉ (divide and **round up**) with integers only.\n\n### Why we need it\n- C++ integer division rounds **down**: `7 / 3 = 2`.\n- But 7 bananas at 3 per hour takes **3** hours (Koko can't switch piles mid-hour).\n\n### Formula\n`hours = (pile + k - 1) / k`\n\n### Why it works\nWrite `pile = q·k + r`, with `0 ≤ r < k` (q = full hours, r = leftover).\n- Needed: **q** hours if r = 0, **q + 1** if r > 0.\n- `(pile + k - 1) / k = q + (r + k - 1) / k`\n- **r = 0:** `(k - 1) / k = 0`, so the total is **q**.\n- **r ≥ 1:** `k ≤ r + k - 1 < 2k`, so that part is exactly **1**, and the total is **q + 1**.\n\n**Intuition:** k − 1 is the most you can add without pushing an exact multiple past the next one. Any leftover gets pushed over.\n\n### Examples (k = 3)\n| pile | pile / k | (pile + k − 1) / k |\n|---|---|---|\n| 6 | 2 | 8 / 3 = **2** |\n| 7 | 2 | 9 / 3 = **3** |\n| 8 | 2 | 10 / 3 = **3** |\n| 9 | 3 | 11 / 3 = **3** |\n\n### Watch out\n- It's a **calculator**, not a condition. It always equals the ceiling.\n- **Overflow:** write `(p + (long long)k - 1) / k`.\n\n### Use in LC 875 (binary search on the answer)\n- **Search space:** speed k in `[1, max(piles)]`. At max speed each pile takes 1 hour, and h ≥ n.\n- **Predicate:** `canFinish(k)` = sum of ⌈pile / k⌉ over **all** piles ≤ h. Keep the sum in `long long` (it can reach about 1e13).\n- **Monotonic:** F F F T T T. Find the **first T**.\n- **Loop:** if `canFinish(mid)`, set `ans = mid` and `hi = mid - 1`; else `lo = mid + 1`.\n- **Complexity:** O(n log M) time, O(1) space.",
         "status": "Your notes from 30 Oct. LC 875 solution was seen (R-28 failed); cold re-solve due Sun 1 Nov.",
         "check": "Prove why (pile + k - 1) / k rounds up, using q and r. Then solve LC 875 cold in 35 minutes."
       }
@@ -2063,8 +2063,14 @@
   ],
   "scopeNote": "90-day sprint from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
-    "Backlog first: any planned item missed on an earlier day is done before that day's new items; the day's own plan only starts once the backlog is clear, and anything unfinished carries forward to the front of the next day (user rule, 30 Oct 2026).",
-    "Notes: when the user says 'write notes', add them as items in tracker.json studyNotes.items (the DSA study-notes section, with area, title, text, status, check), then validate, commit and push. Never create a separate notes file or send one (user rule, 30 Oct 2026).",
+    {
+      "title": "Backlog first",
+      "text": "any planned item missed on an earlier day is done before that day's new items; the day's own plan only starts once the backlog is clear, and anything unfinished carries forward to the front of the next day (user rule, 30 Oct 2026)."
+    },
+    {
+      "title": "Notes go in the tracker",
+      "text": "When the user says 'write notes', add them to tracker.json studyNotes.items as well-structured markdown (### headings, bullet and numbered lists, code blocks, tables), with area, title, status and a self-test check; then validate, commit and push. Never create a separate notes file or send one, and never write a note as one long paragraph (user rule, 30 Oct 2026)."
+    },
     {
       "title": "Daily floor",
       "text": "Every planned day ends with a logged artifact: solution code or closed-book answers. No artifact leaves the day empty on the strip, and tomorrow does not advance."
@@ -2109,7 +2115,10 @@
       "title": "Stories",
       "text": "Real incidents you can verify. No metric unless you measured it."
     },
-    "Never move a due date (especially an overdue one) without your explicit permission."
+    {
+      "title": "Notes go in the tracker",
+      "text": ""
+    }
   ],
   "thresholds": [
     {

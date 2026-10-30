@@ -314,3 +314,10 @@ details.wk > summary .name .sub { display: block; font: 400 0.84rem var(--text);
 .carry ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
 .carry li { margin: 0.2rem 0; }
 .cw { font-weight: 700; color: var(--alert); }
+
+.note-body h3, .note-body h4 { font-size: 0.98rem; margin: 0.9rem 0 0.25rem; }
+.note-body ul, .note-body ol { margin: 0.3rem 0 0.3rem 1.2rem; padding: 0; }
+.note-body li { margin: 0.15rem 0; }
+.note-body p { margin: 0.35rem 0 0; }
+.note-body pre { margin: 0.5rem 0; }
+.note-body table { margin: 0.4rem 0; }
