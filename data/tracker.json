@@ -2064,6 +2064,7 @@
   "scopeNote": "90-day sprint from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
     "Backlog first: any planned item missed on an earlier day is done before that day's new items; the day's own plan only starts once the backlog is clear, and anything unfinished carries forward to the front of the next day (user rule, 30 Oct 2026).",
+    "Notes: when the user says 'write notes', add them as items in tracker.json studyNotes.items (the DSA study-notes section, with area, title, text, status, check), then validate, commit and push. Never create a separate notes file or send one (user rule, 30 Oct 2026).",
     {
       "title": "Daily floor",
       "text": "Every planned day ends with a logged artifact: solution code or closed-book answers. No artifact leaves the day empty on the strip, and tomorrow does not advance."
