@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-10-30",
+      "kind": "evidence",
+      "summary": "LC 875 taught (R-28 failed); LC 525 skipped; Workbench judge rebuilt",
+      "details": "R-28: could not start LC 875 cold, so it was taught (predicate, ceiling division, first-true binary search) and the solution was shown. Rewrote it in the Workbench: Compile Error, then Wrong Answer 51/52 (int overflow), then Accepted 52/52 on attempt 3, timer never started. Not independent; R-40 (1 Nov) and R-41 (20 Nov) scheduled. R-30 skipped at your request and still overdue. Judge sandbox rebuilt and self-tested for p19. Notes on max_element and ceiling division added; notes now collapse on the site. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-10-30",
       "kind": "setup",
       "summary": "Study notes now render as structured notes",
       "details": "The site renders each note's text as markdown (headings, lists, tables, code). All 8 notes rewritten in that format; notes rule updated to require structured notes. Two standards entries fixed to the title/text format the site expects.",

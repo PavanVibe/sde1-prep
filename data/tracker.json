@@ -55,7 +55,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-10-29",
+      "lastEvidence": "2026-10-30",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, Day 19 and Day 33. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
@@ -117,8 +117,8 @@
         {
           "name": "Binary search",
           "status": "PRACTICING",
-          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162.",
-          "lastTested": "2026-08-18",
+          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent.",
+          "lastTested": "2026-10-30",
           "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)",
           "gateTarget": "INTERVIEW READY"
         },
@@ -1368,10 +1368,10 @@
       "title": "Koko Eating Bananas",
       "difficulty": "Medium",
       "pattern": "Binary search on the answer",
-      "date": "2026-10-25",
-      "independence": "unsolved",
-      "hint": "None recorded",
-      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-28) and 1 Nov (R-29)."
+      "date": "2026-10-30",
+      "independence": "solution",
+      "hint": "Taught, then solution code shown",
+      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-28) and 1 Nov (R-29). | R-28 cold retest: could not start, asked to be taught. Taught the predicate canFinish(k), ceiling division and the first-true search; solution code shown. Rewrote from memory in the Workbench (p19): attempt 1 Compile Error (missing ;, name mismatch cancheck/canfinish, mid = left = ..., int hours); attempt 2 Wrong Answer 51/52 (int hours overflowed on 'h huge'); attempt 3 Accepted 52/52 after the judge pointed to overflow. Timer not started on any attempt. Still uses int for (c + k - 1). Not independent."
     },
     {
       "lc": 525,
@@ -1872,8 +1872,8 @@
       "weakness": null,
       "task": "Re-solve LC 875 cold, no hints, 35-minute cap",
       "due": "2026-10-27",
-      "state": "pending",
-      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue."
+      "state": "failed",
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 28 Oct; overdue. 30 Oct: could not solve cold; taught and solution seen. Accepted 52/52 on attempt 3 (smvuz7lwu9u9g) after a judge overflow failure. Not independent. Replaced by R-40."
     },
     {
       "id": "R-29",
@@ -1889,7 +1889,7 @@
       "task": "Re-solve LC 525 cold, no hints, 35-minute cap",
       "due": "2026-10-27",
       "state": "pending",
-      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 29 Oct; overdue."
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 29 Oct; overdue. 30 Oct: skipped at your request; still overdue, first in the backlog."
     },
     {
       "id": "R-31",
@@ -2050,16 +2050,31 @@
       "due": "2026-10-31",
       "state": "pending",
       "note": "The pattern-recognition check R-34 did not provide. 29 Oct: part of an unnamed set of three in the Workbench (p22, p23, p24); any one solved independently counts."
+    },
+    {
+      "id": "R-40",
+      "weakness": null,
+      "task": "Re-solve LC 875 cold (p19), no hints, no notes, 35-minute cap, timer on; long long for the hour sum and the ceiling",
+      "due": "2026-11-01",
+      "state": "pending",
+      "note": "48h retest after the solution was seen on 30 Oct. 7-day R-29 (1 Nov) and a 21-day retest still apply."
+    },
+    {
+      "id": "R-41",
+      "weakness": null,
+      "task": "LC 875 cold again (21-day spaced retest)",
+      "due": "2026-11-20",
+      "state": "pending",
+      "note": "21 days after the solution was seen on 30 Oct."
     }
   ],
   "nextActions": [
-    "BACKLOG FIRST (standing rule from 30 Oct): Thu 29 Oct plan was not done; clear it before any Fri 30 Oct item.",
-    "Fri 30 Oct 19:30-21:30 DSA backlog: R-28 LC 875 (p19), R-30 LC 525, then LC 34 cold (Thu item).",
-    "Fri 30 Oct 21:30-23:00 core backlog: R-04 route trace (overdue), then SQL quiz (5 MCQs first) and teach the gaps.",
-    "Fri 30 Oct 23:00-23:45 behavioral backlog: one-line list of 5 real internship incidents for S-001.",
-    "Then Fri 30 Oct items, only after the backlog is clear: LC 153 and LC 33 cold + 1 unseen stack problem; joins and indexes closed-book; S-001 STAR draft. Whatever is left carries to Sat 31 Oct ahead of Saturday's items.",
-    "Sat 31 Oct: carried Friday items first, then R-18, R-20, R-37, R-39, LC 162 + 2 unseen two-pointer + 1 unseen binary search on the answer; transactions, ACID and the last-seat race; Mongo compare-and-set in the internship code; S-001 full draft.",
-    "Sun 1 Nov: carried items first, then R-06 (LC 34, 153, 33, 162 cold), 7-day retests R-23, R-25, R-27, R-29, R-31; R-05 race scenarios; weekly review at 19:00."
+    "BACKLOG FIRST: R-30 LC 525 (p11), overdue since 27 Oct; you asked to skip it on 30 Oct, so it leads the next DSA block.",
+    "Overdue: R-04 route trace (28 Oct); SQL quiz (5 questions first); S-001 list of 5 real internship incidents (from Thu 29 Oct).",
+    "Overdue and still open: R-08 and R-34 (unseen sliding-window sets).",
+    "Then Fri 30 Oct items not yet done: LC 34, LC 153, LC 33 cold + 1 unseen stack problem; joins and indexes closed-book; S-001 STAR draft. LC 34, 153, 33, 162 still need adding to the Workbench.",
+    "Sat 31 Oct (after the backlog): R-18 LC 209 (p21), R-20 LC 974 (p4), R-37 LC 1493 (p20), R-39 unseen window (p22-p24), LC 162; transactions, ACID, last-seat race; S-001 full draft.",
+    "Sun 1 Nov: R-40 LC 875 cold (p19), R-06 binary search set, R-23 p16, R-25 p17, R-27 p18, R-29 p19, R-31 p11; R-05 race scenarios; weekly review 19:00."
   ],
   "scopeNote": "90-day sprint from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
