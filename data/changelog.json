@@ -9,6 +9,13 @@
   },
   "entries": [
     {
+      "date": "2026-11-01",
+      "kind": "plan",
+      "summary": "Buffer week 2 to 8 Nov added; plan moved one week later (gate 25 Jan 2027)",
+      "details": "At your request, because of pending work: Week 1 now runs 26 Oct to 8 Nov, with 2 to 8 Nov as a buffer week (no new topics; finish Week 1 goals and overdue retests). Week 1 itself (26 Oct to 1 Nov) produced no logged evidence. Weeks 2 to 12 moved 7 days later. Checkpoint 1 is 15 Nov, Checkpoint 2 29 Nov, Checkpoint 3 20 Dec, Checkpoint 4 10 Jan, gate review 25 Jan 2027 (Day 97). Quotas and targets unchanged. Retest due dates were not moved; overdue retests stay overdue.",
+      "changes": []
+    },
+    {
       "date": "2026-10-30",
       "kind": "evidence",
       "summary": "LC 875 taught (R-28 failed); LC 525 skipped; Workbench judge rebuilt",

@@ -334,7 +334,7 @@
       var cy = carryFor(w); st = weekStats(w);
       html += '<details class="wk"' + (st.phase === 'now' ? ' open' : '') + '><summary><span class="name">' + (w.gate ? 'Gate' : 'Week ' + w.week) + (st.phase === 'now' ? ' (this week)' : '') + '<span class="sub">' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></span>' +
         goalBar(st, Math.round(st.pct * 100) + '% done') + '<span class="small"><strong>' + Math.round(st.pct * 100) + '%</strong> of ' + st.g.length + ' goals</span><span><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span>' + (cy.n && st.phase !== 'past' ? '<span class="sub late-tag">' + cy.n + ' carried over</span>' : '') + '</span></summary>' +
-        '<div class="body">' + (st.phase !== 'past' ? carryHtml(w, cy) : '') + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Target level and where you are', 'Progress'], [rows]) +
+        '<div class="body">' + (w.buffer ? '<p class="small"><strong>' + esc(w.buffer) + '</strong></p>' : '') + (st.phase !== 'past' ? carryHtml(w, cy) : '') + weekSummary(w, st) + table(['Lane', 'Planned goal', 'Target level and where you are', 'Progress'], [rows]) +
         (rtRows ? '<h3 class="small">Retests due this week</h3><ul class="rtl small">' + rtRows + '</ul>' : '') + '</div></details>';
     });
     return { title: 'Weekly goals', html: html };
@@ -511,7 +511,7 @@
       return '<li class="' + cls + '"' + (wk && wk.week === w.week ? ' aria-current="step"' : '') + '><div class="when"><b>' + (w.gate ? 'Gate' : 'Week ' + w.week) + '</b><span>' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></div>' +
         '<dl class="lanes"><dt>Core topic</dt><dd>' + esc(w.core) + '</dd>' + (w.applied ? '<dt>Internship</dt><dd>' + esc(w.applied) + '</dd>' : '') + '<dt>DSA</dt><dd>' + esc(w.dsa) + '</dd>' +
         (w.lp ? '<dt>Behavioral</dt><dd>' + esc(w.lp) + '</dd>' : '') +
-        (w.checkpoint ? '<dd class="cp" style="grid-column:1/-1">' + esc(w.checkpoint) + '</dd>' : '') + '</dl></li>';
+        (w.buffer ? '<dd class="cp" style="grid-column:1/-1">' + esc(w.buffer) + '</dd>' : '') + (w.checkpoint ? '<dd class="cp" style="grid-column:1/-1">' + esc(w.checkpoint) + '</dd>' : '') + '</dl></li>';
     }).join('') + '</ol>';
 
     html += '<h2>When you fall behind</h2><p class="muted">Cut in this order, and never by adding hours.</p><ol class="steps">' +

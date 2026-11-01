@@ -4,8 +4,8 @@
     "candidate": "Pavan",
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
-    "gateDate": "2027-01-18",
-    "lastUpdated": "2026-10-30",
+    "gateDate": "2027-01-25",
+    "lastUpdated": "2026-11-01",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -25,29 +25,29 @@
       "detail": "Day 5. Every Week 0 retest passed, or turned into a written remediation plan"
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-15",
       "label": "Checkpoint 1",
-      "detail": "Day 19. Three unseen mediums in 90 minutes with the pattern unnamed, plus a 10-question closed-book CS oral"
+      "detail": "Day 26. Three unseen mediums in 90 minutes with the pattern unnamed, plus a 10-question closed-book CS oral"
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-29",
       "label": "Checkpoint 2",
-      "detail": "Day 33. Unseen timed set with trees, heaps and graphs, pattern unnamed, plus a CS oral on databases, OS and distributed systems"
+      "detail": "Day 40. Unseen timed set with trees, heaps and graphs, pattern unnamed, plus a CS oral on databases, OS and distributed systems"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-20",
       "label": "Checkpoint 3",
-      "detail": "Day 54. Unseen mixed set (DP, backtracking, graphs) plus an OOD mock"
+      "detail": "Day 61. Unseen mixed set (DP, backtracking, graphs) plus an OOD mock"
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-10",
       "label": "Checkpoint 4",
-      "detail": "Day 75. First full Amazon-style loop simulation"
+      "detail": "Day 82. First full Amazon-style loop simulation"
     },
     {
-      "date": "2027-01-18",
+      "date": "2027-01-25",
       "label": "Gate review",
-      "detail": "Day 90. Every Tier 1 goal at its gate target, or the gap and a dated plan for it"
+      "detail": "Day 97. Every Tier 1 goal at its gate target, or the gap and a dated plan for it"
     }
   ],
   "tracks": [
@@ -56,7 +56,7 @@
       "name": "DSA in C++",
       "startsWeek": 0,
       "lastEvidence": "2026-10-30",
-      "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, Day 19 and Day 33. Hard problems, tries, shortest paths and MST are outside this sprint.",
+      "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, Day 26 and Day 40. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
           "name": "Arrays",
@@ -1078,7 +1078,7 @@
       "name": "Mock interviews",
       "startsWeek": 2,
       "lastEvidence": null,
-      "note": "Mocks arrive at the checkpoints: CS oral and timed DSA on Day 19, OOD on Day 33, then a full loop in Week 5.",
+      "note": "Mocks arrive at the checkpoints: CS oral and timed DSA on Day 26, OOD on Day 40, then a full loop in Week 5.",
       "topics": [
         {
           "name": "DSA mock",
@@ -2069,14 +2069,13 @@
     }
   ],
   "nextActions": [
-    "BACKLOG FIRST: R-30 LC 525 (p11), overdue since 27 Oct; you asked to skip it on 30 Oct, so it leads the next DSA block.",
-    "Overdue: R-04 route trace (28 Oct); SQL quiz (5 questions first); S-001 list of 5 real internship incidents (from Thu 29 Oct).",
-    "Overdue and still open: R-08 and R-34 (unseen sliding-window sets).",
-    "Then Fri 30 Oct items not yet done: LC 34, LC 153, LC 33 cold + 1 unseen stack problem; joins and indexes closed-book; S-001 STAR draft. LC 34, 153, 33, 162 still need adding to the Workbench.",
-    "Sat 31 Oct (after the backlog): R-18 LC 209 (p21), R-20 LC 974 (p4), R-37 LC 1493 (p20), R-39 unseen window (p22-p24), LC 162; transactions, ACID, last-seat race; S-001 full draft.",
-    "Sun 1 Nov: R-40 LC 875 cold (p19), R-06 binary search set, R-23 p16, R-25 p17, R-27 p18, R-29 p19, R-31 p11; R-05 race scenarios; weekly review 19:00."
+    "BUFFER WEEK 2 to 8 Nov: no new topics. Work only the backlog, oldest first, as your pending work allows.",
+    "Overdue retests, oldest first: R-30 LC 525 (27 Oct), R-04 route trace (28 Oct), R-18 LC 209, R-20 LC 974, R-37 LC 1493, R-39 unseen window (31 Oct), then the 1 Nov set: R-40 LC 875, R-23, R-25, R-27, R-29, R-31, R-05 race scenarios, R-06 binary search set.",
+    "Also overdue: R-08 and R-34 (unseen sliding-window sets).",
+    "Week 1 goals still open (finish by 8 Nov): SQL, joins, indexes; transactions and the last-seat race; Mongo compare-and-set; binary search set; two pointers and stack (3 unseen each); S-001 full STAR draft.",
+    "Week 2 (OS concurrency, networking, arrays and hashing, linked lists, intervals and greedy) starts Mon 9 Nov. Checkpoint 1 is Sun 15 Nov."
   ],
-  "scopeNote": "90-day sprint from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
+  "scopeNote": "97-day sprint (90 days, plus a buffer week added 1 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
     {
       "title": "Backlog first",
@@ -2189,7 +2188,7 @@
       "Internship modules beyond the job worker, the API path and the voice agent overview",
       "Tier 2 depth beyond Understood (never Tier 1)"
     ],
-    "never": "Tier 1 quotas, retests, checkpoints, stories and mocks are never cut. If Tier 1 is not met by 18 Jan, the gate moves again.",
+    "never": "Tier 1 quotas, retests, checkpoints, stories and mocks are never cut. If Tier 1 is not met by 25 Jan, the gate moves again.",
     "alreadyCut": "Left out: MST, advanced graph algorithms beyond Dijkstra, replication and CAP depth, the publishable queue project."
   },
   "weeklyTime": {
@@ -2242,7 +2241,7 @@
       "Every non-independent problem is re-solved cold 48 hours, 7 days and 21 days later. Every independent unseen solve comes back once inside a mixed set about 14 days later.",
       "A pattern's quota counts only unseen problems Accepted independently within the cap."
     ],
-    "target": "About 23 new problems a week (10 weekdays, 6 Saturday, 4 to 5 Sunday, plus retests): roughly 110 new problems by 29 Nov, covering every Tier 1 pattern's quota."
+    "target": "About 23 new problems a week (10 weekdays, 6 Saturday, 4 to 5 Sunday, plus retests): roughly 110 new problems by 6 Dec, covering every Tier 1 pattern's quota."
   },
   "weeks": [
     {
@@ -2370,7 +2369,7 @@
     {
       "week": 1,
       "start": "2026-10-26",
-      "end": "2026-11-01",
+      "end": "2026-11-08",
       "core": "SQL, joins, indexes; transactions, ACID, isolation, the last-seat race",
       "applied": "Mongo data model; a conditional update as compare-and-set",
       "dsa": "Binary search (incl. on the answer), two pointers, stack and monotonic stack; overdue retests first",
@@ -2383,7 +2382,7 @@
           "item": "SQL, joins, indexes (B-tree, write cost)",
           "state": "blocked",
           "doneDate": null,
-          "note": "Not started: overdue retests block new material.",
+          "note": "Not started: overdue retests block new material. Buffer week: finish by 8 Nov.",
           "quota": "Closed-book oral + 5 query-writing tasks",
           "refs": [
             {
@@ -2408,7 +2407,7 @@
           "item": "Transactions, ACID, isolation, the last-seat race",
           "state": "blocked",
           "doneDate": null,
-          "note": "Not started: overdue retests block new material.",
+          "note": "Not started: overdue retests block new material. Buffer week: finish by 8 Nov.",
           "quota": "3 race scenarios closed-book (R-05)",
           "refs": [
             {
@@ -2433,7 +2432,7 @@
           "item": "Mongo data model; a conditional update as compare-and-set",
           "state": "blocked",
           "doneDate": null,
-          "note": "Not started.",
+          "note": "Not started: overdue retests block new material. Buffer week: finish by 8 Nov.",
           "quota": "Explain one real conditional update in the internship code",
           "refs": [
             {
@@ -2454,7 +2453,7 @@
           "item": "Binary search: LC 34, 153, 33, 162 cold + 3 unseen (one on the answer)",
           "state": "pending",
           "doneDate": null,
-          "note": "R-06 due 1 Nov. Starts after R-28 clears.",
+          "note": "R-06 was due 1 Nov (now overdue). Starts after R-28 clears. Buffer week: finish by 8 Nov.",
           "quota": "R-06 + 3 unseen independent",
           "refs": [
             {
@@ -2512,17 +2511,18 @@
           "note": "",
           "quota": "Draft with your role, decision, trade-off and a measured result"
         }
-      ]
+      ],
+      "buffer": "Buffer week, 2 to 8 Nov (added 1 Nov at your request, because of pending work): no new topics. Finish Week 1 goals and clear overdue retests as time allows. Everything from Week 2 on, including every checkpoint and the gate, moved one week later."
     },
     {
       "week": 2,
-      "start": "2026-11-02",
-      "end": "2026-11-08",
+      "start": "2026-11-09",
+      "end": "2026-11-15",
       "core": "OS concurrency: threads, races, locks, deadlock, stack vs heap, virtual memory. Networking request path: DNS, TCP, UDP, TLS, HTTP",
       "applied": "Job worker concurrency: heartbeat and shutdown",
       "dsa": "Arrays and hashing, linked lists, intervals, sorting and greedy",
       "lp": "S-001 through 10 follow-ups; S-003 full STAR",
-      "checkpoint": "Checkpoint 1, 8 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral",
+      "checkpoint": "Checkpoint 1, 15 Nov: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral",
       "goals": [
         {
           "id": "W2-1",
@@ -2698,8 +2698,8 @@
     },
     {
       "week": 3,
-      "start": "2026-11-09",
-      "end": "2026-11-15",
+      "start": "2026-11-16",
+      "end": "2026-11-22",
       "core": "Distributed systems I: queues, at-least-once delivery, idempotency, retries with backoff and jitter",
       "applied": "Job worker lifecycle: trigger, claim, process, finish or fail, retry",
       "dsa": "Recursion, tree traversals, BST",
@@ -2832,13 +2832,13 @@
     },
     {
       "week": 4,
-      "start": "2026-11-16",
-      "end": "2026-11-22",
+      "start": "2026-11-23",
+      "end": "2026-11-29",
       "core": "Distributed systems II: caching, backpressure, observability, fault tolerance, load balancing",
       "applied": "Job worker failure modes on paper",
       "dsa": "Heap, graph BFS and DFS on grids and graphs",
       "lp": "S-005 (disagreement)",
-      "checkpoint": "Checkpoint 2, 22 Nov: unseen timed set with trees, heaps and graphs (pattern unnamed), plus a CS oral on databases, OS and distributed systems",
+      "checkpoint": "Checkpoint 2, 29 Nov: unseen timed set with trees, heaps and graphs (pattern unnamed), plus a CS oral on databases, OS and distributed systems",
       "goals": [
         {
           "id": "W4-1",
@@ -2948,8 +2948,8 @@
     },
     {
       "week": 5,
-      "start": "2026-11-23",
-      "end": "2026-11-29",
+      "start": "2026-11-30",
+      "end": "2026-12-06",
       "core": "OOD foundations: classes, encapsulation, composition, SOLID, interfaces; LRU cache",
       "applied": "Model the job system's classes",
       "dsa": "Backtracking; graphs round 2 (multi-source BFS, cycle detection)",
@@ -3065,8 +3065,8 @@
     },
     {
       "week": 6,
-      "start": "2026-11-30",
-      "end": "2026-12-06",
+      "start": "2026-12-07",
+      "end": "2026-12-13",
       "core": "OOD interview problems: parking lot plus one more, under requirement changes",
       "applied": "",
       "dsa": "1D dynamic programming; topological sort; union find",
@@ -3168,13 +3168,13 @@
     },
     {
       "week": 7,
-      "start": "2026-12-07",
-      "end": "2026-12-13",
+      "start": "2026-12-14",
+      "end": "2026-12-20",
       "core": "System design I: requirements, API, data model, URL shortener. Databases II: normalization, NoSQL, sharding basics",
       "applied": "",
       "dsa": "2D DP; tries",
       "lp": "Stories for the remaining most-asked LPs",
-      "checkpoint": "Checkpoint 3, 13 Dec: unseen mixed set (DP, backtracking, graphs) + OOD mock",
+      "checkpoint": "Checkpoint 3, 20 Dec: unseen mixed set (DP, backtracking, graphs) + OOD mock",
       "goals": [
         {
           "id": "W7-1",
@@ -3311,8 +3311,8 @@
     },
     {
       "week": 8,
-      "start": "2026-12-14",
-      "end": "2026-12-20",
+      "start": "2026-12-21",
+      "end": "2026-12-27",
       "core": "System design II: rate limiter, caching, load balancing, queues; a notification or job-scheduler design",
       "applied": "Real-time voice agent: architecture and streaming latency",
       "dsa": "Shortest paths (Dijkstra), bit manipulation, strings",
@@ -3427,8 +3427,8 @@
     },
     {
       "week": 9,
-      "start": "2026-12-21",
-      "end": "2026-12-27",
+      "start": "2026-12-28",
+      "end": "2027-01-03",
       "core": "CS completion: OS scheduling, IPC, system calls, context switching; networking latency and WebSockets",
       "applied": "",
       "dsa": "Daily unnamed mixed timed sets across all patterns; DSA mock 1",
@@ -3586,13 +3586,13 @@
     },
     {
       "week": 10,
-      "start": "2026-12-28",
-      "end": "2027-01-03",
+      "start": "2027-01-04",
+      "end": "2027-01-10",
       "core": "Mocks: CS oral, OOD, system design",
       "applied": "Internship deep-dive mock",
       "dsa": "Mixed sets; DSA mock 2; remediation",
       "lp": "Behavioral mock 3",
-      "checkpoint": "Checkpoint 4, 3 Jan: first full Amazon-style loop simulation",
+      "checkpoint": "Checkpoint 4, 10 Jan: first full Amazon-style loop simulation",
       "goals": [
         {
           "id": "W10-1",
@@ -3667,8 +3667,8 @@
     },
     {
       "week": 11,
-      "start": "2027-01-04",
-      "end": "2027-01-10",
+      "start": "2027-01-11",
+      "end": "2027-01-17",
       "core": "Remediation of every goal below target",
       "applied": "Resume final truth pass",
       "dsa": "Mixed sets; remaining quota gaps",
@@ -3814,8 +3814,8 @@
     },
     {
       "week": 12,
-      "start": "2027-01-11",
-      "end": "2027-01-17",
+      "start": "2027-01-18",
+      "end": "2027-01-24",
       "core": "Maintenance and final mocks",
       "applied": "",
       "dsa": "Light mixed sets; rest before the gate",
@@ -3852,20 +3852,20 @@
     },
     {
       "week": 13,
-      "start": "2027-01-18",
-      "end": "2027-01-18",
+      "start": "2027-01-25",
+      "end": "2027-01-25",
       "gate": true,
       "core": "Gate review",
       "applied": "",
       "dsa": "",
       "lp": "",
-      "checkpoint": "Gate review, Day 90",
+      "checkpoint": "Gate review, Day 97",
       "goals": [
         {
           "id": "W13-1",
           "lane": "checkpoint",
           "kind": "checkpoint",
-          "item": "Gate review (Day 90)",
+          "item": "Gate review (Day 97)",
           "state": "pending",
           "doneDate": null,
           "note": "",
@@ -3961,8 +3961,8 @@
     "Frugality"
   ],
   "gate": {
-    "date": "2027-01-18",
-    "note": "The gate is a review, not a promise. It reports what you can demonstrate under interview conditions without AI. Extended on 29 Oct from 42 to 90 days at your request, so the cut topics are back and spaced retests fit.",
+    "date": "2027-01-25",
+    "note": "The gate is a review, not a promise. It reports what you can demonstrate under interview conditions without AI. Extended on 29 Oct from 42 to 90 days at your request, so the cut topics are back and spaced retests fit. Moved one week later on 1 Nov (buffer week 2 to 8 Nov) at your request.",
     "requirements": [
       {
         "area": "DSA",
@@ -4104,6 +4104,6 @@
       }
     ],
     "total": 88,
-    "decision": "29 Oct: extended to a 90-day sprint (gate 18 Jan 2027) at about 43 hours a week. Tier 1 quotas never shrink; if Tier 1 is not met by 18 Jan, the gate moves again."
+    "decision": "29 Oct: extended to a 90-day sprint (gate 18 Jan 2027) at about 43 hours a week. Tier 1 quotas never shrink; if Tier 1 is not met by 18 Jan, the gate moves again. 1 Nov: buffer week 2 to 8 Nov added at your request; Weeks 2 to 12, all checkpoints and the gate moved one week later (gate 25 Jan 2027). Quotas unchanged."
   }
 }
