@@ -9,6 +9,13 @@
   },
   "entries": [
     {
+      "date": "2026-11-21",
+      "kind": "plan",
+      "summary": "9 to 29 Nov are buffer weeks; plan moved three weeks later (gate 15 Feb 2027)",
+      "details": "At your request on 21 Nov: 9 to 22 Nov (planned Weeks 2 and 3, no logged evidence since 30 Oct) counted as buffer, and 23 to 29 Nov added as a buffer week. Week 1 now runs 26 Oct to 29 Nov; 2 to 29 Nov is buffer (no new topics; finish Week 1 goals and overdue retests). Weeks 2 to 12 moved 21 days later: Week 2 starts 30 Nov. Checkpoint 1 is 6 Dec (Day 47), Checkpoint 2 20 Dec (Day 61), Checkpoint 3 10 Jan (Day 82), Checkpoint 4 31 Jan (Day 103), gate review 15 Feb 2027 (Day 118). Quotas and targets unchanged. Retest due dates were not moved; overdue retests stay overdue.",
+      "changes": []
+    },
+    {
       "date": "2026-11-01",
       "kind": "plan",
       "summary": "Buffer week 2 to 8 Nov added; plan moved one week later (gate 25 Jan 2027)",
