@@ -9,6 +9,13 @@
   },
   "entries": [
     {
+      "date": "2026-11-25",
+      "kind": "evidence",
+      "summary": "LC 209 independent (self-reported); LC 525 solution seen; LC 974 hinted",
+      "details": "R-18 LC 209: self-reported independent, passed; time and code not submitted. R-30 LC 525: solved after seeing the solution, failed; R-42/43/44 scheduled (27 Nov, 2 Dec, 16 Dec). R-20 LC 974: needed the hint that equal prefix remainders mean the difference is divisible by k, failed; R-45/46/47 scheduled (27 Nov, 2 Dec, 16 Dec). No status moved.",
+      "changes": []
+    },
+    {
       "date": "2026-11-21",
       "kind": "plan",
       "summary": "9 to 29 Nov are buffer weeks; plan moved three weeks later (gate 15 Feb 2027)",

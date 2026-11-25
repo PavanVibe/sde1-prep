@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2027-02-15",
-    "lastUpdated": "2026-11-21",
+    "lastUpdated": "2026-11-25",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -55,7 +55,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-10-30",
+      "lastEvidence": "2026-11-25",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, 47, 61, 82 and 103; the gate is Day 118. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
@@ -1235,10 +1235,10 @@
       "title": "Minimum Size Subarray Sum",
       "difficulty": "Medium",
       "pattern": "Sliding window",
-      "date": "2026-10-24",
+      "date": "2026-11-25",
       "independence": "independent",
       "hint": "None (self-reported)",
-      "note": "Cold retest R-02, self-reported independent on 24 Oct; code, time and shrink-condition explanation not submitted. 12 Aug: unsolved. W-002 stays open until a 7-day retest (R-18)."
+      "note": "Cold retest R-02, self-reported independent on 24 Oct; code, time and shrink-condition explanation not submitted. 12 Aug: unsolved. W-002 stays open until a 7-day retest (R-18). 25 Nov (R-18): self-reported independent; time, code and shrink-condition explanation not submitted."
     },
     {
       "lc": 567,
@@ -1328,10 +1328,10 @@
       "title": "Subarray Sums Divisible by K",
       "difficulty": "Medium",
       "pattern": "Prefix sum + remainder hashing",
-      "date": "2026-10-28",
-      "independence": "independent",
-      "hint": "0 hints; no outside help logged (judged)",
-      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section."
+      "date": "2026-11-25",
+      "independence": "hinted",
+      "hint": "1 hint: equal prefix remainders mean the difference is divisible by k",
+      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section. 25 Nov (R-20, 7-day retest): needed the core hint (equal remainders => divisible difference); not independent. Retests R-45 (27 Nov), R-46 (2 Dec), R-47 (16 Dec)."
     },
     {
       "lc": 11,
@@ -1378,10 +1378,10 @@
       "title": "Contiguous Array",
       "difficulty": "Medium",
       "pattern": "Prefix sum + hashing",
-      "date": "2026-10-25",
-      "independence": "unsolved",
-      "hint": "None recorded",
-      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31)."
+      "date": "2026-11-25",
+      "independence": "solution",
+      "hint": "Solution seen",
+      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31). 25 Nov (R-30): solved after seeing the solution; not independent. Retests R-42 (27 Nov), R-43 (2 Dec), R-44 (16 Dec)."
     },
     {
       "lc": 1343,
@@ -1768,8 +1768,8 @@
       "weakness": "W-002",
       "task": "Re-solve LC 209 cold, no hints, 35-minute cap; write the shrink condition first",
       "due": "2026-10-31",
-      "state": "pending",
-      "note": "7-day retest after the 24 Oct self-reported solve. 29 Oct: loaded in the Workbench as p21."
+      "state": "passed",
+      "note": "7-day retest after the 24 Oct self-reported solve. 29 Oct: loaded in the Workbench as p21. 25 Nov: self-reported independent; time and code not submitted."
     },
     {
       "id": "R-19",
@@ -1784,8 +1784,8 @@
       "weakness": null,
       "task": "LC 974 cold again (7-day spaced retest)",
       "due": "2026-10-31",
-      "state": "pending",
-      "note": "7 days after 24 Oct."
+      "state": "failed",
+      "note": "7 days after 24 Oct. 25 Nov: 1 hint (equal remainders => divisible difference). Replaced by R-45."
     },
     {
       "id": "R-13",
@@ -1888,8 +1888,8 @@
       "weakness": null,
       "task": "Re-solve LC 525 cold, no hints, 35-minute cap",
       "due": "2026-10-27",
-      "state": "pending",
-      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 29 Oct; overdue. 30 Oct: skipped at your request; still overdue, first in the backlog."
+      "state": "failed",
+      "note": "48h after the 25 Oct attempt. Due date restored to 27 Oct at your request on 29 Oct; overdue. 30 Oct: skipped at your request; still overdue, first in the backlog. 25 Nov: solution seen. Replaced by R-42."
     },
     {
       "id": "R-31",
@@ -2066,11 +2066,60 @@
       "due": "2026-11-20",
       "state": "pending",
       "note": "21 days after the solution was seen on 30 Oct."
+    },
+    {
+      "id": "R-42",
+      "weakness": null,
+      "task": "LC 525 cold, no help, 35-minute cap; explain the 0 -> -1 mapping and why the first index is stored",
+      "due": "2026-11-27",
+      "state": "pending",
+      "note": "48h after the solution was seen on 25 Nov."
+    },
+    {
+      "id": "R-43",
+      "weakness": null,
+      "task": "LC 525 cold (7-day spaced retest)",
+      "due": "2026-12-02",
+      "state": "pending",
+      "note": "7 days after 25 Nov."
+    },
+    {
+      "id": "R-44",
+      "weakness": null,
+      "task": "LC 525 cold (21-day spaced retest)",
+      "due": "2026-12-16",
+      "state": "pending",
+      "note": "21 days after 25 Nov."
+    },
+    {
+      "id": "R-45",
+      "weakness": null,
+      "task": "LC 974 cold, no hints, 35-minute cap; explain why equal remainders give a divisible sum and why the remainder is normalised",
+      "due": "2026-11-27",
+      "state": "pending",
+      "note": "48h after the hinted attempt on 25 Nov."
+    },
+    {
+      "id": "R-46",
+      "weakness": null,
+      "task": "LC 974 cold (7-day spaced retest)",
+      "due": "2026-12-02",
+      "state": "pending",
+      "note": "7 days after 25 Nov."
+    },
+    {
+      "id": "R-47",
+      "weakness": null,
+      "task": "LC 974 cold (21-day spaced retest)",
+      "due": "2026-12-16",
+      "state": "pending",
+      "note": "21 days after 25 Nov."
     }
   ],
   "nextActions": [
     "BUFFER WEEK 23 to 29 Nov (9 to 22 Nov also counted as buffer, at your request): no new topics. Work only the backlog, oldest first, as your time allows.",
-    "Overdue retests, oldest first: R-30 LC 525 (27 Oct), R-04 route trace (28 Oct), R-18 LC 209, R-20 LC 974, R-37 LC 1493, R-39 unseen window (31 Oct), then the 1 Nov set: R-40 LC 875, R-23, R-25, R-27, R-29, R-31, R-05 race scenarios, R-06 binary search set; then R-35 (3 Nov), R-36 (4 Nov), R-38 (5 Nov), R-07 (8 Nov), R-09 and R-10 (15 Nov), R-41 (20 Nov). Due dates not moved.",
+    "New retests: R-42 LC 525 and R-45 LC 974 due Fri 27 Nov (cold, no help).",
+    "Overdue retests, oldest first: R-04 route trace (28 Oct), R-37 LC 1493, R-39 unseen window (31 Oct), then the 1 Nov set: R-40 LC 875, R-23, R-25, R-27, R-29, R-31, R-05 race scenarios, R-06 binary search set; then R-35 (3 Nov), R-36 (4 Nov), R-38 (5 Nov), R-07 (8 Nov), R-09 and R-10 (15 Nov), R-41 (20 Nov). Due dates not moved.",
     "Week 1 goals still open (finish by 29 Nov): SQL, joins, indexes; transactions and the last-seat race; Mongo compare-and-set; binary search set; two pointers and stack (3 unseen each); S-001 full STAR draft.",
     "Week 2 (OS concurrency, networking, arrays and hashing, linked lists, intervals and greedy) starts Mon 30 Nov. Checkpoint 1 is Sun 6 Dec. Gate review Mon 15 Feb 2027."
   ],
