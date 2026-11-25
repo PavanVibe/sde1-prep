@@ -2117,11 +2117,10 @@
     }
   ],
   "nextActions": [
-    "BUFFER WEEK 23 to 29 Nov (9 to 22 Nov also counted as buffer, at your request): no new topics. Work only the backlog, oldest first, as your time allows.",
-    "New retests: R-42 LC 525 and R-45 LC 974 due Fri 27 Nov (cold, no help).",
-    "Overdue retests, oldest first: R-04 route trace (28 Oct), R-37 LC 1493, R-39 unseen window (31 Oct), then the 1 Nov set: R-40 LC 875, R-23, R-25, R-27, R-29, R-31, R-05 race scenarios, R-06 binary search set; then R-35 (3 Nov), R-36 (4 Nov), R-38 (5 Nov), R-07 (8 Nov), R-09 and R-10 (15 Nov), R-41 (20 Nov). Due dates not moved.",
-    "Week 1 goals still open (finish by 29 Nov): SQL, joins, indexes; transactions and the last-seat race; Mongo compare-and-set; binary search set; two pointers and stack (3 unseen each); S-001 full STAR draft.",
-    "Week 2 (OS concurrency, networking, arrays and hashing, linked lists, intervals and greedy) starts Mon 30 Nov. Checkpoint 1 is Sun 6 Dec. Gate review Mon 15 Feb 2027."
+    "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
+    "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-37 LC 1493, R-39 unseen window, R-40 LC 875, R-23 LC 11, R-25 LC 238, R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-35 LC 713, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
+    "Then DSA goals in plan order: binary search, two pointers, stack and monotonic stack (3 unseen each), then arrays and hashing, linked lists, intervals, greedy, and on through the DSA lane.",
+    "Paused (non-DSA, still overdue): R-04 route trace, R-05 race scenarios, R-36 JWT oral, R-09 and R-10 job worker."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
