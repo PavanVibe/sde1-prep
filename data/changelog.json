@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-25",
+      "kind": "evidence",
+      "summary": "LC 1493 cold retest passed (self-reported independent)",
+      "details": "R-37 LC 1493: self-reported independent; time and code not submitted. 7-day retest R-38 still open. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-25",
       "kind": "plan",
       "summary": "DSA-only phase starts; all other tracks paused",
       "details": "At your request on 25 Nov: all study time goes to DSA until the DSA phase is done; CS fundamentals, internship, OOD, system design and behavioral resume after it. Non-DSA retests (R-04, R-05, R-36, R-09, R-10) keep their due dates and stay overdue. Your choices: no end date (the phase ends when the core DSA patterns reach their targets, even if the gate moves), and behavioral is paused fully too. Weekly goals and checkpoints are not rewritten yet.",
