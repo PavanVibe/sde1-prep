@@ -1618,6 +1618,16 @@
       "independence": "independent",
       "hint": "None (self-reported)",
       "note": "R-34 unseen problem, pattern unnamed. Accepted 311/311 on the first submit, 31:49. Window with at most one zero, answer right - left. You confirmed you saw the solution, so it is not independent. 25 Nov (R-37, cold retest): self-reported independent; time and code not submitted."
+    },
+    {
+      "lc": 2024,
+      "title": "Maximize the Confusion of an Exam",
+      "difficulty": "Medium",
+      "pattern": "Sliding window (at most k of the other char)",
+      "date": "2026-11-25",
+      "independence": "independent",
+      "hint": "None (self-reported)",
+      "note": "R-39 unseen problem, pattern unnamed (Workbench p22). Self-reported independent, no hints; time and code not submitted. Returns in a mixed set about 14 days later (R-48, 9 Dec)."
     }
   ],
   "weaknesses": [
@@ -2048,8 +2058,8 @@
       "weakness": "W-003",
       "task": "A different unseen variable-size window problem, pattern unnamed, 35-minute cap, no help",
       "due": "2026-10-31",
-      "state": "pending",
-      "note": "The pattern-recognition check R-34 did not provide. 29 Oct: part of an unnamed set of three in the Workbench (p22, p23, p24); any one solved independently counts."
+      "state": "passed",
+      "note": "The pattern-recognition check R-34 did not provide. 29 Oct: part of an unnamed set of three in the Workbench (p22, p23, p24); any one solved independently counts. 25 Nov: LC 2024 (p22) solved, self-reported independent with no hints."
     },
     {
       "id": "R-40",
@@ -2114,11 +2124,19 @@
       "due": "2026-12-16",
       "state": "pending",
       "note": "21 days after 25 Nov."
+    },
+    {
+      "id": "R-48",
+      "weakness": "W-003",
+      "task": "LC 2024 inside an unnamed mixed set, cold, 35-minute cap",
+      "due": "2026-12-09",
+      "state": "pending",
+      "note": "14 days after the independent unseen solve on 25 Nov."
     }
   ],
   "nextActions": [
     "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
-    "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-39 unseen window, R-40 LC 875, R-23 LC 11, R-25 LC 238, R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-35 LC 713, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
+    "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-40 LC 875, R-23 LC 11, R-25 LC 238, R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-35 LC 713, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
     "Then DSA goals in plan order: binary search, two pointers, stack and monotonic stack (3 unseen each), then arrays and hashing, linked lists, intervals, greedy, and on through the DSA lane.",
     "Paused (non-DSA, still overdue): R-04 route trace, R-05 race scenarios, R-36 JWT oral, R-09 and R-10 job worker."
   ],
