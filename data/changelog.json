@@ -11,6 +11,13 @@
     {
       "date": "2026-11-25",
       "kind": "evidence",
+      "summary": "LC 875 cold retest passed (self-reported, no hints)",
+      "details": "R-40 LC 875: self-reported independent, no hints; time and code not submitted. R-29 (7-day) and R-41 (21-day) still open. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-25",
+      "kind": "evidence",
       "summary": "Unseen LC 2024 solved with no hints (R-39 passed)",
       "details": "R-39: LC 2024 Maximize the Confusion of an Exam, unseen with the pattern unnamed; self-reported independent, no hints; time and code not submitted. First unnamed-pattern sliding-window solve. R-48 (mixed set, 9 Dec) scheduled. No status moved.",
       "changes": []
