@@ -11,6 +11,13 @@
     {
       "date": "2026-11-26",
       "kind": "setup",
+      "summary": "Binary search notes merged into one note",
+      "details": "Your template notes (exact, first and last occurrence, lower bound, last valid position, golden rules) merged with the LC 34 note into one binary search note. Added: start values for each template, the final check for Template 5, the 2-element stuck trace, and both ways to solve LC 34. The separate LC 34 note was folded in. Notes are reference material, not evidence.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "setup",
       "summary": "Notes added: LC 34 two-pass binary search",
       "details": "Your LC 34 notes (core intuition, first-occurrence and last-occurrence passes) added to study notes. Notes are reference material, not evidence.",
       "changes": []
