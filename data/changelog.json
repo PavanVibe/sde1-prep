@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "setup",
+      "summary": "Ledger repo made private; public site offline",
+      "details": "You made the repo private on 26 Nov and want it kept private. GitHub Pages does not serve private repos on a free account, so the public site is offline. Logging and pushes are unaffected. Alchemic details stay out of the ledger anyway (NDA).",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "weakness",
       "summary": "W-009 narrowed: LC 33 range test",
       "details": "Your diagnosis for LC 33: you knew which half was sorted but not how to check whether the target lies in it. Taught the range test the same day. Cold retests R-55 to R-57 unchanged.",
