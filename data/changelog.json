@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-27",
+      "kind": "evidence",
+      "summary": "LC 15 (3Sum) done with the solution; three retests scheduled",
+      "details": "W1-5 new problem LC 15, dated 26 Nov (evening session). Self-reported as solved with the solution, so it is not independent and does not count toward W1-5. Retests R-61 (28 Nov), R-62 (3 Dec), R-63 (17 Dec). LC 881 not yet reported.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
       "kind": "plan",
       "summary": "Rule: 'what to study' gets a small table only",
       "details": "Your decision on 27 Nov: when you ask what to study, I reply with one small table: LC number, New or Retest, and the date it should have been finished. Nothing else unless you ask. Supersedes the longer START TODAY output format for this question.",
