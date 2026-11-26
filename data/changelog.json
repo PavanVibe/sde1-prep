@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "weakness",
+      "summary": "W-009 narrowed: LC 33 range test",
+      "details": "Your diagnosis for LC 33: you knew which half was sorted but not how to check whether the target lies in it. Taught the range test the same day. Cold retests R-55 to R-57 unchanged.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "evidence",
       "summary": "LC 33 done with the solution seen",
       "details": "R-06 part: LC 33 on LeetCode with the solution seen; not independent. Cold retests R-55 (28 Nov), R-56 (3 Dec), R-57 (17 Dec). Adds evidence to W-009 (rotated-array sorted half). LC 162 remains in R-06. No status moved.",
