@@ -379,7 +379,8 @@
           "next": "Explain the user and kernel boundary with follow-ups",
           "gateTarget": "STRONG"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "db",
@@ -468,7 +469,8 @@
           "next": "Design exercise, light (Week 3)",
           "gateTarget": "STRONG"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "net",
@@ -541,7 +543,8 @@
           "next": "Performance reasoning (Week 2)",
           "gateTarget": "STRONG"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "dist",
@@ -630,7 +633,8 @@
           "next": "Metrics, logging and tracing (Week 3)",
           "gateTarget": "STRONG"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "alch",
@@ -772,7 +776,8 @@
           "lastTested": null,
           "next": "Failure investigation flow (Week 3)"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "ood",
@@ -861,7 +866,8 @@
           "next": "Timed mocks",
           "gateTarget": "STRONG"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "sd",
@@ -958,7 +964,8 @@
           "next": "A successful timed mock",
           "gateTarget": "STRONG"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "beh",
@@ -1071,7 +1078,8 @@
           "next": "Mock evidence",
           "gateTarget": "INTERVIEW READY"
         }
-      ]
+      ],
+      "paused": true
     },
     {
       "id": "mock",
@@ -1976,7 +1984,8 @@
       "task": "Trace one authenticated API route; mark uncertain lines as unsure",
       "due": "2026-10-28",
       "state": "pending",
-      "note": "26 Oct: could not trace unaided, so it became a lesson (login, the per-request token check, logout, the Redis revoke list and single-session key). Not a pass. Retest 28 Oct: closed-book trace of one authenticated request on a blank page."
+      "note": "26 Oct: could not trace unaided, so it became a lesson (login, the per-request token check, logout, the Redis revoke list and single-session key). Not a pass. Retest 28 Oct: closed-book trace of one authenticated request on a blank page.",
+      "paused": true
     },
     {
       "id": "R-08",
@@ -2000,7 +2009,8 @@
       "task": "Closed-book race scenarios: booking, shared counter, compare-and-set",
       "due": "2026-11-01",
       "state": "pending",
-      "note": "Week 1, after transactions and isolation."
+      "note": "Week 1, after transactions and isolation.",
+      "paused": true
     },
     {
       "id": "R-06",
@@ -2024,7 +2034,8 @@
       "task": "Worker-crash scenario: acknowledgement, redelivery, idempotency",
       "due": "2026-11-15",
       "state": "pending",
-      "note": "Week 3."
+      "note": "Week 3.",
+      "paused": true
     },
     {
       "id": "R-10",
@@ -2032,7 +2043,8 @@
       "task": "Explain the job worker lifecycle from trigger to retry, unaided",
       "due": "2026-11-15",
       "state": "pending",
-      "note": "Week 3."
+      "note": "Week 3.",
+      "paused": true
     },
     {
       "id": "R-34",
@@ -2056,7 +2068,8 @@
       "task": "Oral, closed-book, 5 min: JWT header contents (alg/typ, not bcrypt), why the payload is readable (Base64URL), 401 vs 403",
       "due": "2026-11-04",
       "state": "pending",
-      "note": "Spaced check after R-32 on 28 Oct."
+      "note": "Spaced check after R-32 on 28 Oct.",
+      "paused": true
     },
     {
       "id": "R-37",
@@ -2232,7 +2245,7 @@
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
     "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
     "Then DSA goals in plan order: binary search, two pointers, stack and monotonic stack (3 unseen each), then arrays and hashing, linked lists, intervals, greedy, and on through the DSA lane.",
-    "Paused (non-DSA, still overdue): R-04 route trace, R-05 race scenarios, R-36 JWT oral, R-09 and R-10 job worker."
+    "Paused for the DSA-only phase (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals W0-2, W0-7, W0-8, W1-1, W1-2, W1-3, W1-7; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
@@ -2440,7 +2453,8 @@
               "topic": "Web API server lifecycle"
             }
           ],
-          "target": "PRACTICING"
+          "target": "PRACTICING",
+          "paused": true
         },
         {
           "id": "W0-3",
@@ -2507,7 +2521,8 @@
           "item": "One-line list of real incidents for stories",
           "state": "missed",
           "doneDate": null,
-          "note": "Not logged."
+          "note": "Not logged.",
+          "paused": true
         },
         {
           "id": "W0-8",
@@ -2516,7 +2531,8 @@
           "item": "Resume truth audit (what you wrote, what was measured)",
           "state": "missed",
           "doneDate": null,
-          "note": "Not logged."
+          "note": "Not logged.",
+          "paused": true
         },
         {
           "id": "W0-9",
@@ -2561,7 +2577,8 @@
               "topic": "Indexes"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W1-2",
@@ -2586,7 +2603,8 @@
               "topic": "Isolation"
             }
           ],
-          "target": "PRACTICING"
+          "target": "PRACTICING",
+          "paused": true
         },
         {
           "id": "W1-3",
@@ -2607,7 +2625,8 @@
               "topic": "MongoDB data-access layer"
             }
           ],
-          "target": "PRACTICING"
+          "target": "PRACTICING",
+          "paused": true
         },
         {
           "id": "W1-4",
@@ -2672,7 +2691,8 @@
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Draft with your role, decision, trade-off and a measured result"
+          "quota": "Draft with your role, decision, trade-off and a measured result",
+          "paused": true
         }
       ],
       "buffer": "Buffer weeks, 2 to 29 Nov. 2 to 8 Nov was added on 1 Nov; on 21 Nov, at your request, 9 to 22 Nov (planned Weeks 2 and 3, no logged evidence) were counted as buffer too, and 23 to 29 Nov was added. No new topics. Finish Week 1 goals and clear overdue retests as time allows. Week 2 now starts 30 Nov; everything after it, including every checkpoint and the gate, moved three weeks later (gate 15 Feb 2027)."
@@ -4170,7 +4190,8 @@
     "partial": "Partly done",
     "pending": "Not done yet",
     "blocked": "New topic not started: overdue retests block it",
-    "missed": "Week ended without it"
+    "missed": "Week ended without it",
+    "paused": "Paused (DSA-only phase): shown, not scored for the current week"
   },
   "syllabus": {
     "note": "Estimate, not an official Amazon syllabus. Area shares follow how public interview guides describe an SDE-1 loop: coding is the bulk, leadership principles in every round, OOD common, system design light. Coverage means scheduled in the plan, not mastered.",
@@ -4268,5 +4289,10 @@
     ],
     "total": 88,
     "decision": "29 Oct: extended to a 90-day sprint (gate 18 Jan 2027) at about 43 hours a week. Tier 1 quotas never shrink; if Tier 1 is not met by 18 Jan, the gate moves again. 1 Nov: buffer week 2 to 8 Nov added at your request; Weeks 2 to 12, all checkpoints and the gate moved one week later (gate 25 Jan 2027). Quotas unchanged. 21 Nov: 9 to 29 Nov became buffer weeks at your request; Weeks 2 to 12, all checkpoints and the gate moved three weeks later (gate 15 Feb 2027). Quotas unchanged."
+  },
+  "pausePhase": {
+    "label": "DSA-only phase",
+    "since": "2026-11-25",
+    "note": "Paused at your request while all study time goes to DSA. Due dates are unchanged and nothing is cancelled: when the DSA phase ends, these come back as overdue."
   }
 }

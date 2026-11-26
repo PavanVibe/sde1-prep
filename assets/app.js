@@ -183,6 +183,7 @@
   function neglected() {
     var out = [];
     T.tracks.forEach(function (t) {
+      if (t.paused) return;
       var starts = weekStart(t.startsWeek);
       if (starts && starts > TODAY) return;
       if (!t.lastEvidence) { out.push({ track: t, why: 'No evidence logged yet' }); return; }
@@ -192,7 +193,7 @@
     return out;
   }
   function openRetests() {
-    return T.retests.filter(function (r) { return r.state === 'pending'; })
+    return T.retests.filter(function (r) { return r.state === 'pending' && !r.paused; })
       .sort(function (a, b) { return a.due < b.due ? -1 : 1; });
   }
 
@@ -236,7 +237,9 @@
 
 
   /* ---------- weekly goals ---------- */
-  var GSTATE = { done: 'At target', late: 'At target, late', partial: 'Part-way', pending: 'Not done yet', blocked: 'Blocked', missed: 'Missed' };
+  var GSTATE = { done: 'At target', late: 'At target, late', partial: 'Part-way', pending: 'Not done yet', blocked: 'Blocked', missed: 'Missed', paused: 'Paused' };
+  function pausedRetests() { return T.retests.filter(function (r) { return r.state === 'pending' && r.paused; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; }); }
+  function pauseLabel() { return T.pausePhase && T.pausePhase.label ? T.pausePhase.label : 'Paused'; }
 
   function topicOf(ref) {
     var tr = T.tracks.filter(function (t) { return t.id === ref.track; })[0];
@@ -251,8 +254,12 @@
     return (x.state === 'done' || x.state === 'late') ? 1 : (x.state === 'partial' ? 0.5 : 0);
   }
   function weekStats(w) {
-    var g = w.goals || [];
+    var phase = TODAY > w.end ? 'past' : (TODAY < w.start ? 'future' : 'now');
+    var all = w.goals || [];
+    // Paused goals (e.g. the DSA-only phase) do not count toward a current or future week's score; past weeks keep their history.
+    var g = all.filter(function (x) { return !(x.paused && phase !== 'past'); });
     var score = 0, n = { done: 0, late: 0, partial: 0, pending: 0, blocked: 0, missed: 0 };
+    all.forEach(function (x) { if (g.indexOf(x) < 0) { x._p = goalProgress(x); x._k = 'paused'; } });
     g.forEach(function (x) {
       var pr = goalProgress(x); x._p = pr;
       var k = pr >= 1 ? (x.state === 'late' ? 'late' : 'done') : (pr > 0 ? 'partial' : (x.refs ? (x.state === 'blocked' || x.state === 'missed' ? x.state : 'pending') : (x.state === 'partial' ? 'pending' : x.state)));
@@ -260,11 +267,10 @@
       n[x._k] = (n[x._k] || 0) + 1; score += pr;
     });
     var len = diffDays(w.start, w.end) + 1;
-    var phase = TODAY > w.end ? 'past' : (TODAY < w.start ? 'future' : 'now');
     var expected = phase === 'past' ? 1 : (phase === 'future' ? 0 : Math.min(1, (diffDays(w.start, TODAY) + 1) / len));
     var pct = g.length ? score / g.length : 0;
     var newLeft = g.filter(function (x) { return x.kind === 'new' && x._p < 1; }).length;
-    var rts = T.retests.filter(function (r) { return r.due >= w.start && r.due <= w.end && r.state !== 'superseded'; });
+    var rts = T.retests.filter(function (r) { return r.due >= w.start && r.due <= w.end && r.state !== 'superseded' && !(r.paused && r.state === 'pending'); });
     var rtPassed = rts.filter(function (r) { return r.state === 'passed'; }).length;
     var behind = Math.round((expected * g.length - score) * 2) / 2;
     var verdict, cls;
@@ -272,7 +278,7 @@
     else if (phase === 'past') { verdict = pct >= 1 ? 'Weekly goal met' : 'Weekly goal missed'; cls = pct >= 1 ? 'ok' : 'warn'; }
     else if (behind <= 0.5) { verdict = 'On track'; cls = 'ok'; }
     else { verdict = 'Behind by ' + behind + ' ' + (behind === 1 ? 'goal' : 'goals'); cls = 'warn'; }
-    return { g: g, n: n, score: score, pct: pct, expected: expected, phase: phase, newLeft: newLeft, rts: rts, rtPassed: rtPassed, verdict: verdict, cls: cls };
+    return { g: g, all: all, n: n, score: score, pct: pct, expected: expected, phase: phase, newLeft: newLeft, rts: rts, rtPassed: rtPassed, verdict: verdict, cls: cls };
   }
   function goalBar(st, label) {
     var tot = st.g.length || 1;
@@ -281,16 +287,16 @@
     var mark = st.phase === 'now' ? '<b class="expect" style="left:' + (st.expected * 100).toFixed(1) + '%" title="Where you should be today"></b>' : '';
     return '<div class="gbar" role="img" aria-label="' + esc(label) + '">' + seg(pd, 'gd') + seg(pl, 'gl') + seg(pp, 'gp') + mark + '</div>';
   }
-  function overdueNow() { return T.retests.filter(function (r) { return r.state === 'pending' && r.due < TODAY; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; }); }
+  function overdueNow() { return T.retests.filter(function (r) { return r.state === 'pending' && !r.paused && r.due < TODAY; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; }); }
 
   function carryFor(w) {
     var goals = [];
     T.weeks.forEach(function (v) {
       if (v.week >= w.week) return;
       weekStats(v);
-      (v.goals || []).forEach(function (x) { if (x.kind !== 'checkpoint' && x._p < 1) goals.push({ week: v.week, g: x }); });
+      (v.goals || []).forEach(function (x) { if (x.kind !== 'checkpoint' && !x.paused && x._p < 1) goals.push({ week: v.week, g: x }); });
     });
-    var rts = T.retests.filter(function (r) { return r.state === 'pending' && r.due < w.start; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; });
+    var rts = T.retests.filter(function (r) { return r.state === 'pending' && !r.paused && r.due < w.start; }).sort(function (a, b) { return a.due < b.due ? -1 : 1; });
     return { goals: goals, rts: rts, n: goals.length + rts.length };
   }
   function carryHtml(w, c) {
@@ -327,10 +333,10 @@
     html += '<h2>Week by week</h2><div class="key small"><span><i class="gd"></i>At target</span><span><i class="gl"></i>At target, late</span><span><i class="gp"></i>Part-way</span><span><i></i>Not started</span></div>';
     T.weeks.forEach(function (w) {
       var st = weekStats(w);
-      var rows = st.g.map(function (x) {
-        return '<tr class="gs-' + x.state + '"><td>' + esc(x.lane === 'lp' ? 'Behavioral' : x.lane === 'applied' ? 'Internship' : x.lane === 'checkpoint' ? 'Checkpoint' : x.lane === 'core' ? 'Core' : 'DSA') + (x.kind === 'retest' ? '<span class="sub">retest</span>' : '') + '</td><td><strong>' + esc(x.item) + '</strong>' + (x.quota ? '<span class="sub"><b>Quota:</b> ' + esc(x.quota) + '</span>' : '') + (x.note ? '<span class="sub">' + esc(x.note) + '</span>' : '') + '</td><td>' + (x.refs ? '<span class="sub">Target: <strong>' + esc(sentence(x.target)) + '</strong></span>' + x.refs.map(function (r) { var tp = topicOf(r); return '<span class="sub">' + esc(r.topic) + ': ' + esc(sentence(tp ? tp.status : 'NOT STARTED')) + (tp && tp.gateTarget ? ' (gate: ' + esc(sentence(tp.gateTarget)) + ')' : '') + '</span>'; }).join('') : '') + '</td><td><span class="gchip ' + x._k + '">' + esc(GSTATE[x._k]) + '</span><span class="sub">' + Math.round(x._p * 100) + '% of target</span>' + (x.doneDate ? '<span class="sub">' + esc(fmt(x.doneDate)) + '</span>' : '') + '</td></tr>';
+      var rows = st.all.map(function (x) {
+        return '<tr class="gs-' + (x._k === 'paused' ? 'paused' : x.state) + '"><td>' + esc(x.lane === 'lp' ? 'Behavioral' : x.lane === 'applied' ? 'Internship' : x.lane === 'checkpoint' ? 'Checkpoint' : x.lane === 'core' ? 'Core' : 'DSA') + (x.kind === 'retest' ? '<span class="sub">retest</span>' : '') + '</td><td><strong>' + esc(x.item) + '</strong>' + (x.quota ? '<span class="sub"><b>Quota:</b> ' + esc(x.quota) + '</span>' : '') + (x.note ? '<span class="sub">' + esc(x.note) + '</span>' : '') + '</td><td>' + (x.refs ? '<span class="sub">Target: <strong>' + esc(sentence(x.target)) + '</strong></span>' + x.refs.map(function (r) { var tp = topicOf(r); return '<span class="sub">' + esc(r.topic) + ': ' + esc(sentence(tp ? tp.status : 'NOT STARTED')) + (tp && tp.gateTarget ? ' (gate: ' + esc(sentence(tp.gateTarget)) + ')' : '') + '</span>'; }).join('') : '') + '</td><td><span class="gchip ' + x._k + '">' + esc(GSTATE[x._k]) + '</span><span class="sub">' + Math.round(x._p * 100) + '% of target</span>' + (x.doneDate ? '<span class="sub">' + esc(fmt(x.doneDate)) + '</span>' : '') + '</td></tr>';
       }).join('');
-      var rtRows = st.rts.map(function (r) { return '<li>' + esc(r.id) + ' ' + esc(r.task) + ' <span class="' + (r.state === 'passed' ? 'okc' : (r.due < TODAY ? 'late-tag' : 'muted')) + '">' + esc(r.state === 'passed' ? 'passed' : r.state === 'failed' ? 'failed' : (r.due < TODAY ? 'overdue' : 'due ' + fmtShort(r.due))) + '</span></li>'; }).join('');
+      var rtRows = st.rts.concat(T.retests.filter(function (r) { return r.paused && r.state === 'pending' && r.due >= w.start && r.due <= w.end; })).map(function (r) { return '<li>' + esc(r.id) + ' ' + esc(r.task) + ' <span class="' + (r.paused && r.state === 'pending' ? 'muted' : (r.state === 'passed' ? 'okc' : (r.due < TODAY ? 'late-tag' : 'muted'))) + '">' + esc(r.paused && r.state === 'pending' ? 'paused (' + pauseLabel() + ')' : (r.state === 'passed' ? 'passed' : r.state === 'failed' ? 'failed' : (r.due < TODAY ? 'overdue' : 'due ' + fmtShort(r.due)))) + '</span></li>'; }).join('');
       var cy = carryFor(w); st = weekStats(w);
       html += '<details class="wk"' + (st.phase === 'now' ? ' open' : '') + '><summary><span class="name">' + (w.gate ? 'Gate' : 'Week ' + w.week) + (st.phase === 'now' ? ' (this week)' : '') + '<span class="sub">' + esc(fmtShort(w.start)) + ' to ' + esc(fmtShort(w.end)) + '</span></span>' +
         goalBar(st, Math.round(st.pct * 100) + '% done') + '<span class="small"><strong>' + Math.round(st.pct * 100) + '%</strong> of ' + st.g.length + ' goals</span><span><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span>' + (cy.n && st.phase !== 'past' ? '<span class="sub late-tag">' + cy.n + ' carried over</span>' : '') + '</span></summary>' +
@@ -339,6 +345,20 @@
     });
     return { title: 'Weekly goals', html: html };
   };
+
+  function pausedBox() {
+    var pr = pausedRetests();
+    var pg = [];
+    T.weeks.forEach(function (v) { if (TODAY > v.end && v.week !== undefined && !(v.goals || []).some(function (x) { return x.paused; })) return; (v.goals || []).forEach(function (x) { if (x.paused && goalProgress(x) < 1) pg.push({ week: v.week, g: x }); }); });
+    var pt = T.tracks.filter(function (t) { return t.paused; });
+    if (!pr.length && !pg.length && !pt.length) return '';
+    var pp = T.pausePhase || {};
+    var html = '<div class="paused"><h3>' + esc(pauseLabel()) + ': paused items</h3><p class="small muted">' + esc(pp.note || 'Paused at your request. Due dates are unchanged; these return as overdue when the pause ends.') + (pp.since ? ' Since ' + esc(fmt(pp.since)) + '.' : '') + '</p><ul class="small">';
+    pr.forEach(function (r) { var d = diffDays(r.due, TODAY); html += '<li><span class="cw">Retest ' + esc(r.id) + '</span> ' + esc(r.task) + ' <span class="muted">(due ' + esc(fmtShort(r.due)) + (d > 0 ? ', ' + plural(d, 'day', 'days') + ' past due' : '') + ')</span></li>'; });
+    pg.forEach(function (o) { html += '<li><span class="cw">Week ' + o.week + ' goal</span> ' + esc(o.g.item) + '</li>'; });
+    if (pt.length) html += '<li><span class="cw">Tracks</span> ' + pt.map(function (t) { return esc(t.name); }).join(', ') + ' (not flagged as neglected)</li>';
+    return html + '</ul></div>';
+  }
 
   VIEW.today = function () {
     var start = T.meta.sprintStart, total = diffDays(start, T.meta.gateDate);
@@ -388,6 +408,7 @@
       });
       html += '</ul>';
     }
+    html += pausedBox();
     html += '</div></div>';
 
     html += '<h2>Next actions</h2><ol class="steps">' + T.nextActions.map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ol>';
@@ -483,6 +504,8 @@
     html += '<h2>Closed (' + T.closedWeaknesses.length + ')</h2>';
     if (!T.closedWeaknesses.length) html += '<p class="empty">Nothing closed yet. The first closure needs a passed, unaided retest logged with its date.</p>';
     else html += table(['ID', 'Topic', 'Retest result', 'Closed'], T.closedWeaknesses.map(function (w) { return '<tr><td>' + esc(w.id) + '</td><td>' + esc(w.topic) + '</td><td>' + esc(w.result) + '</td><td>' + esc(fmt(w.closed)) + '</td></tr>'; }));
+    var prs = pausedRetests();
+    if (prs.length) html += '<h2>Paused retests (' + prs.length + ')</h2><p class="muted small">' + esc(pauseLabel()) + '. Due dates unchanged; they return as overdue when the pause ends.</p><ul class="small">' + prs.map(function (r) { return '<li>' + esc(fmt(r.due)) + ': ' + esc(r.task) + (r.weakness ? ' (' + esc(r.weakness) + ')' : '') + '</li>'; }).join('') + '</ul>';
     html += '<h2>Scheduled retests</h2>' + table(['Due', 'Retest', 'Weakness', 'State'], openRetests().map(function (r) {
       var d = diffDays(r.due, TODAY);
       return '<tr><td>' + esc(fmt(r.due)) + (d > 0 ? '<span class="sub flag">' + plural(d, 'day', 'days') + ' overdue</span>' : '') + '</td><td>' + esc(r.task) + '<span class="sub">' + esc(r.note) + '</span></td><td>' + esc(r.weakness || '—') + '</td><td>Pending</td></tr>';

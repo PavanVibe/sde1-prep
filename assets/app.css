@@ -301,6 +301,11 @@ pre { background: var(--paper-2); padding: 0.9rem 1rem; overflow-x: auto; font: 
 .gchip { display: inline-block; font-weight: 700; font-size: 0.86rem; }
 .gchip.done { color: var(--ok); } .gchip.late { color: var(--s3); } .gchip.partial { color: var(--s3); }
 .gchip.blocked, .gchip.missed { color: var(--alert); } .gchip.pending { color: var(--muted); font-weight: 400; }
+.gchip.paused { color: var(--muted); font-style: italic; }
+tr.gs-paused { opacity: 0.6; }
+.paused { margin-top: 1rem; padding: 0.75rem 1rem; border: 1px dashed var(--rule); border-left: 4px solid var(--muted); }
+.paused h3 { margin: 0 0 0.3rem; font-size: 1rem; }
+.paused ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
 .okc { color: var(--ok); font-weight: 700; }
 .blockers { border: 1.5px solid var(--alert); background: var(--alert-bg); padding: 0.4rem 1rem 0.2rem; border-radius: 3px; margin: 1.2rem 0; }
 .blockers h2 { margin-top: 0.6rem; }
