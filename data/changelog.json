@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "plan",
+      "summary": "Retests and new problems listed separately from now on",
+      "details": "At your request: every plan and log labels each problem as a RETEST (old problem on schedule) or a NEW problem for the week's goal. Next actions are split the same way.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "evidence",
       "summary": "LC 162 with the solution seen; binary search set R-06 not passed",
       "details": "LC 162 on LeetCode with the solution seen; not independent. R-06 closed as failed: 1 of 4 cold (LC 153). Cold retests for LC 34, 33 and 162 start Sat 28 Nov (R-51, R-55, R-58), then 3 Dec and 17 Dec. No status moved.",
