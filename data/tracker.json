@@ -27,12 +27,12 @@
     {
       "date": "2026-12-06",
       "label": "Checkpoint 1",
-      "detail": "Day 47. Three unseen mediums in 90 minutes with the pattern unnamed, plus a 10-question closed-book CS oral"
+      "detail": "Day 47. Three unseen mediums in 90 minutes with the pattern unnamed, plus a 10-question closed-book CS oral. CS oral paused for the DSA-only phase (until 1 Jan, your decision 26 Nov): DSA part only."
     },
     {
       "date": "2026-12-20",
       "label": "Checkpoint 2",
-      "detail": "Day 61. Unseen timed set with trees, heaps and graphs, pattern unnamed, plus a CS oral on databases, OS and distributed systems"
+      "detail": "Day 61. Unseen timed set with trees, heaps and graphs, pattern unnamed, plus a CS oral on databases, OS and distributed systems. CS oral paused for the DSA-only phase (until 1 Jan, your decision 26 Nov): DSA part only."
     },
     {
       "date": "2027-01-10",
@@ -2265,11 +2265,11 @@
     }
   ],
   "nextActions": [
-    "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
+    "DSA-ONLY PHASE until 1 Jan 2027 (your decision, 26 Nov): all study time goes to DSA. All non-DSA work (CS, internship, OOD, system design, behavioral) is paused and resumes Mon 4 Jan (Week 7). Checkpoints 1 (6 Dec) and 2 (20 Dec) are DSA-only.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
     "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-51 LC 34, R-55 LC 33, R-58 LC 162. Overdue: R-38 LC 1493, R-29 and R-41 LC 875, R-31 LC 525 (covered by R-42). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
     "NEW PROBLEMS for Week 1 goals (protected daily slot, count toward the goal only if solved alone within 35 min): W1-5 two pointers 3 new (tonight LC 15 and LC 881); W1-6 stack and monotonic stack 3 new; W1-4 binary search 3 new (one on the answer) once the LC 34, 33, 162 retests pass.",
-    "Paused for the DSA-only phase (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals W0-2, W0-7, W0-8, W1-1, W1-2, W1-3, W1-7; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral."
+    "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
   "standards": [
@@ -2733,7 +2733,7 @@
       "applied": "Job worker concurrency: heartbeat and shutdown",
       "dsa": "Arrays and hashing, linked lists, intervals, sorting and greedy",
       "lp": "S-001 through 10 follow-ups; S-003 full STAR",
-      "checkpoint": "Checkpoint 1, 6 Dec: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral",
+      "checkpoint": "Checkpoint 1, 6 Dec: three unseen mediums in 90 minutes, pattern unnamed, plus a 10-question CS oral (CS oral paused until 1 Jan: DSA part only)",
       "goals": [
         {
           "id": "W2-1",
@@ -2770,7 +2770,8 @@
               "topic": "Virtual memory"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W2-2",
@@ -2803,7 +2804,8 @@
               "topic": "HTTP"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W2-3",
@@ -2820,7 +2822,8 @@
               "topic": "Background job worker"
             }
           ],
-          "target": "PRACTICING"
+          "target": "PRACTICING",
+          "paused": true
         },
         {
           "id": "W2-4",
@@ -2893,7 +2896,8 @@
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Both stories survive follow-ups without notes"
+          "quota": "Both stories survive follow-ups without notes",
+          "paused": true
         },
         {
           "id": "W2-8",
@@ -2902,7 +2906,7 @@
           "item": "Checkpoint 1: three unseen mediums in 90 minutes + 10-question CS oral",
           "state": "pending",
           "doneDate": null,
-          "note": "",
+          "note": " CS oral part paused (DSA-only phase until 1 Jan, your decision 26 Nov); the checkpoint is the 3 unseen mediums in 90 minutes.",
           "quota": ""
         }
       ]
@@ -2939,7 +2943,8 @@
               "topic": "Idempotency"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W3-2",
@@ -2964,7 +2969,8 @@
               "topic": "Job idempotency"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W3-3",
@@ -3037,7 +3043,8 @@
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Real incident; survives follow-ups"
+          "quota": "Real incident; survives follow-ups",
+          "paused": true
         }
       ]
     },
@@ -3049,7 +3056,7 @@
       "applied": "Job worker failure modes on paper",
       "dsa": "Heap, graph BFS and DFS on grids and graphs",
       "lp": "S-005 (disagreement)",
-      "checkpoint": "Checkpoint 2, 20 Dec: unseen timed set with trees, heaps and graphs (pattern unnamed), plus a CS oral on databases, OS and distributed systems",
+      "checkpoint": "Checkpoint 2, 20 Dec: unseen timed set with trees, heaps and graphs (pattern unnamed), plus a CS oral on databases, OS and distributed systems (CS oral paused until 1 Jan: DSA part only)",
       "goals": [
         {
           "id": "W4-1",
@@ -3082,7 +3089,8 @@
               "topic": "Load balancing"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W4-2",
@@ -3099,7 +3107,8 @@
               "topic": "Job retries and recovery"
             }
           ],
-          "target": "STRONG"
+          "target": "STRONG",
+          "paused": true
         },
         {
           "id": "W4-3",
@@ -3143,7 +3152,8 @@
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Real incident; survives follow-ups"
+          "quota": "Real incident; survives follow-ups",
+          "paused": true
         },
         {
           "id": "W4-6",
@@ -3152,7 +3162,7 @@
           "item": "Checkpoint 2: trees, heaps, graphs set + CS oral",
           "state": "pending",
           "doneDate": null,
-          "note": "",
+          "note": " CS oral part paused (DSA-only phase until 1 Jan); the checkpoint is the trees, heaps and graphs set.",
           "quota": ""
         }
       ]
@@ -3197,7 +3207,8 @@
               "topic": "Interface design"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W5-2",
@@ -3270,7 +3281,8 @@
           "state": "pending",
           "doneDate": null,
           "note": "",
-          "quota": "Real incident; survives follow-ups"
+          "quota": "Real incident; survives follow-ups",
+          "paused": true
         }
       ]
     },
@@ -3310,7 +3322,8 @@
               "topic": "Polymorphism"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         },
         {
           "id": "W6-2",
@@ -3373,7 +3386,8 @@
               "topic": "Deliver Results"
             }
           ],
-          "target": "UNDERSTOOD"
+          "target": "UNDERSTOOD",
+          "paused": true
         }
       ]
     },
@@ -4321,6 +4335,8 @@
   "pausePhase": {
     "label": "DSA-only phase",
     "since": "2026-11-25",
-    "note": "Paused at your request while all study time goes to DSA. Due dates are unchanged and nothing is cancelled: when the DSA phase ends, these come back as overdue."
+    "until": "2027-01-01",
+    "resumes": "2027-01-04",
+    "note": "All non-DSA work is paused until 1 Jan 2027 (your decision, 26 Nov); it resumes in Week 7 (Mon 4 Jan). Due dates are unchanged and nothing is cancelled. Paused: non-DSA retests, the non-DSA goals of Weeks 0 to 6, the non-DSA tracks, and the CS oral parts of Checkpoints 1 and 2."
   }
 }

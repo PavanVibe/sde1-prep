@@ -11,6 +11,13 @@
     {
       "date": "2026-11-26",
       "kind": "plan",
+      "summary": "All non-DSA work paused until 1 Jan 2027",
+      "details": "Your decision on 26 Nov: the DSA-only phase now has an end date, 1 Jan 2027; non-DSA work resumes in Week 7 (Mon 4 Jan). Paused: non-DSA goals in Weeks 2 to 6 (W2-1, W2-2, W2-3, W2-7, W3-1, W3-2, W3-6, W4-1, W4-2, W4-5, W5-1, W5-5, W6-1, W6-4), in addition to those already paused, and the CS oral parts of Checkpoint 1 (6 Dec) and Checkpoint 2 (20 Dec), which become DSA-only. Due dates are unchanged. Risk noted: Checkpoint 3 (10 Jan) includes an OOD mock with no OOD study before it, and all non-DSA tracks must fit into Weeks 7 to 12.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "plan",
       "summary": "Linked-list retest R-07 moved to Week 2 (2 Dec)",
       "details": "At your request: R-07 (LC 2, LC 25 and one unseen linked-list problem) moved from 8 Nov to Wed 2 Dec, inside Week 2 where linked lists are planned. Also marked W0-4 (LC 209 cold retest) done late on 25 Nov, from R-18.",
       "changes": []

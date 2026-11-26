@@ -349,13 +349,15 @@
   function pausedBox() {
     var pr = pausedRetests();
     var pg = [];
-    T.weeks.forEach(function (v) { if (TODAY > v.end && v.week !== undefined && !(v.goals || []).some(function (x) { return x.paused; })) return; (v.goals || []).forEach(function (x) { if (x.paused && goalProgress(x) < 1) pg.push({ week: v.week, g: x }); }); });
+    var later = 0;
+    T.weeks.forEach(function (v) { (v.goals || []).forEach(function (x) { if (!x.paused || goalProgress(x) >= 1) return; if (v.start > TODAY) later++; else pg.push({ week: v.week, g: x }); }); });
     var pt = T.tracks.filter(function (t) { return t.paused; });
     if (!pr.length && !pg.length && !pt.length) return '';
     var pp = T.pausePhase || {};
-    var html = '<div class="paused"><h3>' + esc(pauseLabel()) + ': paused items</h3><p class="small muted">' + esc(pp.note || 'Paused at your request. Due dates are unchanged; these return as overdue when the pause ends.') + (pp.since ? ' Since ' + esc(fmt(pp.since)) + '.' : '') + '</p><ul class="small">';
+    var html = '<div class="paused"><h3>' + esc(pauseLabel()) + ': paused items</h3><p class="small muted">' + esc(pp.note || 'Paused at your request. Due dates are unchanged; these return as overdue when the pause ends.') + (pp.since ? ' Since ' + esc(fmt(pp.since)) + (pp.until ? ', until ' + esc(fmt(pp.until)) : '') + '.' : '') + '</p><ul class="small">';
     pr.forEach(function (r) { var d = diffDays(r.due, TODAY); html += '<li><span class="cw">Retest ' + esc(r.id) + '</span> ' + esc(r.task) + ' <span class="muted">(due ' + esc(fmtShort(r.due)) + (d > 0 ? ', ' + plural(d, 'day', 'days') + ' past due' : '') + ')</span></li>'; });
     pg.forEach(function (o) { html += '<li><span class="cw">Week ' + o.week + ' goal</span> ' + esc(o.g.item) + '</li>'; });
+    if (later) html += '<li><span class="cw">Later weeks</span> ' + later + ' non-DSA goals in upcoming weeks are paused too' + (pp.resumes ? ' (work resumes ' + esc(fmt(pp.resumes)) + ')' : '') + '</li>';
     if (pt.length) html += '<li><span class="cw">Tracks</span> ' + pt.map(function (t) { return esc(t.name); }).join(', ') + ' (not flagged as neglected)</li>';
     return html + '</ul></div>';
   }
