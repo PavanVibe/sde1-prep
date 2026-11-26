@@ -2144,7 +2144,7 @@
   ],
   "nextActions": [
     "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
-    "Solve on LeetCode directly (from 26 Nov); report Accepted or not, hints, outside help and time.",
+    "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
     "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-35 LC 713, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
     "Then DSA goals in plan order: binary search, two pointers, stack and monotonic stack (3 unseen each), then arrays and hashing, linked lists, intervals, greedy, and on through the DSA lane.",
     "Paused (non-DSA, still overdue): R-04 route trace, R-05 race scenarios, R-36 JWT oral, R-09 and R-10 job worker."
@@ -2153,7 +2153,7 @@
   "standards": [
     {
       "title": "Where problems are solved",
-      "text": "From 26 Nov 2026 you solve directly on LeetCode; the DSA Workbench and its judge are no longer used. Evidence is your report of the LeetCode result (Accepted or not), hints and outside help, and the time if you have it. Self-reported solves are logged as such (your decision, 26 Nov 2026)."
+      "text": "From 26 Nov 2026 you solve on LeetCode by default and report the result (Accepted or not), hints, outside help and the time if you have it; these are logged as self-reported. The DSA Workbench stays available: it is used only when you say 'open compiler' or ask for problems to be added to it, and then its judged verdicts are the evidence (your decision, 26 Nov 2026)."
     },
     {
       "title": "Backlog first",
@@ -2314,7 +2314,7 @@
       }
     ],
     "dailyDsa": [
-      "Solve on LeetCode with a timer started before reading. Medium cap 35 min, hard 50, easy 20. No hints, no AI.",
+      "Start a timer before reading (on LeetCode, or the Workbench timer when you use it). Medium cap 35 min, hard 50, easy 20. No hints, no AI.",
       "At the cap, stop and say so; the hint ladder opens (pattern, invariant, approach) and the problem is logged as not independent.",
       "Every non-independent problem is re-solved cold 48 hours, 7 days and 21 days later. Every independent unseen solve comes back once inside a mixed set about 14 days later.",
       "A pattern's quota counts only unseen problems Accepted independently within the cap."

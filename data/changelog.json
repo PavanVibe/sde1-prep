@@ -11,6 +11,13 @@
     {
       "date": "2026-11-26",
       "kind": "plan",
+      "summary": "Workbench kept as an option, not retired",
+      "details": "Correction at your request on 26 Nov: LeetCode is the default, but the DSA Workbench stays available and is used when you say 'open compiler' or ask for problems to be added. Nothing in the Workbench was deleted.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "plan",
       "summary": "DSA problems are solved on LeetCode; the Workbench is retired",
       "details": "At your request on 26 Nov: no more Workbench or Claude-side judging. You solve on LeetCode and report the result, hints, outside help and time. Also closed R-49, which was created in error this morning: LC 11 and LC 238 each have two or more independent cold passes, which closes a problem under the re-solve rule.",
       "changes": []
