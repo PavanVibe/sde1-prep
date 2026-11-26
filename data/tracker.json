@@ -117,7 +117,7 @@
         {
           "name": "Binary search",
           "status": "PRACTICING",
-          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery. 26 Nov: LC 153 cold, self-reported independent.",
+          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery. 26 Nov: LC 153 cold, self-reported independent. 26 Nov: LC 33 solution seen.",
           "lastTested": "2026-11-26",
           "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)",
           "gateTarget": "INTERVIEW READY"
@@ -1569,11 +1569,11 @@
       "title": "Search in Rotated Sorted Array",
       "difficulty": "Medium",
       "pattern": "Binary search (rotated)",
-      "date": "2026-08-18",
+      "date": "2026-11-26",
       "dateNote": "from sync",
       "independence": "solution",
-      "hint": "Solution used",
-      "note": "Rotated-array reasoning needs a retest."
+      "hint": "Solution seen (26 Nov)",
+      "note": "Rotated-array reasoning needs a retest. 26 Nov (R-06, LeetCode): solved with the solution seen. Not independent. Cold retests R-55 (28 Nov), R-56 (3 Dec), R-57 (17 Dec)."
     },
     {
       "lc": 162,
@@ -2008,7 +2008,7 @@
       "task": "Binary search variants: LC 34, 153, 33, 162 without help",
       "due": "2026-11-01",
       "state": "pending",
-      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold. 26 Nov: LC 153 solved cold, self-reported, no hints; time not submitted. LC 33 and 162 still to do."
+      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold. 26 Nov: LC 153 solved cold, self-reported, no hints; time not submitted. LC 33 and 162 still to do. 26 Nov: LC 33 done with the solution seen (not a pass; R-55 to R-57). LC 162 still to do."
     },
     {
       "id": "R-07",
@@ -2201,6 +2201,30 @@
       "due": "2026-12-10",
       "state": "pending",
       "note": "About 14 days after the 26 Nov cold solve; a second independent cold pass closes LC 153."
+    },
+    {
+      "id": "R-55",
+      "weakness": "W-009",
+      "task": "Re-solve LC 33 cold on LeetCode, no hints, 35-minute cap; say which half is sorted and how you decide where the target is",
+      "due": "2026-11-28",
+      "state": "pending",
+      "note": "48h retest after the solution was seen on 26 Nov."
+    },
+    {
+      "id": "R-56",
+      "weakness": "W-009",
+      "task": "Re-solve LC 33 cold on LeetCode, no hints, 35-minute cap; say which half is sorted and how you decide where the target is",
+      "due": "2026-12-03",
+      "state": "pending",
+      "note": "7-day retest after the solution was seen on 26 Nov."
+    },
+    {
+      "id": "R-57",
+      "weakness": "W-009",
+      "task": "Re-solve LC 33 cold on LeetCode, no hints, 35-minute cap; say which half is sorted and how you decide where the target is",
+      "due": "2026-12-17",
+      "state": "pending",
+      "note": "21-day retest after the solution was seen on 26 Nov."
     }
   ],
   "nextActions": [

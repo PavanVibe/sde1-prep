@@ -11,6 +11,13 @@
     {
       "date": "2026-11-26",
       "kind": "evidence",
+      "summary": "LC 33 done with the solution seen",
+      "details": "R-06 part: LC 33 on LeetCode with the solution seen; not independent. Cold retests R-55 (28 Nov), R-56 (3 Dec), R-57 (17 Dec). Adds evidence to W-009 (rotated-array sorted half). LC 162 remains in R-06. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "evidence",
       "summary": "LC 153 solved cold (self-reported, no hints)",
       "details": "R-06 part: LC 153 on LeetCode, self-reported independent, no hints; time not submitted. The general rotated-array idea was taught earlier the same day; the LC 153 comparison was not. R-54 (mixed set, 10 Dec) scheduled. LC 33 and 162 remain in R-06. No status moved.",
       "changes": []
