@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "evidence",
+      "summary": "LC 34 full solution shown",
+      "details": "At your request the full LC 34 code was shown and explained. Logged as solution seen. Cold retests R-51 to R-53 already scheduled (28 Nov, 3 Dec, 17 Dec).",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "plan",
       "summary": "LC 34 approach taught; retests R-51 to R-53 scheduled",
       "details": "At your request, the LC 34 approach (two first-true searches, >= and >) was taught before your attempt, so any solve today is not independent. Cold retests: 28 Nov, 3 Dec, 17 Dec. LC 153, 33 and 162 in R-06 stay cold.",

@@ -1529,11 +1529,11 @@
       "title": "Find First and Last Position of Element in Sorted Array",
       "difficulty": "Medium",
       "pattern": "Binary search",
-      "date": "2026-08-18",
+      "date": "2026-11-26",
       "dateNote": "from sync",
-      "independence": "unsolved",
-      "hint": "Not recorded",
-      "note": "Unseen-variant gap remains."
+      "independence": "solution",
+      "hint": "Full solution shown (26 Nov)",
+      "note": "Unseen-variant gap remains. 26 Nov: approach taught, then the full code shown at your request. Not independent. Cold retests R-51 (28 Nov), R-52 (3 Dec), R-53 (17 Dec)."
     },
     {
       "lc": 278,
