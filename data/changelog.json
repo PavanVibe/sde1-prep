@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "evidence",
+      "summary": "LC 713 cold retest passed (self-reported, no hints)",
+      "details": "R-35 LC 713 on LeetCode: self-reported, no hints; time not submitted. With the 28 Oct judged cold pass, LC 713 is closed under the re-solve rule. W-002 stays open. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "plan",
       "summary": "Workbench kept as an option, not retired",
       "details": "Correction at your request on 26 Nov: LeetCode is the default, but the DSA Workbench stays available and is used when you say 'open compiler' or ask for problems to be added. Nothing in the Workbench was deleted.",
