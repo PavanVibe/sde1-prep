@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "evidence",
+      "summary": "LC 162 with the solution seen; binary search set R-06 not passed",
+      "details": "LC 162 on LeetCode with the solution seen; not independent. R-06 closed as failed: 1 of 4 cold (LC 153). Cold retests for LC 34, 33 and 162 start Sat 28 Nov (R-51, R-55, R-58), then 3 Dec and 17 Dec. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "plan",
       "summary": "Non-DSA items marked paused on the site",
       "details": "At your request: the 5 non-DSA retests (R-04, R-05, R-09, R-10, R-36), the non-DSA goals carried from Week 0 (W0-2, W0-7, W0-8) and Week 1 (W1-1, W1-2, W1-3, W1-7), and the non-DSA tracks are marked paused for the DSA-only phase. The site lists them in a Paused box; they no longer count as overdue, blocking, neglected or behind for the current week. Due dates and past-week history are unchanged.",

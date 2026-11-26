@@ -117,7 +117,7 @@
         {
           "name": "Binary search",
           "status": "PRACTICING",
-          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery. 26 Nov: LC 153 cold, self-reported independent. 26 Nov: LC 33 solution seen.",
+          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery. 26 Nov: LC 153 cold, self-reported independent. 26 Nov: LC 33 solution seen. 26 Nov: LC 162 solution seen; R-06 not passed (1 of 4 cold).",
           "lastTested": "2026-11-26",
           "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)",
           "gateTarget": "INTERVIEW READY"
@@ -1588,11 +1588,11 @@
       "title": "Find Peak Element",
       "difficulty": "Medium",
       "pattern": "Binary search (peak)",
-      "date": "2026-08-18",
+      "date": "2026-11-26",
       "dateNote": "from sync",
       "independence": "solution",
-      "hint": "Solution used",
-      "note": "Variant reasoning needs a retest."
+      "hint": "Solution seen (26 Nov)",
+      "note": "Variant reasoning needs a retest. 26 Nov (R-06, LeetCode): solved with the solution seen. Not independent. Cold retests R-58 (28 Nov), R-59 (3 Dec), R-60 (17 Dec)."
     },
     {
       "lc": 1695,
@@ -2017,8 +2017,8 @@
       "weakness": null,
       "task": "Binary search variants: LC 34, 153, 33, 162 without help",
       "due": "2026-11-01",
-      "state": "pending",
-      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold. 26 Nov: LC 153 solved cold, self-reported, no hints; time not submitted. LC 33 and 162 still to do. 26 Nov: LC 33 done with the solution seen (not a pass; R-55 to R-57). LC 162 still to do."
+      "state": "failed",
+      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold. 26 Nov: LC 153 solved cold, self-reported, no hints; time not submitted. LC 33 and 162 still to do. 26 Nov: LC 33 done with the solution seen (not a pass; R-55 to R-57). LC 162 still to do. 26 Nov: LC 162 done with the solution seen. Result: 1 of 4 cold (LC 153); LC 34 taught and solution shown, LC 33 and 162 solution seen. Not a pass. Replaced by R-51 to R-53 (LC 34), R-54 (LC 153 mixed set), R-55 to R-57 (LC 33) and R-58 to R-60 (LC 162)."
     },
     {
       "id": "R-07",
@@ -2238,12 +2238,36 @@
       "due": "2026-12-17",
       "state": "pending",
       "note": "21-day retest after the solution was seen on 26 Nov."
+    },
+    {
+      "id": "R-58",
+      "weakness": "W-009",
+      "task": "Re-solve LC 162 cold on LeetCode, no hints, 35-minute cap; explain why moving toward the larger neighbour always reaches a peak",
+      "due": "2026-11-28",
+      "state": "pending",
+      "note": "48h retest after the solution was seen on 26 Nov."
+    },
+    {
+      "id": "R-59",
+      "weakness": "W-009",
+      "task": "Re-solve LC 162 cold on LeetCode, no hints, 35-minute cap; explain why moving toward the larger neighbour always reaches a peak",
+      "due": "2026-12-03",
+      "state": "pending",
+      "note": "7-day retest after the solution was seen on 26 Nov."
+    },
+    {
+      "id": "R-60",
+      "weakness": "W-009",
+      "task": "Re-solve LC 162 cold on LeetCode, no hints, 35-minute cap; explain why moving toward the larger neighbour always reaches a peak",
+      "due": "2026-12-17",
+      "state": "pending",
+      "note": "21-day retest after the solution was seen on 26 Nov."
     }
   ],
   "nextActions": [
     "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
-    "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
+    "DSA retests: Fri 27 Nov R-50 (written), R-42 LC 525, R-45 LC 974; Sat 28 Nov LC 34, LC 33, LC 162 cold (R-51, R-55, R-58). Overdue: R-27 LC 739, R-29 LC 875, R-31 LC 525, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
     "Then DSA goals in plan order: binary search, two pointers, stack and monotonic stack (3 unseen each), then arrays and hashing, linked lists, intervals, greedy, and on through the DSA lane.",
     "Paused for the DSA-only phase (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals W0-2, W0-7, W0-8, W1-1, W1-2, W1-3, W1-7; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral."
   ],
@@ -2633,9 +2657,9 @@
           "lane": "dsa",
           "kind": "new",
           "item": "Binary search: LC 34, 153, 33, 162 cold + 3 unseen (one on the answer)",
-          "state": "pending",
+          "state": "partial",
           "doneDate": null,
-          "note": "R-06 was due 1 Nov (now overdue). Starts after R-28 clears. Buffer week: finish by 29 Nov.",
+          "note": "R-06 done 26 Nov: 1 of 4 cold (LC 153); LC 34, 33, 162 need cold retests (28 Nov first). 3 unseen binary search problems (one on the answer) still to do.",
           "quota": "R-06 + 3 unseen independent",
           "refs": [
             {
