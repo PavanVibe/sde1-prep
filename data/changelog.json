@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "plan",
+      "summary": "Rule change: new problems are protected daily; overdue retests block only their own pattern",
+      "details": "Your decision on 26 Nov. Old rules (30 Oct 'backlog first' and 'any overdue retest blocks all new material') replaced: each day starts with protected NEW problems (weekdays 2, Saturday 4 to 6, Sunday a mixed set); retests get a daily time box (about 1 to 1.5 hours on weekdays), oldest first; an overdue or failed retest blocks new problems only in its own pattern. Due dates, the 48 h / 7 d / 21 d schedule and the two-cold-passes closing rule are unchanged. First new problems: LC 15 and LC 881 (two pointers, W1-5).",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "evidence",
       "summary": "RETEST: LC 739 cold passed (self-reported, no hints)",
       "details": "R-27 LC 739 on LeetCode: self-reported, no hints; time not submitted. With the 29 Oct judged cold pass, LC 739 is closed under the re-solve rule. Retest, so it does not count toward a weekly goal. No status moved.",

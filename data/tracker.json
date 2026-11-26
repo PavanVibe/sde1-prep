@@ -2268,7 +2268,7 @@
     "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
     "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-51 LC 34, R-55 LC 33, R-58 LC 162. Overdue: R-07 linked lists (LC 2, LC 25 + 1 unseen), R-38 LC 1493, R-29 and R-41 LC 875, R-31 LC 525 (covered by R-42).",
-    "NEW PROBLEMS for Week 1 goals (count toward the goal only if solved alone within 35 min): W1-4 binary search 3 new (one on the answer); W1-5 two pointers 3 new; W1-6 stack and monotonic stack 3 new.",
+    "NEW PROBLEMS for Week 1 goals (protected daily slot, count toward the goal only if solved alone within 35 min): W1-5 two pointers 3 new (tonight LC 15 and LC 881); W1-6 stack and monotonic stack 3 new; W1-4 binary search 3 new (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused for the DSA-only phase (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals W0-2, W0-7, W0-8, W1-1, W1-2, W1-3, W1-7; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
@@ -2282,8 +2282,8 @@
       "text": "Every plan, task list and log names each problem as either a RETEST (an old problem coming back on schedule, with its retest id and why it came back) or a NEW problem for this week's goal (with the goal id and pattern). Only new problems solved alone within the cap count toward a weekly goal; retests keep what you have learned and close old problems (your rule, 26 Nov 2026)."
     },
     {
-      "title": "Backlog first",
-      "text": "any planned item missed on an earlier day is done before that day's new items; the day's own plan only starts once the backlog is clear, and anything unfinished carries forward to the front of the next day (user rule, 30 Oct 2026)."
+      "title": "New problems first, then retests in a time box",
+      "text": "Each day starts with its protected NEW problems (weekdays 2, Saturday 4 to 6, Sunday an unnamed mixed set). Retests then get a time box (about 1 to 1.5 hours on weekdays), oldest overdue first; whatever is unfinished carries to the front of the next day's retest box. Your decision on 26 Nov 2026; replaces the 30 Oct 'backlog first' rule, because the backlog was blocking all new material."
     },
     {
       "title": "Notes go in the tracker",
@@ -2318,8 +2318,8 @@
       "text": "Timed solves, retests and closed-book answers are unaided. A solve done with AI is void and logged as void."
     },
     {
-      "title": "Overdue retests block",
-      "text": "An overdue retest stops new material until it is passed or turned into a written remediation plan."
+      "title": "Overdue retests block their own pattern only",
+      "text": "An overdue or failed retest stops NEW problems in the same pattern until it passes (or a written remediation plan replaces it). Other patterns carry on. Your decision on 26 Nov 2026; before that, any overdue retest blocked all new material."
     },
     {
       "title": "Checkpoints cannot be skipped",
@@ -2396,11 +2396,11 @@
     "alreadyCut": "Left out: MST, advanced graph algorithms beyond Dijkstra, replication and CAP depth, the publishable queue project."
   },
   "weeklyTime": {
-    "note": "About 43 hours a week, set 29 Oct from your real availability: weekdays 19:30 to 00:30, weekends free. Hard stop at 00:30: no tests after it, because tired solves are unreliable evidence. Sunday evening after the review is rest.",
+    "note": "About 43 hours a week, set 29 Oct from your real availability: weekdays 19:30 to 00:30, weekends free. Hard stop at 00:30: no tests after it, because tired solves are unreliable evidence. Sunday evening after the review is rest. From 26 Nov, during the DSA-only phase, the weekday core and behavioral blocks are also DSA (mostly the retest time box).",
     "blocks": [
       {
         "when": "Weekdays 19:30 to 21:30",
-        "what": "DSA: 2 new problems under the timer (unseen when the quota calls for it) + 1 due retest"
+        "what": "DSA: 2 NEW problems first under the timer (protected), then retests oldest-first"
       },
       {
         "when": "Weekdays 21:30 to 23:00",
@@ -2663,7 +2663,7 @@
           "item": "Binary search: LC 34, 153, 33, 162 cold + 3 unseen (one on the answer)",
           "state": "partial",
           "doneDate": null,
-          "note": "R-06 done 26 Nov: 1 of 4 cold (LC 153); LC 34, 33, 162 need cold retests (28 Nov first). 3 unseen binary search problems (one on the answer) still to do.",
+          "note": "R-06 done 26 Nov: 1 of 4 cold (LC 153); LC 34, 33, 162 need cold retests (28 Nov first). 3 unseen binary search problems (one on the answer) still to do. New binary search problems wait until the LC 34, 33, 162 retests pass (pattern block, 26 Nov rule).",
           "quota": "R-06 + 3 unseen independent",
           "refs": [
             {

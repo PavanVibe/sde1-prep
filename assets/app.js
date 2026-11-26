@@ -301,7 +301,7 @@
   }
   function carryHtml(w, c) {
     if (!c.n) return '<p class="okc small">Nothing carried over from earlier weeks.</p>';
-    var html = '<div class="carry"><h3>Carried over from earlier weeks: ' + c.n + '</h3><p class="small muted">These are unfinished. Overdue retests block this week\'s new topics; earlier goals below target must be brought up alongside this week\'s work.</p><ul>';
+    var html = '<div class="carry"><h3>Carried over from earlier weeks: ' + c.n + '</h3><p class="small muted">These are unfinished. An overdue retest blocks new problems in its own pattern only; earlier goals below target are brought up alongside this week\'s work.</p><ul>';
     c.rts.forEach(function (r) { html += '<li><span class="late-tag">Retest ' + esc(r.id) + '</span> ' + esc(r.task) + ' <span class="muted small">(due ' + esc(fmtShort(r.due)) + ')</span></li>'; });
     c.goals.forEach(function (o) { html += '<li><span class="cw">Week ' + o.week + '</span> ' + esc(o.g.item) + ' <span class="muted small">(' + Math.round(o.g._p * 100) + '% of target' + (o.g.target ? ' ' + esc(sentence(o.g.target)) : '') + ')</span></li>'; });
     return html + '</ul></div>';
@@ -313,13 +313,13 @@
       '<p class="gline"><span class="pill ' + st.cls + '">' + esc(st.verdict) + '</span> <strong>' + pct + '%</strong> of the week\'s targets (' + (st.n.done + st.n.late) + ' of ' + st.g.length + ' goals at target' + (st.n.partial ? ', ' + st.n.partial + ' part-way' : '') + ')' +
       (st.phase === 'now' ? '; by today you should be at ' + Math.round(st.expected * 100) + '%' : '') + '.</p>' +
       '<p class="gline small">' + (st.rts.length ? 'Retests due this week: <strong>' + st.rtPassed + ' of ' + st.rts.length + '</strong> passed. ' : '') +
-      (st.phase !== 'future' ? 'New topics not done: <strong>' + st.newLeft + '</strong>' + (st.n.blocked ? ' (' + st.n.blocked + ' blocked by overdue retests)' : '') + '.' : '') + '</p></div>';
+      (st.phase !== 'future' ? 'New topics not done: <strong>' + st.newLeft + '</strong>' + (st.n.blocked ? ' (' + st.n.blocked + ' blocked)' : '') + '.' : '') + '</p></div>';
   }
   VIEW.weekly = function () {
     var html = '<h1>Weekly goals</h1><p class="lede">Each topic has a target level for the end of its week, set by where it sits in the plan: a topic that comes back later only needs a lower level the first time; a one-shot topic must reach its final level in its own week. Progress is your evidence-backed level against that target, never attempts or hours. A goal without a topic (a story draft, a checkpoint) counts when it is done. The dark tick on the current week\'s bar is where you should be by today if the week\'s goals were spread evenly.</p>';
     var od = overdueNow();
     if (od.length) {
-      html += '<div class="blockers"><h2>Blocking new topics right now</h2><p class="muted small">Overdue retests stop new material until they pass. Clear these first.</p><ul class="attn">' +
+      html += '<div class="blockers"><h2>Overdue retests</h2><p class="muted small">Each one blocks new problems in its own pattern only (rule from 26 Nov). New problems come first each day; these are cleared oldest first in the daily retest time.</p><ul class="attn">' +
         od.map(function (r) { return '<li class="late"><b>' + esc(r.id) + ': ' + esc(r.task) + '</b><span class="late-tag">' + plural(diffDays(r.due, TODAY), 'day', 'days') + ' overdue</span></li>'; }).join('') + '</ul></div>';
     }
     var sy = T.syllabus;
