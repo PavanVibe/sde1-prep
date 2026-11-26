@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2027-02-15",
-    "lastUpdated": "2026-11-25",
+    "lastUpdated": "2026-11-26",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -55,7 +55,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-11-25",
+      "lastEvidence": "2026-11-26",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, 47, 61, 82 and 103; the gate is Day 118. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
@@ -1338,20 +1338,20 @@
       "title": "Container With Most Water",
       "difficulty": "Medium",
       "pattern": "Two pointers",
-      "date": "2026-10-29",
+      "date": "2026-11-26",
       "independence": "independent",
-      "hint": "None (29 Oct retest)",
-      "note": "Not independent. Your write-up is in the study notes. Cold again on 27 Oct (R-22) and 1 Nov (R-23). 29 Oct cold retest R-22: Accepted 319/319, 0 hints, 8:13; O(n), O(1) space."
+      "hint": "None (26 Nov, self-reported)",
+      "note": "Not independent. Your write-up is in the study notes. Cold again on 27 Oct (R-22) and 1 Nov (R-23). 29 Oct cold retest R-22: Accepted 319/319, 0 hints, 8:13; O(n), O(1) space. 8 Nov Workbench submit: Accepted 53/53 (judged 26 Nov), 0 hints, 5:32. 26 Nov cold retest R-23: self-reported independent, no hints, no outside help; time and code not submitted. Mixed-set return R-49 (10 Dec)."
     },
     {
       "lc": 238,
       "title": "Product of Array Except Self",
       "difficulty": "Medium",
       "pattern": "Prefix and suffix products",
-      "date": "2026-10-29",
+      "date": "2026-11-26",
       "independence": "independent",
-      "hint": "None (29 Oct retest)",
-      "note": "Not independent. Cold again on 27 Oct (R-24) and 1 Nov (R-25). 29 Oct cold retest R-24: Accepted 309/309, 0 hints, 5:39; O(n) time, O(n) extra (left and right arrays), O(1)-extra follow-up not shown."
+      "hint": "None (26 Nov, self-reported)",
+      "note": "Not independent. Cold again on 27 Oct (R-24) and 1 Nov (R-25). 29 Oct cold retest R-24: Accepted 309/309, 0 hints, 5:39; O(n) time, O(n) extra (left and right arrays), O(1)-extra follow-up not shown. 8 Nov Workbench submit: Accepted 51/51 (judged 26 Nov), 0 hints, 4:07, still O(n) extra. 26 Nov cold retest R-25: self-reported independent, no hints, no outside help; time and code not submitted. Mixed-set return R-49 (10 Dec)."
     },
     {
       "lc": 739,
@@ -1842,8 +1842,8 @@
       "weakness": null,
       "task": "Re-solve LC 11 cold again (7-day spaced retest)",
       "due": "2026-11-01",
-      "state": "pending",
-      "note": "7 days after the 25 Oct attempt."
+      "state": "passed",
+      "note": "7 days after the 25 Oct attempt. 8 Nov: Workbench submit (smw7kywsdo35y), 0 hints, no outside help, timer 5:32; judged 26 Nov: Accepted 53/53 on the rebuilt harness. 26 Nov: solved cold again, self-reported independent, no hints, no outside help; time and code not submitted."
     },
     {
       "id": "R-24",
@@ -1858,8 +1858,8 @@
       "weakness": null,
       "task": "Re-solve LC 238 cold again (7-day spaced retest)",
       "due": "2026-11-01",
-      "state": "pending",
-      "note": "7 days after the 25 Oct attempt."
+      "state": "passed",
+      "note": "7 days after the 25 Oct attempt. 8 Nov: Workbench submit (smw7la6sql2ls), 0 hints, no outside help, timer 4:07; judged 26 Nov: Accepted 51/51 on the rebuilt harness. Still O(n) extra space (left and right arrays). 26 Nov: solved cold again, self-reported independent, no hints, no outside help; time and code not submitted. O(1)-extra follow-up still not shown."
     },
     {
       "id": "R-26",
@@ -2132,11 +2132,19 @@
       "due": "2026-12-09",
       "state": "pending",
       "note": "14 days after the independent unseen solve on 25 Nov."
+    },
+    {
+      "id": "R-49",
+      "weakness": null,
+      "task": "LC 11 and LC 238 inside an unnamed mixed set, cold, no hints, 35-minute cap each; for LC 238 show the O(1)-extra-space version",
+      "due": "2026-12-10",
+      "state": "pending",
+      "note": "About 14 days after the 26 Nov cold solves (re-solve rule)."
     }
   ],
   "nextActions": [
     "DSA-ONLY PHASE (from 25 Nov, at your request): all study time goes to DSA. CS fundamentals, internship, OOD, system design and behavioral are paused until the DSA phase ends; their retests keep their due dates and are listed as paused, not moved.",
-    "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-23 LC 11, R-25 LC 238, R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-35 LC 713, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
+    "DSA retests first: R-42 LC 525 and R-45 LC 974 (Fri 27 Nov); overdue: R-27 LC 739, R-29 LC 875, R-31 LC 525, R-06 binary search set, R-35 LC 713, R-38 LC 1493, R-07 linked lists, R-41 LC 875.",
     "Then DSA goals in plan order: binary search, two pointers, stack and monotonic stack (3 unseen each), then arrays and hashing, linked lists, intervals, greedy, and on through the DSA lane.",
     "Paused (non-DSA, still overdue): R-04 route trace, R-05 race scenarios, R-36 JWT oral, R-09 and R-10 job worker."
   ],
@@ -2535,7 +2543,7 @@
           "item": "Two pointers: 3 unseen mediums",
           "state": "partial",
           "doneDate": null,
-          "note": "LC 11 cold retest passed 29 Oct; no unseen two-pointer problem yet.",
+          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet.",
           "quota": "3 unseen independent",
           "refs": [
             {

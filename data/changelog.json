@@ -9,6 +9,13 @@
   },
   "entries": [
     {
+      "date": "2026-11-26",
+      "kind": "evidence",
+      "summary": "LC 11 and LC 238 cold retests passed (self-reported, no hints)",
+      "details": "R-23 LC 11 and R-25 LC 238: solved cold on 26 Nov, self-reported independent, no hints, no outside help; time and code not submitted. Also judged the unjudged 8 Nov Workbench submissions on a rebuilt harness: LC 11 Accepted 53/53 (5:32), LC 238 Accepted 51/51 (4:07), both 0 hints. LC 238 still uses O(n) extra space. R-49 (mixed set, 10 Dec) scheduled. No status moved: retests of seen problems do not move Two pointers or Prefix sums.",
+      "changes": []
+    },
+    {
       "date": "2026-11-25",
       "kind": "evidence",
       "summary": "LC 875 cold retest passed (self-reported, no hints)",
