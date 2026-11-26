@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "evidence",
+      "summary": "RETEST: LC 739 cold passed (self-reported, no hints)",
+      "details": "R-27 LC 739 on LeetCode: self-reported, no hints; time not submitted. With the 29 Oct judged cold pass, LC 739 is closed under the re-solve rule. Retest, so it does not count toward a weekly goal. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "plan",
       "summary": "Retests and new problems listed separately from now on",
       "details": "At your request: every plan and log labels each problem as a RETEST (old problem on schedule) or a NEW problem for the week's goal. Next actions are split the same way.",
