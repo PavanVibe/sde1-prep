@@ -11,6 +11,13 @@
     {
       "date": "2026-11-27",
       "kind": "plan",
+      "summary": "27 Nov new problems assigned: LC 75 and LC 503; new problems now written down by date",
+      "details": "The first 27 Nov table listed only one new problem (a weekday has two). Fixed: LC 75 (W1-5) and LC 503 (W1-6). From now on each day's new problems are recorded in nextActions with their date.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "plan",
       "summary": "LC 875 and LC 1493 overdue retests replaced by one final retest each on 2 Dec",
       "details": "Your yes on 27 Nov. The 25 Nov cold solves counted once (R-40, R-37). R-29 and R-41 (LC 875) replaced by R-64; R-38 (LC 1493) replaced by R-65; both due Wed 2 Dec. A pass on each is the second independent cold pass and closes the problem.",
       "changes": []

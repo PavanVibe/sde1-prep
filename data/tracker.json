@@ -2319,7 +2319,7 @@
     "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
     "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Overdue: R-31 LC 525 (covered by R-42). Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
-    "NEW PROBLEMS for Week 1 goals (protected daily slot, count toward the goal only if solved alone within 35 min): W1-5 two pointers 3 new (LC 15 done with the solution on 26 Nov, so it does not count; LC 881 still to report; 3 independent unseen needed); W1-6 stack and monotonic stack 3 new; W1-4 binary search 3 new (one on the answer) once the LC 34, 33, 162 retests pass.",
+    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, not reported); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
@@ -2391,6 +2391,10 @@
     {
       "title": "Study answer format",
       "text": "When you ask what to study, I reply with one small table only: LC number, New or Retest, and the date it should have been finished (due date; overdue dates shown as-is). No other text unless you ask."
+    },
+    {
+      "title": "New problems are assigned by date",
+      "text": "Every day's NEW problems are written into nextActions with their date when assigned, so the 'what to study' table is read from the ledger, not worked out again each time. Weekdays have 2, Saturday 5-6, Sunday a mixed set of 4."
     }
   ],
   "thresholds": [
