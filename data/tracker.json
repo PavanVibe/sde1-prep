@@ -2001,7 +2001,7 @@
       "task": "Binary search variants: LC 34, 153, 33, 162 without help",
       "due": "2026-11-01",
       "state": "pending",
-      "note": "Week 1. Rotated-array and peak reasoning."
+      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold."
     },
     {
       "id": "R-07",
@@ -2162,6 +2162,30 @@
       "due": "2026-11-27",
       "state": "pending",
       "note": "Next day after the 26 Nov binary search lesson."
+    },
+    {
+      "id": "R-51",
+      "weakness": "W-009",
+      "task": "Re-solve LC 34 cold on LeetCode, no hints, 35-minute cap; two first-true searches (>= and >), hi = n",
+      "due": "2026-11-28",
+      "state": "pending",
+      "note": "48h retest after the approach was taught on 26 Nov."
+    },
+    {
+      "id": "R-52",
+      "weakness": "W-009",
+      "task": "Re-solve LC 34 cold on LeetCode, no hints, 35-minute cap; two first-true searches (>= and >), hi = n",
+      "due": "2026-12-03",
+      "state": "pending",
+      "note": "7-day retest after the approach was taught on 26 Nov."
+    },
+    {
+      "id": "R-53",
+      "weakness": "W-009",
+      "task": "Re-solve LC 34 cold on LeetCode, no hints, 35-minute cap; two first-true searches (>= and >), hi = n",
+      "due": "2026-12-17",
+      "state": "pending",
+      "note": "21-day retest after the approach was taught on 26 Nov."
     }
   ],
   "nextActions": [
