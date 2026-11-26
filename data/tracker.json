@@ -117,8 +117,8 @@
         {
           "name": "Binary search",
           "status": "PRACTICING",
-          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery.",
-          "lastTested": "2026-10-30",
+          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery. 26 Nov: LC 153 cold, self-reported independent.",
+          "lastTested": "2026-11-26",
           "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)",
           "gateTarget": "INTERVIEW READY"
         },
@@ -1558,11 +1558,11 @@
       "title": "Find Minimum in Rotated Sorted Array",
       "difficulty": "Medium",
       "pattern": "Binary search (rotated)",
-      "date": "2026-08-18",
+      "date": "2026-11-26",
       "dateNote": "from sync",
-      "independence": "solution",
-      "hint": "Solution used",
-      "note": "Rotated-array reasoning needs a retest."
+      "independence": "independent",
+      "hint": "None (26 Nov, self-reported)",
+      "note": "Rotated-array reasoning needs a retest. 26 Nov (R-06, LeetCode): solved cold, self-reported independent, no hints; time not submitted. Earlier that day the general rotated-array idea (one drop, one half sorted) was taught, but not the LC 153 comparison. Second cold pass in a mixed set R-54 (10 Dec) closes it."
     },
     {
       "lc": 33,
@@ -2008,7 +2008,7 @@
       "task": "Binary search variants: LC 34, 153, 33, 162 without help",
       "due": "2026-11-01",
       "state": "pending",
-      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold."
+      "note": "Week 1. Rotated-array and peak reasoning. 26 Nov: LC 34 approach taught at your request before the attempt, so LC 34 no longer counts as cold for R-06 (retests R-51 to R-53). LC 153, 33 and 162 stay cold. 26 Nov: LC 153 solved cold, self-reported, no hints; time not submitted. LC 33 and 162 still to do."
     },
     {
       "id": "R-07",
@@ -2193,6 +2193,14 @@
       "due": "2026-12-17",
       "state": "pending",
       "note": "21-day retest after the approach was taught on 26 Nov."
+    },
+    {
+      "id": "R-54",
+      "weakness": "W-009",
+      "task": "LC 153 cold inside an unnamed mixed set, no hints, 35-minute cap",
+      "due": "2026-12-10",
+      "state": "pending",
+      "note": "About 14 days after the 26 Nov cold solve; a second independent cold pass closes LC 153."
     }
   ],
   "nextActions": [

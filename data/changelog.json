@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "evidence",
+      "summary": "LC 153 solved cold (self-reported, no hints)",
+      "details": "R-06 part: LC 153 on LeetCode, self-reported independent, no hints; time not submitted. The general rotated-array idea was taught earlier the same day; the LC 153 comparison was not. R-54 (mixed set, 10 Dec) scheduled. LC 33 and 162 remain in R-06. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "setup",
       "summary": "Binary search notes merged into one note",
       "details": "Your template notes (exact, first and last occurrence, lower bound, last valid position, golden rules) merged with the LC 34 note into one binary search note. Added: start values for each template, the final check for Template 5, the 2-element stuck trace, and both ways to solve LC 34. The separate LC 34 note was folded in. Notes are reference material, not evidence.",
