@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-27",
+      "kind": "plan",
+      "summary": "LC 875 and LC 1493 overdue retests replaced by one final retest each on 2 Dec",
+      "details": "Your yes on 27 Nov. The 25 Nov cold solves counted once (R-40, R-37). R-29 and R-41 (LC 875) replaced by R-64; R-38 (LC 1493) replaced by R-65; both due Wed 2 Dec. A pass on each is the second independent cold pass and closes the problem.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
       "kind": "evidence",
       "summary": "LC 15 (3Sum) done with the solution; three retests scheduled",
       "details": "W1-5 new problem LC 15, dated 26 Nov (evening session). Self-reported as solved with the solution, so it is not independent and does not count toward W1-5. Retests R-61 (28 Nov), R-62 (3 Dec), R-63 (17 Dec). LC 881 not yet reported.",
