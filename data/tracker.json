@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2027-02-15",
-    "lastUpdated": "2026-11-26",
+    "lastUpdated": "2026-11-27",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -2266,6 +2266,7 @@
   ],
   "nextActions": [
     "DSA-ONLY PHASE until 1 Jan 2027 (your decision, 26 Nov): all study time goes to DSA. All non-DSA work (CS, internship, OOD, system design, behavioral) is paused and resumes Mon 4 Jan (Week 7). Checkpoints 1 (6 Dec) and 2 (20 Dec) are DSA-only.",
+    "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
     "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-51 LC 34, R-55 LC 33, R-58 LC 162. Overdue: R-38 LC 1493, R-29 and R-41 LC 875, R-31 LC 525 (covered by R-42). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
     "NEW PROBLEMS for Week 1 goals (protected daily slot, count toward the goal only if solved alone within 35 min): W1-5 two pointers 3 new (tonight LC 15 and LC 881); W1-6 stack and monotonic stack 3 new; W1-4 binary search 3 new (one on the answer) once the LC 34, 33, 162 retests pass.",
@@ -2336,6 +2337,10 @@
     {
       "title": "Notes go in the tracker",
       "text": ""
+    },
+    {
+      "title": "Study answer format",
+      "text": "When you ask what to study, I reply with one small table only: LC number, New or Retest, and the date it should have been finished (due date; overdue dates shown as-is). No other text unless you ask."
     }
   ],
   "thresholds": [

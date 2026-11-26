@@ -9,6 +9,13 @@
   },
   "entries": [
     {
+      "date": "2026-11-27",
+      "kind": "plan",
+      "summary": "Rule: 'what to study' gets a small table only",
+      "details": "Your decision on 27 Nov: when you ask what to study, I reply with one small table: LC number, New or Retest, and the date it should have been finished. Nothing else unless you ask. Supersedes the longer START TODAY output format for this question.",
+      "changes": []
+    },
+    {
       "date": "2026-11-26",
       "kind": "plan",
       "summary": "All non-DSA work paused until 1 Jan 2027",
