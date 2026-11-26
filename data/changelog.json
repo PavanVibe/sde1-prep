@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "setup",
+      "summary": "Notes added: LC 34 two-pass binary search",
+      "details": "Your LC 34 notes (core intuition, first-occurrence and last-occurrence passes) added to study notes. Notes are reference material, not evidence.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "evidence",
       "summary": "LC 34 full solution shown",
       "details": "At your request the full LC 34 code was shown and explained. Logged as solution seen. Cold retests R-51 to R-53 already scheduled (28 Nov, 3 Dec, 17 Dec).",
