@@ -11,6 +11,13 @@
     {
       "date": "2026-11-26",
       "kind": "setup",
+      "summary": "Ledger repo public again; site back online",
+      "details": "You made the repo public again and re-enabled GitHub Pages on 26 Nov; the site is live. The no-Alchemic-details rule applies as before.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "setup",
       "summary": "Ledger repo made private; public site offline",
       "details": "You made the repo private on 26 Nov and want it kept private. GitHub Pages does not serve private repos on a free account, so the public site is offline. Logging and pushes are unaffected. Alchemic details stay out of the ledger anyway (NDA).",
       "changes": []
