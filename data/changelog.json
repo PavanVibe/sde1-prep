@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-26",
+      "kind": "weakness",
+      "summary": "Binary search placement quiz 3/5; W-009 opened",
+      "details": "Before teaching binary search: 3/5. Correct on overflow-safe mid, lower_bound returning n, and the monotonic predicate behind search on the answer. Missed loop termination when lo = mid (mid must round up) and did not answer which half of a rotated array is sorted. Taught the same day. R-50 closed-book retest due 27 Nov. LC 739 (R-27) deferred to later at your request; its due date is unchanged and it stays overdue. No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-26",
       "kind": "evidence",
       "summary": "LC 713 cold retest passed (self-reported, no hints)",
       "details": "R-35 LC 713 on LeetCode: self-reported, no hints; time not submitted. With the 28 Oct judged cold pass, LC 713 is closed under the re-solve rule. W-002 stays open. No status moved.",

@@ -117,7 +117,7 @@
         {
           "name": "Binary search",
           "status": "PRACTICING",
-          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent.",
+          "evidence": "Independent: LC 278. Assistance not recorded: LC 704, 35. Not solved: LC 34. Solution used: LC 153, 33, 162. 30 Oct: LC 875 (binary search on the answer) taught, solution seen; Accepted on attempt 3, not independent. 26 Nov: placement quiz 3/5 (termination and rotated sorted half missed; W-009); taught the same day. Not evidence of mastery.",
           "lastTested": "2026-10-30",
           "next": "Mixed and unseen retest, including rotated-array and peak variants (Week 1)",
           "gateTarget": "INTERVIEW READY"
@@ -1714,6 +1714,20 @@
       "retest": "Pending",
       "retestDue": "2026-10-26",
       "result": "Placement 2/5 on 2026-10-25"
+    },
+    {
+      "id": "W-009",
+      "topic": "Binary search: loop termination (mid rounding) and the rotated-array sorted half",
+      "source": "DSA",
+      "identified": "2026-11-26",
+      "state": "open",
+      "mistake": "Placement quiz 3/5 on 26 Nov. Correct: why lo + (hi - lo) / 2 avoids overflow; lower_bound returns n when the target is above every element; why binary search on the answer needs a monotonic predicate. Wrong: said a while (lo < hi) loop with lo = mid can never run forever. Not answered: which half is sorted when nums[lo] <= nums[mid] in a rotated array.",
+      "correct": "When a branch assigns lo = mid, mid must round up (lo + (hi - lo + 1) / 2), or two elements left gives mid = lo and no progress. A rotated array has one drop; if nums[lo] <= nums[mid], [lo, mid] has no drop and is sorted, otherwise [mid, hi] is sorted.",
+      "cause": "Knowledge gap: no rule for proving that each branch shrinks the range; rotated-array invariant not known.",
+      "exercise": "Taught 26 Nov. Closed-book written retest (R-50), then LC 34, 153, 33, 162 cold (R-06).",
+      "retest": "R-50",
+      "retestDue": "2026-11-27",
+      "result": "Placement 3/5 on 2026-11-26"
     }
   ],
   "closedWeaknesses": [
@@ -2140,6 +2154,14 @@
       "due": "2026-12-10",
       "state": "closed",
       "note": "About 14 days after the 26 Nov cold solves (re-solve rule). Closed the same day: created in error. Under the re-solve rule two independent cold passes close a problem, and LC 11 and LC 238 each have three (29 Oct, 8 Nov, 26 Nov)."
+    },
+    {
+      "id": "R-50",
+      "weakness": "W-009",
+      "task": "Closed-book, written, 10 min: (1) write first-true and last-true templates and say which way mid rounds in each and why; (2) trace lo = 4, hi = 5 on the broken loop; (3) given a rotated array state, say which half is sorted and why",
+      "due": "2026-11-27",
+      "state": "pending",
+      "note": "Next day after the 26 Nov binary search lesson."
     }
   ],
   "nextActions": [
