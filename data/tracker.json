@@ -55,7 +55,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-11-26",
+      "lastEvidence": "2026-11-27",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, 47, 61, 82 and 103; the gate is Day 118. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
@@ -1653,6 +1653,16 @@
       "independence": "solution",
       "hint": "Solution seen (self-reported, 26 Nov)",
       "note": "W1-5 new problem. You said you solved it with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests at 48 h, 7 d and 21 d (R-61, R-62, R-63)."
+    },
+    {
+      "lc": 881,
+      "title": "Boats to Save People",
+      "difficulty": "Medium",
+      "pattern": "Two pointers (sort, pair heaviest with lightest)",
+      "date": "2026-11-27",
+      "independence": "solution",
+      "hint": "Solution seen (self-reported, 27 Nov)",
+      "note": "W1-5 new problem (assigned 26 Nov, done 27 Nov). You said you did it with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests R-66 (29 Nov), R-67 (4 Dec), R-68 (18 Dec)."
     }
   ],
   "weaknesses": [
@@ -2312,14 +2322,38 @@
       "due": "2026-12-02",
       "state": "pending",
       "note": "Replaces R-38 (your yes, 27 Nov)."
+    },
+    {
+      "id": "R-66",
+      "weakness": null,
+      "task": "Re-solve LC 881 (Boats to Save People) cold on LeetCode, no hints, 35-minute cap; say why pairing the heaviest with the lightest is safe and the time complexity",
+      "due": "2026-11-29",
+      "state": "pending",
+      "note": "48h retest after the solution was used on 27 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-67",
+      "weakness": null,
+      "task": "Re-solve LC 881 (Boats to Save People) cold on LeetCode, no hints, 35-minute cap; say why pairing the heaviest with the lightest is safe and the time complexity",
+      "due": "2026-12-04",
+      "state": "pending",
+      "note": "7-day retest after the solution was used on 27 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-68",
+      "weakness": null,
+      "task": "Re-solve LC 881 (Boats to Save People) cold on LeetCode, no hints, 35-minute cap; say why pairing the heaviest with the lightest is safe and the time complexity",
+      "due": "2026-12-18",
+      "state": "pending",
+      "note": "21-day retest after the solution was used on 27 Nov (two pointers, W1-5)."
     }
   ],
   "nextActions": [
     "DSA-ONLY PHASE until 1 Jan 2027 (your decision, 26 Nov): all study time goes to DSA. All non-DSA work (CS, internship, OOD, system design, behavioral) is paused and resumes Mon 4 Jan (Week 7). Checkpoints 1 (6 Dec) and 2 (20 Dec) are DSA-only.",
     "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
-    "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Overdue: R-31 LC 525 (covered by R-42). Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
-    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, not reported); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
+    "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881. Overdue: R-31 LC 525 (covered by R-42). Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
+    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
@@ -2739,7 +2773,7 @@
           "item": "Two pointers: 3 unseen mediums",
           "state": "partial",
           "doneDate": null,
-          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet.",
+          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet. 26-27 Nov: LC 15 and LC 881 done with the solution seen; neither counts. Still 0 of 3.",
           "quota": "3 unseen independent",
           "refs": [
             {

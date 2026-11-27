@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-27",
+      "kind": "evidence",
+      "summary": "LC 881 (new, W1-5 two pointers) done with the solution; retests R-66 to R-68",
+      "details": "Self-reported: solved with the solution seen. Not independent, so it does not count toward W1-5 (still 0 of 3 unseen independent). Time, code and Accepted result not submitted. Cold retests at 48 h (29 Nov), 7 d (4 Dec) and 21 d (18 Dec). Two pointers status unchanged (NOT STARTED).",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
       "kind": "plan",
       "summary": "27 Nov new problems assigned: LC 75 and LC 503; new problems now written down by date",
       "details": "The first 27 Nov table listed only one new problem (a weekday has two). Fixed: LC 75 (W1-5) and LC 503 (W1-6). From now on each day's new problems are recorded in nextActions with their date.",
