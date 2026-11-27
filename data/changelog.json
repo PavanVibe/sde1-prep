@@ -11,6 +11,13 @@
     {
       "date": "2026-11-27",
       "kind": "plan",
+      "summary": "R-50 written binary search test dropped",
+      "details": "Your decision on 27 Nov, following the no-explanations rule. R-50 closed without being taken (not a pass). W-009 (binary search) stays open and is retested by LC 34 (R-51), LC 33 (R-55) and LC 162 (R-58) cold on 28 Nov.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "plan",
       "summary": "Explanations are no longer asked; R-42 and R-45 passed",
       "details": "Your decision on 27 Nov: never ask for explanations. A retest passes on the cold solve alone; the explain/state parts of retest tasks are dropped. New standard \"No explanations asked\". R-42 (LC 525) and R-45 (LC 974) marked passed on the 27 Nov cold solves.",
       "changes": []
