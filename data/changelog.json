@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-27",
+      "kind": "plan",
+      "summary": "Explanations are no longer asked; R-42 and R-45 passed",
+      "details": "Your decision on 27 Nov: never ask for explanations. A retest passes on the cold solve alone; the explain/state parts of retest tasks are dropped. New standard \"No explanations asked\". R-42 (LC 525) and R-45 (LC 974) marked passed on the 27 Nov cold solves.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
       "kind": "evidence",
       "summary": "LC 974 and LC 525 retests solved cold; LC 503 (new, W1-6) solved with a hint",
       "details": "Retests: LC 974 (R-45) and LC 525 (R-42, also closes overdue R-31) self-reported solved cold with no solution and no hints; time and code not submitted. R-42 and R-45 stay pending until the explanations named in their tasks are given. New: LC 503 solved with a hint, so it does not count toward W1-6 (0 of 3); cold retests R-69 (29 Nov), R-70 (4 Dec), R-71 (18 Dec). No status moved.",

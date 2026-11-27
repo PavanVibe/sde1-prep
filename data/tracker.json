@@ -1346,7 +1346,7 @@
       "date": "2026-11-27",
       "independence": "independent",
       "hint": "None (self-reported, 27 Nov)",
-      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section. 25 Nov (R-20, 7-day retest): needed the core hint (equal remainders => divisible difference); not independent. Retests R-45 (27 Nov), R-46 (2 Dec), R-47 (16 Dec). 27 Nov (R-45, 48h retest, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. Retest explanation (why equal remainders give a divisible sum, why normalise) still owed. R-46 (2 Dec) and R-47 (16 Dec) stay."
+      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section. 25 Nov (R-20, 7-day retest): needed the core hint (equal remainders => divisible difference); not independent. Retests R-45 (27 Nov), R-46 (2 Dec), R-47 (16 Dec). 27 Nov (R-45, 48h retest, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. Retest explanation (why equal remainders give a divisible sum, why normalise) not required (no explanations asked, your decision 27 Nov). R-46 (2 Dec) and R-47 (16 Dec) stay."
     },
     {
       "lc": 11,
@@ -1396,7 +1396,7 @@
       "date": "2026-11-27",
       "independence": "independent",
       "hint": "None (self-reported, 27 Nov)",
-      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31). 25 Nov (R-30): solved after seeing the solution; not independent. Retests R-42 (27 Nov), R-43 (2 Dec), R-44 (16 Dec). 27 Nov (R-42, also covers overdue R-31, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. Retest explanation (0 -> -1 mapping, why the first index is stored) still owed. R-43 (2 Dec) and R-44 (16 Dec) stay."
+      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31). 25 Nov (R-30): solved after seeing the solution; not independent. Retests R-42 (27 Nov), R-43 (2 Dec), R-44 (16 Dec). 27 Nov (R-42, also covers overdue R-31, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. Retest explanation (0 -> -1 mapping, why the first index is stored) not required (no explanations asked, your decision 27 Nov). R-43 (2 Dec) and R-44 (16 Dec) stay."
     },
     {
       "lc": 1343,
@@ -2146,8 +2146,8 @@
       "weakness": null,
       "task": "LC 525 cold, no help, 35-minute cap; explain the 0 -> -1 mapping and why the first index is stored",
       "due": "2026-11-27",
-      "state": "pending",
-      "note": "48h after the solution was seen on 25 Nov. 27 Nov: solved cold, no solution, no hints (self-reported). Stays pending until the explanation in the task is given."
+      "state": "passed",
+      "note": "48h after the solution was seen on 25 Nov. 27 Nov: solved cold, no solution, no hints (self-reported). Stays pending until the explanation in the task is given. 27 Nov: passed on the cold solve; explanations are no longer asked (your decision)."
     },
     {
       "id": "R-43",
@@ -2170,8 +2170,8 @@
       "weakness": null,
       "task": "LC 974 cold, no hints, 35-minute cap; explain why equal remainders give a divisible sum and why the remainder is normalised",
       "due": "2026-11-27",
-      "state": "pending",
-      "note": "48h after the hinted attempt on 25 Nov. 27 Nov: solved cold, no solution, no hints (self-reported). Stays pending until the explanation in the task is given."
+      "state": "passed",
+      "note": "48h after the hinted attempt on 25 Nov. 27 Nov: solved cold, no solution, no hints (self-reported). Stays pending until the explanation in the task is given. 27 Nov: passed on the cold solve; explanations are no longer asked (your decision)."
     },
     {
       "id": "R-46",
@@ -2385,8 +2385,9 @@
   "nextActions": [
     "DSA-ONLY PHASE until 1 Jan 2027 (your decision, 26 Nov): all study time goes to DSA. All non-DSA work (CS, internship, OOD, system design, behavioral) is paused and resumes Mon 4 Jan (Week 7). Checkpoints 1 (6 Dec) and 2 (20 Dec) are DSA-only.",
     "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
+    "No explanations are asked: a retest passes on the cold solve alone (your decision, 27 Nov).",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
-    "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test; R-42 LC 525 and R-45 LC 974 solved cold 27 Nov, explanations still owed. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
+    "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test; R-42 LC 525 and R-45 LC 974 passed 27 Nov. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
     "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack, done 27 Nov with a hint; not counted). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
@@ -2395,6 +2396,10 @@
     {
       "title": "Where problems are solved",
       "text": "From 26 Nov 2026 you solve on LeetCode by default and report the result (Accepted or not), hints, outside help and the time if you have it; these are logged as self-reported. The DSA Workbench stays available: it is used only when you say 'open compiler' or ask for problems to be added to it, and then its judged verdicts are the evidence (your decision, 26 Nov 2026)."
+    },
+    {
+      "title": "No explanations asked",
+      "text": "From 27 Nov 2026 explanations are never asked for. A retest passes on the solve alone (cold, no solution, no hints); any \"explain\", \"say\" or \"state\" part of a retest task is not required (your decision, 27 Nov 2026)."
     },
     {
       "title": "Retests and new problems are always listed separately",
