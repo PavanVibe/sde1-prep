@@ -1673,6 +1673,16 @@
       "independence": "hinted",
       "hint": "Hint taken (self-reported, 27 Nov; details not submitted)",
       "note": "W1-6 new problem. Solved with a hint, so it is not independent and does not count toward W1-6. Time, code and Accepted result not submitted. Cold retests R-69 (29 Nov), R-70 (4 Dec), R-71 (18 Dec)."
+    },
+    {
+      "lc": 75,
+      "title": "Sort Colors",
+      "difficulty": "Medium",
+      "pattern": "Two pointers (three-way partition, Dutch national flag)",
+      "date": "2026-11-27",
+      "independence": "solution",
+      "hint": "Solution seen (self-reported, 27 Nov)",
+      "note": "W1-5 new problem. Done with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests R-72 (29 Nov), R-73 (4 Dec), R-74 (18 Dec)."
     }
   ],
   "weaknesses": [
@@ -2380,6 +2390,30 @@
       "due": "2026-12-18",
       "state": "pending",
       "note": "21-day retest after the hinted solve on 27 Nov (monotonic stack, W1-6)."
+    },
+    {
+      "id": "R-72",
+      "weakness": null,
+      "task": "Re-solve LC 75 (Sort Colors) cold on LeetCode, no hints, 35-minute cap, one pass",
+      "due": "2026-11-29",
+      "state": "pending",
+      "note": "48h retest after the solution was used on 27 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-73",
+      "weakness": null,
+      "task": "Re-solve LC 75 (Sort Colors) cold on LeetCode, no hints, 35-minute cap, one pass",
+      "due": "2026-12-04",
+      "state": "pending",
+      "note": "7-day retest after the solution was used on 27 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-74",
+      "weakness": null,
+      "task": "Re-solve LC 75 (Sort Colors) cold on LeetCode, no hints, 35-minute cap, one pass",
+      "due": "2026-12-18",
+      "state": "pending",
+      "note": "21-day retest after the solution was used on 27 Nov (two pointers, W1-5)."
     }
   ],
   "nextActions": [
@@ -2387,8 +2421,8 @@
     "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
     "No explanations are asked: a retest passes on the cold solve alone (your decision, 27 Nov).",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
-    "RETESTS (old problems on schedule). Fri 27 Nov: R-42 LC 525 and R-45 LC 974 passed 27 Nov. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
-    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack, done 27 Nov with a hint; not counted). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
+    "RETESTS (old problems on schedule). Fri 27 Nov: R-42 LC 525 and R-45 LC 974 passed 27 Nov. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503, R-72 LC 75. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
+    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers, done 27 Nov with the solution; not counted) and LC 503 (W1-6 monotonic stack, done 27 Nov with a hint; not counted). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
@@ -2812,7 +2846,7 @@
           "item": "Two pointers: 3 unseen mediums",
           "state": "partial",
           "doneDate": null,
-          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet. 26-27 Nov: LC 15 and LC 881 done with the solution seen; neither counts. Still 0 of 3.",
+          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet. 26-27 Nov: LC 15, LC 881 and LC 75 done with the solution seen; none counts. Still 0 of 3.",
           "quota": "3 unseen independent",
           "refs": [
             {

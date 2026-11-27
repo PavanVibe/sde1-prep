@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-27",
+      "kind": "evidence",
+      "summary": "LC 75 (new, W1-5 two pointers) done with the solution; retests R-72 to R-74",
+      "details": "Self-reported: done with the solution seen. Not independent, so it does not count toward W1-5 (still 0 of 3 unseen independent). Cold retests at 48 h (29 Nov), 7 d (4 Dec) and 21 d (18 Dec). No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
       "kind": "plan",
       "summary": "R-50 written binary search test dropped",
       "details": "Your decision on 27 Nov, following the no-explanations rule. R-50 closed without being taken (not a pass). W-009 (binary search) stays open and is retested by LC 34 (R-51), LC 33 (R-55) and LC 162 (R-58) cold on 28 Nov.",
