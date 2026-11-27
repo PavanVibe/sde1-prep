@@ -1343,10 +1343,10 @@
       "title": "Subarray Sums Divisible by K",
       "difficulty": "Medium",
       "pattern": "Prefix sum + remainder hashing",
-      "date": "2026-11-25",
-      "independence": "hinted",
-      "hint": "1 hint: equal prefix remainders mean the difference is divisible by k",
-      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section. 25 Nov (R-20, 7-day retest): needed the core hint (equal remainders => divisible difference); not independent. Retests R-45 (27 Nov), R-46 (2 Dec), R-47 (16 Dec)."
+      "date": "2026-11-27",
+      "independence": "independent",
+      "hint": "None (self-reported, 27 Nov)",
+      "note": "Brute force O(n^2) on your own. Optimal O(n) (prefix-sum remainders) seen and not understood. Not counted as solved. Re-solve cold on 26 Oct (R-19) and 31 Oct (R-20). 28 Oct (R-19): Submit smvr6g5q8qsqw Accepted 12/12 on attempt 1, 1:43 on the clock. Normalized remainder ((prefix % k) + k) % k, freq[0] = 1. Solved right after the remainder section was added to your notes, and the code follows that section. 25 Nov (R-20, 7-day retest): needed the core hint (equal remainders => divisible difference); not independent. Retests R-45 (27 Nov), R-46 (2 Dec), R-47 (16 Dec). 27 Nov (R-45, 48h retest, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. Retest explanation (why equal remainders give a divisible sum, why normalise) still owed. R-46 (2 Dec) and R-47 (16 Dec) stay."
     },
     {
       "lc": 11,
@@ -1393,10 +1393,10 @@
       "title": "Contiguous Array",
       "difficulty": "Medium",
       "pattern": "Prefix sum + hashing",
-      "date": "2026-11-25",
-      "independence": "solution",
-      "hint": "Solution seen",
-      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31). 25 Nov (R-30): solved after seeing the solution; not independent. Retests R-42 (27 Nov), R-43 (2 Dec), R-44 (16 Dec)."
+      "date": "2026-11-27",
+      "independence": "independent",
+      "hint": "None (self-reported, 27 Nov)",
+      "note": "Not solved within the cap. Teach, then retest on 27 Oct (R-30) and 1 Nov (R-31). 25 Nov (R-30): solved after seeing the solution; not independent. Retests R-42 (27 Nov), R-43 (2 Dec), R-44 (16 Dec). 27 Nov (R-42, also covers overdue R-31, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. Retest explanation (0 -> -1 mapping, why the first index is stored) still owed. R-43 (2 Dec) and R-44 (16 Dec) stay."
     },
     {
       "lc": 1343,
@@ -1663,6 +1663,16 @@
       "independence": "solution",
       "hint": "Solution seen (self-reported, 27 Nov)",
       "note": "W1-5 new problem (assigned 26 Nov, done 27 Nov). You said you did it with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests R-66 (29 Nov), R-67 (4 Dec), R-68 (18 Dec)."
+    },
+    {
+      "lc": 503,
+      "title": "Next Greater Element II",
+      "difficulty": "Medium",
+      "pattern": "Monotonic stack (circular array, iterate 2n)",
+      "date": "2026-11-27",
+      "independence": "hinted",
+      "hint": "Hint taken (self-reported, 27 Nov; details not submitted)",
+      "note": "W1-6 new problem. Solved with a hint, so it is not independent and does not count toward W1-6. Time, code and Accepted result not submitted. Cold retests R-69 (29 Nov), R-70 (4 Dec), R-71 (18 Dec)."
     }
   ],
   "weaknesses": [
@@ -1955,8 +1965,8 @@
       "weakness": null,
       "task": "Re-solve LC 525 cold again (7-day spaced retest)",
       "due": "2026-11-01",
-      "state": "pending",
-      "note": "7 days after the 25 Oct attempt."
+      "state": "superseded",
+      "note": "7 days after the 25 Oct attempt. 27 Nov: closed as covered by the 27 Nov cold solve of LC 525 (R-42)."
     },
     {
       "id": "R-16",
@@ -2137,7 +2147,7 @@
       "task": "LC 525 cold, no help, 35-minute cap; explain the 0 -> -1 mapping and why the first index is stored",
       "due": "2026-11-27",
       "state": "pending",
-      "note": "48h after the solution was seen on 25 Nov."
+      "note": "48h after the solution was seen on 25 Nov. 27 Nov: solved cold, no solution, no hints (self-reported). Stays pending until the explanation in the task is given."
     },
     {
       "id": "R-43",
@@ -2161,7 +2171,7 @@
       "task": "LC 974 cold, no hints, 35-minute cap; explain why equal remainders give a divisible sum and why the remainder is normalised",
       "due": "2026-11-27",
       "state": "pending",
-      "note": "48h after the hinted attempt on 25 Nov."
+      "note": "48h after the hinted attempt on 25 Nov. 27 Nov: solved cold, no solution, no hints (self-reported). Stays pending until the explanation in the task is given."
     },
     {
       "id": "R-46",
@@ -2346,14 +2356,38 @@
       "due": "2026-12-18",
       "state": "pending",
       "note": "21-day retest after the solution was used on 27 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-69",
+      "weakness": null,
+      "task": "Re-solve LC 503 (Next Greater Element II) cold on LeetCode, no hints, 35-minute cap; say how the circular wrap is handled and why the stack is monotonic decreasing",
+      "due": "2026-11-29",
+      "state": "pending",
+      "note": "48h retest after the hinted solve on 27 Nov (monotonic stack, W1-6)."
+    },
+    {
+      "id": "R-70",
+      "weakness": null,
+      "task": "Re-solve LC 503 (Next Greater Element II) cold on LeetCode, no hints, 35-minute cap; say how the circular wrap is handled and why the stack is monotonic decreasing",
+      "due": "2026-12-04",
+      "state": "pending",
+      "note": "7-day retest after the hinted solve on 27 Nov (monotonic stack, W1-6)."
+    },
+    {
+      "id": "R-71",
+      "weakness": null,
+      "task": "Re-solve LC 503 (Next Greater Element II) cold on LeetCode, no hints, 35-minute cap; say how the circular wrap is handled and why the stack is monotonic decreasing",
+      "due": "2026-12-18",
+      "state": "pending",
+      "note": "21-day retest after the hinted solve on 27 Nov (monotonic stack, W1-6)."
     }
   ],
   "nextActions": [
     "DSA-ONLY PHASE until 1 Jan 2027 (your decision, 26 Nov): all study time goes to DSA. All non-DSA work (CS, internship, OOD, system design, behavioral) is paused and resumes Mon 4 Jan (Week 7). Checkpoints 1 (6 Dec) and 2 (20 Dec) are DSA-only.",
     "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
-    "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test, R-42 LC 525, R-45 LC 974. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881. Overdue: R-31 LC 525 (covered by R-42). Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
-    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
+    "RETESTS (old problems on schedule). Fri 27 Nov: R-50 written binary search test; R-42 LC 525 and R-45 LC 974 solved cold 27 Nov, explanations still owed. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
+    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers) and LC 503 (W1-6 monotonic stack, done 27 Nov with a hint; not counted). Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
@@ -2790,7 +2824,7 @@
           "item": "Stack and monotonic stack: 3 unseen mediums",
           "state": "partial",
           "doneDate": null,
-          "note": "",
+          "note": "27 Nov: LC 503 solved with a hint; does not count. Still 0 of 3.",
           "quota": "3 unseen independent",
           "refs": [
             {

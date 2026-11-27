@@ -11,6 +11,13 @@
     {
       "date": "2026-11-27",
       "kind": "evidence",
+      "summary": "LC 974 and LC 525 retests solved cold; LC 503 (new, W1-6) solved with a hint",
+      "details": "Retests: LC 974 (R-45) and LC 525 (R-42, also closes overdue R-31) self-reported solved cold with no solution and no hints; time and code not submitted. R-42 and R-45 stay pending until the explanations named in their tasks are given. New: LC 503 solved with a hint, so it does not count toward W1-6 (0 of 3); cold retests R-69 (29 Nov), R-70 (4 Dec), R-71 (18 Dec). No status moved.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
+      "kind": "evidence",
       "summary": "LC 881 (new, W1-5 two pointers) done with the solution; retests R-66 to R-68",
       "details": "Self-reported: solved with the solution seen. Not independent, so it does not count toward W1-5 (still 0 of 3 unseen independent). Time, code and Accepted result not submitted. Cold retests at 48 h (29 Nov), 7 d (4 Dec) and 21 d (18 Dec). Two pointers status unchanged (NOT STARTED).",
       "changes": []
