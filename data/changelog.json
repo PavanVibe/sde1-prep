@@ -10,6 +10,13 @@
   "entries": [
     {
       "date": "2026-11-27",
+      "kind": "plan",
+      "summary": "Weekend plan to clear the Week 0 and Week 1 backlog",
+      "details": "Backlog: W1-4 binary search 3 unseen (one on the answer), W1-5 two pointers 3, W1-6 monotonic stack 3, W0-6 arrays and hashing (nothing logged). W0-5 sliding window is covered by the R-39 pass (LC 2024, 25 Nov). Sat 28 Nov new: LC 167, 16, 1679, 901, 402, 853; then retests R-61, R-51, R-55, R-58. Sun 29 Nov: unnamed mixed set of 4 (3 depend on the binary search retests passing), then retests R-66, R-69, R-72. About 13 new problems are owed and the weekend holds about 10, so the arrays and hashing backlog moves into Mon 30 Nov (Week 2 topic). No goal, quota or due date changed.",
+      "changes": []
+    },
+    {
+      "date": "2026-11-27",
       "kind": "evidence",
       "summary": "LC 75 (new, W1-5 two pointers) done with the solution; retests R-72 to R-74",
       "details": "Self-reported: done with the solution seen. Not independent, so it does not count toward W1-5 (still 0 of 3 unseen independent). Cold retests at 48 h (29 Nov), 7 d (4 Dec) and 21 d (18 Dec). No status moved.",
