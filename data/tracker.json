@@ -5,7 +5,7 @@
     "target": "Amazon SDE-1",
     "sprintStart": "2026-10-20",
     "gateDate": "2027-02-15",
-    "lastUpdated": "2026-11-27",
+    "lastUpdated": "2026-11-28",
     "schemaVersion": 1,
     "evidenceRule": "A status moves only on dated, unaided evidence: explaining it, applying it, handling edge cases, unseen problems and follow-ups without AI. Reading, watching or getting an AI explanation is not evidence. A timed solve done with AI is void.",
     "sources": "Seeded on 2026-10-20 from PROGRESS & READINESS (through 2026-08-18), MISTAKES & WEAKNESSES, AMAZON INTERVIEW STORIES, STUDY LOG (from 2026-10-15) and MASTER ROADMAP v2.2. Where they conflict, the STUDY LOG wins."
@@ -55,7 +55,7 @@
       "id": "dsa",
       "name": "DSA in C++",
       "startsWeek": 0,
-      "lastEvidence": "2026-11-27",
+      "lastEvidence": "2026-11-28",
       "note": "Sliding window, binary search and linked lists are PRACTICING on mixed evidence. Nothing else has evidence yet. Checkpoints fall on Day 5, 47, 61, 82 and 103; the gate is Day 118. Hard problems, tries, shortest paths and MST are outside this sprint.",
       "topics": [
         {
@@ -84,10 +84,10 @@
         },
         {
           "name": "Two pointers",
-          "status": "NOT STARTED",
-          "evidence": "—",
-          "lastTested": null,
-          "next": "Independent problems and follow-ups (Week 1)",
+          "status": "PRACTICING",
+          "evidence": "Independent: LC 167, LC 1679 (28 Nov, unseen, self-reported, time not submitted). Cold re-solves: LC 11 (29 Oct, 26 Nov), LC 15 (28 Nov, R-61, 2 days after the solution was seen). Hint: LC 16 (28 Nov). Solution used: LC 15 (26 Nov), LC 881, LC 75 (27 Nov). PRACTICING threshold met: two independent solves plus a cold re-solve after at least 2 days.",
+          "lastTested": "2026-11-28",
+          "next": "UNDERSTOOD: one more unseen medium solved alone within 35 min, one of the three with the pattern unnamed",
           "gateTarget": "INTERVIEW READY"
         },
         {
@@ -1649,10 +1649,10 @@
       "title": "3Sum",
       "difficulty": "Medium",
       "pattern": "Two pointers (sort + inner two-pointer, skip duplicates)",
-      "date": "2026-11-26",
-      "independence": "solution",
-      "hint": "Solution seen (self-reported, 26 Nov)",
-      "note": "W1-5 new problem. You said you solved it with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests at 48 h, 7 d and 21 d (R-61, R-62, R-63)."
+      "date": "2026-11-28",
+      "independence": "independent",
+      "hint": "None (self-reported, 28 Nov)",
+      "note": "W1-5 new problem. You said you solved it with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests at 48 h, 7 d and 21 d (R-61, R-62, R-63). 28 Nov (R-61, LeetCode): self-reported solved cold with no solution and no hints; time and code not submitted. First independent cold pass; R-62 (3 Dec) and R-63 (17 Dec) stay."
     },
     {
       "lc": 881,
@@ -1683,6 +1683,36 @@
       "independence": "solution",
       "hint": "Solution seen (self-reported, 27 Nov)",
       "note": "W1-5 new problem. Done with the solution, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests R-72 (29 Nov), R-73 (4 Dec), R-74 (18 Dec)."
+    },
+    {
+      "lc": 167,
+      "title": "Two Sum II - Input Array Is Sorted",
+      "difficulty": "Medium",
+      "pattern": "Two pointers (opposite ends on a sorted array)",
+      "date": "2026-11-28",
+      "independence": "independent",
+      "hint": "None (self-reported, 28 Nov)",
+      "note": "W1-5 new unseen problem. Self-reported solved with no solution and no hints; time, code and Accepted result not submitted. Counts toward W1-5 (self-reported). Returns once in an unnamed mixed set about 14 days later (R-78, 12 Dec)."
+    },
+    {
+      "lc": 1679,
+      "title": "Max Number of K-Sum Pairs",
+      "difficulty": "Medium",
+      "pattern": "Two pointers (sort, pair from both ends) or hashing",
+      "date": "2026-11-28",
+      "independence": "independent",
+      "hint": "None (self-reported, 28 Nov)",
+      "note": "W1-5 new unseen problem. Self-reported solved with no solution and no hints; time, code and Accepted result not submitted. Counts toward W1-5 (self-reported). Returns once in an unnamed mixed set about 14 days later (R-79, 12 Dec)."
+    },
+    {
+      "lc": 16,
+      "title": "3Sum Closest",
+      "difficulty": "Medium",
+      "pattern": "Two pointers (sort + inner two-pointer, track closest sum)",
+      "date": "2026-11-28",
+      "independence": "hinted",
+      "hint": "Hint taken (self-reported, 28 Nov; details not submitted)",
+      "note": "W1-5 new problem. Solved with a hint, so it is not independent and does not count toward W1-5. Time, code and Accepted result not submitted. Cold retests R-75 (30 Nov), R-76 (5 Dec), R-77 (19 Dec)."
     }
   ],
   "weaknesses": [
@@ -2308,8 +2338,8 @@
       "weakness": null,
       "task": "Re-solve LC 15 (3Sum) cold on LeetCode, no hints, 35-minute cap; state how duplicates are skipped and the time complexity",
       "due": "2026-11-28",
-      "state": "pending",
-      "note": "48h retest after the solution was used on 26 Nov (two pointers, W1-5)."
+      "state": "passed",
+      "note": "48h retest after the solution was used on 26 Nov (two pointers, W1-5). 28 Nov: solved cold on LeetCode, no solution, no hints (self-reported); time not submitted."
     },
     {
       "id": "R-62",
@@ -2414,6 +2444,46 @@
       "due": "2026-12-18",
       "state": "pending",
       "note": "21-day retest after the solution was used on 27 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-75",
+      "weakness": null,
+      "task": "Re-solve LC 16 (3Sum Closest) cold on LeetCode, no hints, 35-minute cap",
+      "due": "2026-11-30",
+      "state": "pending",
+      "note": "48h retest after the hinted solve on 28 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-76",
+      "weakness": null,
+      "task": "Re-solve LC 16 (3Sum Closest) cold on LeetCode, no hints, 35-minute cap",
+      "due": "2026-12-05",
+      "state": "pending",
+      "note": "7-day retest after the hinted solve on 28 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-77",
+      "weakness": null,
+      "task": "Re-solve LC 16 (3Sum Closest) cold on LeetCode, no hints, 35-minute cap",
+      "due": "2026-12-19",
+      "state": "pending",
+      "note": "21-day retest after the hinted solve on 28 Nov (two pointers, W1-5)."
+    },
+    {
+      "id": "R-78",
+      "weakness": null,
+      "task": "LC 167 inside an unnamed mixed set, cold, 35-minute cap",
+      "due": "2026-12-12",
+      "state": "pending",
+      "note": "14 days after the independent unseen solve on 28 Nov."
+    },
+    {
+      "id": "R-79",
+      "weakness": null,
+      "task": "LC 1679 inside an unnamed mixed set, cold, 35-minute cap",
+      "due": "2026-12-12",
+      "state": "pending",
+      "note": "14 days after the independent unseen solve on 28 Nov."
     }
   ],
   "nextActions": [
@@ -2421,8 +2491,8 @@
     "When you ask what to study, the answer is one small table: LC number, New or Retest, and the date it should have been finished. Nothing else.",
     "No explanations are asked: a retest passes on the cold solve alone (your decision, 27 Nov).",
     "Solve on LeetCode by default (from 26 Nov); report Accepted or not, hints, outside help and time. The Workbench is used only when you say 'open compiler' or ask for problems to be added.",
-    "RETESTS (old problems on schedule). Fri 27 Nov: R-42 LC 525 and R-45 LC 974 passed 27 Nov. Sat 28 Nov: R-61 LC 15, R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503, R-72 LC 75. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
-    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers, done 27 Nov with the solution; not counted) and LC 503 (W1-6 monotonic stack, done 27 Nov with a hint; not counted). Sat 28 Nov: LC 167, LC 16, LC 1679 (W1-5 two pointers); LC 901, LC 402, LC 853 (W1-6 stack and monotonic stack). Sun 29 Nov: unnamed mixed set of 4, chosen Sunday morning (3 depend on the 28 Nov binary search retests passing). Mon 30 Nov: the remaining Week 0 arrays and hashing backlog (W0-6), which is also the Week 2 topic. Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
+    "RETESTS (old problems on schedule). Fri 27 Nov: R-42 LC 525 and R-45 LC 974 passed 27 Nov. Sat 28 Nov: R-61 LC 15 passed 28 Nov; still due R-51 LC 34, R-55 LC 33, R-58 LC 162. Sun 29 Nov: R-66 LC 881, R-69 LC 503, R-72 LC 75. Mon 30 Nov: R-75 LC 16. Wed 2 Dec: R-64 LC 875, R-65 LC 1493 (final passes). Week 2: R-07 linked lists (LC 2, LC 25 + 1 unseen) on Wed 2 Dec.",
+    "NEW PROBLEMS (protected daily slot, 2 per weekday; count toward the goal only if solved alone within 35 min). Assigned: 26 Nov LC 15 (done with solution) and LC 881 (W1-5, done 27 Nov with the solution; not counted); 27 Nov LC 75 (W1-5 two pointers, done 27 Nov with the solution; not counted) and LC 503 (W1-6 monotonic stack, done 27 Nov with a hint; not counted). Sat 28 Nov: LC 167 and LC 1679 (W1-5, done alone, count: 2 of 3), LC 16 (W1-5, done with a hint; not counted); LC 901, LC 402, LC 853 (W1-6 stack and monotonic stack). Sun 29 Nov: unnamed mixed set of 4, chosen Sunday morning (3 depend on the 28 Nov binary search retests passing). Mon 30 Nov: the remaining Week 0 arrays and hashing backlog (W0-6), which is also the Week 2 topic. Goals: W1-5 3 independent unseen, W1-6 3, W1-4 binary search 3 (one on the answer) once the LC 34, 33, 162 retests pass.",
     "Paused until 1 Jan (shown in their own box, due dates unchanged): retests R-04, R-05, R-09, R-10, R-36; non-DSA goals of Weeks 0 to 6; tracks OS, databases, networking, distributed systems, internship, OOD, system design, behavioral; CS orals in Checkpoints 1 and 2."
   ],
   "scopeNote": "118-day sprint (90 days, plus buffer weeks 2 to 29 Nov added on 1 Nov and 21 Nov) from 29 Oct (extended at your request). About 43 hours a week. Tier 1 (17 DSA patterns, the 8 most-asked LPs) to Interview ready and OOD to Strong, with fixed quotas; Tier 2 (CS fundamentals, system design, internship) to Strong. Tries, shortest paths, topological sort, union find, 2D DP and bit manipulation are back in.",
@@ -2846,7 +2916,7 @@
           "item": "Two pointers: 3 unseen mediums",
           "state": "partial",
           "doneDate": null,
-          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet. 26-27 Nov: LC 15, LC 881 and LC 75 done with the solution seen; none counts. Still 0 of 3.",
+          "note": "LC 11 cold retests passed 29 Oct and 26 Nov (R-23); no unseen two-pointer problem yet. 26-27 Nov: LC 15, LC 881 and LC 75 done with the solution seen; none counts. Still 0 of 3. 28 Nov: LC 167 and LC 1679 solved alone (self-reported, time not submitted): 2 of 3. LC 16 solved with a hint; does not count. 1 more unseen two-pointer problem needed, and one of the three must be with the pattern unnamed for UNDERSTOOD.",
           "quota": "3 unseen independent",
           "refs": [
             {

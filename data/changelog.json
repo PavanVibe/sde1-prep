@@ -9,6 +9,20 @@
   },
   "entries": [
     {
+      "date": "2026-11-28",
+      "kind": "status",
+      "summary": "LC 167 and LC 1679 (new, W1-5) solved alone; LC 16 (new) with a hint; R-61 LC 15 retest passed; Two pointers NOT STARTED -> PRACTICING",
+      "details": "Self-reported, time and code not submitted. NEW: LC 167 and LC 1679 solved with no solution and no hints, so W1-5 is at 2 of 3; each returns in an unnamed mixed set on 12 Dec (R-78, R-79). LC 16 solved with a hint: not counted; cold retests R-75 (30 Nov), R-76 (5 Dec), R-77 (19 Dec). RETEST: R-61 LC 15 passed (cold, no solution, no hints); R-62 and R-63 stay. Two pointers meets the PRACTICING threshold (two independent solves plus a cold re-solve after at least 2 days).",
+      "changes": [
+        {
+          "track": "dsa",
+          "topic": "Two pointers",
+          "from": "NOT STARTED",
+          "to": "PRACTICING"
+        }
+      ]
+    },
+    {
       "date": "2026-11-27",
       "kind": "plan",
       "summary": "Weekend plan to clear the Week 0 and Week 1 backlog",
